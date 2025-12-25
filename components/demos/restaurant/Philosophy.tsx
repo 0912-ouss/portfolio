@@ -1,0 +1,78 @@
+'use client';
+
+import React from 'react';
+import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
+
+export function Philosophy() {
+    const { scrollYProgress } = useScroll();
+    const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
+
+    return (
+        <section className="py-32 bg-[#0F0F0F] text-[#E5E5E5] relative overflow-hidden">
+            {/* Ambient Particles */}
+            <div className="absolute inset-0 pointer-events-none">
+                {[...Array(20)].map((_, i) => (
+                    <motion.div
+                        key={i}
+                        className="absolute w-1 h-1 bg-[#D4AF37] rounded-full opacity-20"
+                        initial={{
+                            x: Math.random() * 1000,
+                            y: Math.random() * 800,
+                            scale: Math.random() * 0.5 + 0.5,
+                        }}
+                        animate={{
+                            y: [null, Math.random() * -100],
+                            x: [null, (Math.random() - 0.5) * 50],
+                        }}
+                        transition={{
+                            duration: Math.random() * 10 + 10,
+                            repeat: Infinity,
+                            ease: "linear",
+                        }}
+                    />
+                ))}
+            </div>
+
+            <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+                    {/* Text Content */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, ease: 'easeOut' }}
+                    >
+                        <span className="text-xs font-sans uppercase tracking-[0.3em] text-[#D4AF37] block mb-8">
+                            The Elemental Kitchen
+                        </span>
+                        <h2 className="text-5xl md:text-6xl font-serif leading-tight mb-8">
+                            Fire, Flour, <br />
+                            <span className="italic opacity-50">and Time.</span>
+                        </h2>
+                        <p className="text-white/60 font-light leading-relaxed mb-8 max-w-md">
+                            We believe in the alchemy of heat. Our kitchen is an open theater where ingredients surrender to the flame, transforming into something primal yet refined.
+                        </p>
+                        <p className="text-white/60 font-light leading-relaxed max-w-md">
+                            From the volcanic soil that nurtures our wines to the obsidian stone of our ovens, every element is chosen to honor the ancient dance of cooking with fire.
+                        </p>
+                    </motion.div>
+
+                    {/* Image */}
+                    <div className="relative h-[600px] w-full rounded-2xl overflow-hidden">
+                        <motion.div style={{ y }} className="absolute inset-0 h-[120%]">
+                            <Image
+                                src="https://images.unsplash.com/photo-1514986888952-8cd320577b68?q=80&w=2676&auto=format&fit=crop"
+                                alt="Chef cooking with fire"
+                                fill
+                                className="object-cover"
+                            />
+                        </motion.div>
+                        <div className="absolute inset-0 bg-black/20" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
