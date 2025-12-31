@@ -5,60 +5,12 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiUsers, FiSettings, FiZap, FiDroplet } from 'react-icons/fi';
 
+import { carRentalFleet } from '@/data/car-rental/fleet';
+
 const categories = ['All', 'Sports', 'SUV', 'Sedan', 'Electric', 'Luxury'];
 
-const cars = [
-    {
-        id: 1,
-        name: "Porsche 911 Carrera",
-        category: "Sports",
-        price: 299,
-        image: "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=800&auto=format&fit=crop",
-        specs: { seats: 2, transmission: "Auto", power: "450 HP", fuel: "Petrol" }
-    },
-    {
-        id: 2,
-        name: "Mercedes-Benz G-Class",
-        category: "SUV",
-        price: 349,
-        image: "https://images.unsplash.com/photo-1520031441872-265e4ff70366?q=80&w=800&auto=format&fit=crop",
-        specs: { seats: 5, transmission: "Auto", power: "416 HP", fuel: "Petrol" }
-    },
-    {
-        id: 3,
-        name: "Tesla Model S Plaid",
-        category: "Electric",
-        price: 279,
-        image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=800&auto=format&fit=crop",
-        specs: { seats: 5, transmission: "Auto", power: "1020 HP", fuel: "Electric" }
-    },
-    {
-        id: 4,
-        name: "BMW M5 Competition",
-        category: "Sedan",
-        price: 259,
-        image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=800&auto=format&fit=crop",
-        specs: { seats: 5, transmission: "Auto", power: "617 HP", fuel: "Petrol" }
-    },
-    {
-        id: 5,
-        name: "Lamborghini Huracán",
-        category: "Sports",
-        price: 599,
-        image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=800&auto=format&fit=crop",
-        specs: { seats: 2, transmission: "Auto", power: "630 HP", fuel: "Petrol" }
-    },
-    {
-        id: 6,
-        name: "Range Rover Sport",
-        category: "Luxury",
-        price: 289,
-        image: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?q=80&w=800&auto=format&fit=crop",
-        specs: { seats: 5, transmission: "Auto", power: "395 HP", fuel: "Petrol" }
-    }
-];
-
 export function CarRentalFleet() {
+    const cars = carRentalFleet;
     const [activeCategory, setActiveCategory] = useState('All');
     const [hoveredCar, setHoveredCar] = useState<number | null>(null);
 
@@ -104,8 +56,8 @@ export function CarRentalFleet() {
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
                                 className={`px-6 py-3 text-xs uppercase tracking-wider font-bold transition-all ${activeCategory === cat
-                                        ? 'bg-[#FF6B35] text-white'
-                                        : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10'
+                                    ? 'bg-[#FF6B35] text-white'
+                                    : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10'
                                     }`}
                             >
                                 {cat}
@@ -163,11 +115,11 @@ export function CarRentalFleet() {
                                         </div>
                                         <div className="text-center">
                                             <FiZap className="w-4 h-4 mx-auto mb-1 text-white/40" />
-                                            <span className="text-xs text-white/60">{car.specs.power}</span>
+                                            <span className="text-xs text-white/60">{car.specs.hp} HP</span>
                                         </div>
                                         <div className="text-center">
                                             <FiDroplet className="w-4 h-4 mx-auto mb-1 text-white/40" />
-                                            <span className="text-xs text-white/60">{car.specs.fuel}</span>
+                                            <span className="text-xs text-white/60">{car.specs.speed}</span>
                                         </div>
                                     </div>
 

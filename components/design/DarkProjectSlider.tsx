@@ -6,11 +6,16 @@ import { ArrowUpRight } from "lucide-react";
 import { useCallback } from "react";
 
 const projects = [
-    { title: "IES Environment", category: "Webdesign & Production", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80" },
-    { title: "Audio Technica", category: "Creative Direction", image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80" },
-    { title: "Unbra", category: "Brand Identity", image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?w=800&q=80" },
-    { title: "Fashion Week", category: "Art Direction", image: "https://images.unsplash.com/photo-1537832816519-689ad163238b?w=800&q=80" },
-    { title: "Neon Lights", category: "Photography", image: "https://images.unsplash.com/photo-1563245372-f21720e32c4d?w=800&q=80" }
+    { title: "Aesthetic Restoration", category: "Art Direction", image: "/images/design/dental-helicopter.jpg" },
+    { title: "The Grin Guardian", category: "3D Design", image: "/images/design/dental-character.jpg" },
+    { title: "Clinical Excellence", category: "Art Direction", image: "/images/design/dental-braces.jpg" },
+    { title: "Wave of Hygiene", category: "Art Direction", image: "/images/design/dental-surf.jpg" },
+    { title: "Artisanal Menu", category: "Branding", image: "/images/design/menu-design-1.jpg" },
+    { title: "Sonic Harmony", category: "Advertising", image: "/images/design/earbuds-ad.jpg" },
+    { title: "The Kebab Atelier", category: "Marketing", image: "/images/design/kebab-menu.jpg" },
+    { title: "MOGA Burger", category: "Advertising", image: "/images/design/burger-colosseum.jpg" },
+    { title: "The Sandwich Craft", category: "Marketing", image: "/images/design/sandwich-menu.jpg" },
+    { title: "Mint Cookie Drink", category: "Advertising", image: "/images/design/mint-cookie-drink.jpg" }
 ];
 
 export function DarkProjectSlider() {

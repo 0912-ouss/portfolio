@@ -13,15 +13,14 @@ export function Navbar() {
   const isHome = pathname === "/";
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-8 md:px-16 transition-colors duration-300 bg-white/90 backdrop-blur-md text-black border-b border-transparent">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-3 md:py-8 md:px-16 transition-colors duration-300 bg-white/90 backdrop-blur-md text-black border-b border-transparent">
 
       {/* Logo Area */}
-      <div className="flex-shrink-0 w-[200px]">
+      <div className="flex-shrink-0 w-auto md:w-[200px]">
         <Link href="/" className="group flex items-start gap-1">
           <div className="flex flex-col">
-            {/* Simulated Icon - two interlocking rings/circles if needed, or just text */}
-            <span className="text-[10px] text-orange-500 font-bold -mb-1 ml-1">OU</span>
-            <span className="text-4xl font-black tracking-tighter leading-none">
+            <span className="text-[8px] md:text-[10px] text-orange-500 font-bold -mb-1 ml-0.5 md:ml-1">OU</span>
+            <span className="text-2xl md:text-4xl font-black tracking-tighter leading-none">
               Berhayla<span className="text-pink-500">.</span>
             </span>
           </div>

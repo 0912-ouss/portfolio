@@ -4,10 +4,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const websites = [
-    "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80", // Web design 1
-    "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&q=80", // Web design 2
-    "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=800&q=80", // Web design 3
-    "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&q=80",
+    "/images/design/milka-poster.jpg",
+    "/images/design/rolex-watch.jpg",
+    "/images/design/travis-scott-jordan.jpg",
+    "/images/design/bleu-de-chanel.jpg",
+    "/images/design/lux-body-wash.jpg",
+    "/images/design/internet-ad.jpg",
 ];
 
 export function WebsiteShowcase() {

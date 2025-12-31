@@ -107,6 +107,7 @@ export const projects: Project[] = [
     year: "2023",
   },
 
+  /* Hiding project per user request
   {
     id: "8",
     title: "DriveEasy Car Rental",
@@ -118,6 +119,7 @@ export const projects: Project[] = [
     client: "DriveEasy Inc",
     year: "2023",
   },
+  */
 
   // E-commerce
   {

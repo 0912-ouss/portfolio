@@ -45,114 +45,118 @@ export default function Home() {
       <Navbar />
 
       {/* Main Hero Content */}
-      <div className="relative min-h-screen flex flex-col justify-center items-center pt-32 md:pt-48 pb-10 overflow-hidden">
+      <div className="relative h-[100dvh] w-full flex flex-col justify-between overflow-hidden bg-white">
 
-        {/* Intro Text */}
+        {/* 1. TOP & CENTER: Centered Visual Content */}
+        <div className="flex-1 flex flex-col justify-center items-center px-4 pt-20 relative z-10">
+
+          {/* Greeting - Refined */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="mb-6 md:mb-12 text-center"
+          >
+            <p className="text-[10px] md:text-sm text-gray-400 tracking-[0.4em] uppercase font-bold">
+              <span className="text-lg mr-2">👋</span>
+              Established in Paris
+            </p>
+          </motion.div>
+
+          {/* Main Visual Group */}
+          <div className="relative w-full flex flex-col items-center justify-center py-4 md:py-10">
+
+            {/* Portrait - Background Layer on Mobile */}
+            <motion.div
+              style={{ x: imageX, y: imageY }}
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] md:w-[520px] aspect-[3/4] z-0 pointer-events-none"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1000&q=80"
+                alt="Portrait"
+                className="w-full h-full object-cover grayscale brightness-105 contrast-125 rounded-t-full mask-image-gradient opacity-30 md:opacity-100"
+              />
+            </motion.div>
+
+            {/* Typography - Foreground */}
+            <div className="relative z-10 flex flex-col items-center">
+              <motion.h1
+                style={{ x: textX, y: textY }}
+                className="text-[14vw] md:text-[14vw] leading-[0.8] font-black tracking-tighter text-black text-center select-none"
+              >
+                Webdesigner
+              </motion.h1>
+
+              <motion.h1
+                style={{ x: textX, y: textY, WebkitTextStroke: "1px rgba(0,0,0,0.5)" }}
+                className="text-[12vw] md:text-[10vw] font-light italic text-transparent -my-2 md:-my-10 text-center select-none"
+              >
+                &
+              </motion.h1>
+
+              <motion.h1
+                style={{ x: textX, y: textY, WebkitTextStroke: "1px black" }}
+                className="text-[14vw] md:text-[14vw] leading-[0.8] font-black tracking-tighter text-transparent text-center select-none"
+              >
+                Developer
+              </motion.h1>
+            </div>
+          </div>
+        </div>
+
+        {/* 2. BOTTOM: Control Bar / Footer */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-          className="text-center mb-4 md:mb-8 relative z-40 flex items-center gap-2"
+          transition={{ delay: 1, duration: 0.8 }}
+          className="w-full p-6 md:p-12 md:pb-20 space-y-8 md:space-y-0 relative z-20"
         >
-          <span className="text-xl md:text-2xl">👋</span>
-          <p className="text-sm md:text-xl text-gray-600 font-light">
-            , my name is Bazil and I am a freelance
-          </p>
-        </motion.div>
+          {/* Action Buttons - Pinned Bottom on Mobile */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
 
-        {/* Giant Typography & Image Container */}
-        <div className="relative w-full max-w-[1600px] mx-auto px-4 flex flex-col items-center justify-center h-[50vh] md:h-[70vh]">
+            {/* Location - Left on Desktop, Centered on Mobile */}
+            <div className="order-3 md:order-1 text-center md:text-left">
+              <p className="text-[10px] md:text-base tracking-[0.3em] uppercase text-gray-400 font-bold whitespace-nowrap">
+                Available for Projects — 2024
+              </p>
+            </div>
 
-          {/* Top Text: Webdesigner - BEHIND IMAGE */}
-          <motion.h1
-            style={{ x: textX, y: textY }}
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-            className="text-[13vw] md:text-[14vw] leading-[0.8] font-black tracking-tighter text-black relative z-10 mix-blend-normal text-center w-full select-none"
-          >
-            Webdesigner
-          </motion.h1>
+            {/* Pinned CTA's - Center Group */}
+            <div className="order-1 md:order-2 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+              <Link
+                href="/design"
+                className="bg-black text-white px-10 py-5 text-[10px] md:text-sm font-black tracking-[0.2em] uppercase hover:bg-orange-500 transition-all text-center flex items-center justify-center h-14 w-full sm:min-w-[220px]"
+              >
+                Start a Project
+              </Link>
+              <Link
+                href="/projects"
+                className="bg-white border-2 border-black text-black px-10 py-5 text-[10px] md:text-sm font-black tracking-[0.2em] uppercase hover:bg-black hover:text-white transition-all text-center flex items-center justify-center h-14 w-full sm:min-w-[220px]"
+              >
+                View My Work
+              </Link>
+            </div>
 
-          {/* Middle Text: & - BEHIND IMAGE (Outlined) */}
-          <motion.h1
-            style={{ x: textX, y: textY, WebkitTextStroke: "1px black" }}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-            className="text-[8vw] md:text-[8vw] leading-[0.8] font-light italic text-transparent relative z-0 -my-4 md:-my-8 text-center w-full select-none pointer-events-none"
-          >
-            &
-          </motion.h1>
-
-          {/* Central Image - MIDDLE LAYER */}
-          <motion.div
-            style={{ x: imageX, y: imageY }}
-            initial={{ opacity: 0, scale: 0.8, y: 100 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[480px] aspect-[3/4] z-20 pointer-events-none"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
-              alt="Bazil Portrait"
-              className="w-full h-full object-cover grayscale brightness-110 contrast-125 rounded-t-full mask-image-gradient shadow-2xl"
-            />
-          </motion.div>
-
-          {/* Bottom Text: Developer - ABOVE IMAGE (Outlined) */}
-          <motion.h1
-            style={{ x: textX, y: textY, WebkitTextStroke: "1px black" }}
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-            className="text-[13vw] md:text-[14vw] leading-[0.8] font-black tracking-tighter text-transparent relative z-30 -mt-2 md:-mt-6 text-center w-full select-none pointer-events-none"
-          >
-            Developer
-          </motion.h1>
-
-        </div>
-
-        {/* Bottom Area */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="fixed bottom-0 left-0 right-0 w-full px-6 md:px-12 py-8 flex flex-col md:flex-row justify-between items-end z-50 pointer-events-none"
-        >
-
-          {/* Left: Location */}
-          <div className="mb-4 md:mb-0 pointer-events-auto">
-            <p className="text-xl md:text-2xl text-gray-700 font-normal">based in Paris, France.</p>
+            {/* Awards Marquee - Right on Desktop, Hidden on Mobile */}
+            <div className="hidden lg:flex order-3 items-center overflow-hidden w-[300px] mask-image-gradient-r">
+              <motion.div
+                className="flex gap-8 whitespace-nowrap"
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+              >
+                {[...Array(4)].map((_, i) => (
+                  <div key={i} className="flex gap-8 opacity-20 grayscale font-black text-xs items-center uppercase tracking-[0.2em]">
+                    <span>Awwwards</span>
+                    <span>FWA</span>
+                    <span>CSSDA</span>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
           </div>
-
-          {/* Center: Buttons */}
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-8 flex gap-4 pointer-events-auto">
-            <Link href="/design" className="bg-black text-white px-6 py-4 text-sm font-bold hover:bg-gray-900 transition-colors transform hover:-translate-y-1 duration-300">
-              You need a designer
-            </Link>
-            <Link href="/projects" className="bg-white border border-black text-black px-6 py-4 text-sm font-bold hover:bg-gray-50 transition-colors transform hover:-translate-y-1 duration-300">
-              You need a developer
-            </Link>
-          </div>
-
-          {/* Right: Scrolling Awards */}
-          <div className="flex items-center overflow-hidden w-[200px] md:w-[300px] mask-image-gradient-r pointer-events-auto">
-            <motion.div
-              className="flex gap-8 whitespace-nowrap"
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-            >
-              {[...Array(4)].map((_, i) => (
-                <div key={i} className="flex gap-8 opacity-40 grayscale font-bold text-xl items-center">
-                  <span>Awwwards.</span>
-                  <span>FWA</span>
-                  <span>CSSDA</span>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-
         </motion.div>
 
       </div>
