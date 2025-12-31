@@ -112,7 +112,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
-          className="w-full p-6 md:p-12 md:pb-20 space-y-8 md:space-y-0 relative z-20"
+          className="w-full p-6 md:p-12 md:pb-24 space-y-8 md:space-y-0 relative z-20"
         >
           {/* Action Buttons - Pinned Bottom on Mobile */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
@@ -125,7 +125,7 @@ export default function Home() {
             </div>
 
             {/* Pinned CTA's - Center Group */}
-            <div className="order-1 md:order-2 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+            <div className="order-1 md:order-2 flex flex-col sm:flex-row gap-3 w-full md:w-auto md:mb-10">
               <Link
                 href="/design"
                 className="bg-black text-white px-10 py-5 text-[10px] md:text-sm font-black tracking-[0.2em] uppercase hover:bg-orange-500 transition-all text-center flex items-center justify-center h-14 w-full sm:min-w-[220px]"
