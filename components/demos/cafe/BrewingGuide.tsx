@@ -10,7 +10,7 @@ const methods = [
         name: 'V60 Pour Over',
         time: '3:00',
         temp: '93°C',
-        desc: 'A conical dripper that highlights floral notes and acidity through a thin paper filter.',
+        desc: 'Un dripper conique qui met en valeur les notes florales et l\'acidité grâce à un filtre en papier fin.',
         image: 'https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=2000&auto=format&fit=crop'
     },
     {
@@ -18,7 +18,7 @@ const methods = [
         name: 'Chemex',
         time: '4:30',
         temp: '94°C',
-        desc: 'Thick bonded filters produce an incredibly clean, tea-like body with high clarity.',
+        desc: 'Les filtres épais produisent un corps incroyablement propre, semblable à du thé, avec une grande clarté.',
         image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2000&auto=format&fit=crop'
     },
     {
@@ -26,7 +26,7 @@ const methods = [
         name: 'Aeropress',
         time: '1:30',
         temp: '85°C',
-        desc: 'Immersion brewing with air pressure. Versatile, rich, and full-bodied extraction.',
+        desc: 'Infusion par immersion avec pression d\'air. Extraction polyvalente, riche et corsée.',
         image: 'https://images.unsplash.com/photo-1559496417-e7f25cb247f3?q=80&w=2000&auto=format&fit=crop'
     }
 ];
@@ -40,9 +40,9 @@ export function BrewingGuide() {
 
                 <div className="relative">
                     <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-8">
-                        Methods of Production
+                        Méthodes de Production
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-serif mb-12">Precision Brewing</h2>
+                    <h2 className="text-4xl md:text-5xl font-serif mb-12">Infusion de Précision</h2>
 
                     <div className="space-y-6">
                         {methods.map((method) => (
@@ -98,7 +98,7 @@ export function BrewingGuide() {
                     </AnimatePresence>
 
                     <div className="absolute bottom-8 left-8 right-8 text-center pointer-events-none">
-                        <span className="text-[10px] uppercase tracking-[0.4em] text-white/40">Step into the ritual</span>
+                        <span className="text-[10px] uppercase tracking-[0.4em] text-white/40">Entrez dans le rituel</span>
                     </div>
                 </div>
 

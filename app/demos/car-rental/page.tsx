@@ -12,7 +12,7 @@ import { CarRentalFAQ } from "@/components/demos/car-rental/CarRentalFAQ";
 
 export default function CarRentalDemo() {
     useEffect(() => {
-        document.title = "AutoRent | Premium Car Rental";
+        document.title = "AutoRent | Location de Voitures Premium";
     }, []);
 
     return (

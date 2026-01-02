@@ -7,17 +7,17 @@ import { FiArrowRight } from 'react-icons/fi';
 
 const categories = [
     {
-        name: "Dresses",
+        name: "Robes",
         count: 48,
         image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=800&auto=format&fit=crop"
     },
     {
-        name: "Outerwear",
+        name: "Manteaux",
         count: 32,
         image: "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?q=80&w=800&auto=format&fit=crop"
     },
     {
-        name: "Accessories",
+        name: "Accessoires",
         count: 86,
         image: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?q=80&w=800&auto=format&fit=crop"
     }
@@ -41,7 +41,7 @@ export function EcommerceCategories() {
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-light tracking-tight"
                     >
-                        Explore <span className="font-serif italic">Collections</span>
+                        Explorez les <span className="font-serif italic">Collections</span>
                     </motion.h2>
                 </div>
 
@@ -68,13 +68,13 @@ export function EcommerceCategories() {
                             {/* Content */}
                             <div className="absolute inset-x-0 bottom-0 p-8">
                                 <span className="text-white/60 text-xs uppercase tracking-widest block mb-2">
-                                    {category.count} Items
+                                    {category.count} Articles
                                 </span>
                                 <h3 className="text-2xl font-light text-white mb-4">
                                     {category.name}
                                 </h3>
                                 <div className="flex items-center gap-2 text-white text-sm group-hover:gap-4 transition-all">
-                                    <span>Explore</span>
+                                    <span>Explorer</span>
                                     <FiArrowRight />
                                 </div>
                             </div>

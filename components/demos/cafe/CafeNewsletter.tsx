@@ -44,13 +44,13 @@ export function CafeNewsletter() {
                         </div>
 
                         <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-6">
-                            Stay Connected
+                            Restez Connecté
                         </span>
                         <h2 className="text-3xl md:text-4xl font-serif mb-6">
-                            Join the Atelier
+                            Rejoignez l'Atelier
                         </h2>
                         <p className="text-sm font-light text-white/50 leading-relaxed mb-12 max-w-lg mx-auto">
-                            Receive first access to new single origins, brewing tips from our faculty, and exclusive invitations to cupping events.
+                            Recevez en avant-première l'accès aux nouvelles origines uniques, des conseils d'infusion de notre faculté et des invitations exclusives aux événements de dégustation.
                         </p>
 
                         {/* Newsletter Form */}
@@ -70,7 +70,7 @@ export function CafeNewsletter() {
                                                 type="email"
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
-                                                placeholder="Your email address"
+                                                placeholder="Votre adresse email"
                                                 required
                                                 className="w-full bg-white/5 border border-white/10 py-4 pl-12 pr-4 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#C8AA6E]/50 transition-colors"
                                             />
@@ -79,7 +79,7 @@ export function CafeNewsletter() {
                                             type="submit"
                                             className="px-8 py-4 bg-[#C8AA6E] text-black text-xs uppercase font-bold tracking-[0.2em] hover:bg-white transition-colors whitespace-nowrap"
                                         >
-                                            Subscribe
+                                            S'abonner
                                         </button>
                                     </motion.div>
                                 ) : (
@@ -93,7 +93,7 @@ export function CafeNewsletter() {
                                         <div className="w-10 h-10 rounded-full border-2 border-[#C8AA6E] flex items-center justify-center">
                                             <FiCheck className="w-5 h-5" />
                                         </div>
-                                        <span className="text-sm font-sans tracking-wider">Welcome to the atelier</span>
+                                        <span className="text-sm font-sans tracking-wider">Bienvenue à l'atelier</span>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
@@ -101,7 +101,7 @@ export function CafeNewsletter() {
 
                         {/* Social Proof */}
                         <p className="text-[10px] uppercase tracking-[0.2em] text-white/20 mt-8">
-                            Join 2,400+ coffee enthusiasts
+                            Rejoignez plus de 2 400 amateurs de café
                         </p>
                     </motion.div>
                 </div>

@@ -26,15 +26,15 @@ export function RealEstateRestoration() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-12">
                     <div className="max-w-2xl">
                         <MaskReveal>
-                            <span className="text-[#C19A6B] text-[10px] uppercase tracking-[0.6em] font-bold mb-4 block">The Art of Restoration</span>
+                            <span className="text-[#C19A6B] text-[10px] uppercase tracking-[0.6em] font-bold mb-4 block">L'Art de la Restauration</span>
                         </MaskReveal>
                         <MaskReveal delay={0.2}>
-                            <h2 className="text-5xl md:text-8xl font-serif text-[#2C2C2C] leading-none">Resurrecting <br /><span className="italic">Heritage</span></h2>
+                            <h2 className="text-5xl md:text-8xl font-serif text-[#2C2C2C] leading-none">Ressusciter <br /><span className="italic">L'Héritage</span></h2>
                         </MaskReveal>
                     </div>
                     <MaskReveal delay={0.4}>
                         <p className="text-gray-400 text-[10px] uppercase tracking-[0.3em] font-bold pb-4 border-b border-gray-100 lg:w-96">
-                            From forgotten ruins to the pinnacle of architectural excellence. Witness the Atlas transformative touch.
+                            Des ruines oubliées au sommet de l'excellence architecturale. Témoignez de la touche transformative d'Atlas.
                         </p>
                     </MaskReveal>
                 </div>
@@ -54,7 +54,7 @@ export function RealEstateRestoration() {
                             className="object-cover"
                         />
                         <div className="absolute top-8 right-8 z-20">
-                            <span className="px-4 py-2 bg-black/40 backdrop-blur-md text-white text-[9px] uppercase tracking-widest font-bold border border-white/10 rounded-full">Present / Restored</span>
+                            <span className="px-4 py-2 bg-black/40 backdrop-blur-md text-white text-[9px] uppercase tracking-widest font-bold border border-white/10 rounded-full">Présent / Restauré</span>
                         </div>
                     </div>
 
@@ -70,7 +70,7 @@ export function RealEstateRestoration() {
                             className="object-cover grayscale"
                         />
                         <div className="absolute top-8 left-8">
-                            <span className="px-4 py-2 bg-[#C19A6B] text-white text-[9px] uppercase tracking-widest font-bold rounded-full shadow-lg">1924 / Original State</span>
+                            <span className="px-4 py-2 bg-[#C19A6B] text-white text-[9px] uppercase tracking-widest font-bold rounded-full shadow-lg">1924 / État Original</span>
                         </div>
                     </div>
 
@@ -87,16 +87,16 @@ export function RealEstateRestoration() {
                             </div>
                         </div>
                         {/* Decorative arrows */}
-                        <div className="absolute top-[45%] left-1/2 -translate-x-full pr-12 text-white/40 font-serif italic text-sm">Before</div>
-                        <div className="absolute top-[45%] left-1/2 translate-x-full pl-12 text-white/40 font-serif italic text-sm">After</div>
+                        <div className="absolute top-[45%] left-1/2 -translate-x-full pr-12 text-white/40 font-serif italic text-sm">Avant</div>
+                        <div className="absolute top-[45%] left-1/2 translate-x-full pl-12 text-white/40 font-serif italic text-sm">Après</div>
                     </div>
                 </div>
 
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12">
                     {[
-                        { title: "Structural Integrity", desc: "Stabilizing ancient foundations with modern engineering while preserving original mortar techniques." },
-                        { title: "Artisan Revival", desc: "Employing the last generation of master craftsmen to recreate lost Zellige patterns." },
-                        { title: "Modern Comfort", desc: "Invisible integration of smart climate control and sustainable energy systems." }
+                        { title: "Intégrité Structurelle", desc: "Stabilisation des fondations anciennes avec l'ingénierie moderne tout en préservant les techniques de mortier originales." },
+                        { title: "Renaissance Artisanale", desc: "Emploi de la dernière génération de maîtres artisans pour recréer des motifs de Zellige perdus." },
+                        { title: "Confort Moderne", desc: "Intégration invisible de contrôle climatique intelligent et de systèmes énergétiques durables." }
                     ].map((item, i) => (
                         <div key={i} className="group">
                             <h4 className="text-[10px] uppercase tracking-widest font-bold text-[#2C2C2C] mb-4 flex items-center gap-4">

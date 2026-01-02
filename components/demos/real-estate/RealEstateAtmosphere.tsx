@@ -84,7 +84,7 @@ export function RealEstateAtmosphere({ isGoldenHour }: { isGoldenHour: boolean }
                         className="fixed bottom-[14.5rem] left-24 z-[200] pointer-events-none"
                     >
                         <span className="text-[9px] uppercase tracking-[0.4em] text-white/60 font-medium whitespace-nowrap">
-                            Ambient: {isGoldenHour ? "Desert Wind & Prayer" : "Atlas Breeze & Water"}
+                            Ambiance : {isGoldenHour ? "Vent du Désert & Prière" : "Brise de l'Atlas & Eau"}
                         </span>
                     </motion.div>
                 )}

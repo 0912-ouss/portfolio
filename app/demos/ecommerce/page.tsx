@@ -20,7 +20,7 @@ import { EcommerceFooter } from "@/components/demos/ecommerce/EcommerceFooter";
 
 export default function EcommerceDemo() {
     useEffect(() => {
-        document.title = "Fashion Boutique | Luxury E-commerce";
+        document.title = "Boutique Mode | E-commerce de Luxe";
     }, []);
 
     return (

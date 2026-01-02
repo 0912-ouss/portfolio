@@ -27,7 +27,7 @@ export function RealEstateConcierge({ onInquiryClick }: { onInquiryClick: () => 
                                 className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                             />
                             <div className="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-black via-black/40 to-transparent">
-                                <span className="text-[#C19A6B] text-[10px] uppercase tracking-[0.4em] font-bold mb-2 block">Senior Partner</span>
+                                <span className="text-[#C19A6B] text-[10px] uppercase tracking-[0.4em] font-bold mb-2 block">Associé Principal</span>
                                 <h3 className="text-3xl font-serif mb-6">Yassin Benjelloun</h3>
                                 <div className="flex gap-4">
                                     <button className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#C19A6B] transition-colors flex items-center justify-center">
@@ -52,14 +52,14 @@ export function RealEstateConcierge({ onInquiryClick }: { onInquiryClick: () => 
                             whileInView={{ opacity: 1 }}
                             className="text-[#C19A6B] text-xs uppercase tracking-[0.6em] font-bold mb-6 block"
                         >
-                            Bespoke Service
+                            Service Sur Mesure
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             className="text-5xl md:text-8xl font-serif mb-10 leading-tight"
                         >
-                            Your Private <br /><span className="italic">Concierge</span>
+                            Votre Concierge <br /><span className="italic">Privé</span>
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -67,15 +67,15 @@ export function RealEstateConcierge({ onInquiryClick }: { onInquiryClick: () => 
                             transition={{ delay: 0.2 }}
                             className="text-white/40 font-light leading-relaxed mb-12 max-w-lg"
                         >
-                            Acquiring a heritage estate is more than a transaction; it's a legacy. Our dedicated advisors provide end-to-end support, from private jet coordinates to legal advisory and restoration management.
+                            Acquérir un domaine patrimonial est plus qu'une transaction; c'est un héritage. Nos conseillers dédiés fournissent un soutien de bout en bout, des coordonnées de jet privé à la gestion juridique et de restauration.
                         </motion.p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                             {[
-                                { icon: <Plane size={20} />, title: "Private Jet Tours", desc: "Aerial site inspections" },
-                                { icon: <ShieldCheck size={20} />, title: "Legal Advisory", desc: "Expert heritage law support" },
-                                { icon: <Calendar size={20} />, title: "Private Viewing", desc: "Exclusive mansion access" },
-                                { icon: <Gem size={20} />, title: "Restoration", desc: "Curated artisan network" }
+                                { icon: <Plane size={20} />, title: "Visites en Jet Privé", desc: "Inspections aériennes" },
+                                { icon: <ShieldCheck size={20} />, title: "Conseil Juridique", desc: "Expertise en droit du patrimoine" },
+                                { icon: <Calendar size={20} />, title: "Visite Privée", desc: "Accès exclusif aux manoirs" },
+                                { icon: <Gem size={20} />, title: "Restauration", desc: "Réseau d'artisans sélectionnés" }
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}
@@ -97,7 +97,7 @@ export function RealEstateConcierge({ onInquiryClick }: { onInquiryClick: () => 
                             onClick={onInquiryClick}
                             className="bg-[#C19A6B] text-white px-12 py-5 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-white hover:text-black transition-all duration-500"
                         >
-                            Request Portfolio Presentation
+                            Demander une Présentation
                         </MagnetButton>
                     </div>
                 </div>

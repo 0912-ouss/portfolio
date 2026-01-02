@@ -20,10 +20,10 @@ export function EcommerceHeader() {
     }, []);
 
     const navLinks = [
-        { name: 'Home', href: '/demos/ecommerce' },
-        { name: 'Shop All', href: '/demos/ecommerce/shop' },
+        { name: 'Accueil', href: '/demos/ecommerce' },
+        { name: 'Tout Voir', href: '/demos/ecommerce/shop' },
         { name: 'Collections', href: '/demos/ecommerce/collections' },
-        { name: 'About', href: '/demos/ecommerce/about' },
+        { name: 'À Propos', href: '/demos/ecommerce/about' },
     ];
 
     return (

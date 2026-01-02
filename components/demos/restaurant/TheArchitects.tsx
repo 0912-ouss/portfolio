@@ -7,14 +7,14 @@ import { motion } from 'framer-motion';
 const team = [
     {
         name: "Elena Vance",
-        role: "Executive Chef",
-        bio: "Former architect turned culinary sculptor. Believes plate structure dictates flavor perception.",
+        role: "Chef Exécutif",
+        bio: "Ancienne architecte devenue sculptrice culinaire. Croit que la structure de l'assiette dicte la perception des saveurs.",
         image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=2000&auto=format&fit=crop"
     },
     {
         name: "Marcus Thorne",
-        role: "Head Sommelier",
-        bio: "A curator of history in a bottle. Specializes in volcanic wines and forgotten varietals.",
+        role: "Sommelier en Chef",
+        bio: "Un conservateur de l'histoire en bouteille. Spécialisé dans les vins volcaniques et les cépages oubliés.",
         image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=2100&auto=format&fit=crop"
     }
 ];
@@ -25,9 +25,9 @@ export function TheArchitects() {
             <div className="container mx-auto px-6">
                 <div className="text-center mb-24">
                     <span className="text-xs font-sans uppercase tracking-[0.3em] text-[#D4AF37] block mb-6">
-                        The Architects
+                        Les Architectes
                     </span>
-                    <h2 className="text-5xl font-serif">Curators of Taste</h2>
+                    <h2 className="text-5xl font-serif">Conservateurs du Goût</h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-20">

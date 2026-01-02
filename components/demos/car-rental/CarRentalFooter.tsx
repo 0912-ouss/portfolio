@@ -15,7 +15,7 @@ export function CarRentalFooter() {
                             AUTO<span className="text-[#FF6B35]">RENT</span>
                         </h3>
                         <p className="text-white/50 text-sm mb-6 leading-relaxed">
-                            Premium car rental service with a fleet of luxury vehicles. Experience the drive of your dreams.
+                            Service de location de voitures premium avec une flotte de véhicules de luxe. Vivez la conduite de vos rêves.
                         </p>
                         <div className="flex gap-4">
                             <a href="#" className="w-10 h-10 bg-white/5 flex items-center justify-center hover:bg-[#FF6B35] transition-colors">
@@ -32,9 +32,9 @@ export function CarRentalFooter() {
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="font-bold uppercase tracking-wider text-sm mb-6">Quick Links</h4>
+                        <h4 className="font-bold uppercase tracking-wider text-sm mb-6">Liens Rapides</h4>
                         <ul className="space-y-3">
-                            {['Our Fleet', 'Locations', 'Pricing', 'Insurance', 'Corporate'].map(link => (
+                            {['Notre Flotte', 'Agences', 'Tarifs', 'Assurance', 'Entreprise'].map(link => (
                                 <li key={link}>
                                     <a href="#" className="text-white/50 hover:text-[#FF6B35] transition-colors text-sm">
                                         {link}
@@ -46,9 +46,9 @@ export function CarRentalFooter() {
 
                     {/* Support */}
                     <div>
-                        <h4 className="font-bold uppercase tracking-wider text-sm mb-6">Support</h4>
+                        <h4 className="font-bold uppercase tracking-wider text-sm mb-6">Aide</h4>
                         <ul className="space-y-3">
-                            {['Help Center', 'Booking Guide', 'Terms & Conditions', 'Privacy Policy', 'Contact Us'].map(link => (
+                            {['Centre d\'Aide', 'Guide de Réservation', 'Conditions Générales', 'Politique de Confidentialité', 'Contactez-nous'].map(link => (
                                 <li key={link}>
                                     <a href="#" className="text-white/50 hover:text-[#FF6B35] transition-colors text-sm">
                                         {link}
@@ -86,11 +86,11 @@ export function CarRentalFooter() {
             <div className="border-t border-white/10 py-6">
                 <div className="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-white/30 text-xs">
-                        © 2024 AutoRent. All rights reserved.
+                        © 2024 AutoRent. Tous droits réservés.
                     </p>
                     <div className="flex gap-6 text-xs text-white/30">
-                        <a href="#" className="hover:text-white transition-colors">Privacy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms</a>
+                        <a href="#" className="hover:text-white transition-colors">Confidentialité</a>
+                        <a href="#" className="hover:text-white transition-colors">Conditions</a>
                         <a href="#" className="hover:text-white transition-colors">Cookies</a>
                     </div>
                 </div>

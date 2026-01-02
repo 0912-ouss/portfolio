@@ -5,9 +5,9 @@ import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const stats = [
-    { value: 8, suffix: '+', label: 'Years of Craft' },
-    { value: 24, suffix: '', label: 'Origin Countries' },
-    { value: 50000, suffix: '+', label: 'Cups Poured' }
+    { value: 8, suffix: '+', label: "Années d'Artisanat" },
+    { value: 24, suffix: '', label: "Pays d'Origine" },
+    { value: 50000, suffix: '+', label: 'Tasses Servies' }
 ];
 
 export function CafeAbout() {
@@ -91,9 +91,9 @@ export function CafeAbout() {
                             transition={{ delay: 0.5, duration: 0.8 }}
                             className="absolute -bottom-8 -right-8 md:right-8 bg-[#1A1714]/90 backdrop-blur-xl border border-white/10 p-8 max-w-[280px]"
                         >
-                            <span className="text-[10px] uppercase tracking-[0.4em] text-[#C8AA6E] block mb-4">Philosophy</span>
+                            <span className="text-[10px] uppercase tracking-[0.4em] text-[#C8AA6E] block mb-4">Philosophie</span>
                             <p className="text-sm font-light text-white/60 leading-relaxed italic">
-                                "Every cup is a meditation. Every pour, intentional."
+                                "Chaque tasse est une méditation. Chaque versé, intentionnel."
                             </p>
                         </motion.div>
                     </motion.div>
@@ -107,17 +107,17 @@ export function CafeAbout() {
                             transition={{ duration: 0.8 }}
                         >
                             <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-8">
-                                The Atelier
+                                L'Atelier
                             </span>
                             <h2 className="text-4xl md:text-6xl font-serif mb-8 leading-[0.95]">
-                                Where Science<br />
-                                <span className="text-[#C8AA6E]/30">Meets Soul</span>
+                                Où la Science<br />
+                                <span className="text-[#C8AA6E]/30">Rencontre l'Âme</span>
                             </h2>
                             <p className="text-lg font-light text-white/50 leading-relaxed mb-8 max-w-lg">
-                                KŌHĪ was born from an obsession with extraction - the precise dance of water, time, and temperature that unlocks a bean's hidden character.
+                                KŌHĪ est né d'une obsession pour l'extraction - la danse précise de l'eau, du temps et de la température qui révèle le caractère caché d'un grain.
                             </p>
                             <p className="text-sm font-light text-white/40 leading-relaxed mb-12 max-w-lg">
-                                Founded in the arts district of Los Angeles, our atelier is a laboratory of taste. We source directly from micro-lots across 24 origin countries, roasting in small batches to preserve terroir. Here, coffee is not a commodity - it's a craft.
+                                Fondé dans le quartier des arts de Los Angeles, notre atelier est un laboratoire du goût. Nous nous approvisionnons directement auprès de micro-lots dans 24 pays d'origine, torréfiant en petites quantités pour préserver le terroir. Ici, le café n'est pas une marchandise, c'est un métier d'art.
                             </p>
 
                             {/* Stats */}

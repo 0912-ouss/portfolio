@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-const categories = ["All", "Branding", "Art Direction", "Advertising", "Marketing", "3D Design"];
+const categories = ["Tout", "Branding", "Direction artistique", "Publicité", "Marketing", "Design 3D"];
 
 const items = [
     {
@@ -17,28 +17,28 @@ const items = [
     {
         id: 2,
         title: "Dental Precision - Air Lift",
-        category: "Art Direction",
+        category: "Direction artistique",
         image: "/images/design/dental-helicopter.jpg",
         width: "col-span-12 md:col-span-4",
     },
     {
         id: 3,
         title: "The Grin Guardian",
-        category: "3D Design",
+        category: "Design 3D",
         image: "/images/design/dental-character.jpg",
         width: "col-span-12 md:col-span-4",
     },
     {
         id: 4,
         title: "Clinical Excellence",
-        category: "Art Direction",
+        category: "Direction artistique",
         image: "/images/design/dental-braces.jpg",
         width: "col-span-12 md:col-span-4",
     },
     {
         id: 5,
         title: "Wave of Hygiene",
-        category: "Art Direction",
+        category: "Direction artistique",
         image: "/images/design/dental-surf.jpg",
         width: "col-span-12 md:col-span-4",
     },
@@ -52,7 +52,7 @@ const items = [
     {
         id: 7,
         title: "Rolex - Wear the Future",
-        category: "Advertising",
+        category: "Publicité",
         image: "/images/design/rolex-watch.jpg",
         width: "col-span-12 md:col-span-6",
     },
@@ -66,14 +66,14 @@ const items = [
     {
         id: 9,
         title: "Lux Body Wash - Orchid Essence",
-        category: "Advertising",
+        category: "Publicité",
         image: "/images/design/lux-body-wash.jpg",
         width: "col-span-12 md:col-span-4",
     },
     {
         id: 10,
         title: "Bleu de Chanel - Luxury Perfume",
-        category: "Advertising",
+        category: "Publicité",
         image: "/images/design/bleu-de-chanel.jpg",
         width: "col-span-12 md:col-span-4",
     },
@@ -87,7 +87,7 @@ const items = [
     {
         id: 12,
         title: "Sonic Harmony - Earbuds Pro",
-        category: "Advertising",
+        category: "Publicité",
         image: "/images/design/earbuds-ad.jpg",
         width: "col-span-12 md:col-span-6",
     },
@@ -101,7 +101,7 @@ const items = [
     {
         id: 14,
         title: "MOGA - Roman Cheese Burger",
-        category: "Advertising",
+        category: "Publicité",
         image: "/images/design/burger-colosseum.jpg",
         width: "col-span-12 md:col-span-4",
     },
@@ -115,9 +115,9 @@ const items = [
 ];
 
 export const GallerySection = () => {
-    const [activeCategory, setActiveCategory] = useState("All");
+    const [activeCategory, setActiveCategory] = useState("Tout");
 
-    const filteredItems = activeCategory === "All"
+    const filteredItems = activeCategory === "Tout"
         ? items
         : items.filter(item => item.category === activeCategory);
 
@@ -132,7 +132,7 @@ export const GallerySection = () => {
                             viewport={{ once: true }}
                             className="text-[10px] uppercase tracking-[0.4em] font-bold text-gray-400 block mb-6"
                         >
-                            Visual Archive
+                            Archives Visuelles
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 30 }}
@@ -141,7 +141,7 @@ export const GallerySection = () => {
                             transition={{ delay: 0.1 }}
                             className="text-[8vw] md:text-[5vw] font-black leading-[0.9] tracking-tighter uppercase"
                         >
-                            Design <br /> <span className="text-transparent stroke-text">Gallery</span>
+                            Design <br /> <span className="text-transparent stroke-text">Galerie</span>
                         </motion.h2>
                     </div>
 

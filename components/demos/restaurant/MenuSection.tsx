@@ -6,19 +6,19 @@ import Image from 'next/image';
 
 const courses = [
     {
-        name: "First Impression",
+        name: "Première Impression",
         items: [
-            { name: "Smoked Scallop", description: "Yuzu, charred scallion oil, micro cilantro", price: "24", image: "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=2070&auto=format&fit=crop" },
-            { name: "Wagyu Tartare", description: "Quail egg, truffle emulsion, squid ink cracker", price: "28", image: "https://images.unsplash.com/photo-1546241072-48010ad2862c?q=80&w=2000&auto=format&fit=crop" },
-            { name: "Charred Octopus", description: "Romesco sauce, fingerling potatoes, chorizo dust", price: "26", image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=2071&auto=format&fit=crop" }
+            { name: "Coquille Saint-Jacques Fumée", description: "Yuzu, huile d'oignon vert brûlé, micro coriandre", price: "24", image: "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=2070&auto=format&fit=crop" },
+            { name: "Tartare de Wagyu", description: "Œuf de caille, émulsion de truffe, craquelin à l'encre de seiche", price: "28", image: "https://images.unsplash.com/photo-1546241072-48010ad2862c?q=80&w=2000&auto=format&fit=crop" },
+            { name: "Poulpe Grillé", description: "Sauce Romesco, pommes de terre rattes, poussière de chorizo", price: "26", image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=2071&auto=format&fit=crop" }
         ]
     },
     {
-        name: "Main Event",
+        name: "Plat Principal",
         items: [
-            { name: "Dry-Aged Duck", description: "Blackberry gastrique, parsnip puree, roasted fig", price: "42", image: "https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?q=80&w=2080&auto=format&fit=crop" },
-            { name: "Black Cod", description: "Miso glaze, bok choy, ginger dashi, lotus root", price: "38", image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=2069&auto=format&fit=crop" },
-            { name: "Truffle Risotto", description: "Wild mushrooms, parmesan crisp, fresh shaved truffle", price: "36", image: "https://images.unsplash.com/photo-1476124369491-e7addf5db371?q=80&w=2070&auto=format&fit=crop" }
+            { name: "Canard Vieilli", description: "Gastrique de mûre, purée de panais, figue rôtie", price: "42", image: "https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?q=80&w=2080&auto=format&fit=crop" },
+            { name: "Morue Noire", description: "Glaçage miso, bok choy, dashi au gingembre, racine de lotus", price: "38", image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=2069&auto=format&fit=crop" },
+            { name: "Risotto à la Truffe", description: "Champignons sauvages, croustillant de parmesan, truffe fraîche râpée", price: "36", image: "https://images.unsplash.com/photo-1476124369491-e7addf5db371?q=80&w=2070&auto=format&fit=crop" }
         ]
     }
 ];
@@ -64,9 +64,9 @@ export function MenuSection() {
             <div className="container mx-auto px-6 max-w-5xl relative z-10">
                 <div className="text-center mb-20">
                     <span className="text-xs font-sans uppercase tracking-[0.3em] text-[#D4AF37] block mb-6">
-                        The Tasting Menu
+                        Le Menu Dégustation
                     </span>
-                    <h2 className="text-5xl font-serif mb-4">Omakase & A La Carte</h2>
+                    <h2 className="text-5xl font-serif mb-4">Omakase & À La Carte</h2>
                 </div>
 
                 <div className="space-y-24">

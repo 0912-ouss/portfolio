@@ -5,10 +5,10 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const wines = [
-    { name: "Château Margaux 2015", region: "Bordeaux, France", notes: "Velvet tannins, violet bouquet, deep currant structure.", year: "2015", image: "https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?q=80&w=1920&auto=format&fit=crop" },
-    { name: "Opus One", region: "Napa Valley, USA", notes: "Creamy entry, dark chocolate, black olive finish.", year: "2018", image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=2700&auto=format&fit=crop" },
-    { name: "Solaia Antinori", region: "Tuscany, Italy", notes: "Intense spice, ripe cherry, tobacco leaf.", year: "2016", image: "https://images.unsplash.com/photo-1474722883778-792e7990302f?q=80&w=2574&auto=format&fit=crop" },
-    { name: "Penfolds Grange", region: "South Australia", notes: "Asian five spice, preserved blackberry, shiraz intensity.", year: "2014", image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2670&auto=format&fit=crop" }
+    { name: "Château Margaux 2015", region: "Bordeaux, France", notes: "Tanins veloutés, bouquet de violette, structure profonde de cassis.", year: "2015", image: "https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?q=80&w=1920&auto=format&fit=crop" },
+    { name: "Opus One", region: "Napa Valley, USA", notes: "Attaque crémeuse, chocolat noir, finale d'olive noire.", year: "2018", image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=2700&auto=format&fit=crop" },
+    { name: "Solaia Antinori", region: "Toscane, Italie", notes: "Épices intenses, cerise mûre, feuille de tabac.", year: "2016", image: "https://images.unsplash.com/photo-1474722883778-792e7990302f?q=80&w=2574&auto=format&fit=crop" },
+    { name: "Penfolds Grange", region: "Australie du Sud", notes: "Cing épices asiatiques, mûre confite, intensité shiraz.", year: "2014", image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2670&auto=format&fit=crop" }
 ];
 
 export function TheCellar() {
@@ -17,12 +17,12 @@ export function TheCellar() {
             <div className="container mx-auto px-6 mb-16 flex flex-col md:flex-row justify-between items-end">
                 <div>
                     <span className="text-xs font-sans uppercase tracking-[0.3em] text-[#D4AF37] block mb-6">
-                        The Cellar
+                        La Cave
                     </span>
-                    <h2 className="text-5xl font-serif">Curated Vintages</h2>
+                    <h2 className="text-5xl font-serif">Millésimes Sélectionnés</h2>
                 </div>
                 <div className="hidden md:block">
-                    <span className="text-xs font-sans uppercase tracking-widest text-white/40">Scroll to explore</span>
+                    <span className="text-xs font-sans uppercase tracking-widest text-white/40">Défiler pour explorer</span>
                 </div>
             </div>
 

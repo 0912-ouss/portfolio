@@ -30,7 +30,7 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 
 export default function CafeDemo() {
     useEffect(() => {
-        document.title = "KŌHĪ | The Coffee Atelier";
+        document.title = "KŌHĪ | L'Atelier Café";
     }, []);
 
     return (

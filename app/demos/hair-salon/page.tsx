@@ -26,55 +26,55 @@ import { useState, useRef, useEffect } from "react";
 // Artisanal Services Data
 const services = [
     {
-        title: "Pigment Architecture",
-        tagline: "The Color Atelier: Molecular Precision",
-        description: "Advanced color orchestration utilizing low-additive pigments. From high-fashion obsidian depths to structural platinum, our faculty architects create shades that evolve with your movement.",
-        price: "Admission from $350",
+        title: "Architecture Pigmentaire",
+        tagline: "L'Atelier Couleur : Précision Moléculaire",
+        description: "Orchestration avancée des couleurs utilisant des pigments à faible additif. Des profondeurs d'obsidienne haute couture au platine structurel, nos architectes créent des nuances qui évoluent avec votre mouvement.",
+        price: "Admission dès 350 €",
         image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2070&auto=format&fit=crop",
-        features: ["Molecular Bond Repair", "UV-Kinetic Protection", "Sculptural Gloss Finish"]
+        features: ["Réparation de Liaison Moléculaire", "Protection UV-Cinétique", "Finition Gloss Sculptural"]
     },
     {
-        title: "Structural Silhouette",
-        tagline: "Precision Engineering",
-        description: "An architectural approach to silhouette. Utilizing dry-carving techniques to create fluid geometry that respects the natural fall and density of your hair's unique DNA.",
-        price: "Admission from $150",
+        title: "Silhouette Structurelle",
+        tagline: "Ingénierie de Précision",
+        description: "Une approche architecturale de la silhouette. Utilisation de techniques de coupe à sec pour créer une géométrie fluide qui respecte la chute naturelle et la densité de l'ADN unique de vos cheveux.",
+        price: "Admission dès 150 €",
         image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2070&auto=format&fit=crop",
-        features: ["Anatomical Analysis", "Silhouette Mapping", "Fluid-Motion Texture"]
+        features: ["Analyse Anatomique", "Cartographie de Silhouette", "Texture Mouvement Fluide"]
     },
     {
-        title: "Texture Alchemy",
-        tagline: "Material Transformation",
-        description: "Complete molecular resurfacing. Utilizing bio-synthetic keratin and artisanal oils to reconstruct the hair's cuticle, delivering a mirrored finish and structural integrity.",
-        price: "Custom Protocol",
+        title: "Alchimie de Texture",
+        tagline: "Transformation Matérielle",
+        description: "Resurfaçage moléculaire complet. Utilisation de kératine bio-synthétique et d'huiles artisanales pour reconstruire la cuticule du cheveu, offrant une finition miroir et une intégrité structurelle.",
+        price: "Protocole Sur Mesure",
         image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=2070&auto=format&fit=crop",
-        features: ["Intra-Lipid Restoration", "Thermal Shielding", "Mirror-Glaze Finish"]
+        features: ["Restauration Intra-Lipidique", "Bouclier Thermique", "Finition Miroir"]
     }
 ];
 
 // Lab Equipment Data
 const labEquipment = [
     {
-        device: "Molecular Centrifuge",
-        function: "Pigment Optimization",
-        description: "Precisely separates and concentrates organic pigments for bespoke color formulations.",
+        device: "Centrifugeuse Moléculaire",
+        function: "Optimisation Pigmentaire",
+        description: "Sépare et concentre précisément les pigments organiques pour des formules couleur sur mesure.",
         icon: <FiScissors />
     },
     {
-        device: "Hydra-Sonic Diffuser",
-        function: "Cortex Hydration",
-        description: "Utilizes high-frequency sound waves to atomize nutrient-dense serums for deep cuticle penetration.",
+        device: "Diffuseur Hydra-Sonic",
+        function: "Hydratation du Cortex",
+        description: "Utilise des ondes sonores haute fréquence pour atomiser des sérums riches en nutriments pour une pénétration profonde de la cuticule.",
         icon: <FiClock />
     },
     {
-        device: "Spectro-Analysis",
-        function: "Structural Mapping",
-        description: "Infrared scanning of the hair fiber to identify structural weaknesses and chemical history.",
+        device: "Spectro-Analyse",
+        function: "Cartographie Structurelle",
+        description: "Scan infrarouge de la fibre capillaire pour identifier les faiblesses structurelles et l'historique chimique.",
         icon: <FiCheck />
     },
     {
-        device: "Kinetic-Thermal Shield",
-        function: "Thermal Mastery",
-        description: "Protective induction technology that seals the cuticle during advanced textural transitions.",
+        device: "Bouclier Cinétique-Thermique",
+        function: "Maîtrise Thermique",
+        description: "Technologie d'induction protectrice qui scelle la cuticule lors des transitions textuelles avancées.",
         icon: <FiScissors />
     }
 ];
@@ -83,33 +83,33 @@ const labEquipment = [
 const teamMembers = [
     {
         name: "Emma Richardson",
-        role: "Master Stylist",
-        specialty: "Color Specialist",
-        experience: "12+ years",
+        role: "Maître Styliste",
+        specialty: "Spécialiste Couleur",
+        experience: "12+ ans",
         image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=400&h=500&fit=crop",
         social: { instagram: "#", facebook: "#" }
     },
     {
         name: "Michael Chen",
-        role: "Senior Stylist",
-        specialty: "Cutting Expert",
-        experience: "10+ years",
+        role: "Styliste Senior",
+        specialty: "Expert Coupe",
+        experience: "10+ ans",
         image: "https://images.unsplash.com/photo-1521119989659-a83eee488004?w=400&h=500&fit=crop",
         social: { instagram: "#", facebook: "#" }
     },
     {
         name: "Sarah Martinez",
-        role: "Creative Director",
-        specialty: "Transformation Specialist",
-        experience: "15+ years",
+        role: "Directrice Créative",
+        specialty: "Spécialiste Transformation",
+        experience: "15+ ans",
         image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=400&h=500&fit=crop&sat=-100",
         social: { instagram: "#", facebook: "#" }
     },
     {
         name: "David Thompson",
-        role: "Style Consultant",
-        specialty: "Men's Grooming",
-        experience: "8+ years",
+        role: "Consultant Style",
+        specialty: "Soins Hommes",
+        experience: "8+ ans",
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop",
         social: { instagram: "#", facebook: "#" }
     },
@@ -120,23 +120,23 @@ const transformations = [
     {
         before: "https://images.unsplash.com/photo-1503185912284-5271ff81b9a8?w=400&h=500&fit=crop",
         after: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&h=500&fit=crop",
-        title: "Brunette to Blonde Balayage",
+        title: "Balayage Brunette vers Blond",
         client: "Jessica M.",
-        description: "A stunning transformation from dark brunette to sun-kissed blonde balayage."
+        description: "Une transformation étonnante d'un brun foncé vers un balayage blond ensoleillé."
     },
     {
         before: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=400&h=500&fit=crop",
         after: "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=400&h=500&fit=crop",
-        title: "Long to Chic Bob",
+        title: "Long vers Bob Chic",
         client: "Amanda K.",
-        description: "Bold new look with a modern textured bob and rich copper tones."
+        description: "Nouveau look audacieux avec un bob texturé moderne et de riches tons cuivrés."
     },
     {
         before: "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=400&h=500&fit=crop",
         after: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=400&h=500&fit=crop",
-        title: "Damaged to Healthy Shine",
+        title: "Abîmé vers Éclat Sain",
         client: "Maria L.",
-        description: "Complete hair restoration with our premium treatment program."
+        description: "Restauration capillaire complète avec notre programme de traitement premium."
     },
 ];
 
@@ -144,23 +144,23 @@ const transformations = [
 const testimonials = [
     {
         name: "Rachel Williams",
-        text: "Absolutely love my new look! The team here is incredibly talented and made me feel so comfortable. Best salon experience ever!",
+        text: "J'adore absolument mon nouveau look ! L'équipe est incroyablement talentueuse et m'a fait sentir si à l'aise. La meilleure expérience en salon !",
         rating: 5,
-        service: "Hair Transformation",
+        service: "Transformation Capillaire",
         image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
     },
     {
         name: "Jennifer Brown",
-        text: "I've been coming here for 3 years and wouldn't trust anyone else with my hair. Professional, creative, and always exceeding expectations.",
+        text: "Je viens ici depuis 3 ans et je ne confierais mes cheveux à personne d'autre. Professionnels, créatifs et dépassant toujours les attentes.",
         rating: 5,
-        service: "Color & Style",
+        service: "Couleur & Style",
         image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
     },
     {
         name: "Lisa Anderson",
-        text: "The attention to detail and quality of service is unmatched. My hair has never looked or felt better!",
+        text: "L'attention aux détails et la qualité du service sont inégalées. Mes cheveux n'ont jamais été aussi beaux !",
         rating: 5,
-        service: "Treatments",
+        service: "Traitements",
         image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
     },
 ];
@@ -168,28 +168,28 @@ const testimonials = [
 // FAQ Data
 const faqs = [
     {
-        question: "How do I book an appointment?",
-        answer: "You can book through our online form below, call us directly, or message us on social media. We recommend booking at least a week in advance for popular time slots."
+        question: "Comment puis-je prendre rendez-vous ?",
+        answer: "Vous pouvez réserver via notre formulaire en ligne ci-dessous, nous appeler directement ou nous envoyer un message sur les réseaux sociaux. Nous recommandons de réserver au moins une semaine à l'avance pour les créneaux populaires."
     },
     {
-        question: "What should I bring to my appointment?",
-        answer: "Just bring yourself! If you have inspiration photos of hairstyles you love, feel free to bring those or save them on your phone to show your stylist."
+        question: "Que dois-je apporter à mon rendez-vous ?",
+        answer: "Juste vous-même ! Si vous avez des photos d'inspiration de coiffures que vous aimez, n'hésitez pas à les apporter ou à les enregistrer sur votre téléphone pour les montrer à votre styliste."
     },
     {
-        question: "How long do services typically take?",
-        answer: "Haircuts take 45-60 minutes, coloring 2-3 hours, and full transformations can take 4-6 hours. We'll give you an estimated time when you book."
+        question: "Combien de temps prennent les services généralement ?",
+        answer: "Les coupes prennent 45-60 minutes, la coloration 2-3 heures, et les transformations complètes peuvent prendre 4-6 heures. Nous vous donnerons une estimation du temps lors de votre réservation."
     },
     {
-        question: "Do you offer consultations?",
-        answer: "Yes! All services include a complimentary consultation to discuss your hair goals, face shape, lifestyle, and maintenance preferences."
+        question: "Proposez-vous des consultations ?",
+        answer: "Oui ! Tous les services incluent une consultation complémentaire pour discuter de vos objectifs capillaires, de la forme de votre visage, de votre style de vie et de vos préférences d'entretien."
     },
     {
-        question: "What is your cancellation policy?",
-        answer: "We require 24 hours notice for cancellations or rescheduling. Late cancellations or no-shows may incur a fee."
+        question: "Quelle est votre politique d'annulation ?",
+        answer: "Nous demandons un préavis de 24 heures pour les annulations ou les reprogrammations. Les annulations tardives ou les non-présentations peuvent entraîner des frais."
     },
     {
-        question: "Do you sell hair care products?",
-        answer: "Yes! We carry premium professional products recommended by our stylists. Ask during your appointment for personalized product recommendations."
+        question: "Vendez-vous des produits de soins capillaires ?",
+        answer: "Oui ! Nous proposons des produits professionnels haut de gamme recommandés par nos stylistes. Demandez des recommandations personnalisées lors de votre rendez-vous."
     },
 ];
 
@@ -244,9 +244,9 @@ export default function HairSalonDemo() {
         phone: "",
         email: "",
         service: "",
-        stylist: "Any Available",
+        stylist: "Tout disponible",
         date: "",
-        time: "10:00 AM",
+        time: "10:00",
         notes: ""
     });
     const [submitted, setSubmitted] = useState(false);
@@ -438,9 +438,9 @@ export default function HairSalonDemo() {
                         <div className="hidden lg:flex items-center gap-12">
                             {[
                                 { href: "#home", label: "Studio" },
-                                { href: "#services", label: "Artistry" },
+                                { href: "#services", label: "Art" },
                                 { href: "#transformations", label: "Archives" },
-                                { href: "#team", label: "Faculty" },
+                                { href: "#team", label: "Faculté" },
                             ].map((item, index) => (
                                 <motion.a
                                     key={item.href}
@@ -459,7 +459,7 @@ export default function HairSalonDemo() {
                         <div className="flex items-center gap-8">
                             <Magnetic>
                                 <a href="#booking" className="hidden sm:block px-10 py-4 bg-[#C5A059] text-[#0A0A0B] text-[10px] uppercase font-black tracking-[0.3em] rounded-xl hover:bg-white transition-all shadow-xl shadow-[#C5A059]/10">
-                                    Initialize Appointment
+                                    Prendre Rendez-vous
                                 </a>
                             </Magnetic>
                             <button
@@ -505,12 +505,12 @@ export default function HairSalonDemo() {
                         >
                             <div className="flex items-center gap-6 mb-16">
                                 <div className="h-[1px] w-24 bg-[#C5A059]/30" />
-                                <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059]">Artisanal Hair Mastery</span>
+                                <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059]">Maîtrise Capillaire Artisanale</span>
                             </div>
 
                             <h1 className="text-[15vw] sm:text-[13vw] md:text-[11vw] font-black leading-[0.7] uppercase tracking-tighter text-white">
-                                <span className="block italic font-serif font-extralight text-white/5 lowercase -mb-[3vw] ml-[2vw]">redefining</span>
-                                <span className="block">SILHOUETTE</span>
+                                <span className="block italic font-serif font-extralight text-white/5 lowercase -mb-[3vw] ml-[2vw]">redéfinir</span>
+                                <span className="block">LA SILHOUETTE</span>
                                 <span className="flex items-center gap-6">
                                     <span className="luxury-text-stroke">STUDIO</span>
                                     <motion.div
@@ -524,7 +524,7 @@ export default function HairSalonDemo() {
 
                             <div className="mt-20 flex flex-col lg:flex-row lg:items-end justify-between gap-16">
                                 <p className="text-xl md:text-2xl text-white/40 max-w-2xl font-light leading-snug tracking-tight">
-                                    An underground sanctuary for advanced hair architecture. Where organic chemistry meets the refined precision of artisanal craftsmanship.
+                                    Un sanctuaire souterrain pour une architecture capillaire avancée. Où la chimie organique rencontre la précision raffinée de l'artisanat.
                                 </p>
 
                                 <div className="flex items-center gap-12">
@@ -545,7 +545,7 @@ export default function HairSalonDemo() {
 
                                     <div className="flex flex-col gap-2">
                                         <span className="text-4xl font-black tracking-tighter text-white">15+</span>
-                                        <span className="text-[8px] uppercase font-bold tracking-[0.3em] text-white/20">Years of Faculty Mastery</span>
+                                        <span className="text-[8px] uppercase font-bold tracking-[0.3em] text-white/20">Années de Maîtrise</span>
                                     </div>
                                 </div>
                             </div>
@@ -559,14 +559,14 @@ export default function HairSalonDemo() {
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-32">
                         <div className="max-w-2xl">
-                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8 underline underline-offset-8 decoration-[#C5A059]/10">The Suite</span>
+                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8 underline underline-offset-8 decoration-[#C5A059]/10">La Suite</span>
                             <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter leading-none text-white">
-                                <span className="block font-serif italic font-extralight text-white/5 lowercase -mb-[1.5vw]">advanced</span>
+                                <span className="block font-serif italic font-extralight text-white/5 lowercase -mb-[1.5vw]">avancé</span>
                                 <span>PORTFOLIO</span>
                             </h2>
                         </div>
                         <p className="text-sm text-white/30 font-light leading-relaxed max-w-[280px]">
-                            A curated selection of advanced hair protocols designed for structural integrity and high-fashion aesthetics.
+                            Une sélection curée de protocoles capillaires avancés conçus pour l'intégrité structurelle et l'esthétique haute couture.
                         </p>
                     </div>
 
@@ -636,8 +636,8 @@ export default function HairSalonDemo() {
                                 style={{ y: y1 }}
                                 className="absolute -right-12 top-1/2 -translate-y-1/2 p-12 bg-[#141416]/90 backdrop-blur-3xl border border-[#C5A059]/30 rounded-[3rem] hidden md:block max-w-[280px] z-20"
                             >
-                                <span className="text-[8px] uppercase font-black tracking-[0.4em] text-[#C5A059] block mb-4">Current Formulation</span>
-                                <h4 className="text-xl font-bold text-white mb-6 uppercase tracking-widest">Obsidian No. 04</h4>
+                                <span className="text-[8px] uppercase font-black tracking-[0.4em] text-[#C5A059] block mb-4">Formule Actuelle</span>
+                                <h4 className="text-xl font-bold text-white mb-6 uppercase tracking-widest">Obsidienne No. 04</h4>
                                 <div className="space-y-4">
                                     <div className="flex justify-between items-center text-[10px] text-white/40 uppercase font-black">
                                         <span>Saturation</span>
@@ -651,26 +651,26 @@ export default function HairSalonDemo() {
                         </motion.div>
 
                         <div className="lg:w-1/2">
-                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8">The Color Atelier</span>
+                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8">L'Atelier Couleur</span>
                             <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white mb-12">
-                                CHROMATIC<br />
-                                <span className="luxury-text-stroke">SOVEREIGNTY</span>
+                                SOUVERAINETÉ<br />
+                                <span className="luxury-text-stroke">CHROMATIQUE</span>
                             </h2>
                             <p className="text-lg text-white/50 font-light leading-relaxed mb-16 max-w-xl">
-                                Step into a space where pigment meets physics. Our atelier specializes in molecular color architecture, ensuring long-form vibrancy and structural hair health through quantum-grade additives.
+                                Entrez dans un espace où le pigment rencontre la physique. Notre atelier se spécialise dans l'architecture moléculaire des couleurs, assurant une vibrance durable et une santé structurelle des cheveux grâce à des additifs de qualité quantique.
                             </p>
 
                             <div className="grid grid-cols-2 gap-12">
                                 <div>
-                                    <h4 className="text-sm font-black uppercase tracking-widest text-[#C5A059] mb-4">Precision Batching</h4>
+                                    <h4 className="text-sm font-black uppercase tracking-widest text-[#C5A059] mb-4">Dosage de Précision</h4>
                                     <p className="text-[10px] text-white/30 uppercase font-bold tracking-widest leading-loose">
-                                        Formulations measured to the milligram for absolute consistency.
+                                        Formulations mesurées au milligramme pour une consistance absolue.
                                     </p>
                                 </div>
                                 <div>
-                                    <h4 className="text-sm font-black uppercase tracking-widest text-[#C5A059] mb-4">Solar Resistance</h4>
+                                    <h4 className="text-sm font-black uppercase tracking-widest text-[#C5A059] mb-4">Résistance Solaire</h4>
                                     <p className="text-[10px] text-white/30 uppercase font-bold tracking-widest leading-loose">
-                                        UV-kinetic shields built into every pigment layer.
+                                        Boucliers UV-cinétiques intégrés dans chaque couche de pigment.
                                     </p>
                                 </div>
                             </div>
@@ -684,8 +684,8 @@ export default function HairSalonDemo() {
                 <motion.div style={{ y: y1 }} className="absolute inset-0 bg-gold-glow opacity-30" />
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="mb-32 max-w-2xl">
-                        <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8">Clinical Infrastructure</span>
-                        <h2 className="text-[8vw] sm:text-[6vw] lg:text-[4vw] font-black uppercase tracking-tighter text-white">THE ALCHEMIST'S Vault</h2>
+                        <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8">Infrastructure Clinique</span>
+                        <h2 className="text-[8vw] sm:text-[6vw] lg:text-[4vw] font-black uppercase tracking-tighter text-white">LE COFFRE DE L'ALCHIMISTE</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -729,20 +729,20 @@ export default function HairSalonDemo() {
 
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="flex flex-col items-center text-center">
-                        <span className="text-[10px] uppercase tracking-[0.8em] font-black text-[#C5A059] mb-12">The Zenith Protocol</span>
-                        <h2 className="text-[10vw] md:text-[8vw] font-serif italic font-extralight text-white leading-none mb-16">Sensory SANCTUARY</h2>
+                        <span className="text-[10px] uppercase tracking-[0.8em] font-black text-[#C5A059] mb-12">Le Protocole Zénith</span>
+                        <h2 className="text-[10vw] md:text-[8vw] font-serif italic font-extralight text-white leading-none mb-16">SANCTUAIRE Sensoriel</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-24 max-w-5xl">
                             <div className="flex flex-col gap-6">
-                                <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/40">Acoustic Architecture</span>
-                                <p className="text-sm text-white/30 font-light leading-relaxed italic">"Designed to absorb the frequency of the outside world, returning presence to the ritual."</p>
+                                <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/40">Architecture Acoustique</span>
+                                <p className="text-sm text-white/30 font-light leading-relaxed italic">"Conçu pour absorber la fréquence du monde extérieur, ramenant la présence au rituel."</p>
                             </div>
                             <div className="flex flex-col gap-6">
-                                <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/40">Olfactory Journey</span>
-                                <p className="text-sm text-white/30 font-light leading-relaxed italic">"Bespoke cedarwood and obsidian-salt aromatherapy curated for neural restoration."</p>
+                                <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/40">Voyage Olfactif</span>
+                                <p className="text-sm text-white/30 font-light leading-relaxed italic">"Bois de cèdre sur mesure et aromathérapie au sel d'obsidienne curés pour la restauration neurale."</p>
                             </div>
                             <div className="flex flex-col gap-6">
-                                <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/40">Kinetic Massage</span>
-                                <p className="text-sm text-white/30 font-light leading-relaxed italic">"Slow-motion scalp orchestration to stimulate blood flow and deep relaxation."</p>
+                                <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/40">Massage Cinétique</span>
+                                <p className="text-sm text-white/30 font-light leading-relaxed italic">"Orchestration du cuir chevelu au ralenti pour stimuler la circulation sanguine et la relaxation profonde."</p>
                             </div>
                         </div>
                     </div>
@@ -754,9 +754,9 @@ export default function HairSalonDemo() {
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-32">
                         <div className="max-w-2xl">
-                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8 underline underline-offset-8 decoration-[#C5A059]/10">The Archive</span>
+                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8 underline underline-offset-8 decoration-[#C5A059]/10">Les Archives</span>
                             <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter leading-none text-white">
-                                <span className="block font-serif italic font-extralight text-white/5 lowercase -mb-[1.5vw]">evolution</span>
+                                <span className="block font-serif italic font-extralight text-white/5 lowercase -mb-[1.5vw]">évolution</span>
                                 <span>SILHOUETTES</span>
                             </h2>
                         </div>
@@ -811,7 +811,7 @@ export default function HairSalonDemo() {
                                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                             />
                                             <div className="absolute top-8 left-8 bg-black/60 text-white/40 px-4 py-2 rounded-full text-[10px] font-black tracking-widest z-10 border border-white/5">
-                                                BEFORE
+                                                AVANT
                                             </div>
                                         </div>
 
@@ -830,7 +830,7 @@ export default function HairSalonDemo() {
 
                                         {/* Instructional Hint (shows on hover) */}
                                         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-[#0A0A0B]/80 backdrop-blur-md text-[#C5A059] px-6 py-3 rounded-full text-[8px] font-black uppercase tracking-[0.3em] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-[#C5A059]/20">
-                                            Lateral Slide to Contrast
+                                            Glisser pour Contraster
                                         </div>
                                     </div>
 
@@ -853,10 +853,10 @@ export default function HairSalonDemo() {
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-32">
                         <div className="max-w-2xl">
-                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8 underline underline-offset-8 decoration-[#C5A059]/10">The Faculty</span>
+                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8 underline underline-offset-8 decoration-[#C5A059]/10">La Faculté</span>
                             <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter leading-none text-white">
-                                <span className="block font-serif italic font-extralight text-white/5 lowercase -mb-[1.5vw]">master</span>
-                                <span>ARCHITECTS</span>
+                                <span className="block font-serif italic font-extralight text-white/5 lowercase -mb-[1.5vw]">maîtres</span>
+                                <span>ARCHITECTES</span>
                             </h2>
                         </div>
                     </div>
@@ -907,16 +907,16 @@ export default function HairSalonDemo() {
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="flex flex-col lg:flex-row gap-32">
                         <div className="lg:w-1/3">
-                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8">Testimonials</span>
+                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8">Témoignages</span>
                             <h2 className="text-6xl font-black uppercase tracking-tighter text-white leading-[0.8] mb-12">
-                                SOVEREIGN<br /><span className="luxury-text-stroke">PERSPECTIVE</span>
+                                PERSPECTIVE<br /><span className="luxury-text-stroke">SOUVERAINE</span>
                             </h2>
                             <p className="text-sm text-white/30 font-light leading-relaxed mb-12">
-                                Reflections from our members on the intersection of structure, chemistry, and identity.
+                                Réflexions de nos membres sur l'intersection de la structure, de la chimie et de l'identité.
                             </p>
                             <div className="flex flex-col gap-4">
                                 <span className="text-4xl font-serif italic font-extralight text-[#C5A059]">98%</span>
-                                <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/20">Retention Metric</span>
+                                <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/20">Métrique de Rétention</span>
                             </div>
                         </div>
 
@@ -955,19 +955,19 @@ export default function HairSalonDemo() {
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="flex flex-col lg:flex-row justify-between items-end gap-16 mb-32">
                         <div>
-                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8">Access</span>
-                            <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter leading-none text-[#0A0A0B]">SIGNATURE Alliances</h2>
+                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#C5A059] block mb-8">Accès</span>
+                            <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter leading-none text-[#0A0A0B]">Alliances SIGNATURE</h2>
                         </div>
                         <p className="text-sm text-[#0A0A0B]/30 font-light leading-relaxed max-w-[280px]">
-                            Bespoke membership protocols for those who require ultimate pigment sovereignty and structural permanence.
+                            Protocoles d'adhésion sur mesure pour ceux qui exigent une souveraineté pigmentaire ultime et une permanence structurelle.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         {[
-                            { name: "The Ritualist", price: "$250/mo", features: ["Monthly Silhouette Mapping", "Priority Studio Access", "Molecular Gloss Finish"] },
-                            { name: "The Architect", price: "$650/mo", features: ["Pigment Architecture (4 Sessions)", "At-Home Vault Access", "The Zenith Protocol"] },
-                            { name: "The Sovereign", price: "$1200/mo", features: ["Unlimited Faculty Access", "Global Studio Concierge", "Artisanal Labs Priority"] }
+                            { name: "Le Ritualiste", price: "250 €/mois", features: ["Cartographie Silhouette Mensuelle", "Accès Studio Prioritaire", "Finition Gloss Moléculaire"] },
+                            { name: "L'Architecte", price: "650 €/mois", features: ["Architecture Pigmentaire (4 Sessions)", "Accès Coffre à Domicile", "Le Protocole Zénith"] },
+                            { name: "Le Souverain", price: "1200 €/mois", features: ["Accès Faculté Illimité", "Conciergerie Studio Globale", "Priorité Labos Artisanaux"] }
                         ].map((tier, index) => (
                             <motion.div
                                 key={index}
@@ -980,7 +980,7 @@ export default function HairSalonDemo() {
                                 <div className="mb-12">
                                     <h3 className="text-3xl font-black uppercase tracking-tighter text-[#0A0A0B] mb-4">{tier.name}</h3>
                                     <div className="flex items-baseline gap-2">
-                                        <span className="text-[10px] font-bold text-[#0A0A0B]/30 uppercase tracking-widest">Investment</span>
+                                        <span className="text-[10px] font-bold text-[#0A0A0B]/30 uppercase tracking-widest">Investissement</span>
                                         <span className="text-4xl font-black text-[#0A0A0B]">{tier.price}</span>
                                     </div>
                                 </div>
@@ -994,7 +994,7 @@ export default function HairSalonDemo() {
                                 </div>
                                 <Magnetic>
                                     <button className={`w-full py-6 rounded-2xl text-[10px] uppercase font-black tracking-[0.4em] transition-all ${index === 2 ? 'bg-[#0A0A0B] text-white hover:bg-[#C5A059]' : 'bg-transparent border border-black/10 text-[#0A0A0B] hover:bg-[#0A0A0B] hover:text-white'}`}>
-                                        Initialize Tier
+                                        Initialiser Palier
                                     </button>
                                 </Magnetic>
                             </motion.div>
@@ -1010,32 +1010,32 @@ export default function HairSalonDemo() {
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#C5A059]/10 blur-[100px] -translate-y-1/2 translate-x-1/2" />
 
                         <div className="text-center mb-20">
-                            <span className="text-[10px] uppercase tracking-[0.8em] font-black text-[#C5A059] mb-8 block">Final Admission</span>
-                            <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-10 leading-none">RESERVE<br /><span className="luxury-text-stroke">YOUR INITIALIZATION</span></h2>
+                            <span className="text-[10px] uppercase tracking-[0.8em] font-black text-[#C5A059] mb-8 block">Admission Finale</span>
+                            <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-10 leading-none">RÉSERVEZ<br /><span className="luxury-text-stroke">VOTRE INITIALISATION</span></h2>
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-12">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                                 <div className="space-y-4">
-                                    <label className="text-[8px] uppercase font-black tracking-[0.4em] text-white/30 ml-4">Subject Name</label>
-                                    <input type="text" className="w-full bg-white/[0.03] border border-white/5 rounded-2xl px-8 py-6 text-white focus:outline-none focus:border-[#C5A059]/50 transition-all font-light" placeholder="Full Identity" />
+                                    <label className="text-[8px] uppercase font-black tracking-[0.4em] text-white/30 ml-4">Nom du Sujet</label>
+                                    <input type="text" className="w-full bg-white/[0.03] border border-white/5 rounded-2xl px-8 py-6 text-white focus:outline-none focus:border-[#C5A059]/50 transition-all font-light" placeholder="Identité Complète" />
                                 </div>
                                 <div className="space-y-4">
-                                    <label className="text-[8px] uppercase font-black tracking-[0.4em] text-white/30 ml-4">Email Terminal</label>
-                                    <input type="email" className="w-full bg-white/[0.03] border border-white/5 rounded-2xl px-8 py-6 text-white focus:outline-none focus:border-[#C5A059]/50 transition-all font-light" placeholder="contact@domain.com" />
+                                    <label className="text-[8px] uppercase font-black tracking-[0.4em] text-white/30 ml-4">Terminal Email</label>
+                                    <input type="email" className="w-full bg-white/[0.03] border border-white/5 rounded-2xl px-8 py-6 text-white focus:outline-none focus:border-[#C5A059]/50 transition-all font-light" placeholder="contact@domaine.com" />
                                 </div>
                             </div>
                             <div className="space-y-4">
-                                <label className="text-[8px] uppercase font-black tracking-[0.4em] text-white/30 ml-4">Desired Protocol</label>
+                                <label className="text-[8px] uppercase font-black tracking-[0.4em] text-white/30 ml-4">Protocole Désiré</label>
                                 <select className="w-full bg-white/[0.03] border border-white/5 rounded-2xl px-8 py-6 text-white/40 focus:outline-none focus:border-[#C5A059]/50 transition-all font-light appearance-none">
-                                    <option>Pigment Architecture</option>
-                                    <option>Structural Silhouette</option>
-                                    <option>Texture Alchemy</option>
+                                    <option>Architecture Pigmentaire</option>
+                                    <option>Silhouette Structurelle</option>
+                                    <option>Alchimie de Texture</option>
                                 </select>
                             </div>
                             <Magnetic>
                                 <button className="w-full py-8 bg-[#C5A059] text-[#0A0A0B] text-xs uppercase font-black tracking-[0.5em] rounded-2xl hover:bg-white transition-all shadow-2xl shadow-[#C5A059]/20 group">
-                                    Initialize Admission <FiArrowRight className="inline-block ml-4 group-hover:translate-x-2 transition-transform" />
+                                    Initialiser Admission <FiArrowRight className="inline-block ml-4 group-hover:translate-x-2 transition-transform" />
                                 </button>
                             </Magnetic>
                         </form>
@@ -1055,7 +1055,7 @@ export default function HairSalonDemo() {
                                 <h3 className="text-2xl font-black uppercase tracking-tighter text-white">MILL BERRY</h3>
                             </div>
                             <p className="text-white/20 text-sm font-light leading-relaxed max-w-sm mb-12">
-                                An underground faculty dedicated to the advanced architecture of hair. Redefining silhouettes through molecular precision.
+                                Une faculté souterraine dédiée à l'architecture avancée du cheveu. Redéfinition des silhouettes par la précision moléculaire.
                             </p>
                             <div className="flex gap-8">
                                 <motion.a href="#" whileHover={{ y: -5 }} className="text-white/20 hover:text-[#C5A059] transition-colors"><FiInstagram className="w-6 h-6" /></motion.a>
@@ -1064,11 +1064,11 @@ export default function HairSalonDemo() {
                             </div>
                         </div>
                         <div>
-                            <h4 className="text-[10px] uppercase font-black tracking-[0.5em] text-[#C5A059] mb-10">Protocols</h4>
+                            <h4 className="text-[10px] uppercase font-black tracking-[0.5em] text-[#C5A059] mb-10">Protocoles</h4>
                             <ul className="space-y-4 text-white/30 text-[10px] uppercase font-bold tracking-[0.2em]">
                                 <li className="hover:text-white transition-colors cursor-pointer">Architecture</li>
-                                <li className="hover:text-white transition-colors cursor-pointer">Artistry</li>
-                                <li className="hover:text-white transition-colors cursor-pointer">Chemistry</li>
+                                <li className="hover:text-white transition-colors cursor-pointer">Art</li>
+                                <li className="hover:text-white transition-colors cursor-pointer">Chimie</li>
                                 <li className="hover:text-white transition-colors cursor-pointer">Archives</li>
                             </ul>
                         </div>
@@ -1082,10 +1082,10 @@ export default function HairSalonDemo() {
                         </div>
                     </div>
                     <div className="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-12 gap-8">
-                        <p className="text-[8px] uppercase font-black tracking-[0.5em] text-white/10 italic">© 2024 MILL BERRY FACULTY. ALL RIGHTS RESERVED.</p>
+                        <p className="text-[8px] uppercase font-black tracking-[0.5em] text-white/10 italic">© 2024 MILL BERRY FACULTÉ. TOUS DROITS RÉSERVÉS.</p>
                         <div className="flex gap-12 text-[8px] uppercase font-black tracking-[0.3em] text-white/10">
-                            <span className="hover:text-[#C5A059] transition-colors cursor-pointer">Privacy Protocol</span>
-                            <span className="hover:text-[#C5A059] transition-colors cursor-pointer">Service Terms</span>
+                            <span className="hover:text-[#C5A059] transition-colors cursor-pointer">Protocole Confidentialité</span>
+                            <span className="hover:text-[#C5A059] transition-colors cursor-pointer">Conditions Service</span>
                         </div>
                     </div>
                 </div>
@@ -1119,9 +1119,9 @@ export default function HairSalonDemo() {
                             <div className="mt-24 space-y-12">
                                 {[
                                     { href: "#home", label: "Studio" },
-                                    { href: "#services", label: "Artistry" },
+                                    { href: "#services", label: "Architecture" },
                                     { href: "#transformations", label: "Archives" },
-                                    { href: "#team", label: "Faculty" },
+                                    { href: "#team", label: "Faculté" },
                                     { href: "#booking", label: "Admission" },
                                 ].map((item, index) => (
                                     <motion.a

@@ -37,7 +37,7 @@ export function Hero() {
                     transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <span className="text-xs md:text-sm font-sans uppercase tracking-[0.3em] text-[#D4AF37] mb-6 block">
-                        Gastronomy in Amber & Onyx
+                        Gastronomie en Ambre & Onyx
                     </span>
                     <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-medium tracking-tight leading-none mb-12 mix-blend-overlay opacity-90">
                         LUMIÈRE
@@ -45,19 +45,19 @@ export function Hero() {
 
                     <div className="max-w-xl mx-auto mb-16">
                         <p className="text-sm md:text-base font-light text-white/60 leading-relaxed font-sans">
-                            Where fire meets precision. An elemental dining experience crafted for the modern palate.
+                            Où le feu rencontre la précision. Une expérience culinaire élémentaire conçue pour le palais moderne.
                         </p>
                     </div>
 
                     <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                         <Magnetic>
                             <button className="px-10 py-4 bg-[#D4AF37] text-black text-xs uppercase font-bold tracking-[0.2em] hover:bg-white transition-colors duration-500">
-                                Reserve Table
+                                Réserver une Table
                             </button>
                         </Magnetic>
                         <Magnetic>
                             <button className="px-10 py-4 border border-white/20 text-white text-xs uppercase font-bold tracking-[0.2em] hover:bg-white hover:text-black transition-colors duration-500">
-                                View Menu
+                                Voir le Menu
                             </button>
                         </Magnetic>
                     </div>
@@ -69,7 +69,7 @@ export function Hero() {
                 style={{ opacity }}
                 className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 mix-blend-difference z-20"
             >
-                <span className="text-[10px] uppercase tracking-[0.3em]">Explore</span>
+                <span className="text-[10px] uppercase tracking-[0.3em]">Explorer</span>
                 <motion.div
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

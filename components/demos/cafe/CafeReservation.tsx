@@ -47,14 +47,14 @@ export function CafeReservation() {
                         viewport={{ once: true }}
                     >
                         <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-8">
-                            Private Experience
+                            Expérience Privée
                         </span>
                         <h2 className="text-4xl md:text-6xl font-serif mb-8 leading-[0.95]">
-                            Reserve Your<br />
-                            <span className="text-[#C8AA6E]/30">Tasting Session</span>
+                            Réservez Votre<br />
+                            <span className="text-[#C8AA6E]/30">Session de Dégustation</span>
                         </h2>
                         <p className="text-lg font-light text-white/50 leading-relaxed mb-12 max-w-md">
-                            Book a private cupping experience with our head barista. Explore single origins, discuss extraction theory, and deepen your appreciation for specialty coffee.
+                            Réservez une expérience de dégustation privée avec notre barista en chef. Explorez les origines uniques, discutez de la théorie de l'extraction et approfondissez votre appréciation du café de spécialité.
                         </p>
 
                         {/* Contact Info */}
@@ -64,7 +64,7 @@ export function CafeReservation() {
                                     <FiMapPin className="w-5 h-5" />
                                 </div>
                                 <div>
-                                    <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 block mb-1">Location</span>
+                                    <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 block mb-1">Emplacement</span>
                                     <span className="text-sm text-white/70">1080 Kyoto St, Arts District, LA 90013</span>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@ export function CafeReservation() {
                                     <FiPhone className="w-5 h-5" />
                                 </div>
                                 <div>
-                                    <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 block mb-1">Phone</span>
+                                    <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 block mb-1">Téléphone</span>
                                     <span className="text-sm text-white/70">213.555.0199</span>
                                 </div>
                             </div>
@@ -90,19 +90,19 @@ export function CafeReservation() {
 
                         {/* Hours */}
                         <div className="p-8 border border-white/5 bg-white/[0.02]">
-                            <h4 className="text-sm uppercase tracking-[0.2em] text-[#C8AA6E] mb-6">Tasting Hours</h4>
+                            <h4 className="text-sm uppercase tracking-[0.2em] text-[#C8AA6E] mb-6">Heures de Dégustation</h4>
                             <div className="space-y-3 text-sm text-white/50">
                                 <div className="flex justify-between">
-                                    <span>Tuesday - Friday</span>
+                                    <span>Mardi - Vendredi</span>
                                     <span className="text-white/70">10am - 12pm, 3pm - 5pm</span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span>Saturday - Sunday</span>
+                                    <span>Samedi - Dimanche</span>
                                     <span className="text-white/70">11am - 4pm</span>
                                 </div>
                                 <div className="flex justify-between text-white/30">
-                                    <span>Monday</span>
-                                    <span>Closed for sourcing</span>
+                                    <span>Lundi</span>
+                                    <span>Fermé pour sourcing</span>
                                 </div>
                             </div>
                         </div>
@@ -118,14 +118,14 @@ export function CafeReservation() {
                         <form onSubmit={handleSubmit} className="space-y-8">
                             {/* Name */}
                             <div className="border-b border-white/10 pb-4">
-                                <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4">Full Name</label>
+                                <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4">Nom Complet</label>
                                 <input
                                     type="text"
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
-                                    placeholder="Your name"
+                                    placeholder="Votre nom"
                                     className="w-full bg-transparent text-lg font-light text-white placeholder-white/20 focus:outline-none"
                                 />
                             </div>
@@ -140,12 +140,12 @@ export function CafeReservation() {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        placeholder="you@email.com"
+                                        placeholder="vous@email.com"
                                         className="w-full bg-transparent text-lg font-light text-white placeholder-white/20 focus:outline-none"
                                     />
                                 </div>
                                 <div className="border-b border-white/10 pb-4">
-                                    <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4">Phone</label>
+                                    <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4">Téléphone</label>
                                     <input
                                         type="tel"
                                         name="phone"
@@ -174,7 +174,7 @@ export function CafeReservation() {
                                 </div>
                                 <div className="border-b border-white/10 pb-4">
                                     <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4 flex items-center gap-2">
-                                        <FiClock className="w-3 h-3" /> Time
+                                        <FiClock className="w-3 h-3" /> Heure
                                     </label>
                                     <select
                                         name="time"
@@ -191,7 +191,7 @@ export function CafeReservation() {
                                 </div>
                                 <div className="border-b border-white/10 pb-4">
                                     <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4 flex items-center gap-2">
-                                        <FiUsers className="w-3 h-3" /> Guests
+                                        <FiUsers className="w-3 h-3" /> Invités
                                     </label>
                                     <select
                                         name="guests"
@@ -200,7 +200,7 @@ export function CafeReservation() {
                                         className="w-full bg-transparent text-lg font-light text-white focus:outline-none appearance-none cursor-pointer"
                                     >
                                         {[1, 2, 3, 4, 5, 6].map(n => (
-                                            <option key={n} value={n} className="bg-[#1A1714]">{n} {n === 1 ? 'Guest' : 'Guests'}</option>
+                                            <option key={n} value={n} className="bg-[#1A1714]">{n} {n === 1 ? 'Invité' : 'Invités'}</option>
                                         ))}
                                     </select>
                                 </div>
@@ -208,47 +208,47 @@ export function CafeReservation() {
 
                             {/* Experience Type */}
                             <div className="border-b border-white/10 pb-4">
-                                <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4">Experience</label>
+                                <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4">Expérience</label>
                                 <select
                                     name="experience"
                                     value={formData.experience}
                                     onChange={handleChange}
                                     className="w-full bg-transparent text-lg font-light text-white focus:outline-none appearance-none cursor-pointer"
-                                >
-                                    <option value="tasting" className="bg-[#1A1714]">Origin Tasting — $45/person</option>
-                                    <option value="brewing" className="bg-[#1A1714]">Brewing Masterclass — $75/person</option>
-                                    <option value="private" className="bg-[#1A1714]">Private Cupping — $120/group</option>
-                                </select>
-                            </div>
+                                .>
+                                <option value="tasting" className="bg-[#1A1714]">Dégustation Origine — 45$/personne</option>
+                                <option value="brewing" className="bg-[#1A1714]">Masterclass Infusion — 75$/personne</option>
+                                <option value="private" className="bg-[#1A1714]">Dégustation Privée — 120$/groupe</option>
+                            </select>
+                        </div>
 
-                            {/* Notes */}
-                            <div className="border-b border-white/10 pb-4">
-                                <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4">Special Requests</label>
-                                <textarea
-                                    name="notes"
-                                    value={formData.notes}
-                                    onChange={handleChange}
-                                    rows={3}
-                                    placeholder="Any preferences or dietary requirements..."
-                                    className="w-full bg-transparent text-lg font-light text-white placeholder-white/20 focus:outline-none resize-none"
-                                />
-                            </div>
+                        {/* Notes */}
+                        <div className="border-b border-white/10 pb-4">
+                            <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4">Demandes Spéciales</label>
+                            <textarea
+                                name="notes"
+                                value={formData.notes}
+                                onChange={handleChange}
+                                rows={3}
+                                placeholder="Toute préférence ou exigence alimentaire..."
+                                className="w-full bg-transparent text-lg font-light text-white placeholder-white/20 focus:outline-none resize-none"
+                            />
+                        </div>
 
-                            {/* Submit Button */}
-                            <button
-                                type="submit"
-                                disabled={submitted}
-                                className={`w-full py-6 text-xs uppercase font-bold tracking-[0.3em] transition-all duration-500 ${submitted
-                                        ? 'bg-[#C8AA6E] text-black'
-                                        : 'border border-[#C8AA6E] text-[#C8AA6E] hover:bg-[#C8AA6E] hover:text-black'
-                                    }`}
-                            >
-                                {submitted ? '✓ Reservation Requested' : 'Request Reservation'}
-                            </button>
-                        </form>
-                    </motion.div>
-                </div>
+                        {/* Submit Button */}
+                        <button
+                            type="submit"
+                            disabled={submitted}
+                            className={`w-full py-6 text-xs uppercase font-bold tracking-[0.3em] transition-all duration-500 ${submitted
+                                ? 'bg-[#C8AA6E] text-black'
+                                : 'border border-[#C8AA6E] text-[#C8AA6E] hover:bg-[#C8AA6E] hover:text-black'
+                                }`}
+                        >
+                            {submitted ? '✓ Réservation Demandée' : 'Demander une Réservation'}
+                        </button>
+                    </form>
+                </motion.div>
             </div>
-        </section>
+        </div>
+        </section >
     );
 }

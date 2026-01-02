@@ -23,12 +23,12 @@ export function RealEstateFeatured({
     const filteredProperties = useMemo(() => {
         return properties.filter(prop => {
             const matchesLocation = selectedLocation ? prop.locationId === selectedLocation : true;
-            const matchesType = activeFilter === 'All' ? true : prop.category === activeFilter;
+            const matchesType = activeFilter === 'Tout' ? true : prop.category === activeFilter;
             return matchesLocation && matchesType;
         });
     }, [selectedLocation, activeFilter]);
 
-    const filters = ['All', 'Villa', 'Apartment', 'Riad'];
+    const filters = ['Tout', 'Villa', 'Appartement', 'Riad'];
 
     return (
         <section id="featured" className="py-32 bg-[#FDFBF7] px-6 min-h-screen">
@@ -37,11 +37,11 @@ export function RealEstateFeatured({
                     <div className="max-w-2xl">
                         <MaskReveal>
                             <span className="text-[#C19A6B] text-xs uppercase tracking-[0.4em] font-bold mb-4 block">
-                                {selectedLocation ? `Collection in ${selectedLocation}` : 'Curated Selection'}
+                                {selectedLocation ? `Collection à ${selectedLocation}` : 'Sélection Exclusive'}
                             </span>
                         </MaskReveal>
                         <MaskReveal delay={0.2}>
-                            <h2 className="text-5xl md:text-7xl font-serif text-[#2C2C2C] leading-[1.1]">The Heritage <br /><span className="italic">Collection</span></h2>
+                            <h2 className="text-5xl md:text-7xl font-serif text-[#2C2C2C] leading-[1.1]">La Collection <br /><span className="italic">Héritage</span></h2>
                         </MaskReveal>
                     </div>
 
@@ -49,7 +49,7 @@ export function RealEstateFeatured({
                     <div className="flex flex-wrap items-center gap-4">
                         <div className="flex items-center gap-2 mr-4 text-gray-400">
                             <Filter size={14} />
-                            <span className="text-[10px] uppercase tracking-widest font-bold">Filter By</span>
+                            <span className="text-[10px] uppercase tracking-widest font-bold">Filtrer Par</span>
                         </div>
                         {filters.map(filter => (
                             <button
@@ -118,11 +118,11 @@ export function RealEstateFeatured({
                                     <div className="flex gap-6 border-t border-gray-100 pt-6">
                                         <div className="flex items-center gap-2 text-gray-400">
                                             <BedDouble size={14} />
-                                            <span className="text-[10px] uppercase tracking-widest leading-none pt-1">{prop.specs.beds} Beds</span>
+                                            <span className="text-[10px] uppercase tracking-widest leading-none pt-1">{prop.specs.beds} Lits</span>
                                         </div>
                                         <div className="flex items-center gap-2 text-gray-400">
                                             <Bath size={14} />
-                                            <span className="text-[10px] uppercase tracking-widest leading-none pt-1">{prop.specs.baths} Baths</span>
+                                            <span className="text-[10px] uppercase tracking-widest leading-none pt-1">{prop.specs.baths} SDB</span>
                                         </div>
                                         <div className="flex items-center gap-2 text-gray-400">
                                             <Square size={14} />
@@ -137,12 +137,12 @@ export function RealEstateFeatured({
                                 animate={{ opacity: 1 }}
                                 className="col-span-full py-24 text-center"
                             >
-                                <p className="text-gray-400 font-light italic">No properties found in this collection.</p>
+                                <p className="text-gray-400 font-light italic">Aucune propriété trouvée dans cette collection.</p>
                                 <button
-                                    onClick={() => setActiveFilter('All')}
+                                    onClick={() => setActiveFilter('Tout')}
                                     className="mt-4 text-[#C19A6B] text-xs uppercase tracking-widest font-bold border-b border-[#C19A6B]"
                                 >
-                                    Reset Filters
+                                    Réinitialiser les Filtres
                                 </button>
                             </motion.div>
                         )}

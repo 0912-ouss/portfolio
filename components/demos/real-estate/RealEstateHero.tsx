@@ -62,13 +62,13 @@ export function RealEstateHero() {
                 <div className="max-w-4xl">
                     <MaskReveal>
                         <span className="text-[#C19A6B] text-[10px] md:text-xs uppercase tracking-[0.8em] font-bold mb-8 block drop-shadow-lg">
-                            An Atlas Estates Production
+                            Une Production Atlas Estates
                         </span>
                     </MaskReveal>
 
                     <MaskReveal delay={0.2}>
                         <h1 className="text-6xl md:text-9xl font-serif text-white mb-10 leading-[0.9] drop-shadow-2xl">
-                            Heritage <br /> <span className="italic font-light">Redefined</span>
+                            Héritage <br /> <span className="italic font-light">Redéfini</span>
                         </h1>
                     </MaskReveal>
 
@@ -76,7 +76,7 @@ export function RealEstateHero() {
                         <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-white/80">
                             <div className="h-[1px] w-12 bg-[#C19A6B] hidden md:block" />
                             <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] font-medium max-w-md leading-loose">
-                                Curating the most prestigious architectural landmarks across the Kingdom of Morocco.
+                                Conservation des monuments architecturaux les plus prestigieux du Royaume du Maroc.
                             </p>
                             <div className="h-[1px] w-12 bg-[#C19A6B] hidden md:block" />
                         </div>
@@ -90,7 +90,7 @@ export function RealEstateHero() {
                     transition={{ delay: 1, duration: 1 }}
                     className="absolute bottom-16 flex flex-col items-center gap-4"
                 >
-                    <span className="text-[10px] uppercase tracking-[0.6em] text-white/40 font-bold">Discover</span>
+                    <span className="text-[10px] uppercase tracking-[0.6em] text-white/40 font-bold">Découvrir</span>
                     <div className="w-[1px] h-12 bg-gradient-to-b from-white/40 to-transparent" />
                 </motion.div>
             </div>
@@ -99,7 +99,7 @@ export function RealEstateHero() {
                 className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-white/40"
             >
                 <div className="w-[1px] h-24 bg-gradient-to-b from-white/40 to-transparent" />
-                <span className="text-[10px] uppercase tracking-[0.4em] rotate-90 origin-left mt-4 translate-x-1">Discover</span>
+                <span className="text-[10px] uppercase tracking-[0.4em] rotate-90 origin-left mt-4 translate-x-1">Découvrir</span>
             </motion.div>
         </section>
     );

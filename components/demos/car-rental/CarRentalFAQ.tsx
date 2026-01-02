@@ -6,28 +6,28 @@ import { FiPlus, FiMinus } from 'react-icons/fi';
 
 const faqs = [
     {
-        question: "What documents do I need to rent a car?",
-        answer: "You'll need a valid driver's license (held for at least 2 years), a credit card in your name, and a valid ID or passport. International renters may need an International Driving Permit."
+        question: "Quels documents dois-je fournir pour louer une voiture ?",
+        answer: "Vous aurez besoin d'un permis de conduire valide (depuis au moins 2 ans), d'une carte de crédit à votre nom et d'une pièce d'identité ou d'un passeport valide. Les locataires internationaux peuvent avoir besoin d'un permis international."
     },
     {
-        question: "Is insurance included in the rental price?",
-        answer: "Yes, comprehensive insurance is included with every rental. This covers collision damage, theft protection, and third-party liability. Additional coverage options are available."
+        question: "L'assurance est-elle incluse dans le prix de la location ?",
+        answer: "Oui, une assurance complète est incluse avec chaque location. Cela couvre les dommages en cas collision, le vol et la responsabilité civile. Des options de couverture supplémentaires sont disponibles."
     },
     {
-        question: "Can I pick up in one location and drop off in another?",
-        answer: "Absolutely! One-way rentals are available between all our locations. A small surcharge may apply depending on the distance and locations involved."
+        question: "Puis-je prendre le véhicule dans une agence et le rendre dans une autre ?",
+        answer: "Absolument ! Les locations en aller simple sont disponibles entre toutes nos agences. Un petit supplément peut s'appliquer selon la distance et les lieux concernés."
     },
     {
-        question: "What is the minimum age to rent?",
-        answer: "The minimum age is 21 for standard vehicles. For luxury and performance cars, the minimum age is 25. Young driver surcharges may apply for drivers under 25."
+        question: "Quel est l'âge minimum pour louer ?",
+        answer: "L'âge minimum est de 21 ans pour les véhicules standard. Pour les voitures de luxe et de sport, l'âge minimum est de 25 ans. Des frais jeune conducteur peuvent s'appliquer pour les conducteurs de moins de 25 ans."
     },
     {
-        question: "What happens if I return the car late?",
-        answer: "We offer a 29-minute grace period. After that, a late fee applies. If you anticipate being late, contact us and we'll try to accommodate your needs."
+        question: "Que se passe-t-il si je rends la voiture en retard ?",
+        answer: "Nous offrons une période de grâce de 29 minutes. Au-delà, des frais de retard s'appliquent. Si vous prévoyez d'être en retard, contactez-nous et nous essaierons de nous adapter."
     },
     {
-        question: "Are there mileage limits?",
-        answer: "Most of our rentals include unlimited mileage. Some specialty and luxury vehicles may have daily limits of 200-300 miles, with additional miles charged at a competitive rate."
+        question: "Y a-t-il des limites de kilométrage ?",
+        answer: "La plupart de nos locations incluent le kilométrage illimité. Certains véhicules spéciaux et de luxe peuvent avoir des limites journalières de 200 à 300 kilomètres, avec les kilomètres supplémentaires facturés à un tarif compétitif."
     }
 ];
 
@@ -52,14 +52,14 @@ export function CarRentalFAQ() {
                             whileInView={{ opacity: 1, y: 0 }}
                             className="text-4xl md:text-5xl font-black tracking-tight mb-8"
                         >
-                            Common<br />
-                            <span className="text-white/20">Questions</span>
+                            Questions<br />
+                            <span className="text-white/20">Fréquentes</span>
                         </motion.h2>
                         <p className="text-white/50 mb-8 max-w-sm">
-                            Everything you need to know about renting with AutoRent. Can't find your answer? Contact our support team.
+                            Tout ce que vous devez savoir sur la location avec AutoRent. Vous ne trouvez pas votre réponse ? Contactez notre équipe support.
                         </p>
                         <button className="px-8 py-4 bg-[#FF6B35] text-white font-bold uppercase tracking-wider text-sm hover:bg-[#FF8C42] transition-colors">
-                            Contact Support
+                            Contacter le Support
                         </button>
                     </div>
 

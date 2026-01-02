@@ -19,24 +19,24 @@ export function RealEstateSearch() {
                     <Search size={18} className="text-[#C19A6B]" />
                     <input
                         type="text"
-                        placeholder="Search by city, residence..."
+                        placeholder="Rechercher par ville, résidence..."
                         className="bg-transparent border-none focus:ring-0 text-sm w-full px-4 placeholder:text-gray-400 font-light"
                     />
                 </div>
 
                 <div className="hidden md:flex items-center px-6 gap-8">
                     <button className="flex items-center gap-2 group">
-                        <span className="text-[10px] uppercase tracking-widest font-bold text-[#2C2C2C]">Price Range</span>
+                        <span className="text-[10px] uppercase tracking-widest font-bold text-[#2C2C2C]">Gamme de Prix</span>
                         <ChevronDown size={14} className="text-gray-400 group-hover:text-[#C19A6B] transition-colors" />
                     </button>
                     <button className="flex items-center gap-2 group">
-                        <span className="text-[10px] uppercase tracking-widest font-bold text-[#2C2C2C]">Bedrooms</span>
+                        <span className="text-[10px] uppercase tracking-widest font-bold text-[#2C2C2C]">Chambres</span>
                         <ChevronDown size={14} className="text-gray-400 group-hover:text-[#C19A6B] transition-colors" />
                     </button>
                 </div>
 
                 <MagnetButton className="bg-[#2C2C2C] text-white px-8 py-3 rounded-full text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-[#C19A6B] transition-colors flex items-center gap-2 ml-auto">
-                    Search Properties
+                    Rechercher
                 </MagnetButton>
             </motion.div>
         </div>

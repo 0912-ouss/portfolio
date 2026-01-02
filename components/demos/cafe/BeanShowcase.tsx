@@ -7,22 +7,22 @@ import { motion } from 'framer-motion';
 const beans = [
     {
         name: "Ethiopia Yirgacheffe",
-        process: "Washed",
-        notes: ["Jasmine", "Bergamot", "Peach"],
+        process: "Lavé",
+        notes: ["Jasmin", "Bergamote", "Pêche"],
         altitude: "2100m",
         image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=2000&auto=format&fit=crop"
     },
     {
         name: "Colombia Huila",
-        process: "Honey",
-        notes: ["Caramel", "Red Apple", "Citrus"],
+        process: "Miel",
+        notes: ["Caramel", "Pomme Rouge", "Agrumes"],
         altitude: "1800m",
         image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=2000&auto=format&fit=crop"
     },
     {
         name: "Costa Rica Tarrazu",
-        process: "Natural",
-        notes: ["Dark Chocolate", "Cherry", "Nuts"],
+        process: "Naturel",
+        notes: ["Chocolat Noir", "Cerise", "Noix"],
         altitude: "1600m",
         image: "https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?q=80&w=2000&auto=format&fit=crop"
     }
@@ -34,9 +34,9 @@ export function BeanShowcase() {
             <div className="container mx-auto px-6">
                 <div className="text-center mb-24">
                     <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-4">
-                        Origin Stories
+                        Histoires d'Origine
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-serif">Single Origin Series</h2>
+                    <h2 className="text-4xl md:text-5xl font-serif">Série Origine Unique</h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

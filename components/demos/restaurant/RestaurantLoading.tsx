@@ -74,7 +74,7 @@ export function RestaurantLoading() {
 
                 <div className="overflow-hidden">
                     <span className="subtext block text-xs font-sans uppercase tracking-[0.4em] text-white/40 translate-y-full opacity-0">
-                        Sanctuary of Taste
+                        Sanctuaire du Goût
                     </span>
                 </div>
             </div>

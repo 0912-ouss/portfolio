@@ -32,7 +32,7 @@ export function EcommerceInstagram() {
                         <FiInstagram className="w-6 h-6" />
                         <span className="text-lg font-light">@fashionboutique</span>
                     </a>
-                    <p className="text-[#999] text-sm mt-2">Follow us for style inspiration</p>
+                    <p className="text-[#999] text-sm mt-2">Suivez-nous pour des inspirations de style</p>
                 </motion.div>
 
                 {/* Instagram Grid */}

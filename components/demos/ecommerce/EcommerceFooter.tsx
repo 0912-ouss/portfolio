@@ -15,7 +15,7 @@ export function EcommerceFooter() {
                             FASHION<span className="text-[#D4A574]">.</span>
                         </h3>
                         <p className="text-white/50 text-sm mb-6 leading-relaxed">
-                            Curating timeless elegance since 2015. Luxury fashion for the modern individual.
+                            Une élégance intemporelle sélectionnée depuis 2015. La mode de luxe pour l'individu moderne.
                         </p>
                         <div className="flex gap-4">
                             {[FiInstagram, FiTwitter, FiFacebook, FiYoutube].map((Icon, i) => (
@@ -28,9 +28,9 @@ export function EcommerceFooter() {
 
                     {/* Shop */}
                     <div>
-                        <h4 className="font-medium uppercase tracking-wider text-sm mb-6">Shop</h4>
+                        <h4 className="font-medium uppercase tracking-wider text-sm mb-6">Boutique</h4>
                         <ul className="space-y-3">
-                            {['New Arrivals', 'Best Sellers', 'Dresses', 'Outerwear', 'Accessories', 'Sale'].map(link => (
+                            {['Nouveautés', 'Meilleures Ventes', 'Robes', 'Manteaux', 'Accessoires', 'Soldes'].map(link => (
                                 <li key={link}>
                                     <a href="#" className="text-white/50 hover:text-[#D4A574] transition-colors text-sm">
                                         {link}
@@ -42,9 +42,9 @@ export function EcommerceFooter() {
 
                     {/* Help */}
                     <div>
-                        <h4 className="font-medium uppercase tracking-wider text-sm mb-6">Help</h4>
+                        <h4 className="font-medium uppercase tracking-wider text-sm mb-6">Aide</h4>
                         <ul className="space-y-3">
-                            {['Contact Us', 'FAQs', 'Shipping Info', 'Returns', 'Size Guide', 'Track Order'].map(link => (
+                            {['Contactez-nous', 'FAQ', 'Livraison', 'Retours', 'Guide des Tailles', 'Suivi de Commande'].map(link => (
                                 <li key={link}>
                                     <a href="#" className="text-white/50 hover:text-[#D4A574] transition-colors text-sm">
                                         {link}
@@ -56,9 +56,9 @@ export function EcommerceFooter() {
 
                     {/* About */}
                     <div>
-                        <h4 className="font-medium uppercase tracking-wider text-sm mb-6">About</h4>
+                        <h4 className="font-medium uppercase tracking-wider text-sm mb-6">À Propos</h4>
                         <ul className="space-y-3">
-                            {['Our Story', 'Sustainability', 'Careers', 'Press', 'Affiliates'].map(link => (
+                            {['Notre Histoire', 'Durabilité', 'Carrières', 'Presse', 'Affiliés'].map(link => (
                                 <li key={link}>
                                     <a href="#" className="text-white/50 hover:text-[#D4A574] transition-colors text-sm">
                                         {link}
@@ -74,11 +74,11 @@ export function EcommerceFooter() {
             <div className="border-t border-white/10 py-6">
                 <div className="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-white/30 text-xs">
-                        © 2024 Fashion Boutique. All rights reserved.
+                        © 2024 FASHION Boutique. Tous droits réservés.
                     </p>
                     <div className="flex gap-6 text-xs text-white/30">
-                        <a href="#" className="hover:text-white transition-colors">Privacy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms</a>
+                        <a href="#" className="hover:text-white transition-colors">Confidentialité</a>
+                        <a href="#" className="hover:text-white transition-colors">Conditions</a>
                         <a href="#" className="hover:text-white transition-colors">Cookies</a>
                     </div>
                 </div>

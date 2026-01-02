@@ -23,7 +23,7 @@ export function WebsiteShowcase() {
     return (
         <section ref={containerRef} className="py-32 bg-gray-50 overflow-hidden">
             <div className="px-6 md:px-12 mb-12 text-center">
-                <h2 className="text-xl font-bold uppercase tracking-widest text-gray-400 mb-8">Selected Projects</h2>
+                <h2 className="text-xl font-bold uppercase tracking-widest text-gray-400 mb-8">Projets sélectionnés</h2>
             </div>
 
             <div className="flex w-full overflow-hidden mask-image-gradient-r">
@@ -38,7 +38,7 @@ export function WebsiteShowcase() {
 
                             {/* Overlay Content */}
                             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                                <span className="bg-white text-black px-6 py-3 font-bold uppercase tracking-widest text-xs rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">View Case</span>
+                                <span className="bg-white text-black px-6 py-3 font-bold uppercase tracking-widest text-xs rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Voir le projet</span>
                             </div>
                         </div>
                     ))}

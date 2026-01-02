@@ -10,10 +10,10 @@ export function Reservations() {
 
                 <div className="text-center mb-16">
                     <span className="text-xs font-sans uppercase tracking-[0.3em] text-[#D4AF37] block mb-6">
-                        The Table
+                        La Table
                     </span>
-                    <h2 className="text-5xl font-serif mb-4">Secure Your Experience</h2>
-                    <p className="font-sans font-light text-white/40">Limited seatings available nightly.</p>
+                    <h2 className="text-5xl font-serif mb-4">Sécurisez Votre Expérience</h2>
+                    <p className="font-sans font-light text-white/40">Places limitées disponibles chaque soir.</p>
                 </div>
 
                 <div className="bg-[#1A1A1A] p-12 rounded-3xl border border-white/5">
@@ -27,13 +27,13 @@ export function Reservations() {
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label className="text-[10px] uppercase tracking-widest text-[#D4AF37]">Guests</label>
+                                <label className="text-[10px] uppercase tracking-widest text-[#D4AF37]">Invités</label>
                                 <div className="relative">
                                     <select className="w-full bg-[#0F0F0F] border border-white/10 rounded-lg px-4 py-4 text-sm font-sans focus:border-[#D4AF37] outline-none transition-colors appearance-none cursor-pointer">
-                                        <option>2 Guests</option>
-                                        <option>3 Guests</option>
-                                        <option>4 Guests</option>
-                                        <option>5+ Guests</option>
+                                        <option>2 Invités</option>
+                                        <option>3 Invités</option>
+                                        <option>4 Invités</option>
+                                        <option>5+ Invités</option>
                                     </select>
                                     <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#D4AF37]">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
@@ -44,7 +44,7 @@ export function Reservations() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="space-y-2">
-                                <label className="text-[10px] uppercase tracking-widest text-[#D4AF37]">Name</label>
+                                <label className="text-[10px] uppercase tracking-widest text-[#D4AF37]">Nom</label>
                                 <input
                                     type="text"
                                     placeholder="ALEXANDER VANCE"
@@ -64,7 +64,7 @@ export function Reservations() {
                         <div className="flex justify-center pt-8">
                             <Magnetic>
                                 <button className="px-16 py-5 bg-[#D4AF37] text-black text-xs uppercase font-bold tracking-[0.2em] hover:bg-white transition-colors duration-500 w-full md:w-auto">
-                                    Confirm Reservation
+                                    Confirmer la Réservation
                                 </button>
                             </Magnetic>
                         </div>

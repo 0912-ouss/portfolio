@@ -11,7 +11,7 @@ export function DesignHero() {
                 transition={{ delay: 0.2 }}
                 className="text-xs font-bold uppercase tracking-[0.2em] mb-4 text-orange-500"
             >
-                GRAPHIC DESIGNER, WEBDESIGNER & WEBFLOW EXPERT
+                GRAPHISTE, WEBDESIGNER & EXPERT WEBFLOW
             </motion.p>
 
             <motion.h1
@@ -27,7 +27,7 @@ export function DesignHero() {
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                         className="block"
                     >
-                        Impactful branding and high-end
+                        Branding percutant et sites
                     </motion.span>
                 </span>
                 <span className="block overflow-hidden">
@@ -37,7 +37,7 @@ export function DesignHero() {
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                         className="block"
                     >
-                        Webflow websites for creatives.
+                        Webflow haut de gamme.
                     </motion.span>
                 </span>
             </motion.h1>
@@ -48,7 +48,7 @@ export function DesignHero() {
                 transition={{ delay: 0.5 }}
                 className="border border-black px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-colors cursor-pointer"
             >
-                Let's start a project together
+                Démarrons un projet ensemble
             </motion.div>
 
             {/* Logos / Badges Row - Simulated */}

@@ -59,7 +59,7 @@ export default function Home() {
           >
             <p className="text-[10px] md:text-sm text-gray-400 tracking-[0.4em] uppercase font-bold">
               <span className="text-lg mr-2">👋</span>
-              Established in Paris
+              Établi à Paris
             </p>
           </motion.div>
 
@@ -101,7 +101,7 @@ export default function Home() {
                 style={{ x: textX, y: textY, WebkitTextStroke: "1px black" }}
                 className="text-[14vw] md:text-[14vw] leading-[0.8] font-black tracking-tighter text-transparent text-center select-none"
               >
-                Developer
+                Développeur
               </motion.h1>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function Home() {
             {/* Location - Left on Desktop, Centered on Mobile */}
             <div className="order-3 md:order-1 text-center md:text-left">
               <p className="text-[10px] md:text-base tracking-[0.3em] uppercase text-gray-400 font-bold whitespace-nowrap">
-                Available for Projects — 2024
+                Disponible pour projets — 2024
               </p>
             </div>
 
@@ -130,13 +130,13 @@ export default function Home() {
                 href="/design"
                 className="bg-black text-white px-10 py-5 text-[10px] md:text-sm font-black tracking-[0.2em] uppercase hover:bg-orange-500 transition-all text-center flex items-center justify-center h-14 w-full sm:min-w-[220px]"
               >
-                Start a Project
+                Démarrer un projet
               </Link>
               <Link
                 href="/projects"
                 className="bg-white border-2 border-black text-black px-10 py-5 text-[10px] md:text-sm font-black tracking-[0.2em] uppercase hover:bg-black hover:text-white transition-all text-center flex items-center justify-center h-14 w-full sm:min-w-[220px]"
               >
-                View My Work
+                Voir mes réalisations
               </Link>
             </div>
 

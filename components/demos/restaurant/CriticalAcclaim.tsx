@@ -4,10 +4,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const awards = [
-    { title: "MICHELIN", subtitle: "2 Stars, 2024" },
-    { title: "THE 50 BEST", subtitle: "#12 Global Ranking" },
-    { title: "JAMES BEARD", subtitle: "Outstanding Design" },
-    { title: "WINE SPECTATOR", subtitle: "Grand Award" }
+    { title: "MICHELIN", subtitle: "2 Étoiles, 2024" },
+    { title: "THE 50 BEST", subtitle: "#12 Classement Mondial" },
+    { title: "JAMES BEARD", subtitle: "Design Exceptionnel" },
+    { title: "WINE SPECTATOR", subtitle: "Grand Prix" }
 ];
 
 export function CriticalAcclaim() {
@@ -17,9 +17,9 @@ export function CriticalAcclaim() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-12">
                     <div className="shrink-0 text-center md:text-left">
                         <span className="text-xs font-sans uppercase tracking-[0.3em] text-[#D4AF37] block mb-2">
-                            Recognition
+                            Reconnaissance
                         </span>
-                        <h2 className="text-3xl font-serif text-white/90">Critical Acclaim</h2>
+                        <h2 className="text-3xl font-serif text-white/90">Succès Critique</h2>
                     </div>
 
                     <div className="w-full h-px bg-white/10 hidden md:block flex-1 mx-12" />

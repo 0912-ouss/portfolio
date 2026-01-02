@@ -21,17 +21,17 @@ export function RealEstateLocations({
                         whileInView={{ opacity: 1 }}
                         className="text-[#C19A6B] text-xs uppercase tracking-[0.6em] font-bold mb-4 block"
                     >
-                        Explore Landscapes
+                        Explorer les Paysages
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-8xl font-serif mb-8"
                     >
-                        Experience <span className="italic">Morocco</span>
+                        Vivre le <span className="italic">Maroc</span>
                     </motion.h2>
                     <p className="max-w-xl mx-auto text-white/40 font-light text-sm tracking-wide">
-                        Choose your preferred region to discover available luxury estates. Each terrain offers a distinct lifestyle and architectural heritage.
+                        Choisissez votre région préférée pour découvrir les domaines de luxe disponibles. Chaque terrain offre un style de vie et un patrimoine architectural distincts.
                     </p>
                 </div>
 
@@ -64,7 +64,7 @@ export function RealEstateLocations({
                                             {loc.description}
                                         </p>
                                         <button className="text-[10px] uppercase tracking-widest text-[#C19A6B] font-bold border-b border-[#C19A6B] pb-1">
-                                            View Properties
+                                            Voir les Propriétés
                                         </button>
                                     </div>
                                 </div>

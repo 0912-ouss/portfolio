@@ -35,26 +35,26 @@ export function CarRentalHero() {
                             transition={{ duration: 1, delay: 0.5 }}
                         >
                             <span className="inline-block px-4 py-2 bg-[#FF6B35]/10 border border-[#FF6B35]/30 text-[#FF6B35] text-xs uppercase tracking-[0.3em] mb-8">
-                                Premium Fleet Available
+                                Flotte Premium Disponible
                             </span>
 
                             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tight mb-8">
-                                Drive Your<br />
-                                <span className="text-[#FF6B35]">Dream</span> Today
+                                Conduisez Votre<br />
+                                <span className="text-[#FF6B35]">Rêve</span> Aujourd'hui
                             </h1>
 
                             <p className="text-lg md:text-xl text-white/60 font-light max-w-lg mb-12 leading-relaxed">
-                                Experience luxury on wheels. From sports cars to SUVs, find the perfect vehicle for your journey.
+                                Découvrez le luxe sur roues. Des voitures de sport aux SUV, trouvez le véhicule parfait pour votre voyage.
                             </p>
 
                             {/* Quick Booking Widget */}
                             <div className="flex flex-col sm:flex-row gap-4 mb-12">
                                 <button className="group flex items-center gap-4 px-8 py-4 bg-[#FF6B35] text-white font-bold uppercase tracking-wider text-sm hover:bg-[#FF8C42] transition-colors">
-                                    Book Now
+                                    Réserver
                                     <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
                                 </button>
                                 <button className="flex items-center gap-4 px-8 py-4 border border-white/20 text-white font-bold uppercase tracking-wider text-sm hover:bg-white/5 transition-colors">
-                                    View Fleet
+                                    Voir la Flotte
                                 </button>
                             </div>
                         </motion.div>
@@ -74,26 +74,26 @@ export function CarRentalHero() {
                         <div className="flex items-center gap-4 border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-6">
                             <FiMapPin className="text-[#FF6B35] w-6 h-6" />
                             <div>
-                                <span className="text-[10px] uppercase tracking-widest text-white/40 block">Pick-up</span>
+                                <span className="text-[10px] uppercase tracking-widest text-white/40 block">Prise en charge</span>
                                 <span className="text-white font-medium">Los Angeles, CA</span>
                             </div>
                         </div>
                         <div className="flex items-center gap-4 border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-6">
                             <FiCalendar className="text-[#FF6B35] w-6 h-6" />
                             <div>
-                                <span className="text-[10px] uppercase tracking-widest text-white/40 block">Pick-up Date</span>
-                                <span className="text-white font-medium">Dec 24, 2024</span>
+                                <span className="text-[10px] uppercase tracking-widest text-white/40 block">Date de Départ</span>
+                                <span className="text-white font-medium">24 Déc 2024</span>
                             </div>
                         </div>
                         <div className="flex items-center gap-4 border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-6">
                             <FiCalendar className="text-[#FF6B35] w-6 h-6" />
                             <div>
-                                <span className="text-[10px] uppercase tracking-widest text-white/40 block">Return Date</span>
-                                <span className="text-white font-medium">Dec 28, 2024</span>
+                                <span className="text-[10px] uppercase tracking-widest text-white/40 block">Date de Retour</span>
+                                <span className="text-white font-medium">28 Déc 2024</span>
                             </div>
                         </div>
                         <button className="bg-[#FF6B35] hover:bg-[#FF8C42] text-white font-bold uppercase tracking-wider text-sm py-4 transition-colors">
-                            Search Cars
+                            Rechercher
                         </button>
                     </div>
                 </div>
@@ -104,7 +104,7 @@ export function CarRentalHero() {
                 style={{ opacity }}
                 className="absolute bottom-32 right-12 hidden lg:flex flex-col items-center gap-4 text-white/40"
             >
-                <span className="text-[10px] uppercase tracking-widest rotate-90 origin-center">Scroll</span>
+                <span className="text-[10px] uppercase tracking-widest rotate-90 origin-center">Défiler</span>
                 <div className="w-[1px] h-16 bg-gradient-to-b from-white/40 to-transparent" />
             </motion.div>
         </section>

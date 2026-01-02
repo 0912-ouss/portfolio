@@ -3,12 +3,12 @@
 import React from 'react';
 
 const menuItems = [
-    { name: "Espresso", price: "4.00", desc: "Double shot, extracted 28s" },
-    { name: "Cortado", price: "4.50", desc: "Espresso, equal part steamed milk" },
-    { name: "Flat White", price: "5.00", desc: "Espresso, velvet microfoam" },
-    { name: "Pour Over", price: "6.00", desc: "Hand brewed single origin" },
-    { name: "Cold Brew", price: "5.50", desc: "Steeped 24h, kyoto drip" },
-    { name: "Matcha Latte", price: "6.00", desc: "Ceremonial grade, bamboo whisked" }
+    { name: "Espresso", price: "4.00", desc: "Double shot, extrait 28s" },
+    { name: "Cortado", price: "4.50", desc: "Espresso, parts égales de lait vapeur" },
+    { name: "Flat White", price: "5.00", desc: "Espresso, micromousse de velours" },
+    { name: "Pour Over", price: "6.00", desc: "Infusé main origine unique" },
+    { name: "Cold Brew", price: "5.50", desc: "Infusé 24h, goutte à goutte kyoto" },
+    { name: "Matcha Latte", price: "6.00", desc: "Grade cérémoniel, fouetté au bambou" }
 ];
 
 export function MenuBook() {
@@ -17,9 +17,9 @@ export function MenuBook() {
             <div className="container mx-auto px-6 max-w-4xl">
                 <div className="text-center mb-20">
                     <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-4">
-                        The Ledger
+                        Le Registre
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-serif">Curated Extractions</h2>
+                    <h2 className="text-4xl md:text-5xl font-serif">Extractions Choisies</h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
@@ -36,7 +36,7 @@ export function MenuBook() {
 
                 <div className="text-center mt-20">
                     <button className="px-10 py-4 border border-[#C8AA6E] text-[#C8AA6E] text-xs uppercase font-bold tracking-[0.2em] hover:bg-[#C8AA6E] hover:text-black transition-colors duration-500">
-                        Download Full Menu
+                        Télécharger le Menu Complet
                     </button>
                 </div>
             </div>

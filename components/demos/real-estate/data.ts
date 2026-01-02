@@ -2,53 +2,53 @@ export const locations = [
     {
         id: "marrakech",
         name: "Marrakech",
-        description: "The soul of Moroccan heritage and luxury living.",
+        description: "L'âme du patrimoine marocain et de la vie de luxe.",
         image: "/demos/real-estate/marrakech_v2.png",
-        tag: "Cultural Capital"
+        tag: "Capitale Culturelle"
     },
     {
         id: "tangier",
-        name: "Tangier",
-        description: "Where the Mediterranean meets the Atlantic breeze.",
+        name: "Tanger",
+        description: "Là où la Méditerranée rencontre la brise atlantique.",
         image: "/demos/real-estate/tangier_v2.png",
-        tag: "Gateway to Europe"
+        tag: "Porte de l'Europe"
     },
     {
         id: "taghazout",
         name: "Taghazout",
-        description: "Modern coastal retreats and endless horizons.",
+        description: "Retraites côtières modernes et horizons infinis.",
         image: "/demos/real-estate/taghazout_v2.png",
-        tag: "Ocean Sanctuary"
+        tag: "Sanctuaire Océanique"
     },
     {
         id: "casablanca",
         name: "Casablanca",
-        description: "Modern elegance and coastal sophistication.",
+        description: "Élégance moderne et sophistication côtière.",
         image: "/demos/real-estate/apartment.png",
-        tag: "Economic Heart"
+        tag: "Cœur Économique"
     }
 ];
 
 export const properties = [
     {
         id: 1,
-        title: "The Atlas Sanctuary",
+        title: "Le Sanctuaire de l'Atlas",
         locationId: "marrakech",
         price: "€3,450,000",
         image: "/demos/real-estate/villa.png",
         specs: { beds: 6, baths: 7, size: "850 m²" },
         category: "Villa",
-        description: "A breathtaking villa nestled in the foothills of the Atlas Mountains. Features a private infinity pool, authentic zellige tilework, and sprawling olive groves."
+        description: "Une villa époustouflante nichée au pied des montagnes de l'Atlas. Dispose d'une piscine à débordement privée, de zellige authentique et de vastes oliveraies."
     },
     {
         id: 2,
-        title: "Ocean View Majesty",
+        title: "Majesté Vue Océan",
         locationId: "casablanca",
         price: "€1,850,000",
         image: "/demos/real-estate/apartment.png",
         specs: { beds: 3, baths: 4, size: "320 m²" },
-        category: "Apartment",
-        description: "Modern penthouse overlooking the Atlantic. Floor-to-ceiling windows and minimalist interior design with subtle Moroccan accents."
+        category: "Appartement",
+        description: "Penthouse moderne surplombant l'Atlantique. Baies vitrées du sol au plafond et design intérieur minimaliste avec de subtiles touches marocaines."
     },
     {
         id: 3,
@@ -58,16 +58,16 @@ export const properties = [
         image: "/demos/real-estate/hero.png",
         specs: { beds: 8, baths: 10, size: "1200 m²" },
         category: "Riad",
-        description: "Stunning historic Riad in the heart of the Medina. Fully restored with a central pool, lush garden, and several rooftop terraces."
+        description: "Superbe Riad historique au cœur de la Médina. Entièrement restauré avec piscine centrale, jardin luxuriant et plusieurs terrasses sur le toit."
     },
     {
         id: 4,
-        title: "Mediterranean Breeze",
+        title: "Brise Méditerranéenne",
         locationId: "tangier",
         price: "€1,250,000",
         image: "https://images.unsplash.com/photo-1544971587-b842c27f8e14?q=80&w=1000",
         specs: { beds: 4, baths: 3, size: "450 m²" },
         category: "Villa",
-        description: "Contemporary villa with panoramic views of the Strait of Gibraltar. Clean lines and bright spaces."
+        description: "Villa contemporaine avec vue panoramique sur le détroit de Gibraltar. Lignes épurées et espaces lumineux."
     }
 ];

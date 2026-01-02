@@ -6,16 +6,16 @@ import { ArrowUpRight } from "lucide-react";
 import { useCallback } from "react";
 
 const projects = [
-    { title: "Aesthetic Restoration", category: "Art Direction", image: "/images/design/dental-helicopter.jpg" },
-    { title: "The Grin Guardian", category: "3D Design", image: "/images/design/dental-character.jpg" },
-    { title: "Clinical Excellence", category: "Art Direction", image: "/images/design/dental-braces.jpg" },
-    { title: "Wave of Hygiene", category: "Art Direction", image: "/images/design/dental-surf.jpg" },
+    { title: "Aesthetic Restoration", category: "Direction artistique", image: "/images/design/dental-helicopter.jpg" },
+    { title: "The Grin Guardian", category: "Design 3D", image: "/images/design/dental-character.jpg" },
+    { title: "Clinical Excellence", category: "Direction artistique", image: "/images/design/dental-braces.jpg" },
+    { title: "Wave of Hygiene", category: "Direction artistique", image: "/images/design/dental-surf.jpg" },
     { title: "Artisanal Menu", category: "Branding", image: "/images/design/menu-design-1.jpg" },
-    { title: "Sonic Harmony", category: "Advertising", image: "/images/design/earbuds-ad.jpg" },
+    { title: "Sonic Harmony", category: "Publicité", image: "/images/design/earbuds-ad.jpg" },
     { title: "The Kebab Atelier", category: "Marketing", image: "/images/design/kebab-menu.jpg" },
-    { title: "MOGA Burger", category: "Advertising", image: "/images/design/burger-colosseum.jpg" },
+    { title: "MOGA Burger", category: "Publicité", image: "/images/design/burger-colosseum.jpg" },
     { title: "The Sandwich Craft", category: "Marketing", image: "/images/design/sandwich-menu.jpg" },
-    { title: "Mint Cookie Drink", category: "Advertising", image: "/images/design/mint-cookie-drink.jpg" }
+    { title: "Mint Cookie Drink", category: "Publicité", image: "/images/design/mint-cookie-drink.jpg" }
 ];
 
 export function DarkProjectSlider() {
@@ -32,7 +32,7 @@ export function DarkProjectSlider() {
     return (
         <section className="bg-[#111] text-white py-24 md:py-32 cursor-grab active:cursor-grabbing">
             <div className="px-6 md:px-12 mb-16 flex justify-between items-end">
-                <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">Latest projects</h2>
+                <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">Derniers projets</h2>
 
                 <div className="flex gap-4">
                     <button onClick={scrollPrev} className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-colors z-10 relative">

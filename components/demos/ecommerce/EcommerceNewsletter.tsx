@@ -31,10 +31,10 @@ export function EcommerceNewsletter() {
                         Newsletter
                     </span>
                     <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6">
-                        Join the <span className="font-serif italic">Inner Circle</span>
+                        Rejoignez le <span className="font-serif italic">Cercle Privé</span>
                     </h2>
                     <p className="text-[#666] font-light mb-10">
-                        Be the first to know about new arrivals, exclusive offers, and styling tips. Join our community of fashion enthusiasts.
+                        Soyez les premiers informés des nouveautés, des offres exclusives et des conseils de style. Rejoignez notre communauté.
                     </p>
 
                     <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -44,7 +44,7 @@ export function EcommerceNewsletter() {
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="Enter your email"
+                                    placeholder="Entrez votre email"
                                     required
                                     className="flex-1 px-6 py-4 border border-[#E0E0E0] bg-white focus:outline-none focus:border-[#1A1A1A] transition-colors"
                                 />
@@ -52,7 +52,7 @@ export function EcommerceNewsletter() {
                                     type="submit"
                                     className="px-8 py-4 bg-[#1A1A1A] text-white font-medium text-sm uppercase tracking-wider hover:bg-[#333] transition-colors"
                                 >
-                                    Subscribe
+                                    S'abonner
                                 </button>
                             </>
                         ) : (
@@ -61,13 +61,13 @@ export function EcommerceNewsletter() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 className="w-full py-4 text-[#D4A574] font-medium"
                             >
-                                ✓ Welcome to the inner circle!
+                                ✓ Bienvenue dans le cercle privé !
                             </motion.div>
                         )}
                     </form>
 
                     <p className="text-xs text-[#999] mt-6">
-                        By subscribing, you agree to our Privacy Policy. Unsubscribe anytime.
+                        En vous abonnant, vous acceptez notre politique de confidentialité. Désabonnement à tout moment.
                     </p>
                 </motion.div>
             </div>

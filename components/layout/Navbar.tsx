@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "Design", href: "/design" },
-  { name: "Web Projects", href: "/projects" },
+  { name: "Projets Web", href: "/projects" },
 ];
 
 export function Navbar() {
@@ -43,8 +43,8 @@ export function Navbar() {
       {/* Right Actions */}
       <div className="hidden md:flex items-center gap-10 flex-shrink-0">
         <div className="flex gap-3 text-sm font-semibold tracking-wide text-gray-500">
-          <span className="hover:text-black cursor-pointer transition-colors">FR</span>
-          <span className="text-black border-b-2 border-black pb-0.5 pointer-events-none">EN</span>
+          <span className="text-black border-b-2 border-black pb-0.5 pointer-events-none">FR</span>
+          <span className="hover:text-black cursor-pointer transition-colors">EN</span>
         </div>
         <a
           href="mailto:hello@berhayla.com"

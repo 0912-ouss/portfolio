@@ -7,23 +7,23 @@ import { FiTruck, FiRefreshCw, FiShield, FiHeadphones } from 'react-icons/fi';
 const features = [
     {
         icon: FiTruck,
-        title: "Free Shipping",
-        description: "Complimentary shipping on orders over $200"
+        title: "Livraison Gratuite",
+        description: "Livraison offerte pour les commandes de plus de 200 $"
     },
     {
         icon: FiRefreshCw,
-        title: "Easy Returns",
-        description: "30-day hassle-free return policy"
+        title: "Retours Faciles",
+        description: "Politique de retour sans tracas de 30 jours"
     },
     {
         icon: FiShield,
-        title: "Secure Payment",
-        description: "100% secure checkout with encryption"
+        title: "Paiement Sécurisé",
+        description: "Paiement 100% sécurisé avec cryptage"
     },
     {
         icon: FiHeadphones,
-        title: "24/7 Support",
-        description: "Dedicated styling consultants"
+        title: "Assistance 24/7",
+        description: "Conseillers en style dédiés"
     }
 ];
 

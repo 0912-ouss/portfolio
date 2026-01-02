@@ -8,24 +8,24 @@ import { FiStar, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 const testimonials = [
     {
         name: "Michael Chen",
-        role: "Business Executive",
-        text: "AutoRent made my business trip seamless. The Mercedes was impeccable and the delivery service saved me hours. Will definitely use again.",
+        role: "Cadre Dirigeant",
+        text: "AutoRent a rendu mon voyage d'affaires fluide. La Mercedes était impeccable et le service de livraison m'a fait gagner des heures. Je réutiliserai certainement.",
         rating: 5,
         image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop",
         car: "Mercedes-Benz S-Class"
     },
     {
         name: "Sarah Williams",
-        role: "Travel Blogger",
-        text: "Rented a convertible for a coastal road trip. The car was spotless, and the 24/7 support gave me peace of mind throughout the journey.",
+        role: "Blogueuse Voyage",
+        text: "J'ai loué un cabriolet pour un road trip sur la côte. La voiture était impeccable et l'assistance 24/7 m'a tranquillisée tout au long du voyage.",
         rating: 5,
         image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",
         car: "Porsche 911 Cabriolet"
     },
     {
         name: "David Park",
-        role: "Tech Entrepreneur",
-        text: "The Tesla Model S Plaid was incredible. AutoRent's fleet of electric vehicles is impressive, and their service is unmatched.",
+        role: "Entrepreneur Tech",
+        text: "La Tesla Model S Plaid était incroyable. La flotte de véhicules électriques d'AutoRent est impressionnante et leur service est inégalé.",
         rating: 5,
         image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop",
         car: "Tesla Model S Plaid"
@@ -49,15 +49,15 @@ export function CarRentalTestimonials() {
                             whileInView={{ opacity: 1 }}
                             className="text-[#FF6B35] text-xs uppercase tracking-[0.3em] block mb-4"
                         >
-                            Happy Customers
+                            Clients Satisfaits
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             className="text-4xl md:text-5xl font-black tracking-tight mb-12"
                         >
-                            What Our<br />
-                            <span className="text-white/20">Clients Say</span>
+                            Ce Que Disent<br />
+                            <span className="text-white/20">Nos Clients</span>
                         </motion.h2>
 
                         {/* Testimonial */}
@@ -119,10 +119,10 @@ export function CarRentalTestimonials() {
                     {/* Right - Stats */}
                     <div className="grid grid-cols-2 gap-8">
                         {[
-                            { value: "15K+", label: "Happy Customers" },
-                            { value: "50+", label: "Premium Cars" },
-                            { value: "15", label: "Locations" },
-                            { value: "4.9", label: "Average Rating" }
+                            { value: "15K+", label: "Clients Satisfaits" },
+                            { value: "50+", label: "Voitures Premium" },
+                            { value: "15", label: "Agences" },
+                            { value: "4.9", label: "Note Moyenne" }
                         ].map((stat, i) => (
                             <motion.div
                                 key={i}

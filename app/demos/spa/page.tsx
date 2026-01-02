@@ -24,78 +24,78 @@ import { useState, useEffect, useRef } from "react";
 
 const massageServices = [
     {
-        title: "The Carbon Ritual",
-        tagline: "Thermal Deceleration",
+        title: "Le Rituel Carbone",
+        tagline: "Décélération Thermique",
         duration: "90 min",
-        price: "From $380",
-        description: "An obsidian-stone journey utilizing volcanic minerals to ground neural pathways and induce profound cellular rest.",
+        price: "À partir de 380 €",
+        description: "Un voyage en pierre d'obsidienne utilisant des minéraux volcaniques pour ancrer les voies neuronales et induire un repos cellulaire profond.",
         image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070&auto=format&fit=crop",
-        features: ["Mineral Saturation", "Neural Decompression", "Obsidian Shielding"]
+        features: ["Saturation Minérale", "Décompression Neurale", "Bouclier d'Obsidienne"]
     },
     {
-        title: "Silk-Path Flow",
-        tagline: "Lymphatic Optimization",
+        title: "Flux Chemin de Soie",
+        tagline: "Optimisation Lymphatique",
         duration: "75 min",
-        price: "From $320",
-        description: "A precision-guided sequence using high-viscosity silk oils to restore fluid dynamics and epidermal luminosity.",
+        price: "À partir de 320 €",
+        description: "Une séquence guidée avec précision utilisant des huiles de soie à haute viscosité pour restaurer la dynamique des fluides et la luminosité épidermique.",
         image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=2070&auto=format&fit=crop",
-        features: ["Silk-Oil Infusion", "Kinetic Drainage", "Micro-Circulation Boost"]
+        features: ["Infusion Huile de Soie", "Drainage Cinétique", "Boost Micro-Circulation"]
     },
     {
-        title: "Ethereal Breath",
-        tagline: "Olfactory Expansion",
+        title: "Souffle Éthéré",
+        tagline: "Expansion Olfactive",
         duration: "60 min",
-        price: "From $280",
-        description: "A sensory-led experience focusing on cranial-sacral release and bespoke molecular aromatherapy.",
+        price: "À partir de 280 €",
+        description: "Une expérience sensorielle axée sur la libération crânio-sacrée et l'aromathérapie moléculaire sur mesure.",
         image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=2070&auto=format&fit=crop",
-        features: ["Cranial Syncing", "Molecular Scent-mapping", "Vagus Nerve Activation"]
+        features: ["Synchronisation Crânienne", "Cartographie Moléculaire", "Activation Nerf Vague"]
     }
 ];
 
 const botanicals = [
     {
-        name: "White Lotus Extract",
-        property: "Cellular Longevity",
-        description: "Sourced from high-altitude aquatic sanctuaries for its rare anti-oxidative resilience.",
-        potency: "High"
+        name: "Extrait de Lotus Blanc",
+        property: "Longévité Cellulaire",
+        description: "Sourcé de sanctuaires aquatiques de haute altitude pour sa rare résilience anti-oxydante.",
+        potency: "Élevé"
     },
     {
-        name: "Obsidian Sea-Salt",
-        property: "Thermal Retention",
-        description: "Rich in tectonic trace minerals to stabilize heat transfer during deep-tissue rituals.",
+        name: "Sel Marin d'Obsidienne",
+        property: "Rétention Thermique",
+        description: "Riche en oligo-éléments tectoniques pour stabiliser le transfert de chaleur lors des rituels des tissus profonds.",
         potency: "Maximum"
     },
     {
-        name: "Micro-Silk Peptides",
-        property: "Structural Glow",
-        description: "Bio-engineered peptides that mimic the skin's natural elastic response.",
-        potency: "Advanced"
+        name: "Peptides de Micro-Soie",
+        property: "Éclat Structurel",
+        description: "Bio-peptides conçus pour imiter la réponse élastique naturelle de la peau.",
+        potency: "Avancé"
     }
 ];
 
 const alliances = [
     {
-        tier: "The Ritualist",
-        privileges: ["4 Monthly Journeys", "Flora Observatory Access", "Priority Booking"],
-        price: "$850/mo"
+        tier: "Le Ritualiste",
+        privileges: ["4 Voyages Mensuels", "Accès à l'Observatoire Floral", "Réservation Prioritaire"],
+        price: "850 €/mois"
     },
     {
-        tier: "The Architect",
-        privileges: ["8 Monthly Journeys", "Private Hydro-Vault", "Bespoke Scent-mapping"],
-        price: "$1,600/mo"
+        tier: "L'Architecte",
+        privileges: ["8 Voyages Mensuels", "Hydro-Voute Privée", "Cartographie Olfactive Sur Mesure"],
+        price: "1 600 €/mois"
     },
     {
-        tier: "The Sovereign",
-        privileges: ["Unlimited Access", "24/7 Wellness Concierge", "Global Sanctuary Status"],
-        price: "Custom Allocation"
+        tier: "Le Souverain",
+        privileges: ["Accès Illimité", "Conciergerie Bien-être 24/7", "Statut Sanctuaire Global"],
+        price: "Allocation Sur Mesure"
     }
 ];
 
 const journalEntries = [
     {
-        title: "The Anatomy of Silence",
-        excerpt: "Exploring the neurological impact of zero-frequency environments.",
-        date: "Issue 01",
+        title: "L'Anatomie du Silence",
+        excerpt: "Explorer l'impact neurologique des environnements à fréquence zéro.",
+        date: "Édition 01",
         image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2070&auto=format&fit=crop"
     },
     {
@@ -394,7 +394,7 @@ export default function SpaDemo() {
                         )}
                     </button>
                     <div className="w-px h-12 bg-gradient-to-b from-[#9C8461]/10 to-[#9C8461]" />
-                    <span className="[writing-mode:vertical-lr] text-[8px] uppercase font-black tracking-[1em] text-[#9C8461] rotate-180">Connect with silence</span>
+                    <span className="[writing-mode:vertical-lr] text-[8px] uppercase font-black tracking-[1em] text-[#9C8461] rotate-180">Connectez-vous au silence</span>
                     <div className="w-px h-12 bg-gradient-to-b from-[#9C8461] to-[#9C8461]/10" />
                     <Magnetic>
                         <a href="tel:8088770171" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#9C8461] border border-[#9C8461]/20 hover:bg-[#9C8461] hover:text-white transition-all shadow-xl hover:translate-x-[-4px]">
@@ -430,16 +430,16 @@ export default function SpaDemo() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ ...luxuryEaseTransition, delay: 0.8 }}
                         >
-                            <span className="text-[10px] uppercase tracking-[1em] font-black text-[#9C8461] block mb-12">Established in Silence</span>
+                            <span className="text-[10px] uppercase tracking-[1em] font-black text-[#9C8461] block mb-12">Établi dans le Silence</span>
                             <h1 className="text-[12vw] sm:text-[10vw] lg:text-[8vw] font-black uppercase tracking-tighter leading-[0.85] text-[#2A2A2A] mb-12">
-                                TRANSCEND<br />
-                                <span className="silk-text-stroke font-serif italic font-thin lowercase">the physical</span>
+                                TRANSCENDEZ<br />
+                                <span className="silk-text-stroke font-serif italic font-thin lowercase">le physique</span>
                             </h1>
 
                             <div className="flex flex-col md:flex-row items-center gap-12 mt-16">
                                 <Magnetic>
                                     <button className="px-12 py-6 bg-[#9C8461] text-white text-xs uppercase font-black tracking-[0.4em] rounded-full hover:bg-[#2A2A2A] transition-all shadow-2xl flex items-center gap-4 group">
-                                        Begin Your Journey
+                                        Commencez Votre Voyage
                                         <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
                                     </button>
                                 </Magnetic>
@@ -449,7 +449,7 @@ export default function SpaDemo() {
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                         <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                                     </span>
-                                    <span className="text-[8px] font-black tracking-widest text-[#2A2A2A]/60 uppercase">Sanctuary Capacity: 38%</span>
+                                    <span className="text-[8px] font-black tracking-widest text-[#2A2A2A]/60 uppercase">Capacité du Sanctuaire : 38%</span>
                                 </div>
                                 <div className="flex -space-x-4">
                                     {[
@@ -468,7 +468,7 @@ export default function SpaDemo() {
                                         </div>
                                     ))}
                                     <div className="flex items-center ml-8 text-[10px] uppercase font-black tracking-widest text-[#2A2A2A]/40">
-                                        Used by 4,000+ Seekers
+                                        Utilisé par 4 000+ Chercheurs
                                     </div>
                                 </div>
                             </div>
@@ -483,19 +483,19 @@ export default function SpaDemo() {
                         >
                             <div>
                                 <div className="text-4xl font-serif italic text-[#9C8461]">{yearsCount}</div>
-                                <div className="text-[8px] uppercase font-black tracking-[0.3em] text-[#2A2A2A]/40">Years of Silence</div>
+                                <div className="text-[8px] uppercase font-black tracking-[0.3em] text-[#2A2A2A]/40">Années de Silence</div>
                             </div>
                             <div>
                                 <div className="text-4xl font-serif italic text-[#9C8461]">{(clientsCount / 1000).toFixed(0)}k+</div>
-                                <div className="text-[8px] uppercase font-black tracking-[0.3em] text-[#2A2A2A]/40">Souls Decelerated</div>
+                                <div className="text-[8px] uppercase font-black tracking-[0.3em] text-[#2A2A2A]/40">Âmes Décélérées</div>
                             </div>
                             <div>
                                 <div className="text-4xl font-serif italic text-[#9C8461]">{ratingCount.toFixed(1)}</div>
-                                <div className="text-[8px] uppercase font-black tracking-[0.3em] text-[#2A2A2A]/40">Purity Rating</div>
+                                <div className="text-[8px] uppercase font-black tracking-[0.3em] text-[#2A2A2A]/40">Note de Pureté</div>
                             </div>
                             <div>
                                 <div className="text-4xl font-serif italic text-[#9C8461]">100%</div>
-                                <div className="text-[8px] uppercase font-black tracking-[0.3em] text-[#2A2A2A]/40">Nature Sourced</div>
+                                <div className="text-[8px] uppercase font-black tracking-[0.3em] text-[#2A2A2A]/40">Sourcé Naturellement</div>
                             </div>
                         </motion.div>
                     </div>
@@ -519,10 +519,10 @@ export default function SpaDemo() {
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-32">
                         <div className="max-w-2xl">
-                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#9C8461] block mb-8 underline underline-offset-8 decoration-[#9C8461]/20">The Collection</span>
+                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#9C8461] block mb-8 underline underline-offset-8 decoration-[#9C8461]/20">La Collection</span>
                             <h2 className="text-[8vw] sm:text-[6vw] lg:text-[4vw] font-black uppercase tracking-tighter leading-none text-[#2A2A2A]">
                                 CHRONO<br />
-                                <span className="font-serif italic font-extralight text-[#9C8461] lowercase -mt-4 block">rituals</span>
+                                <span className="font-serif italic font-extralight text-[#9C8461] lowercase -mt-4 block">rituels</span>
                             </h2>
                         </div>
                         <div className="flex gap-4">
@@ -596,7 +596,7 @@ export default function SpaDemo() {
                                         <span className="text-3xl font-serif italic text-[#9C8461]">{massageServices[activeService].price}</span>
                                         <Magnetic>
                                             <button className="px-10 py-5 bg-[#2A2A2A] text-white text-[10px] uppercase font-black tracking-[0.3em] rounded-xl hover:bg-[#9C8461] transition-all">
-                                                Initialize Ritual
+                                                Initialiser le Rituel
                                             </button>
                                         </Magnetic>
                                     </div>
@@ -610,9 +610,9 @@ export default function SpaDemo() {
             {/* The Visual Sanctuary (Gallery) */}
             <section className="py-32 bg-[#FAF9F6] border-t border-black/5 overflow-hidden">
                 <div className="container mx-auto px-8 mb-24">
-                    <span className="text-[10px] uppercase tracking-[1em] font-black text-[#9C8461] mb-8 block text-center">The Architecture of Silence</span>
+                    <span className="text-[10px] uppercase tracking-[1em] font-black text-[#9C8461] mb-8 block text-center">L'Architecture du Silence</span>
                     <h2 className="text-4xl md:text-6xl font-serif italic text-center silk-text-stroke leading-tight max-w-2xl mx-auto">
-                        Where the physical dissolves into the ethereal
+                        Où le physique se dissout dans l'éthéré
                     </h2>
                 </div>
 
@@ -651,24 +651,24 @@ export default function SpaDemo() {
             <section className="py-60 bg-[#1A1A1A] text-white relative overflow-hidden">
                 <motion.div style={{ y: y2 }} className="absolute inset-0 bronze-glow opacity-20" />
                 <div className="container mx-auto px-8 relative z-10 text-center">
-                    <span className="text-[10px] uppercase tracking-[1em] font-black text-[#9C8461] mb-12 block">The Elemental Core</span>
-                    <h2 className="text-[10vw] md:text-[8vw] font-serif italic font-thin silk-text-stroke leading-none mb-16">The Hydro-Vault</h2>
+                    <span className="text-[10px] uppercase tracking-[1em] font-black text-[#9C8461] mb-12 block">Le Cœur Élémentaire</span>
+                    <h2 className="text-[10vw] md:text-[8vw] font-serif italic font-thin silk-text-stroke leading-none mb-16">L'Hydro-Voute</h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-6xl mx-auto">
                         <div className="p-12 border border-white/5 bg-white/[0.02] rounded-[3rem] group hover:bg-white/[0.05] transition-all">
                             <span className="text-4xl block mb-8">🪨</span>
-                            <h4 className="text-lg font-black uppercase tracking-widest mb-4">Thermic Stone</h4>
-                            <p className="text-[10px] text-white/30 uppercase font-bold tracking-widest leading-loose">Sub-zero crystalline suites designed for lymphatic thermal shock.</p>
+                            <h4 className="text-lg font-black uppercase tracking-widest mb-4">Pierre Thermique</h4>
+                            <p className="text-[10px] text-white/30 uppercase font-bold tracking-widest leading-loose">Suites cristallines sub-zéro conçues pour le choc thermique lymphatique.</p>
                         </div>
                         <div className="p-12 border border-[#9C8461]/30 bg-[#9C8461]/5 rounded-[3rem] group hover:bg-[#9C8461]/10 transition-all scale-110 relative z-10">
                             <span className="text-4xl block mb-8">💧</span>
-                            <h4 className="text-lg font-black uppercase tracking-widest mb-4 text-[#9C8461]">Vitality Pool</h4>
-                            <p className="text-[10px] text-[#9C8461]/60 uppercase font-bold tracking-widest leading-loose">Hydro-kinetic jets orchestrated for targeted muscle deceleration.</p>
+                            <h4 className="text-lg font-black uppercase tracking-widest mb-4 text-[#9C8461]">Bassin de Vitalité</h4>
+                            <p className="text-[10px] text-[#9C8461]/60 uppercase font-bold tracking-widest leading-loose">Jets hydrocinétiques orchestrés pour la décélération musculaire ciblée.</p>
                         </div>
                         <div className="p-12 border border-white/5 bg-white/[0.02] rounded-[3rem] group hover:bg-white/[0.05] transition-all">
                             <span className="text-4xl block mb-8">🌫️</span>
-                            <h4 className="text-lg font-black uppercase tracking-widest mb-4">Hammam Mist</h4>
-                            <p className="text-[10px] text-white/30 uppercase font-bold tracking-widest leading-loose">Bespoke eucalyptus and cedarwood steam atomization.</p>
+                            <h4 className="text-lg font-black uppercase tracking-widest mb-4">Brume Hammam</h4>
+                            <p className="text-[10px] text-white/30 uppercase font-bold tracking-widest leading-loose">Atomisation de vapeur d'eucalyptus et de bois de cèdre sur mesure.</p>
                         </div>
                     </div>
                 </div>
@@ -678,8 +678,8 @@ export default function SpaDemo() {
             <section id="botanicals" className="py-40 bg-[#FAF9F6] relative overflow-hidden">
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="mb-32">
-                        <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#9C8461] block mb-8 underline underline-offset-8 decoration-[#9C8461]/20">Clinical Botanicals</span>
-                        <h2 className="text-[8vw] sm:text-[6vw] lg:text-[4vw] font-black uppercase tracking-tighter text-[#2A2A2A]">THE FLORA<br /><span className="font-serif italic font-thin lowercase text-[#9C8461]">observatory</span></h2>
+                        <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#9C8461] block mb-8 underline underline-offset-8 decoration-[#9C8461]/20">Botaniques Cliniques</span>
+                        <h2 className="text-[8vw] sm:text-[6vw] lg:text-[4vw] font-black uppercase tracking-tighter text-[#2A2A2A]">L'OBSERVATOIRE<br /><span className="font-serif italic font-thin lowercase text-[#9C8461]">floral</span></h2>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -717,13 +717,13 @@ export default function SpaDemo() {
                             />
                         </div>
                         <div className="relative z-10 max-w-xl">
-                            <h4 className="text-3xl font-serif italic mb-8">Molecular Extraction</h4>
+                            <h4 className="text-3xl font-serif italic mb-8">Extraction Moléculaire</h4>
                             <p className="text-white/40 text-sm font-light leading-relaxed mb-12">
-                                Our in-house alchemists utilize supercritical CO2 extraction to preserve the crystalline integrity of every botanical asset.
+                                Nos alchimistes internes utilisent l'extraction au CO2 supercritique pour préserver l'intégrité cristalline de chaque actif botanique.
                             </p>
                             <Magnetic>
                                 <button className="px-8 py-4 border border-white/20 rounded-xl text-[10px] uppercase font-black tracking-widest hover:bg-white hover:text-[#2A2A2A] transition-all">
-                                    View Potency Reports
+                                    Voir les Rapports de Puissance
                                 </button>
                             </Magnetic>
                         </div>
@@ -735,8 +735,8 @@ export default function SpaDemo() {
             <section id="memberships" className="py-40 bg-[#1A1A1A] text-white relative overflow-hidden">
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="text-center mb-32">
-                        <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#9C8461] block mb-8">Elite Access</span>
-                        <h2 className="text-[6vw] font-black uppercase tracking-tighter">ZENITH ALLIANCES</h2>
+                        <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#9C8461] block mb-8">Accès Élite</span>
+                        <h2 className="text-[6vw] font-black uppercase tracking-tighter">ALLIANCES ZENITH</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -749,7 +749,7 @@ export default function SpaDemo() {
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className={`p-16 rounded-[4rem] border relative overflow-hidden group ${index === 1 ? 'border-[#9C8461] bg-[#9C8461]/5' : 'border-white/5 bg-white/[0.02]'}`}
                             >
-                                {index === 1 && <div className="absolute top-12 right-12 bg-[#9C8461] text-white text-[8px] font-black uppercase tracking-widest px-4 py-2 rounded-full">Most Sought</div>}
+                                {index === 1 && <div className="absolute top-12 right-12 bg-[#9C8461] text-white text-[8px] font-black uppercase tracking-widest px-4 py-2 rounded-full">Plus Recherché</div>}
 
                                 <h3 className="text-3xl font-serif italic mb-4">{alliance.tier}</h3>
                                 <div className="text-4xl font-black uppercase tracking-tighter text-[#9C8461] mb-12">{alliance.price}</div>
@@ -765,7 +765,7 @@ export default function SpaDemo() {
 
                                 <Magnetic>
                                     <button className={`w-full py-6 rounded-2xl text-[10px] uppercase font-black tracking-[0.3em] transition-all ${index === 1 ? 'bg-[#9C8461] text-white' : 'bg-white/5 text-white hover:bg-white hover:text-black'}`}>
-                                        Apply for Alliance
+                                        Postuler pour l'Alliance
                                     </button>
                                 </Magnetic>
                             </motion.div>
@@ -778,28 +778,28 @@ export default function SpaDemo() {
             <section id="curators" className="py-40 bg-white relative overflow-hidden">
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="flex flex-col md:flex-row justify-between items-baseline mb-32">
-                        <h2 className="text-[10vw] md:text-[6vw] font-black uppercase tracking-tighter text-[#2A2A2A]">THE CURATORS</h2>
-                        <p className="text-[#9C8461] font-serif italic text-2xl">Master practitioners of the quiet arts.</p>
+                        <h2 className="text-[10vw] md:text-[6vw] font-black uppercase tracking-tighter text-[#2A2A2A]">LES CURATEURS</h2>
+                        <p className="text-[#9C8461] font-serif italic text-2xl">Maîtres praticiens des arts silencieux.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                         {[
                             {
                                 name: "Keiko Tanaka",
-                                role: "Lead Alchemist",
-                                bio: "Specializing in molecular shiatsu and neurological deceleration.",
+                                role: "Alchimiste Principale",
+                                bio: "Spécialisée en shiatsu moléculaire et décélération neurologique.",
                                 image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
                             },
                             {
                                 name: "Leilani Wong",
-                                role: "Ritual Architect",
-                                bio: "Master of Lomi Lomi flow and ancestral thermal medicine.",
+                                role: "Architecte de Rituel",
+                                bio: "Maître du flux Lomi Lomi et de la médecine thermique ancestrale.",
                                 image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80"
                             },
                             {
                                 name: "Michael Chen",
-                                role: "Structural Specialist",
-                                bio: "Expert in deep tissue recalibration and kinetic alignment.",
+                                role: "Spécialiste Structurel",
+                                bio: "Expert en recalibrage des tissus profonds et alignement cinétique.",
                                 image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80"
                             }
                         ].map((curator, index) => (
@@ -833,7 +833,7 @@ export default function SpaDemo() {
             <section id="reviews" className="py-40 bg-[#FAF9F6] relative overflow-hidden">
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="max-w-4xl mx-auto text-center mb-32">
-                        <span className="text-[10px] uppercase tracking-[1em] font-black text-[#9C8461] mb-12 block">Verified Echoes</span>
+                        <span className="text-[10px] uppercase tracking-[1em] font-black text-[#9C8461] mb-12 block">Échos Vérifiés</span>
                         <h2 className="text-6xl md:text-8xl font-serif italic silk-text-stroke leading-none">Perspectives</h2>
                     </div>
 
@@ -841,13 +841,13 @@ export default function SpaDemo() {
                         {[
                             {
                                 name: "Sarah Johnson",
-                                quote: "The silence here is physical. It’s not just a spa; it’s a recalibration of the soul. The Carbon Ritual changed my perception of time.",
-                                date: "October 2025"
+                                quote: "Le silence ici est physique. Ce n'est pas juste un spa ; c'est un recalibrage de l'âme. Le Rituel Carbone a changé ma perception du temps.",
+                                date: "Octobre 2025"
                             },
                             {
                                 name: "David Martinez",
-                                quote: "Breathtaking attention to detail. From the molecular extraction of the oils to the custom haptic feedback of the pools.",
-                                date: "November 2025"
+                                quote: "Une attention aux détails époustouflante. De l'extraction moléculaire des huiles au retour haptique personnalisé des bassins.",
+                                date: "Novembre 2025"
                             }
                         ].map((perspective, index) => (
                             <motion.div
@@ -868,7 +868,7 @@ export default function SpaDemo() {
                                         <span className="text-[8px] text-black/30 uppercase font-bold tracking-widest">{perspective.date}</span>
                                     </div>
                                     <Magnetic>
-                                        <button className="text-[10px] uppercase font-black tracking-widest text-[#9C8461] hover:underline">Read Story</button>
+                                        <button className="text-[10px] uppercase font-black tracking-widest text-[#9C8461] hover:underline">Lire l'Histoire</button>
                                     </Magnetic>
                                 </div>
                             </motion.div>
@@ -883,12 +883,12 @@ export default function SpaDemo() {
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-24">
                         <div>
-                            <span className="text-[10px] uppercase tracking-[1em] font-black text-[#9C8461] mb-8 block">Sanctuary Notes</span>
-                            <h2 className="text-6xl font-serif italic silk-text-stroke leading-none">The Journal</h2>
+                            <span className="text-[10px] uppercase tracking-[1em] font-black text-[#9C8461] mb-8 block">Notes du Sanctuaire</span>
+                            <h2 className="text-6xl font-serif italic silk-text-stroke leading-none">Le Journal</h2>
                         </div>
                         <Magnetic>
                             <button className="text-[10px] uppercase font-black tracking-widest text-[#2A2A2A] hover:text-[#9C8461] transition-colors mt-8 md:mt-0">
-                                View Archive
+                                Voir les Archives
                             </button>
                         </Magnetic>
                     </div>
@@ -916,7 +916,7 @@ export default function SpaDemo() {
                                 <h3 className="text-2xl font-serif text-[#2A2A2A] mb-4 group-hover:italic transition-all">{entry.title}</h3>
                                 <p className="text-sm text-black/40 font-light leading-relaxed mb-8">{entry.excerpt}</p>
                                 <Magnetic>
-                                    <span className="text-[10px] uppercase font-black tracking-widest text-[#9C8461] opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 inline-block duration-500">Read Article</span>
+                                    <span className="text-[10px] uppercase font-black tracking-widest text-[#9C8461] opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 inline-block duration-500">Lire l'Article</span>
                                 </Magnetic>
                             </motion.div>
                         ))}
@@ -929,14 +929,14 @@ export default function SpaDemo() {
                 <div className="container mx-auto px-8 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-32">
                         <div>
-                            <span className="text-[10px] uppercase tracking-[1em] font-black text-[#9C8461] mb-12 block">Secure Your Space</span>
-                            <h2 className="text-7xl md:text-9xl font-black uppercase tracking-tighter text-[#2A2A2A] mb-16 leading-none">THE<br /><span className="silk-text-stroke font-serif italic font-thin lowercase">enquiry</span></h2>
+                            <span className="text-[10px] uppercase tracking-[1em] font-black text-[#9C8461] mb-12 block">Sécurisez Votre Espace</span>
+                            <h2 className="text-7xl md:text-9xl font-black uppercase tracking-tighter text-[#2A2A2A] mb-16 leading-none">LA<br /><span className="silk-text-stroke font-serif italic font-thin lowercase">demande</span></h2>
 
                             <div className="space-y-12">
                                 {[
-                                    { q: "Arrival protocol", a: "We recommend arrival 30 minutes prior to ritual initialization for sensory grounding." },
-                                    { q: "The Dress Code", a: "Silk robes and artisanal footwear provided upon entry. Please arrive in comfortable attire." },
-                                    { q: "Digital Sanctuary", a: "The Zenith Spa is a zero-frequency zone. All digital devices must be surrendered at entry." }
+                                    { q: "Protocole d'Arrivée", a: "Nous recommandons d'arriver 30 minutes avant l'initialisation du rituel pour un ancrage sensoriel." },
+                                    { q: "Le Code Vestimentaire", a: "Peignoirs en soie et chaussures artisanales fournis à l'entrée. Veuillez arriver dans une tenue confortable." },
+                                    { q: "Sanctuaire Numérique", a: "Le Spa Zenith est une zone à fréquence zéro. Tous les appareils numériques doivent être remis à l'entrée." }
                                 ].map((faq, i) => (
                                     <div key={i} className="group cursor-help">
                                         <h4 className="text-[10px] uppercase font-black tracking-[0.3em] text-[#9C8461] mb-4 group-hover:pl-4 transition-all duration-500">{faq.q}</h4>
@@ -949,7 +949,7 @@ export default function SpaDemo() {
                         <div className="p-16 bg-[#FAF9F6] rounded-[4rem] border border-black/5">
                             <form className="space-y-12" onSubmit={handleSubmit}>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase font-black tracking-widest text-black/40 px-4">Full Identity</label>
+                                    <label className="text-[10px] uppercase font-black tracking-widest text-black/40 px-4">Identité Complète</label>
                                     <input
                                         name="firstName"
                                         type="text"
@@ -958,7 +958,7 @@ export default function SpaDemo() {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase font-black tracking-widest text-black/40 px-4">Digital Address</label>
+                                    <label className="text-[10px] uppercase font-black tracking-widest text-black/40 px-4">Adresse Numérique</label>
                                     <input
                                         name="email"
                                         type="email"
@@ -967,26 +967,26 @@ export default function SpaDemo() {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase font-black tracking-widest text-black/40 px-4">Specified Ritual</label>
+                                    <label className="text-[10px] uppercase font-black tracking-widest text-black/40 px-4">Rituel Spécifié</label>
                                     <select name="service" className="w-full bg-white px-8 py-6 rounded-2xl border border-black/5 focus:border-[#9C8461] outline-none transition-all text-[10px] uppercase font-bold tracking-widest text-black/40">
-                                        <option>Select Ritual</option>
-                                        <option>The Carbon Ritual</option>
-                                        <option>Silk-Path Flow</option>
-                                        <option>Molecular Deep Tissue</option>
+                                        <option>Sélectionner le Rituel</option>
+                                        <option>Le Rituel Carbone</option>
+                                        <option>Flux Chemin de Soie</option>
+                                        <option>Tissus Profonds Moléculaires</option>
                                     </select>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] uppercase font-black tracking-widest text-black/40 px-4">Notes of Intent</label>
+                                    <label className="text-[10px] uppercase font-black tracking-widest text-black/40 px-4">Notes d'Intention</label>
                                     <textarea
                                         name="message"
                                         rows={4}
-                                        placeholder="SPECIAL REQUIREMENTS OR ALLERGIES"
+                                        placeholder="EXIGENCES SPÉCIALES OU ALLERGIES"
                                         className="w-full bg-white px-8 py-6 rounded-2xl border border-black/5 focus:border-[#9C8461] outline-none transition-all placeholder:text-black/10 text-[10px] uppercase font-bold tracking-widest resize-none"
                                     />
                                 </div>
                                 <Magnetic>
                                     <button className="w-full py-8 bg-[#2A2A2A] text-white rounded-2xl text-[10px] uppercase font-black tracking-[0.5em] hover:bg-[#9C8461] transition-all">
-                                        REQUEST ADMITTANCE
+                                        DEMANDER L'ADMISSION
                                     </button>
                                 </Magnetic>
                             </form>
@@ -1016,7 +1016,7 @@ export default function SpaDemo() {
                                 <span className="text-2xl font-black uppercase tracking-tighter text-[#2A2A2A]">Zenith Spa</span>
                             </div>
                             <p className="text-sm text-black/40 font-light leading-relaxed max-w-sm mb-12">
-                                An architecture of silence designed for the modern seeker. Established to decelerate the physical and transcend the ordinary.
+                                Une architecture de silence conçue pour le chercheur moderne. Établi pour décélérer le physique et transcender l'ordinaire.
                             </p>
                             <div className="flex gap-6">
                                 {[FiInstagram, FiTwitter, FiFacebook].map((Icon, i) => (
@@ -1032,17 +1032,17 @@ export default function SpaDemo() {
                         <div>
                             <h5 className="text-[10px] uppercase font-black tracking-widest text-[#2A2A2A] mb-8">Navigation</h5>
                             <ul className="space-y-4 text-xs font-light text-black/40">
-                                <li><a href="#rituals" className="hover:text-[#9C8461] transition-colors">Rituals</a></li>
-                                <li><a href="#observatory" className="hover:text-[#9C8461] transition-colors">Observatory</a></li>
+                                <li><a href="#rituals" className="hover:text-[#9C8461] transition-colors">Rituels</a></li>
+                                <li><a href="#observatory" className="hover:text-[#9C8461] transition-colors">Observatoire</a></li>
                                 <li><a href="#alliances" className="hover:text-[#9C8461] transition-colors">Alliances</a></li>
-                                <li><a href="#curators" className="hover:text-[#9C8461] transition-colors">Curators</a></li>
+                                <li><a href="#curators" className="hover:text-[#9C8461] transition-colors">Curateurs</a></li>
                             </ul>
                         </div>
 
                         <div>
-                            <h5 className="text-[10px] uppercase font-black tracking-widest text-[#2A2A2A] mb-8">Location</h5>
+                            <h5 className="text-[10px] uppercase font-black tracking-widest text-[#2A2A2A] mb-8">Emplacement</h5>
                             <p className="text-xs font-light text-black/40 leading-loose">
-                                2259 Kalakaua Ave<br />
+                                2259 Av. Kalakaua<br />
                                 Honolulu, HI 96815<br />
                                 O'ahu, Hawaii
                             </p>
@@ -1050,10 +1050,10 @@ export default function SpaDemo() {
                     </div>
 
                     <div className="pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-8">
-                        <span className="text-[8px] uppercase font-black tracking-widest text-black/20">© 2025 Zenith Spa Systems. All Rights Reserved.</span>
+                        <span className="text-[8px] uppercase font-black tracking-widest text-black/20">© 2025 Systèmes Spa Zenith. Tous droits réservés.</span>
                         <div className="flex gap-12 text-[8px] uppercase font-black tracking-widest text-black/20">
-                            <a href="#" className="hover:text-[#9C8461]">Privacy Protocol</a>
-                            <a href="#" className="hover:text-[#9C8461]">Terms of Access</a>
+                            <a href="#" className="hover:text-[#9C8461]">Protocole de Confidentialité</a>
+                            <a href="#" className="hover:text-[#9C8461]">Conditions d'Accès</a>
                         </div>
                     </div>
                 </div>

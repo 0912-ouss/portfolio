@@ -29,35 +29,35 @@ export function PrivateDining() {
 
                         <div className="p-16 lg:p-24 flex flex-col justify-center">
                             <span className="text-xs font-sans uppercase tracking-[0.3em] text-[#D4AF37] block mb-8">
-                                The Private Chamber
+                                La Chambre Privée
                             </span>
                             <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">
-                                Secluded for <br />
-                                <span className="italic text-white/40">the momentous.</span>
+                                Isolé pour <br />
+                                <span className="italic text-white/40">le mémorable.</span>
                             </h2>
                             <p className="text-white/60 font-light leading-relaxed mb-12 max-w-md">
-                                A hidden sanctuary behind the cellar. Custom lighting architectures, bespoke auditory environments, and a dedicated culinary team for up to 12 guests.
+                                Un sanctuaire caché derrière la cave. Architectures d'éclairage personnalisées, environnements auditifs sur mesure et une équipe culinaire dédiée jusqu'à 12 invités.
                             </p>
 
                             <div className="flex flex-col gap-6">
                                 <div className="flex items-center gap-4 text-sm font-sans tracking-wide text-white/80">
                                     <div className="w-1 h-1 bg-[#D4AF37] rounded-full" />
-                                    <span>Curated Tasting Menus</span>
+                                    <span>Menus Dégustation Sélectionnés</span>
                                 </div>
                                 <div className="flex items-center gap-4 text-sm font-sans tracking-wide text-white/80">
                                     <div className="w-1 h-1 bg-[#D4AF37] rounded-full" />
-                                    <span>Private Entrance</span>
+                                    <span>Entrée Privée</span>
                                 </div>
                                 <div className="flex items-center gap-4 text-sm font-sans tracking-wide text-white/80 mb-8">
                                     <div className="w-1 h-1 bg-[#D4AF37] rounded-full" />
-                                    <span>Sommelier Service</span>
+                                    <span>Service Sommelier</span>
                                 </div>
                             </div>
 
                             <div>
                                 <Magnetic>
                                     <button className="px-10 py-4 border border-[#D4AF37] text-[#D4AF37] text-xs uppercase font-bold tracking-[0.2em] hover:bg-[#D4AF37] hover:text-black transition-colors duration-500">
-                                        Inquire Availability
+                                        Demander la Disponibilité
                                     </button>
                                 </Magnetic>
                             </div>

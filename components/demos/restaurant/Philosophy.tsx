@@ -45,17 +45,17 @@ export function Philosophy() {
                         transition={{ duration: 1, ease: 'easeOut' }}
                     >
                         <span className="text-xs font-sans uppercase tracking-[0.3em] text-[#D4AF37] block mb-8">
-                            The Elemental Kitchen
+                            La Cuisine Élémentaire
                         </span>
                         <h2 className="text-5xl md:text-6xl font-serif leading-tight mb-8">
-                            Fire, Flour, <br />
-                            <span className="italic opacity-50">and Time.</span>
+                            Feu, Farine, <br />
+                            <span className="italic opacity-50">et Temps.</span>
                         </h2>
                         <p className="text-white/60 font-light leading-relaxed mb-8 max-w-md">
-                            We believe in the alchemy of heat. Our kitchen is an open theater where ingredients surrender to the flame, transforming into something primal yet refined.
+                            Nous croyons en l'alchimie de la chaleur. Notre cuisine est un théâtre ouvert où les ingrédients s'abandonnent à la flamme, se transformant en quelque chose de primitif mais raffiné.
                         </p>
                         <p className="text-white/60 font-light leading-relaxed max-w-md">
-                            From the volcanic soil that nurtures our wines to the obsidian stone of our ovens, every element is chosen to honor the ancient dance of cooking with fire.
+                            Du sol volcanique qui nourrit nos vins à la pierre d'obsidienne de nos fours, chaque élément est choisi pour honorer la danse ancienne de la cuisine au feu.
                         </p>
                     </motion.div>
 

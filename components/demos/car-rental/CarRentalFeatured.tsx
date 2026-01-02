@@ -9,27 +9,27 @@ const featuredCars = [
     {
         id: 1,
         name: "Porsche 911 GT3",
-        tagline: "Born on the Track",
+        tagline: "Né sur la Piste",
         price: 499,
-        specs: { hp: "502", speed: "198 mph", accel: "3.2s" },
+        specs: { hp: "502", speed: "318 km/h", accel: "3.2s" },
         image: "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=1200&auto=format&fit=crop",
         color: "#FF6B35"
     },
     {
         id: 2,
         name: "Mercedes-AMG GT",
-        tagline: "Handcrafted Excellence",
+        tagline: "Excellence Artisanale",
         price: 449,
-        specs: { hp: "523", speed: "193 mph", accel: "3.6s" },
+        specs: { hp: "523", speed: "310 km/h", accel: "3.6s" },
         image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=1200&auto=format&fit=crop",
         color: "#C0C0C0"
     },
     {
         id: 3,
         name: "BMW M8 Competition",
-        tagline: "Ultimate Performance",
+        tagline: "Performance Ultime",
         price: 399,
-        specs: { hp: "617", speed: "189 mph", accel: "3.0s" },
+        specs: { hp: "617", speed: "305 km/h", accel: "3.0s" },
         image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200&auto=format&fit=crop",
         color: "#1E90FF"
     }
@@ -62,7 +62,7 @@ export function CarRentalFeatured() {
                             whileInView={{ opacity: 1 }}
                             className="text-[#FF6B35] text-xs uppercase tracking-[0.3em] block mb-4"
                         >
-                            Featured Vehicle
+                            Véhicule en Vedette
                         </motion.span>
 
                         <AnimatePresence mode="wait">
@@ -84,15 +84,15 @@ export function CarRentalFeatured() {
                                 <div className="grid grid-cols-3 gap-6 mb-12">
                                     <div className="p-4 bg-white/5 border border-white/10">
                                         <span className="text-2xl font-black text-[#FF6B35]">{currentCar.specs.hp}</span>
-                                        <span className="text-[10px] uppercase tracking-widest text-white/40 block mt-1">Horsepower</span>
+                                        <span className="text-[10px] uppercase tracking-widest text-white/40 block mt-1">Puissance</span>
                                     </div>
                                     <div className="p-4 bg-white/5 border border-white/10">
                                         <span className="text-2xl font-black text-[#FF6B35]">{currentCar.specs.speed}</span>
-                                        <span className="text-[10px] uppercase tracking-widest text-white/40 block mt-1">Top Speed</span>
+                                        <span className="text-[10px] uppercase tracking-widest text-white/40 block mt-1">Vitesse Max</span>
                                     </div>
                                     <div className="p-4 bg-white/5 border border-white/10">
                                         <span className="text-2xl font-black text-[#FF6B35]">{currentCar.specs.accel}</span>
-                                        <span className="text-[10px] uppercase tracking-widest text-white/40 block mt-1">0-60 mph</span>
+                                        <span className="text-[10px] uppercase tracking-widest text-white/40 block mt-1">0-100 km/h</span>
                                     </div>
                                 </div>
 
@@ -100,10 +100,10 @@ export function CarRentalFeatured() {
                                 <div className="flex items-center gap-8">
                                     <div>
                                         <span className="text-4xl font-black text-white">${currentCar.price}</span>
-                                        <span className="text-white/40">/day</span>
+                                        <span className="text-white/40">/jour</span>
                                     </div>
                                     <button className="px-8 py-4 bg-[#FF6B35] text-white font-bold uppercase tracking-wider text-sm hover:bg-[#FF8C42] transition-colors">
-                                        Reserve Now
+                                        Réserver
                                     </button>
                                 </div>
                             </motion.div>
@@ -164,7 +164,7 @@ export function CarRentalFeatured() {
                             transition={{ repeat: Infinity, duration: 3 }}
                             className="absolute bottom-8 right-8 px-4 py-2 bg-[#FF6B35] text-white text-xs uppercase tracking-wider font-bold"
                         >
-                            Premium Selection
+                            Sélection Premium
                         </motion.div>
                     </div>
                 </div>

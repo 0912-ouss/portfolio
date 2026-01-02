@@ -7,30 +7,30 @@ import { FiArrowRight } from 'react-icons/fi';
 const processSteps = [
     {
         number: "01",
-        title: "Sourcing",
-        subtitle: "Origin Selection",
-        description: "We travel to remote farms across 24 countries, building direct relationships with growers who share our obsession with quality.",
+        title: "Approvisionnement",
+        subtitle: "Sélection d'Origine",
+        description: "Nous voyageons vers des fermes isolées dans 24 pays, établissant des relations directes avec des producteurs qui partagent notre obsession pour la qualité.",
         icon: "🌍"
     },
     {
         number: "02",
-        title: "Cupping",
-        subtitle: "Quality Assessment",
-        description: "Each lot undergoes rigorous cupping sessions. We score for aroma, body, acidity, and complexity before approval.",
+        title: "Dégustation",
+        subtitle: "Évaluation de la Qualité",
+        description: "Chaque lot subit des sessions de dégustation rigoureuses. Nous notons l'arôme, le corps, l'acidité et la complexité avant approbation.",
         icon: "☕"
     },
     {
         number: "03",
-        title: "Roasting",
-        subtitle: "Heat Orchestration",
-        description: "Small-batch roasting preserves origin character. Every profile is developed to highlight unique terroir notes.",
+        title: "Torréfaction",
+        subtitle: "Orchestration de la Chaleur",
+        description: "La torréfaction en petites quantités préserve le caractère d'origine. Chaque profil est développé pour mettre en valeur les notes uniques du terroir.",
         icon: "🔥"
     },
     {
         number: "04",
         title: "Extraction",
-        subtitle: "The Final Pour",
-        description: "Precision brewing at optimal parameters. Water temperature, grind size, and timing calibrated for perfection.",
+        subtitle: "Le Versé Final",
+        description: "Infusion de précision aux paramètres optimaux. Température de l'eau, taille de mouture et minutage calibrés pour la perfection.",
         icon: "💧"
     }
 ];
@@ -50,11 +50,11 @@ export function CafeProcess() {
                         viewport={{ once: true }}
                     >
                         <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-6">
-                            The Journey
+                            Le Voyage
                         </span>
                         <h2 className="text-4xl md:text-6xl font-serif mb-6">
-                            From Seed<br />
-                            <span className="text-[#C8AA6E]/30">To Cup</span>
+                            De la Graine<br />
+                            <span className="text-[#C8AA6E]/30">À la Tasse</span>
                         </h2>
                     </motion.div>
                 </div>

@@ -18,8 +18,8 @@ export function RealEstateNav() {
     }, []);
 
     const navLinks = [
-        { name: 'Heritage Collection', href: '#featured' },
-        { name: 'Experience Morocco', href: '#locations' },
+        { name: 'Collection Héritage', href: '#featured' },
+        { name: 'Découvrir le Maroc', href: '#locations' },
         { name: 'Services', href: '#services' },
         { name: 'Contact', href: '#contact' },
     ];
@@ -46,7 +46,7 @@ export function RealEstateNav() {
                         </Link>
                     ))}
                     <button className={`px-6 py-3 text-xs uppercase tracking-[0.2em] font-bold transition-all duration-300 ${isScrolled ? 'bg-[#C19A6B] text-white hover:bg-[#A67F52]' : 'bg-white text-black hover:bg-[#C19A6B] hover:text-white'}`}>
-                        Inquire Now
+                        Faire une Demande
                     </button>
                 </div>
 
@@ -79,7 +79,7 @@ export function RealEstateNav() {
                             </Link>
                         ))}
                         <button className="mt-4 px-10 py-4 bg-[#C19A6B] text-white text-sm uppercase tracking-widest font-bold">
-                            Inquire Now
+                            Faire une Demande
                         </button>
                     </motion.div>
                 )}

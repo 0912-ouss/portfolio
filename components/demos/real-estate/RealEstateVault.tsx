@@ -55,8 +55,8 @@ export function RealEstateVault() {
                                             )}
                                         </div>
                                         <div className="text-center px-10">
-                                            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-white mb-2">Off-Market Archive</h4>
-                                            <p className="text-[9px] uppercase tracking-widest text-white/30 leading-relaxed font-bold">Biometric verification required for anonymous portfolio access.</p>
+                                            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-white mb-2">Archives Hors Marché</h4>
+                                            <p className="text-[9px] uppercase tracking-widest text-white/30 leading-relaxed font-bold">Vérification biométrique requise pour l'accès anonyme au portefeuille.</p>
                                         </div>
                                         <button
                                             onMouseEnter={() => setIsHovered(true)}
@@ -65,7 +65,7 @@ export function RealEstateVault() {
                                             disabled={isScanning}
                                             className={`px-8 py-3 border border-white/10 rounded-full text-[9px] uppercase tracking-widest font-bold transition-all duration-500 overflow-hidden relative ${isScanning ? 'text-[#C19A6B]' : 'text-white hover:border-[#C19A6B]'}`}
                                         >
-                                            {isScanning ? 'Authenticating...' : 'Commence Scan'}
+                                            {isScanning ? 'Authentification...' : 'Commencer le Scan'}
                                             {isScanning && (
                                                 <motion.div
                                                     className="absolute bottom-0 left-0 h-[2px] bg-[#C19A6B]"
@@ -85,14 +85,14 @@ export function RealEstateVault() {
                                     >
                                         <Eye size={64} className="text-[#C19A6B]" />
                                         <div className="text-center px-10">
-                                            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#C19A6B] mb-2">Access Granted</h4>
-                                            <p className="text-[9px] uppercase tracking-widest text-white/60 leading-relaxed font-bold">Displaying restricted properties for verified partners.</p>
+                                            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#C19A6B] mb-2">Accès Autorisé</h4>
+                                            <p className="text-[9px] uppercase tracking-widest text-white/60 leading-relaxed font-bold">Affichage des propriétés restreintes pour les partenaires vérifiés.</p>
                                         </div>
                                         <div className="flex flex-col gap-2 w-full px-12">
                                             <div className="h-[1px] bg-[#C19A6B]/30 w-full" />
                                             <div className="flex justify-between text-[8px] uppercase tracking-widest font-bold text-[#C19A6B]">
-                                                <span>Active Files</span>
-                                                <span>12 Secret Portfolios</span>
+                                                <span>Fichiers Actifs</span>
+                                                <span>12 Portefeuilles Secrets</span>
                                             </div>
                                         </div>
                                     </motion.div>
@@ -111,28 +111,28 @@ export function RealEstateVault() {
 
                         {/* Decorative side text */}
                         <div className="absolute top-1/2 -left-20 -translate-y-1/2 rotate-90 hidden lg:block">
-                            <span className="text-[10px] uppercase tracking-[1em] text-white/10 font-bold whitespace-nowrap">RESTRICTED SECTION 09-AF</span>
+                            <span className="text-[10px] uppercase tracking-[1em] text-white/10 font-bold whitespace-nowrap">SECTION RESTREINTE 09-AF</span>
                         </div>
                     </div>
 
                     {/* Right: Narrative Content */}
                     <div>
                         <MaskReveal>
-                            <span className="text-[#C19A6B] text-[10px] uppercase tracking-[0.6em] font-bold mb-6 block drop-shadow-lg underline underline-offset-8">Confidentiality Tier 1</span>
+                            <span className="text-[#C19A6B] text-[10px] uppercase tracking-[0.6em] font-bold mb-6 block drop-shadow-lg underline underline-offset-8">Niveau de Confidentialité 1</span>
                         </MaskReveal>
                         <MaskReveal delay={0.2}>
-                            <h2 className="text-5xl md:text-8xl font-serif text-white mb-10 leading-none">The <span className="italic">Heritage</span> <br />Vault</h2>
+                            <h2 className="text-5xl md:text-8xl font-serif text-white mb-10 leading-none">Le Coffre <br /><span className="italic">Héritage</span></h2>
                         </MaskReveal>
                         <MaskReveal delay={0.4}>
                             <p className="text-white/40 font-light leading-relaxed mb-12 max-w-lg text-lg italic">
-                                "The most prestigious properties are never listed. They are passed between guardians in silence."
+                                "Les propriétés les plus prestigieuses ne sont jamais listées. Elles se transmettent entre gardiens en silence."
                             </p>
                         </MaskReveal>
 
                         <div className="space-y-12 mb-16">
                             {[
-                                { icon: <Shield size={18} />, title: "Discretion Above All", desc: "No public records, no digital footprints. Pure architectural privacy." },
-                                { icon: <Lock size={18} />, title: "Exclusive Guardianship", desc: "Reserved for patrons already holding significant heritage assets." }
+                                { icon: <Shield size={18} />, title: "Discrétion Avant Tout", desc: "Archives privées, sans traces numériques. Confidentialité architecturale pure." },
+                                { icon: <Lock size={18} />, title: "Garde Exclusive", desc: "Réservé aux mécènes détenant déjà des actifs patrimoniaux importants." }
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}
@@ -152,7 +152,7 @@ export function RealEstateVault() {
                         </div>
 
                         <MagnetButton className="bg-white text-black px-12 py-5 text-[10px] uppercase tracking-[0.4em] font-bold hover:bg-[#C19A6B] hover:text-white transition-all duration-700 flex items-center gap-4 group">
-                            Apply for Clearance
+                            Demander une Autorisation
                             <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                         </MagnetButton>
                     </div>

@@ -8,29 +8,29 @@ import { MaskReveal } from './MaskReveal';
 const milestones = [
     {
         year: "1924",
-        title: "The Founding",
-        desc: "Origins in documenting the colonial architectural shifts in Casablanca.",
+        title: "La Fondation",
+        desc: "Origines dans la documentation des changements architecturaux coloniaux à Casablanca.",
         image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1000",
         side: "left"
     },
     {
         year: "1958",
-        title: "The Golden Era",
-        desc: "Expansion into the restoration of historic Riads in the heart of Marrakech.",
+        title: "L'Âge d'Or",
+        desc: "Expansion dans la restauration de Riads historiques au cœur de Marrakech.",
         image: "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=1000",
         side: "right"
     },
     {
         year: "1992",
-        title: "Modernist Fusion",
-        desc: "Pioneering the blend of traditional Zellige with Brutalist concrete forms.",
+        title: "Fusion Moderniste",
+        desc: "Pionnier du mélange de Zellige traditionnel avec des formes brutalistes en béton.",
         image: "/demos/real-estate/modernist_fusion.jpg",
         side: "left"
     },
     {
         year: "2024",
-        title: "The Legacy Continues",
-        desc: "Leading the global standard for private architectural guardianship in Morocco.",
+        title: "L'Héritage Continue",
+        desc: "Établissement de la norme mondiale pour la garde architecturale privée au Maroc.",
         image: "https://images.unsplash.com/photo-1544971587-b842c27f8e14?q=80&w=1000",
         side: "right"
     }
@@ -51,10 +51,10 @@ export function RealEstateTimeline() {
 
                 <div className="text-center mb-32">
                     <MaskReveal>
-                        <span className="text-[#C19A6B] text-[10px] uppercase tracking-[0.6em] font-bold mb-4 block">Our Lineage</span>
+                        <span className="text-[#C19A6B] text-[10px] uppercase tracking-[0.6em] font-bold mb-4 block">Notre Histoire</span>
                     </MaskReveal>
                     <MaskReveal delay={0.2}>
-                        <h2 className="text-5xl md:text-8xl font-serif text-[#2C2C2C]">A Century Of <br /><span className="italic">Perspective</span></h2>
+                        <h2 className="text-5xl md:text-8xl font-serif text-[#2C2C2C]">Un Siècle de <br /><span className="italic">Perspective</span></h2>
                     </MaskReveal>
                 </div>
 

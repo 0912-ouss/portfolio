@@ -17,7 +17,7 @@ interface CartItem {
 const initialCartItems: CartItem[] = [
     {
         id: 1,
-        name: "Silk Midi Dress",
+        name: "Robe Midi en Soie",
         price: 890,
         quantity: 1,
         image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=200&auto=format&fit=crop",
@@ -25,7 +25,7 @@ const initialCartItems: CartItem[] = [
     },
     {
         id: 2,
-        name: "Cashmere Overcoat",
+        name: "Manteau en Cachemire",
         price: 1450,
         quantity: 1,
         image: "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?q=80&w=200&auto=format&fit=crop",
@@ -97,7 +97,7 @@ export function EcommerceCart() {
                         >
                             {/* Header */}
                             <div className="flex items-center justify-between p-6 border-b border-[#E5E5E5]">
-                                <h3 className="text-lg font-medium">Shopping Bag ({cartItems.length})</h3>
+                                <h3 className="text-lg font-medium">Panier ({cartItems.length})</h3>
                                 <button
                                     onClick={() => setIsOpen(false)}
                                     className="w-10 h-10 flex items-center justify-center hover:bg-[#F5F5F5] transition-colors"
@@ -111,7 +111,7 @@ export function EcommerceCart() {
                                 {cartItems.length === 0 ? (
                                     <div className="text-center py-12">
                                         <FiShoppingBag className="w-12 h-12 mx-auto text-[#CCC] mb-4" />
-                                        <p className="text-[#999]">Your bag is empty</p>
+                                        <p className="text-[#999]">Votre panier est vide</p>
                                     </div>
                                 ) : (
                                     <div className="space-y-6">
@@ -134,7 +134,7 @@ export function EcommerceCart() {
                                                 </div>
                                                 <div className="flex-1">
                                                     <h4 className="font-medium mb-1">{item.name}</h4>
-                                                    <p className="text-sm text-[#999] mb-3">Size: {item.size}</p>
+                                                    <p className="text-sm text-[#999] mb-3">Taille: {item.size}</p>
                                                     <div className="flex items-center justify-between">
                                                         <div className="flex items-center border border-[#E5E5E5]">
                                                             <button
@@ -171,12 +171,12 @@ export function EcommerceCart() {
                                 <div className="p-6 border-t border-[#E5E5E5] bg-[#FAFAFA]">
                                     <div className="space-y-2 mb-6">
                                         <div className="flex justify-between text-sm">
-                                            <span className="text-[#666]">Subtotal</span>
+                                            <span className="text-[#666]">Sous-total</span>
                                             <span>${subtotal}</span>
                                         </div>
                                         <div className="flex justify-between text-sm">
-                                            <span className="text-[#666]">Shipping</span>
-                                            <span>{shipping === 0 ? 'Free' : `$${shipping}`}</span>
+                                            <span className="text-[#666]">Livraison</span>
+                                            <span>{shipping === 0 ? 'Gratuite' : `$${shipping}`}</span>
                                         </div>
                                         <div className="flex justify-between font-medium text-lg pt-2 border-t border-[#E5E5E5]">
                                             <span>Total</span>
@@ -184,10 +184,10 @@ export function EcommerceCart() {
                                         </div>
                                     </div>
                                     <button className="w-full py-4 bg-[#1A1A1A] text-white font-medium uppercase tracking-wider text-sm hover:bg-[#333] transition-colors">
-                                        Checkout
+                                        Commander
                                     </button>
                                     <p className="text-center text-xs text-[#999] mt-4">
-                                        Free shipping on orders over $500
+                                        Livraison gratuite pour les commandes de plus de 500 $
                                     </p>
                                 </div>
                             )}

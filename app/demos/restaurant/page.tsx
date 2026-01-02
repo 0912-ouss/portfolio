@@ -30,7 +30,7 @@ export default function RestaurantDemoPage() {
             {/* Footer minimal */}
             <footer className="py-24 text-center text-[10px] text-white/20 uppercase tracking-widest border-t border-white/5 bg-[#0F0F0F] flex flex-col gap-8">
                 <div className="w-12 h-12 bg-[#D4AF37] rounded-full mx-auto flex items-center justify-center text-black font-serif font-bold text-xl">L</div>
-                <p>© 2024 LUMIÈRE. Gastronomy in Amber & Onyx.</p>
+                <p>© 2024 LUMIÈRE. Gastronomie en Ambre & Onyx.</p>
             </footer>
         </main>
     );

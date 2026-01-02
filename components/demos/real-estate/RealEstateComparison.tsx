@@ -94,7 +94,7 @@ export function RealEstateComparison({
                                 <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-300 mb-4">
                                     <ArrowRightLeft size={18} />
                                 </div>
-                                <p className="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Add Property <br /> to Compare</p>
+                                <p className="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Ajouter une Propriété <br /> à Comparer</p>
                             </div>
                         )}
                     </div>

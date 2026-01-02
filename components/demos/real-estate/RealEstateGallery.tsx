@@ -6,38 +6,38 @@ import { motion } from 'framer-motion';
 
 const galleryItems = [
     {
-        title: "Majestic Arches",
+        title: "Arches Majestueuses",
         category: "Architecture",
         image: "/demos/real-estate/hero.png",
         size: "large"
     },
     {
-        title: "Intricate Zellige",
-        category: "Details",
+        title: "Zellige Intriqué",
+        category: "Détails",
         image: "/demos/real-estate/detail1.png",
         size: "small"
     },
     {
-        title: "Royal Suite",
-        category: "Interior",
+        title: "Suite Royale",
+        category: "Intérieur",
         image: "/demos/real-estate/detail2.png",
         size: "medium"
     },
     {
-        title: "Oasis Garden",
-        category: "Landscape",
+        title: "Jardin Oasis",
+        category: "Paysage",
         image: "/demos/real-estate/detail3.png",
         size: "medium"
     },
     {
-        title: "Atlas Panorama",
-        category: "Environment",
+        title: "Panorama de l'Atlas",
+        category: "Environnement",
         image: "/demos/real-estate/villa.png",
         size: "large"
     },
     {
-        title: "Ocean Breeze",
-        category: "Coastal",
+        title: "Brise Océanique",
+        category: "Côtier",
         image: "/demos/real-estate/apartment.png",
         size: "small"
     }
@@ -48,8 +48,8 @@ export function RealEstateGallery() {
         <section id="gallery" className="py-32 bg-[#FDFBF7] px-6">
             <div className="max-w-[1400px] mx-auto">
                 <div className="text-center mb-24">
-                    <span className="text-[#C19A6B] text-xs uppercase tracking-[0.5em] font-bold mb-4 block">Visual Journey</span>
-                    <h2 className="text-5xl md:text-8xl font-serif text-[#2C2C2C]">Architecture <br /><span className="italic">& Detail</span></h2>
+                    <span className="text-[#C19A6B] text-xs uppercase tracking-[0.5em] font-bold mb-4 block">Voyage Visuel</span>
+                    <h2 className="text-5xl md:text-8xl font-serif text-[#2C2C2C]">Architecture <br /><span className="italic">& Détail</span></h2>
                 </div>
 
                 <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">

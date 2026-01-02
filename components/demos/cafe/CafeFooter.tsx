@@ -11,12 +11,12 @@ export function CafeFooter() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 text-sm font-sans font-light opacity-80">
                     <div className="space-y-4">
-                        <h4 className="uppercase tracking-widest text-[#C8AA6E] mb-6">Visit</h4>
+                        <h4 className="uppercase tracking-widest text-[#C8AA6E] mb-6">Visite</h4>
                         <p>1080 Kyoto St.<br />Arts District, LA 90013</p>
                     </div>
                     <div className="space-y-4">
-                        <h4 className="uppercase tracking-widest text-[#C8AA6E] mb-6">Hours</h4>
-                        <p>Mon - Fri: 7am - 4pm<br />Sat - Sun: 8am - 6pm</p>
+                        <h4 className="uppercase tracking-widest text-[#C8AA6E] mb-6">Horaires</h4>
+                        <p>Lun - Ven : 7h - 16h<br />Sam - Dim : 8h - 18h</p>
                     </div>
                     <div className="space-y-4">
                         <h4 className="uppercase tracking-widest text-[#C8AA6E] mb-6">Contact</h4>
@@ -31,7 +31,7 @@ export function CafeFooter() {
                 </div>
 
                 <div className="mt-16 text-[10px] uppercase tracking-widest text-white/20">
-                    © 2024 KŌHĪ Atelier. All Rights Reserved.
+                    © 2024 KŌHĪ Atelier. Tous Droits Réservés.
                 </div>
             </div>
         </footer>

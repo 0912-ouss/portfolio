@@ -8,29 +8,29 @@ import { FiInstagram, FiAward } from 'react-icons/fi';
 const baristas = [
     {
         name: "Kenji Tanaka",
-        role: "Head Barista",
-        specialty: "Pour Over Specialist",
-        experience: "12 Years",
+        role: "Barista en Chef",
+        specialty: "Spécialiste du Pour Over",
+        experience: "12 Ans",
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop",
-        certifications: ["Q Grader", "SCA Certified"],
+        certifications: ["Q Grader", "Certifié SCA"],
         instagram: "#"
     },
     {
         name: "Sofia Martinez",
-        role: "Roast Master",
-        specialty: "Single Origin Expert",
-        experience: "8 Years",
+        role: "Maître Torréfacteur",
+        specialty: "Expert Origine Unique",
+        experience: "8 Ans",
         image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=800&fit=crop",
-        certifications: ["Roasting Guild", "Origin Specialist"],
+        certifications: ["Guilde de Torréfaction", "Spécialiste Origine"],
         instagram: "#"
     },
     {
         name: "Marcus Chen",
-        role: "Latte Artist",
-        specialty: "Milk Texturing",
-        experience: "6 Years",
+        role: "Artiste Latte",
+        specialty: "Texturisation du Lait",
+        experience: "6 Ans",
         image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&h=800&fit=crop",
-        certifications: ["Latte Art Champion 2023"],
+        certifications: ["Champion Latte Art 2023"],
         instagram: "#"
     }
 ];
@@ -60,14 +60,14 @@ export function CafeBaristas() {
                         viewport={{ once: true }}
                     >
                         <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-6">
-                            The Faculty
+                            Les Experts
                         </span>
                         <h2 className="text-4xl md:text-6xl font-serif mb-6">
-                            Meet Our<br />
+                            Rencontrez Nos<br />
                             <span className="text-[#C8AA6E]/30">Artisans</span>
                         </h2>
                         <p className="max-w-lg mx-auto text-sm font-light text-white/40 leading-relaxed">
-                            Each member of our faculty brings years of dedicated practice and a passion for the perfect extraction.
+                            Chaque membre de notre équipe apporte des années de pratique dévouée et une passion pour l'extraction parfaite.
                         </p>
                     </motion.div>
                 </div>

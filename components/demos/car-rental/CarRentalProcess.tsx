@@ -6,23 +6,23 @@ import { motion } from 'framer-motion';
 const steps = [
     {
         number: "01",
-        title: "Choose Your Car",
-        description: "Browse our premium fleet and select the perfect vehicle for your needs."
+        title: "Choisissez Votre Voiture",
+        description: "Parcourez notre flotte premium et sélectionnez le véhicule parfait pour vos besoins."
     },
     {
         number: "02",
-        title: "Book Online",
-        description: "Complete your reservation in minutes with our streamlined booking system."
+        title: "Réservez en Ligne",
+        description: "Complétez votre réservation en quelques minutes avec notre système simplifié."
     },
     {
         number: "03",
-        title: "Pick Up",
-        description: "Collect your car from any of our locations or opt for free delivery."
+        title: "Récupérez-la",
+        description: "Récupérez votre voiture dans l'une de nos agences ou optez pour la livraison gratuite."
     },
     {
         number: "04",
-        title: "Hit the Road",
-        description: "Enjoy your journey with 24/7 support and comprehensive coverage."
+        title: "Prenez la Route",
+        description: "Profitez de votre voyage avec une assistance 24/7 et une couverture complète."
     }
 ];
 
@@ -37,14 +37,14 @@ export function CarRentalProcess() {
                         whileInView={{ opacity: 1 }}
                         className="text-[#FF6B35] text-xs uppercase tracking-[0.3em] block mb-4"
                     >
-                        How It Works
+                        Comment Ça Marche
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-black tracking-tight"
                     >
-                        Rent in <span className="text-[#FF6B35]">4</span> Easy Steps
+                        Louez en <span className="text-[#FF6B35]">4</span> Étapes Faciles
                     </motion.h2>
                 </div>
 

@@ -17,10 +17,10 @@ export default function ContactPage() {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <span className="block text-sm font-bold uppercase tracking-widest text-muted-foreground mb-8">
-                        Get in Touch
+                        Contactez-moi
                     </span>
                     <h1 className="text-6xl font-bold tracking-tighter text-foreground md:text-8xl lg:text-9xl leading-none mb-12">
-                        Let's work <br /> together.
+                        Travaillons <br />ensemble.
                     </h1>
 
                     <div className="flex flex-col md:flex-row gap-12 md:items-end">

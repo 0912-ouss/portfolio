@@ -29,8 +29,8 @@ export function HeroFull() {
                     </h1>
                     <div className="mt-12 h-[1px] w-24 bg-white/50" />
                     <p className="mt-8 max-w-lg text-lg text-white/80 md:text-xl font-light">
-                        Paris-based art director & digital designer.
-                        Crafting digital experiences with a focus on motion and typography.
+                        Directeur artistique & designer digital basé à Paris.
+                        Créateur d'expériences digitales axées sur le motion et la typographie.
                     </p>
                 </motion.div>
             </div>
@@ -42,7 +42,7 @@ export function HeroFull() {
                 transition={{ delay: 1.5, duration: 1 }}
                 className="absolute bottom-12 right-6 md:right-12 lg:right-24"
             >
-                <span className="text-xs uppercase tracking-widest text-white/50">Scroll to Explore</span>
+                <span className="text-xs uppercase tracking-widest text-white/50">Défiler pour explorer</span>
             </motion.div>
         </section>
     );

@@ -43,20 +43,20 @@ import { useState, useRef } from "react";
 
 const services = [
     {
-        title: "Digital Diagnostic Suite",
-        description: "Advanced neural analytics and clinical imaging from the sanctity of your private residence.",
+        title: "Suite de Diagnostic Numérique",
+        description: "Analyses neuronales avancées et imagerie clinique depuis la sainteté de votre résidence privée.",
         icon: <FiVideo className="w-8 h-8" />,
         image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
     },
     {
-        title: "Private Entry & Consult",
-        description: "Seamless orchestration of clinical expertise tailored to your individual anatomical profile.",
+        title: "Entrée Privée & Consultation",
+        description: "Orchestration transparente de l'expertise clinique adaptée à votre profil anatomique individuel.",
         icon: <FiCalendar className="w-8 h-8" />,
         image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
     },
     {
-        title: "Clinical Apothecary",
-        description: "Boutique pharmaceutical sourcing and direct delivery of specialized therapeutic protocols.",
+        title: "Apothicaire Clinique",
+        description: "Approvisionnement pharmaceutique boutique et livraison directe de protocoles thérapeutiques spécialisés.",
         icon: <FiShield className="w-8 h-8" />,
         image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80"
     }
@@ -64,20 +64,20 @@ const services = [
 
 const features = [
     {
-        title: "Administrative Stealth",
-        description: "Invisible orchestration of medical documentation and administrative workflows.",
+        title: "Discrétion Administrative",
+        description: "Orchestration invisible de la documentation médicale et des flux administratifs.",
         icon: <FiFileText className="w-8 h-8" />,
         color: "from-slate-700 to-slate-900"
     },
     {
-        title: "Encrypted Concierge",
-        description: "Secure, real-time communication portal between clinical faculty and guests.",
+        title: "Conciergerie Cryptée",
+        description: "Portail de communication sécurisé en temps réel entre le corps clinique et les invités.",
         icon: <FiMessageCircle className="w-8 h-8" />,
         color: "from-emerald-700 to-emerald-900"
     },
     {
-        title: "Specialized Protocols",
-        description: "High-precision therapeutic programs curated for metabolic excellence.",
+        title: "Protocoles Spécialisés",
+        description: "Programmes thérapeutiques de haute précision conçus pour l'excellence métabolique.",
         icon: <FiAward className="w-8 h-8" />,
         color: "from-indigo-900 to-slate-900"
     }
@@ -86,20 +86,20 @@ const features = [
 const doctors = [
     {
         name: "Dr. Alistair Vaughn",
-        specialty: "Clinical Cardiology",
-        experience: "Senior Faculty",
+        specialty: "Cardiologie Clinique",
+        experience: "Faculté Senior",
         image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80"
     },
     {
         name: "Dr. Elena Thorne",
-        specialty: "Precision Pediatrics",
-        experience: "Lead Consultant",
+        specialty: "Pédiatrie de Précision",
+        experience: "Consultante Principale",
         image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&q=80"
     },
     {
         name: "Dr. Julian Blackwood",
-        specialty: "Advanced Dermatology",
-        experience: "Research Chair",
+        specialty: "Dermatologie Avancée",
+        experience: "Chaire de Recherche",
         image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80"
     }
 ];
@@ -107,49 +107,49 @@ const doctors = [
 const testimonials = [
     {
         name: "S. Montgomery",
-        comment: "A profound shift in how I perceive medical care. The discretion and clinical precision are peerless.",
+        comment: "Un changement profond dans ma perception des soins médicaux. La discrétion et la précision clinique sont sans égal.",
         rating: 5,
-        role: "Private Guest"
+        role: "Invité Privé"
     },
     {
         name: "L. Stanfield",
-        comment: "Every touchpoint reflects a commitment to excellence. The digital suite is exceptionally intuitive.",
+        comment: "Chaque point de contact reflète un engagement envers l'excellence. La suite numérique est exceptionnellement intuitive.",
         rating: 5,
-        role: "Private Guest"
+        role: "Invité Privé"
     },
     {
         name: "R. Sterling",
-        comment: "Finally, a medical experience that respects one's time and privacy with absolute clinical rigor.",
+        comment: "Enfin, une expérience médicale qui respecte le temps et la vie privée avec une rigueur clinique absolue.",
         rating: 5,
-        role: "Private Guest"
+        role: "Invité Privé"
     }
 ];
 
 const benefits = [
     {
-        title: "Perpetual Vigilance",
-        description: "Uninterrupted clinical monitoring and on-demand faculty support.",
+        title: "Vigilance Perpétuelle",
+        description: "Surveillance clinique ininterrompue et soutien de la faculté à la demande.",
         icon: <FiClock className="w-10 h-10" />,
         stat: "24/7",
         color: "from-slate-800 to-slate-950"
     },
     {
-        title: "Certified Faculty",
-        description: "Our physicians undergo rigorous biometric and clinical certification.",
+        title: "Faculté Certifiée",
+        description: "Nos médecins subissent une certification biométrique et clinique rigoureuse.",
         icon: <FiAward className="w-10 h-10" />,
         stat: "100%",
         color: "from-emerald-800 to-emerald-950"
     },
     {
-        title: "Biometric Security",
-        description: "Highest tier of data sovereignty and HIPAA-aligned encryption.",
+        title: "Sécurité Biométrique",
+        description: "Plus haut niveau de souveraineté des données et cryptage aligné HIPAA.",
         icon: <FiShield className="w-10 h-10" />,
         stat: "AES-256",
         color: "from-indigo-800 to-indigo-950"
     },
     {
-        title: "Global Network",
-        description: "Integrated access to specialized medical alliances worldwide.",
+        title: "Réseau Global",
+        description: "Accès intégré à des alliances médicales spécialisées dans le monde entier.",
         icon: <FiHeart className="w-10 h-10" />,
         stat: "Elite",
         color: "from-slate-900 to-black"
@@ -159,26 +159,26 @@ const benefits = [
 const processSteps = [
     {
         number: "01",
-        title: "Private Intake",
-        description: "Curated onboarding through our secure digital portal.",
+        title: "Admission Privée",
+        description: "Intégration soignée via notre portail numérique sécurisé.",
         icon: <FiCalendar className="w-6 h-6" />
     },
     {
         number: "02",
-        title: "Faculty Review",
-        description: "In-depth analysis of your biometric and clinical profile.",
+        title: "Revue de la Faculté",
+        description: "Analyse approfondie de votre profil biométrique et clinique.",
         icon: <FiVideo className="w-6 h-6" />
     },
     {
         number: "03",
-        title: "Protocol Design",
-        description: "Bespoke therapeutic roadmap and prescription orchestration.",
+        title: "Conception de Protocole",
+        description: "Feuille de route thérapeutique sur mesure et orchestration des prescriptions.",
         icon: <FiFileText className="w-6 h-6" />
     },
     {
         number: "04",
-        title: "Continual Care",
-        description: "Proactive monitoring and ongoing clinical adjustment.",
+        title: "Soins Continus",
+        description: "Surveillance proactive et ajustement clinique continu.",
         icon: <FiActivity className="w-6 h-6" />
     }
 ];
@@ -192,31 +192,31 @@ const insuranceProviders = [
 
 const faqs = [
     {
-        question: "How do I initiate my private entry?",
-        answer: "Entry is managed through our encrypted concierge portal. Select your area of interest, and a clinical coordinator will orchestrate your initial faculty review."
+        question: "Comment initier mon entrée privée ?",
+        answer: "L'entrée est gérée via notre portail de conciergerie crypté. Sélectionnez votre domaine d'intérêt, et un coordinateur clinique orchestrera votre revue initiale par la faculté."
     },
     {
-        question: "Is my data truly sovereign?",
-        answer: "We utilize multi-layer encryption and private cloud infrastructure to ensure your medical history remains exclusively accessible to you and your designated faculty."
+        question: "Mes données sont-elles vraiment souveraines ?",
+        answer: "Nous utilisons un cryptage multicouche et une infrastructure cloud privée pour garantir que votre historique médical reste exclusivement accessible à vous et à votre faculté désignée."
     }
 ];
 
 const articles = [
     {
-        title: "The Neuro-Aesthetics of Clinical Calm",
-        excerpt: "Exploring the intersection of architectural design and therapeutic recovery outcomes.",
+        title: "La Neuro-Esthétique du Calme Clinique",
+        excerpt: "Explorer l'intersection entre le design architectural et les résultats de récupération thérapeutique.",
         image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&q=80",
-        category: "Research",
+        category: "Recherche",
         readTime: "8 min",
-        date: "Dec 15, 2024"
+        date: "15 Déc 2024"
     },
     {
-        title: "Precision Nutri-Genomics",
-        excerpt: "Leveraging genetic profiles to design hyper-personalized metabolic optimization protocols.",
+        title: "Nutri-Génomique de Précision",
+        excerpt: "Exploiter les profils génétiques pour concevoir des protocoles d'optimisation métabolique hyper-personnalisés.",
         image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80",
-        category: "Metabolics",
+        category: "Métabolique",
         readTime: "12 min",
-        date: "Dec 10, 2024"
+        date: "10 Déc 2024"
     }
 ];
 
@@ -230,28 +230,28 @@ const partners = [
 ];
 
 const sanctuaries = [
-    { site: "Manhattan", specialized: "Aesthetic Restoration", metric: "Site 01" },
-    { site: "Geneva", specialized: "Metabolic Optimization", metric: "Site 02" },
-    { site: "Dubai", specialized: "Longevity Board", metric: "Site 03" },
-    { site: "Singapore", specialized: "Genomic Sequencing", metric: "Site 04" }
+    { site: "Manhattan", specialized: "Restauration Esthétique", metric: "Site 01" },
+    { site: "Genève", specialized: "Optimisation Métabolique", metric: "Site 02" },
+    { site: "Dubai", specialized: "Conseil de Longévité", metric: "Site 03" },
+    { site: "Singapour", specialized: "Séquençage Génomique", metric: "Site 04" }
 ];
 
 const membershipTiers = [
-    { name: "Essential", protocols: ["Bi-Annual Analytics", "Secure Concierge", "Member Portal"], price: "2.5k" },
-    { name: "Elite", protocols: ["Quarterly Diagnostics", "24/7 Dispatch", "Private Entry", "Sanctuary Access"], price: "10k" },
-    { name: "Sovereign", protocols: ["Immortal Protocols", "Dedicated Faculty", "Global Sanctuary Access", "Alpha Dispatch"], price: "25k" }
+    { name: "Essentiel", protocols: ["Analyses Bi-Annuelles", "Conciergerie Sécurisée", "Portail Membre"], price: "2.5k" },
+    { name: "Élite", protocols: ["Diagnostics Trimestriels", "Répartition 24/7", "Entrée Privée", "Accès au Sanctuaire"], price: "10k" },
+    { name: "Souverain", protocols: ["Protocoles Immortels", "Faculté Dédiée", "Accès Sanctuaire Global", "Répartition Alpha"], price: "25k" }
 ];
 
 const vaultEquipment = [
-    { device: "Quantum Imaging", function: "Molecular Diagnostics", icon: <FiCpu /> },
-    { device: "Holographic Bio-Loom", function: "Tissue Regeneration", icon: <FiLayers /> },
-    { device: "Neural Link v4", function: "Cognitive Optimization", icon: <FiZap /> },
-    { device: "Medi-Sovereign AI", function: "Predictive Analytics", icon: <FiLock /> }
+    { device: "Imagerie Quantique", function: "Diagnostics Moléculaires", icon: <FiCpu /> },
+    { device: "Bio-Métier Holographique", function: "Régénération Tissulaire", icon: <FiLayers /> },
+    { device: "Lien Neural v4", function: "Optimisation Cognitive", icon: <FiZap /> },
+    { device: "IA Médi-Souveraine", function: "Analyses Prédictives", icon: <FiLock /> }
 ];
 
 const clientJourneys = [
-    { identity: "A. Sterling", role: "Venture Principal", narrative: "The clinical rigor at MediVault is matched only by the absolute sanctuary of their service.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
-    { identity: "S. Chen", role: "Design Director", narrative: "A sovereign approach to wellness that feels light-years ahead of traditional institutions.", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" }
+    { identity: "A. Sterling", role: "Directeur de Capital-Risque", narrative: "La rigueur clinique chez MediVault n'a d'égal que le sanctuaire absolu de leur service.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
+    { identity: "S. Chen", role: "Directeur de Design", narrative: "Une approche souveraine du bien-être qui semble avoir des années-lumière d'avance sur les institutions traditionnelles.", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" }
 ];
 
 const Magnetic = ({ children }: { children: React.ReactNode }) => {
@@ -368,10 +368,10 @@ export default function MediCareDemo() {
                             <div className="flex items-center gap-4">
                                 <span className="flex items-center gap-2 text-emerald-400">
                                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                                    Clinical Support Active
+                                    Support Clinique Actif
                                 </span>
                                 <span className="hidden sm:inline opacity-40">|</span>
-                                <span className="hidden sm:inline opacity-60">Emergencies: Dial 911</span>
+                                <span className="hidden sm:inline opacity-60">Urgences : Composez le 112</span>
                             </div>
                             <button
                                 onClick={() => setEmergencyBannerVisible(false)}
@@ -399,10 +399,10 @@ export default function MediCareDemo() {
                         {/* Desktop Navigation */}
                         <div className="hidden lg:flex items-center gap-12 text-[10px] uppercase font-bold tracking-[0.3em] text-[#1A1A1A]/40">
                             {[
-                                { name: 'Arrival', href: '#home' },
-                                { name: 'Portfolio', href: '#services' },
-                                { name: 'Protocol', href: '#process' },
-                                { name: 'Faculty', href: '#doctors' },
+                                { name: 'Arrivée', href: '#home' },
+                                { name: 'Portefeuille', href: '#services' },
+                                { name: 'Protocole', href: '#process' },
+                                { name: 'Faculté', href: '#doctors' },
                                 { name: 'Journal', href: '#blog' }
                             ].map((item) => (
                                 <a
@@ -424,7 +424,7 @@ export default function MediCareDemo() {
                                     whileTap={{ scale: 0.98 }}
                                     className="px-8 py-4 bg-[#1A1A1A] text-white text-[10px] uppercase font-bold tracking-[0.3em] hover:bg-emerald-600 transition-colors shadow-2xl shadow-black/10"
                                 >
-                                    Private Entry
+                                    Entrée Privée
                                 </motion.button>
                             </Magnetic>
                         </div>
@@ -451,7 +451,7 @@ export default function MediCareDemo() {
                             className="lg:hidden bg-white border-t border-slate-100 overflow-hidden shadow-2xl"
                         >
                             <div className="container mx-auto px-6 py-12 flex flex-col gap-8 text-center uppercase tracking-[0.3em] font-bold text-[10px] text-[#1A1A1A]/50">
-                                {['Arrival', 'Portfolio', 'Protocol', 'Faculty', 'Journal'].map((item) => (
+                                {['Arrivée', 'Portefeuille', 'Protocole', 'Faculté', 'Journal'].map((item) => (
                                     <a
                                         key={item}
                                         href={`#${item.toLowerCase()}`}
@@ -485,12 +485,12 @@ export default function MediCareDemo() {
                             >
                                 <div className="flex items-center gap-6 mb-12">
                                     <div className="h-[1px] w-16 bg-emerald-600/30" />
-                                    <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-emerald-600">The Future of Care</span>
+                                    <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-emerald-600">L'Avenir des Soins</span>
                                 </div>
 
                                 <h1 className="text-[12vw] sm:text-[10vw] lg:text-[7.5vw] font-black leading-[0.85] tracking-tighter text-[#1A1A1A] mb-12">
-                                    <span className="block font-serif italic font-extralight text-[#1A1A1A]/5 lowercase -mb-[2vw] ml-[1vw]">orchestrated</span>
-                                    <span>CLINICAL</span>
+                                    <span className="block font-serif italic font-extralight text-[#1A1A1A]/5 lowercase -mb-[2vw] ml-[1vw]">orchestrée</span>
+                                    <span>CLINIQUE</span>
                                     <br />
                                     <span className="flex items-center gap-6">
                                         <span className="luxury-text-stroke uppercase">EXCELLENCE</span>
@@ -504,7 +504,7 @@ export default function MediCareDemo() {
                                 </h1>
 
                                 <p className="text-xl md:text-2xl text-[#1A1A1A]/40 font-light leading-snug tracking-tight max-w-xl mb-16">
-                                    A private sanctuary for advanced diagnostics and specialized therapeutics. Where faculty expertise meets the tranquility of high-end clinical hospitality.
+                                    Un sanctuaire privé pour des diagnostics avancés et des thérapies spécialisées. Où l'expertise de la faculté rencontre la tranquillité de l'hospitalité clinique haut de gamme.
                                 </p>
 
                                 <div className="flex flex-wrap gap-12 items-center">
@@ -517,7 +517,7 @@ export default function MediCareDemo() {
                                             <div className="w-16 h-16 rounded-full border border-black/5 flex items-center justify-center group-hover:bg-[#1A1A1A] transition-all duration-500">
                                                 <FiArrowRight className="w-6 h-6 group-hover:text-white" />
                                             </div>
-                                            <span className="text-[9px] uppercase font-bold tracking-[0.4em]">Explore Portfolio</span>
+                                            <span className="text-[9px] uppercase font-bold tracking-[0.4em]">Explorer le Portefeuille</span>
                                         </motion.a>
                                     </Magnetic>
 
@@ -526,11 +526,11 @@ export default function MediCareDemo() {
                                     <div className="flex gap-12">
                                         <div>
                                             <div className="text-3xl font-black tracking-tighter text-[#1A1A1A]">99.9%</div>
-                                            <span className="text-[8px] uppercase font-bold tracking-[0.3em] text-[#1A1A1A]/30">Clinical Accuracy</span>
+                                            <span className="text-[8px] uppercase font-bold tracking-[0.3em] text-[#1A1A1A]/30">Précision Clinique</span>
                                         </div>
                                         <div>
                                             <div className="text-3xl font-black tracking-tighter text-[#1A1A1A]">500+</div>
-                                            <span className="text-[8px] uppercase font-bold tracking-[0.3em] text-[#1A1A1A]/30">Expert Faculty</span>
+                                            <span className="text-[8px] uppercase font-bold tracking-[0.3em] text-[#1A1A1A]/30">Faculté Experte</span>
                                         </div>
                                     </div>
                                 </div>
@@ -569,8 +569,8 @@ export default function MediCareDemo() {
                                                 <FiActivity />
                                             </div>
                                             <div>
-                                                <div className="text-xs font-bold tracking-widest text-[#1A1A1A] uppercase">Real-Time Vitality</div>
-                                                <div className="text-[10px] text-[#1A1A1A]/40 mt-1 uppercase font-bold">Encrypted Stream Active</div>
+                                                <div className="text-xs font-bold tracking-widest text-[#1A1A1A] uppercase">Vitalité Temps Réel</div>
+                                                <div className="text-[10px] text-[#1A1A1A]/40 mt-1 uppercase font-bold">Flux Crypté Actif</div>
                                             </div>
                                         </div>
                                     </motion.div>
@@ -591,16 +591,16 @@ export default function MediCareDemo() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                             >
-                                <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-emerald-600 block mb-8">The Clinical Edge</span>
+                                <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-emerald-600 block mb-8">L'Avantage Clinique</span>
                                 <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter leading-[0.8] text-[#1A1A1A]">
-                                    <span className="block font-serif italic font-extralight text-[#1A1A1A]/5 lowercase -mb-[1.5vw]">uncompromising</span>
+                                    <span className="block font-serif italic font-extralight text-[#1A1A1A]/5 lowercase -mb-[1.5vw]">intransigeant</span>
                                     <span>STANDARDS</span>
                                 </h2>
                             </motion.div>
                         </div>
                         <div className="lg:col-span-4 text-right">
                             <p className="text-sm text-[#1A1A1A]/40 font-light leading-relaxed max-w-[280px] ml-auto">
-                                Every interaction is governed by a meticulous commitment to clinical rigor and personal discretion.
+                                Chaque interaction est régie par un engagement méticuleux envers la rigueur clinique et la discrétion personnelle.
                             </p>
                         </div>
                     </div>
@@ -634,7 +634,7 @@ export default function MediCareDemo() {
                 <div className="container mx-auto px-6 lg:px-12 relative z-10">
                     <div className="text-center mb-32">
                         <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8">Infrastructure</span>
-                        <h2 className="text-[8vw] sm:text-[6vw] lg:text-[4vw] font-black uppercase tracking-tighter text-[#1A1A1A]">THE DIGITAL Vault</h2>
+                        <h2 className="text-[8vw] sm:text-[6vw] lg:text-[4vw] font-black uppercase tracking-tighter text-[#1A1A1A]">LE COFFRE NUMÉRIQUE</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -664,11 +664,11 @@ export default function MediCareDemo() {
                 <div className="container mx-auto px-6 lg:px-12 relative z-10">
                     <div className="flex flex-col lg:flex-row justify-between items-end gap-16 mb-32">
                         <div>
-                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-400 block mb-8">Privilege</span>
-                            <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter leading-none text-white">SOVEREIGN Access</h2>
+                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-400 block mb-8">Privilège</span>
+                            <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter leading-none text-white">ACCÈS SOUVERAIN</h2>
                         </div>
                         <p className="text-xs text-white/40 font-light leading-relaxed max-w-[240px]">
-                            Exclusive membership tiers designed for those who require ultimate clinical sovereignty and personal discretion.
+                            Niveaux d'adhésion exclusifs conçus pour ceux qui exigent une souveraineté clinique ultime et une discrétion personnelle.
                         </p>
                     </div>
 
@@ -689,9 +689,9 @@ export default function MediCareDemo() {
                                 )}
                                 <h3 className="text-2xl font-black uppercase tracking-[0.2em] mb-12">{tier.name}</h3>
                                 <div className="flex items-baseline gap-2 mb-16">
-                                    <span className="text-4xl font-serif italic text-emerald-400">from</span>
+                                    <span className="text-4xl font-serif italic text-emerald-400">dès</span>
                                     <span className="text-6xl font-black tracking-tighter">${tier.price}</span>
-                                    <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/20">/ annum</span>
+                                    <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/20">/ an</span>
                                 </div>
                                 <ul className="space-y-6 mb-16">
                                     {tier.protocols.map((protocol, pi) => (
@@ -702,7 +702,7 @@ export default function MediCareDemo() {
                                     ))}
                                 </ul>
                                 <button className={`w-full py-6 rounded-full text-[10px] uppercase font-bold tracking-[0.4em] transition-all duration-500 ${index === 2 ? 'bg-emerald-600 text-white hover:bg-emerald-500' : 'border border-white/10 hover:border-white/40 text-white/60 hover:text-white'}`}>
-                                    Initialize Protocol
+                                    Initialiser le Protocole
                                 </button>
                             </motion.div>
                         ))}
@@ -715,10 +715,10 @@ export default function MediCareDemo() {
                 <div className="container mx-auto px-6 lg:px-12">
                     <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-32">
                         <div className="max-w-2xl">
-                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8 underline underline-offset-8 decoration-emerald-600/10">The Suite</span>
+                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8 underline underline-offset-8 decoration-emerald-600/10">La Suite</span>
                             <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter leading-none text-[#1A1A1A]">
-                                <span className="block font-serif italic font-extralight text-[#1A1A1A]/5 lowercase -mb-[1.5vw]">advanced</span>
-                                <span>PORTFOLIO</span>
+                                <span className="block font-serif italic font-extralight text-[#1A1A1A]/5 lowercase -mb-[1.5vw]">avancé</span>
+                                <span>PORTEFEUILLE</span>
                             </h2>
                         </div>
                         <div className="flex gap-4">
@@ -766,12 +766,12 @@ export default function MediCareDemo() {
                 <div className="container mx-auto px-6 lg:px-12 relative z-10">
                     <div className="flex flex-col lg:flex-row justify-between items-end gap-16 mb-32">
                         <div className="max-w-xl">
-                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8 underline underline-offset-8 decoration-emerald-600/10">Global Presence</span>
-                            <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter leading-none text-[#1A1A1A]">CLINICAL Sanctuaries</h2>
+                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8 underline underline-offset-8 decoration-emerald-600/10">Présence Globale</span>
+                            <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter leading-none text-[#1A1A1A]">SANCTUAIRES CLINIQUES</h2>
                         </div>
                         <div className="flex items-center gap-4 text-[10px] uppercase font-bold tracking-[0.4em] text-emerald-600">
                             <FiGlobe className="animate-spin-slow" />
-                            Sovereign Map v4.2
+                            Carte Souveraine v4.2
                         </div>
                     </div>
 
@@ -799,8 +799,8 @@ export default function MediCareDemo() {
                 <div className="absolute inset-0 grain-overlay opacity-10" />
                 <div className="container mx-auto px-6 lg:px-12 relative z-10">
                     <div className="text-center mb-32">
-                        <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-400 block mb-8">The Journey</span>
-                        <h2 className="text-[8vw] sm:text-[6vw] lg:text-[4.5vw] font-black uppercase tracking-tighter text-white">ORCHESTRATED Flow</h2>
+                        <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-400 block mb-8">Le Voyage</span>
+                        <h2 className="text-[8vw] sm:text-[6vw] lg:text-[4.5vw] font-black uppercase tracking-tighter text-white">FLUX ORCHESTRÉ</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-20">
@@ -864,11 +864,11 @@ export default function MediCareDemo() {
                         >
                             <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8">Infrastructure</span>
                             <h2 className="text-[8vw] sm:text-[6vw] lg:text-[4vw] font-black uppercase tracking-tighter leading-tight text-[#1A1A1A] mb-12">
-                                <span className="block font-serif italic font-extralight text-[#1A1A1A]/5 lowercase -mb-[1vw]">meticulous</span>
-                                <span>ENROLLMENT</span>
+                                <span className="block font-serif italic font-extralight text-[#1A1A1A]/5 lowercase -mb-[1vw]">méticuleuse</span>
+                                <span>INSCRIPTION</span>
                             </h2>
                             <p className="text-sm text-[#1A1A1A]/40 font-light leading-relaxed mb-12 max-w-lg">
-                                Experience a seamless transition into our medical ecosystem. Our administrative stealth ensures your onboarding is as tranquil as the care that follows.
+                                Vivez une transition fluide vers notre écosystème médical. Notre discrétion administrative assure que votre intégration est aussi tranquille que les soins qui suivent.
                             </p>
                             <motion.button
                                 whileHover={{ x: 10 }}
@@ -877,7 +877,7 @@ export default function MediCareDemo() {
                                 <div className="w-14 h-14 rounded-full bg-[#1A1A1A] text-white flex items-center justify-center group-hover:bg-emerald-600 transition-colors">
                                     <FiArrowRight className="w-5 h-5" />
                                 </div>
-                                <span className="text-[10px] uppercase font-bold tracking-[0.4em]">Initialize Intake</span>
+                                <span className="text-[10px] uppercase font-bold tracking-[0.4em]">Initialiser l'Admission</span>
                             </motion.button>
                         </motion.div>
                     </div>
@@ -889,8 +889,8 @@ export default function MediCareDemo() {
                 <div className="container mx-auto px-6 lg:px-12">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
                         <div className="text-center lg:text-left">
-                            <h3 className="text-[10px] uppercase tracking-[0.5em] font-bold text-[#1A1A1A]/30 mb-2">Global Alliances</h3>
-                            <div className="text-xl font-serif italic text-[#1A1A1A]">Accepted Clinical Partners</div>
+                            <h3 className="text-[10px] uppercase tracking-[0.5em] font-bold text-[#1A1A1A]/30 mb-2">Alliances Globales</h3>
+                            <div className="text-xl font-serif italic text-[#1A1A1A]">Partenaires Cliniques Acceptés</div>
                         </div>
                         <div className="flex flex-wrap justify-center gap-12 lg:gap-24 items-center">
                             {insuranceProviders.map((provider, index) => (
@@ -912,8 +912,8 @@ export default function MediCareDemo() {
             <section id="doctors" className="py-40 bg-white">
                 <div className="container mx-auto px-6 lg:px-12">
                     <div className="text-center mb-32">
-                        <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8">The Faculty</span>
-                        <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter text-[#1A1A1A]">MEDICAL Board</h2>
+                        <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8">La Faculté</span>
+                        <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter text-[#1A1A1A]">CONSEIL MÉDICAL</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
@@ -934,7 +934,7 @@ export default function MediCareDemo() {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-12">
                                         <div className="text-white">
-                                            <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-emerald-400 mb-2">Private Consult Ready</p>
+                                            <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-emerald-400 mb-2">Prêt pour Consultation Privée</p>
                                             <div className="h-[1px] w-12 bg-white/20" />
                                         </div>
                                     </div>
@@ -955,10 +955,10 @@ export default function MediCareDemo() {
                 <div className="container mx-auto px-6 lg:px-12 max-w-5xl">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
                         <div className="lg:col-span-5">
-                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8">Queries</span>
-                            <h2 className="text-4xl font-black uppercase tracking-tighter text-[#1A1A1A] mb-8 leading-none">Specialized<br />INQUIRIES</h2>
+                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8">Questions</span>
+                            <h2 className="text-4xl font-black uppercase tracking-tighter text-[#1A1A1A] mb-8 leading-none">DEMANDES<br />SPÉCIALISÉES</h2>
                             <p className="text-xs text-[#1A1A1A]/40 leading-relaxed font-light">
-                                For unique clinical requirements or administrative questions, please reach out to our encrypted concierge.
+                                Pour des exigences cliniques uniques ou des questions administratives, veuillez contacter notre conciergerie cryptée.
                             </p>
                         </div>
                         <div className="lg:col-span-7 space-y-6">
@@ -996,14 +996,14 @@ export default function MediCareDemo() {
                     <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-32">
                         <div className="max-w-2xl">
                             <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8">Journal</span>
-                            <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter text-[#1A1A1A]">THE Journal</h2>
+                            <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter text-[#1A1A1A]">LE JOURNAL</h2>
                         </div>
                         <motion.a
                             href="#"
                             whileHover={{ x: 10 }}
                             className="flex items-center gap-6 group"
                         >
-                            <span className="text-[10px] uppercase font-bold tracking-[0.4em]">View Archives</span>
+                            <span className="text-[10px] uppercase font-bold tracking-[0.4em]">Voir Archives</span>
                             <div className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center group-hover:bg-[#1A1A1A] group-hover:text-white transition-all">
                                 <FiArrowRight />
                             </div>
@@ -1051,11 +1051,11 @@ export default function MediCareDemo() {
                 <div className="container mx-auto px-6 lg:px-12">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-32 items-center">
                         <div className="lg:col-span-5">
-                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-12">The Narrative</span>
+                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-12">Le Récit</span>
                             <div className="relative mb-20">
                                 <span className="text-[20vw] font-serif italic text-emerald-600/5 absolute -top-[12vw] -left-[4vw] pointer-events-none">"</span>
                                 <h2 className="text-6xl font-black uppercase tracking-tighter text-[#1A1A1A] leading-[0.9] relative z-10">
-                                    SOVEREIGN<br />PERSPECTIVE
+                                    PERSPECTIVE<br />SOUVERAINE
                                 </h2>
                             </div>
                             <div className="space-y-32">
@@ -1102,9 +1102,9 @@ export default function MediCareDemo() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 className="absolute -bottom-16 -left-16 bg-[#1A1A1A] text-white p-14 rounded-[4rem] shadow-3xl max-w-xs z-20"
                             >
-                                <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-emerald-400 mb-8 underline decoration-emerald-400/20 underline-offset-8">Vault Metric</p>
+                                <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-emerald-400 mb-8 underline decoration-emerald-400/20 underline-offset-8">Métrique Coffre</p>
                                 <div className="text-5xl font-black tracking-tighter mb-4">98.4%</div>
-                                <div className="text-[11px] uppercase tracking-[0.2em] font-bold text-white/30">Clinical Sovereignty Score</div>
+                                <div className="text-[11px] uppercase tracking-[0.2em] font-bold text-white/30">Score Souveraineté Clinique</div>
                             </motion.div>
                         </div>
                     </div>
@@ -1116,17 +1116,17 @@ export default function MediCareDemo() {
                 <div className="container mx-auto px-6 lg:px-12 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-24">
                         <div className="lg:col-span-5">
-                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8">Inquiry</span>
-                            <h2 className="text-4xl font-black uppercase tracking-tighter text-[#1A1A1A] mb-8 leading-none">Private<br />INTAKE</h2>
+                            <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8">Demande</span>
+                            <h2 className="text-4xl font-black uppercase tracking-tighter text-[#1A1A1A] mb-8 leading-none">ADMISSION<br />PRIVÉE</h2>
                             <p className="text-xs text-[#1A1A1A]/40 leading-relaxed font-light mb-12">
-                                For specialized medical protocols or private entry inquiries, please utilize our encrypted intake portal.
+                                Pour des protocoles médicaux spécialisés ou des demandes d'entrée privée, veuillez utiliser notre portail d'admission crypté.
                             </p>
 
                             <div className="space-y-10">
                                 {[
-                                    { icon: <FiPhone />, title: "Clinical Support", content: "1-800-VAULT-ME" },
-                                    { icon: <FiMail />, title: "Secure Dispatch", content: "concierge@medivault.com" },
-                                    { icon: <FiMapPin />, title: "Sovereign Site", content: "Medical District v2.0" }
+                                    { icon: <FiPhone />, title: "Support Clinique", content: "1-800-VAULT-ME" },
+                                    { icon: <FiMail />, title: "Envoi Sécurisé", content: "concierge@medivault.com" },
+                                    { icon: <FiMapPin />, title: "Site Souverain", content: "Medical District v2.0" }
                                 ].map((item, i) => (
                                     <div key={i} className="flex gap-6 group">
                                         <div className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center text-[#1A1A1A] group-hover:bg-emerald-600 group-hover:text-white transition-all">
@@ -1148,16 +1148,16 @@ export default function MediCareDemo() {
                                 <form onSubmit={handleSubmit} className="space-y-8">
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                                         <div className="space-y-3">
-                                            <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]/40 ml-4">Subject Identity</label>
+                                            <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]/40 ml-4">Identité du Sujet</label>
                                             <input
                                                 type="text"
                                                 required
                                                 className="w-full px-8 py-5 bg-white border border-black/5 rounded-2xl focus:ring-1 focus:ring-emerald-600 outline-none text-xs font-light tracking-wide transition-all"
-                                                placeholder="Legal Name"
+                                                placeholder="Nom Légal"
                                             />
                                         </div>
                                         <div className="space-y-3">
-                                            <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]/40 ml-4">Encrypted Alpha</label>
+                                            <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]/40 ml-4">Alpha Crypté</label>
                                             <input
                                                 type="email"
                                                 required
@@ -1167,20 +1167,20 @@ export default function MediCareDemo() {
                                         </div>
                                     </div>
                                     <div className="space-y-3">
-                                        <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]/40 ml-4">Clinical Protocol</label>
+                                        <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]/40 ml-4">Protocole Clinique</label>
                                         <select className="w-full px-8 py-5 bg-white border border-black/5 rounded-2xl focus:ring-1 focus:ring-emerald-600 outline-none text-xs font-light tracking-wide transition-all appearance-none cursor-pointer">
-                                            <option>Aesthetic Restoration</option>
-                                            <option>Pediatric Precision</option>
-                                            <option>Digital Diagnostic Suite</option>
-                                            <option>Clinical Apothecary</option>
+                                            <option>Restauration Esthétique</option>
+                                            <option>Pédiatrie de Précision</option>
+                                            <option>Suite de Diagnostic Numérique</option>
+                                            <option>Apothicaire Clinique</option>
                                         </select>
                                     </div>
                                     <div className="space-y-3">
-                                        <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]/40 ml-4">Journal Entry</label>
+                                        <label className="text-[9px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]/40 ml-4">Entrée de Journal</label>
                                         <textarea
                                             rows={4}
                                             className="w-full px-8 py-5 bg-white border border-black/5 rounded-2xl focus:ring-1 focus:ring-emerald-600 outline-none text-xs font-light tracking-wide transition-all resize-none"
-                                            placeholder="Message Transmission..."
+                                            placeholder="Transmission de Message..."
                                         ></textarea>
                                     </div>
                                     <motion.button
@@ -1189,7 +1189,7 @@ export default function MediCareDemo() {
                                         type="submit"
                                         className="w-full py-6 bg-[#1A1A1A] text-white rounded-2xl font-black text-[10px] uppercase tracking-[0.5em] shadow-2xl hover:bg-emerald-600 transition-all duration-500"
                                     >
-                                        {submitted ? "Protocol Transmitted" : "Initialize Inquiry"}
+                                        {submitted ? "Protocole Transmis" : "Initialiser Demande"}
                                     </motion.button>
                                 </form>
                             </div>
@@ -1211,7 +1211,7 @@ export default function MediCareDemo() {
                                 <span className="text-xl font-black uppercase tracking-[0.4em]">MediVault</span>
                             </div>
                             <p className="text-xs text-white/40 leading-relaxed font-light mb-12 max-w-sm">
-                                Standardizing medical excellence through a synthesis of clinical rigor and private sanctuary protocols.
+                                Standardisation de l'excellence médicale par une synthèse de rigueur clinique et de protocoles de sanctuaire privé.
                             </p>
                             <div className="flex gap-8">
                                 {[FiInstagram, FiTwitter, FiLinkedin].map((Icon, i) => (
@@ -1224,9 +1224,9 @@ export default function MediCareDemo() {
 
                         <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-16">
                             {[
-                                { title: 'Faculty', links: ['Aesthetics', 'Pediatrics', 'Cardiology', 'Neuro'] },
-                                { title: 'Portfolio', links: ['Arrival', 'Inquiry', 'Protocols', 'Archives'] },
-                                { title: 'Security', links: ['Sovereignty', 'Compliance', 'Ethics', 'Legal'] }
+                                { title: 'Faculté', links: ['Esthétique', 'Pédiatrie', 'Cardiologie', 'Neuro'] },
+                                { title: 'Portefeuille', links: ['Arrivée', 'Demande', 'Protocoles', 'Archives'] },
+                                { title: 'Sécurité', links: ['Souveraineté', 'Conformité', 'Éthique', 'Légal'] }
                             ].map((group, i) => (
                                 <div key={i}>
                                     <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold mb-8 text-white/30">{group.title}</h4>
@@ -1244,10 +1244,10 @@ export default function MediCareDemo() {
 
                     <div className="flex flex-col md:flex-row justify-between items-center gap-12 pt-12 border-t border-white/5">
                         <div className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/30">
-                            © 2024 MediVault Clinical. All Rights Sovereign.
+                            © 2024 MediVault Clinique. Tous Droits Souverains.
                         </div>
                         <div className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/30">
-                            Crafted for Clinical Excellence
+                            Conçu pour l'Excellence Clinique
                         </div>
                     </div>
                 </div>

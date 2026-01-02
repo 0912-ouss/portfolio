@@ -7,33 +7,35 @@ import { FiShield, FiClock, FiMapPin, FiHeadphones, FiDollarSign, FiTruck } from
 const features = [
     {
         icon: FiShield,
-        title: "Full Insurance",
-        description: "Comprehensive coverage included with every rental. Drive with complete peace of mind."
+    {
+        icon: FiShield,
+        title: "Assurance Complète",
+        description: "Couverture complète incluse avec chaque location. Conduisez en toute tranquillité."
     },
     {
         icon: FiClock,
-        title: "24/7 Availability",
-        description: "Pick up and drop off anytime. Our service runs around the clock, every day."
+        title: "Disponibilité 24/7",
+        description: "Prise en charge et retour à tout moment. Notre service fonctionne 24h/24, tous les jours."
     },
     {
         icon: FiMapPin,
-        title: "15+ Locations",
-        description: "Convenient pick-up points across the city. Airport, downtown, and suburban locations."
+        title: "15+ Agences",
+        description: "Points de prise en charge pratiques dans toute la ville. Aéroport, centre-ville et banlieue."
     },
     {
         icon: FiHeadphones,
-        title: "24/7 Support",
-        description: "Our dedicated team is always ready to assist you with any questions or emergencies."
+        title: "Assistance 24/7",
+        description: "Notre équipe dédiée est toujours prête à vous aider pour toute question ou urgence."
     },
     {
         icon: FiDollarSign,
-        title: "Best Price",
-        description: "Competitive rates with no hidden fees. Price match guarantee on all bookings."
+        title: "Meilleur Prix",
+        description: "Tarifs compétitifs sans frais cachés. Garantie du meilleur prix sur toutes les réservations."
     },
     {
         icon: FiTruck,
-        title: "Free Delivery",
-        description: "We bring the car to you. Free delivery within city limits for rentals over 3 days."
+        title: "Livraison Gratuite",
+        description: "Nous vous apportons la voiture. Livraison gratuite en ville pour les locations de plus de 3 jours."
     }
 ];
 
@@ -52,18 +54,18 @@ export function CarRentalFeatures() {
                         whileInView={{ opacity: 1 }}
                         className="text-[#FF6B35] text-xs uppercase tracking-[0.3em] block mb-4"
                     >
-                        Why Choose Us
+                        Pourquoi Nous Choisir
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-black tracking-tight mb-6"
                     >
-                        The AutoRent<br />
-                        <span className="text-white/20">Advantage</span>
+                        L'Avantage<br />
+                        <span className="text-white/20">AutoRent</span>
                     </motion.h2>
                     <p className="max-w-lg mx-auto text-white/50 font-light">
-                        Experience premium service with every rental. We go beyond just providing cars.
+                        Profitez d'un service premium à chaque location. Nous allons au-delà de la simple fourniture de voitures.
                     </p>
                 </div>
 

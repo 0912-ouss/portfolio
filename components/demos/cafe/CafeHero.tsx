@@ -34,14 +34,14 @@ export function CafeHero() {
                     transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <span className="block text-xs md:text-sm font-sans tracking-[0.4em] text-[#C8AA6E] mb-6 uppercase">
-                        The Art of Extraction
+                        L'Art de l'Extraction
                     </span>
                     <h1 className="text-7xl md:text-9xl font-serif font-medium tracking-tight mb-8 text-[#E6DCCA] mix-blend-overlay">
                         KŌHĪ
                     </h1>
                     <p className="max-w-md mx-auto text-sm md:text-base font-light text-[#E6DCCA]/60 leading-relaxed font-sans">
-                        Precision. Patience. The perfect pour. <br />
-                        Welcome to the atelier of modern brewing.
+                        Précision. Patience. Le versé parfait. <br />
+                        Bienvenue dans l'atelier de l'infusion moderne.
                     </p>
                 </motion.div>
             </div>
@@ -50,7 +50,7 @@ export function CafeHero() {
                 style={{ opacity }}
                 className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-[#E6DCCA]/40"
             >
-                <span className="text-[10px] uppercase tracking-widest">Scroll</span>
+                <span className="text-[10px] uppercase tracking-widest">Défiler</span>
                 <div className="w-[1px] h-12 bg-gradient-to-b from-[#E6DCCA]/40 to-transparent" />
             </motion.div>
         </section>

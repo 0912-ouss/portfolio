@@ -22,18 +22,18 @@ export function EcommerceProducts() {
                             whileInView={{ opacity: 1 }}
                             className="text-[#D4A574] text-xs uppercase tracking-[0.3em] block mb-4"
                         >
-                            Curated Selection
+                            Sélection Exclusive
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             className="text-4xl md:text-5xl font-light tracking-tight"
                         >
-                            New <span className="font-serif italic">Arrivals</span>
+                            Nos <span className="font-serif italic">Nouveautés</span>
                         </motion.h2>
                     </div>
                     <Link href="/demos/ecommerce/shop" className="text-sm uppercase tracking-wider mt-6 md:mt-0 border-b border-[#1A1A1A] hover:text-[#D4A574] hover:text-[#D4A574] transition-colors pb-1">
-                        View All
+                        Voir Tout
                     </Link>
                 </div>
 
@@ -63,12 +63,12 @@ export function EcommerceProducts() {
                                 <div className="absolute top-4 left-4 flex flex-col gap-2">
                                     {product.isNew && (
                                         <span className="px-3 py-1 bg-[#1A1A1A] text-white text-[10px] uppercase tracking-wider font-bold">
-                                            New
+                                            Nouveau
                                         </span>
                                     )}
                                     {product.isSale && (
                                         <span className="px-3 py-1 bg-[#D4A574] text-white text-[10px] uppercase tracking-wider font-bold">
-                                            Sale
+                                            Soldes
                                         </span>
                                     )}
                                 </div>
@@ -81,7 +81,7 @@ export function EcommerceProducts() {
                                     </button>
                                     <button className="flex-1 max-w-[180px] h-10 bg-[#1A1A1A] text-white flex items-center justify-center gap-2 text-xs uppercase tracking-wider font-bold hover:bg-[#333] transition-colors shadow-lg">
                                         <FiShoppingBag className="w-4 h-4" />
-                                        Add to Bag
+                                        Ajouter au Panier
                                     </button>
                                     <button className="w-10 h-10 bg-white flex items-center justify-center hover:bg-[#1A1A1A] hover:text-white transition-colors shadow-lg">
                                         <FiEye className="w-4 h-4" />

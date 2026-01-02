@@ -6,28 +6,28 @@ import { FiPlus, FiMinus } from 'react-icons/fi';
 
 const faqs = [
     {
-        question: "What makes your coffee different?",
-        answer: "We source exclusively from micro-lots with rigorous quality standards. Each bean is selected for its unique terroir characteristics, roasted in small batches within 48 hours of shipping, and prepared with precision brewing parameters calibrated to the specific origin."
+        question: "Qu'est-ce qui rend votre café différent ?",
+        answer: "Nous nous approvisionnons exclusivement auprès de micro-lots avec des normes de qualité rigoureuses. Chaque grain est sélectionné pour ses caractéristiques de terroir uniques, torréfié en petites quantités dans les 48 heures suivant l'expédition et préparé avec des paramètres d'infusion de précision calibrés pour l'origine spécifique."
     },
     {
-        question: "Do you offer brewing classes?",
-        answer: "Yes! We host weekly masterclasses covering pour-over techniques, espresso extraction theory, and sensory analysis. Private sessions with our head barista are available for groups seeking a deeper understanding of the craft."
+        question: "Proposez-vous des cours d'infusion ?",
+        answer: "Oui ! Nous organisons des masterclasses hebdomadaires couvrant les techniques de pour-over, la théorie de l'extraction de l'espresso et l'analyse sensorielle. Des sessions privées avec notre barista en chef sont disponibles pour les groupes cherchant une compréhension plus approfondie de l'artisanat."
     },
     {
-        question: "Can I purchase beans to take home?",
-        answer: "Absolutely. All our single origins and house blends are available by the bag. We recommend consumption within 3 weeks of roast date for optimal freshness. Subscriptions offer 15% savings and priority access to limited releases."
+        question: "Puis-je acheter des grains à emporter ?",
+        answer: "Absolument. Tous nos origines uniques et mélanges maison sont disponibles au sac. Nous recommandons une consommation dans les 3 semaines suivant la date de torréfaction pour une fraîcheur optimale. Les abonnements offrent 15% d'économie et un accès prioritaire aux sorties limitées."
     },
     {
-        question: "What brewing equipment do you recommend?",
-        answer: "For beginners, we suggest the Hario V60 or Aeropress. Intermediate brewers might explore the Chemex or Kalita Wave. We stock curated equipment in-store and offer complimentary guidance on selection."
+        question: "Quel équipement d'infusion recommandez-vous ?",
+        answer: "Pour les débutants, nous suggérons le Hario V60 ou l'Aeropress. Les amateurs intermédiaires pourraient explorer le Chemex ou le Kalita Wave. Nous stockons un équipement sélectionné en magasin et offrons des conseils gratuits sur la sélection."
     },
     {
-        question: "Do you accommodate dietary restrictions?",
-        answer: "We offer a full range of alternative milks including oat, almond, and coconut. Our pastries include gluten-free and vegan options. Please inform our team of any allergies for personalized recommendations."
+        question: "Prenez-vous en compte les restrictions alimentaires ?",
+        answer: "Nous proposons une gamme complète de laits alternatifs, y compris avoine, amande et coco. Nos pâtisseries incluent des options sans gluten et véganes. Veuillez informer notre équipe de toute allergie pour des recommandations personnalisées."
     },
     {
-        question: "Is there parking available?",
-        answer: "Street parking is available along Kyoto Street. We validate for the Arts District lot on weekends. Many guests prefer to arrive via Metro (Arts District station, 3 min walk) or ride-share."
+        question: "Y a-t-il un parking disponible ?",
+        answer: "Le stationnement dans la rue est disponible le long de Kyoto Street. Nous validons pour le parking du Arts District le week-end. De nombreux invités préfèrent arriver via le métro (station Arts District, 3 min à pied) ou en covoiturage."
     }
 ];
 
@@ -53,17 +53,17 @@ export function CafeFAQ() {
                             Questions
                         </span>
                         <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-[0.95]">
-                            Frequently<br />
-                            <span className="text-[#C8AA6E]/30">Asked</span>
+                            Fréquemment<br />
+                            <span className="text-[#C8AA6E]/30">Posées</span>
                         </h2>
                         <p className="text-sm font-light text-white/40 leading-relaxed max-w-sm mb-12">
-                            Everything you need to know about our coffee, services, and the KŌHĪ experience. Can't find what you're looking for? Reach out to our team.
+                            Tout ce que vous devez savoir sur notre café, nos services et l'expérience KŌHĪ. Vous ne trouvez pas ce que vous cherchez ? Contactez notre équipe.
                         </p>
                         <a
                             href="#reservation"
                             className="inline-flex items-center gap-4 text-[#C8AA6E] text-xs uppercase tracking-[0.2em] group"
                         >
-                            <span className="group-hover:underline underline-offset-4">Contact Us</span>
+                            <span className="group-hover:underline underline-offset-4">Contactez-nous</span>
                             <span className="w-8 h-[1px] bg-[#C8AA6E] group-hover:w-12 transition-all" />
                         </a>
                     </motion.div>
@@ -88,8 +88,8 @@ export function CafeFAQ() {
                                         {faq.question}
                                     </span>
                                     <span className={`w-8 h-8 border flex items-center justify-center transition-all ${openIndex === index
-                                            ? 'border-[#C8AA6E] text-[#C8AA6E] rotate-0'
-                                            : 'border-white/10 text-white/40'
+                                        ? 'border-[#C8AA6E] text-[#C8AA6E] rotate-0'
+                                        : 'border-white/10 text-white/40'
                                         }`}>
                                         {openIndex === index ? <FiMinus /> : <FiPlus />}
                                     </span>

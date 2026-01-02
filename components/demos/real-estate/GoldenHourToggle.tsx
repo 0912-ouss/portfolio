@@ -44,7 +44,7 @@ export function GoldenHourToggle({
                 </div>
 
                 <span className="text-[10px] uppercase tracking-[0.3em] font-bold">
-                    {isGoldenHour ? 'Golden Hour' : 'Daylight Mode'}
+                    {isGoldenHour ? 'Heure Dorée' : 'Mode Jour'}
                 </span>
 
                 {/* Status Indicator */}

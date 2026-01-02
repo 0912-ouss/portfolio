@@ -88,7 +88,7 @@ export function CafeLoading() {
                             KŌHĪ
                         </h1>
                         <p className="text-[10px] uppercase tracking-[0.5em] text-[#C8AA6E]">
-                            The Coffee Atelier
+                            L'Atelier Café
                         </p>
                     </motion.div>
 
@@ -102,7 +102,7 @@ export function CafeLoading() {
                             />
                         </div>
                         <p className="text-[10px] text-white/30 text-center mt-4 uppercase tracking-widest">
-                            Brewing...
+                            Infusion...
                         </p>
                     </div>
                 </motion.div>

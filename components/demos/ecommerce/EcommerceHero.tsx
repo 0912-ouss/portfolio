@@ -24,25 +24,25 @@ export function EcommerceHero() {
                         className="max-w-lg"
                     >
                         <span className="inline-block px-4 py-2 bg-[#1A1A1A] text-white text-[10px] uppercase tracking-[0.3em] mb-8">
-                            New Season 2024
+                            Nouvelle Saison 2024
                         </span>
 
                         <h1 className="text-5xl md:text-7xl font-light leading-[0.95] tracking-tight mb-8">
-                            Effortless<br />
-                            <span className="font-serif italic">Elegance</span>
+                            Élégance<br />
+                            <span className="font-serif italic">Naturelle</span>
                         </h1>
 
                         <p className="text-lg text-[#666] font-light leading-relaxed mb-12">
-                            Discover curated collections that blend timeless style with modern sensibility. Luxury redefined for the contemporary wardrobe.
+                            Découvrez des collections sélectionnées qui allient style intemporel et sensibilité moderne. Le luxe redéfini pour la garde-robe contemporaine.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link href="/demos/ecommerce/shop" className="group flex items-center justify-center gap-4 px-8 py-4 bg-[#1A1A1A] text-white font-medium text-sm uppercase tracking-wider hover:bg-[#333] transition-colors">
-                                Shop Collection
+                                Voir la Collection
                                 <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
                             </Link>
                             <Link href="/demos/ecommerce/collections" className="flex items-center justify-center gap-4 px-8 py-4 border border-[#1A1A1A] text-[#1A1A1A] font-medium text-sm uppercase tracking-wider hover:bg-[#1A1A1A] hover:text-white transition-colors">
-                                The Library
+                                Les Collections
                             </Link>
                         </div>
                     </motion.div>
@@ -70,9 +70,9 @@ export function EcommerceHero() {
                         className="absolute bottom-12 right-12 bg-white/90 backdrop-blur-sm p-6 shadow-xl hidden lg:block"
                     >
                         <span className="text-[10px] uppercase tracking-widest text-[#999] block mb-2">
-                            Featured
+                            En Vedette
                         </span>
-                        <p className="font-medium">Silk Evening Dress</p>
+                        <p className="font-medium">Robe de Soirée en Soie</p>
                         <p className="text-[#666] text-sm">$1,250</p>
                     </motion.div>
                 </motion.div>
@@ -83,7 +83,7 @@ export function EcommerceHero() {
                 style={{ opacity }}
                 className="absolute bottom-12 left-1/2 -translate-x-1/2 lg:left-20 lg:translate-x-0 flex flex-col items-center gap-4 text-[#999]"
             >
-                <span className="text-[10px] uppercase tracking-widest">Scroll to explore</span>
+                <span className="text-[10px] uppercase tracking-widest">Défiler pour explorer</span>
                 <div className="w-[1px] h-12 bg-gradient-to-b from-[#999] to-transparent" />
             </motion.div>
         </section>

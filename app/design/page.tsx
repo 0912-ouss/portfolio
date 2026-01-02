@@ -41,7 +41,7 @@ export default function DesignPage() {
                 <footer className="bg-white py-20 px-6 md:px-12 border-t border-gray-100">
                     <div className="flex flex-col md:flex-row justify-between items-end">
                         <h1 className="text-[10vw] font-black tracking-tighter leading-none">
-                            Let's Talk.
+                            Parlons.
                         </h1>
                         <div className="flex gap-4 mb-4">
                             <a href="mailto:hello@bazil.fr" className="text-xl font-bold underline decoration-2 underline-offset-4">hello@bazil.fr</a>

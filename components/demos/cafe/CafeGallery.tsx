@@ -9,32 +9,32 @@ const galleryImages = [
     {
         src: "https://images.unsplash.com/photo-1453614512568-c4024d13c247?q=80&w=2000&auto=format&fit=crop",
         alt: "Coffee Bar Counter",
-        category: "Interior"
+        category: "Intérieur"
     },
     {
         src: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=2000&auto=format&fit=crop",
         alt: "Espresso Machine",
-        category: "Equipment"
+        category: "Équipement"
     },
     {
         src: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=2000&auto=format&fit=crop",
         alt: "Cozy Seating",
-        category: "Atmosphere"
+        category: "Atmosphère"
     },
     {
         src: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2000&auto=format&fit=crop",
         alt: "Cafe Window View",
-        category: "Interior"
+        category: "Intérieur"
     },
     {
         src: "https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=2000&auto=format&fit=crop",
         alt: "Barista at Work",
-        category: "Craft"
+        category: "Savoir-faire"
     },
     {
         src: "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=2000&auto=format&fit=crop",
         alt: "Latte Art",
-        category: "Craft"
+        category: "Savoir-faire"
     }
 ];
 
@@ -65,9 +65,9 @@ export function CafeGallery() {
                         viewport={{ once: true }}
                     >
                         <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-4">
-                            The Space
+                            L'Espace
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-serif">Atmosphere & Craft</h2>
+                        <h2 className="text-4xl md:text-5xl font-serif">Atmosphère & Savoir-faire</h2>
                     </motion.div>
                 </div>
 

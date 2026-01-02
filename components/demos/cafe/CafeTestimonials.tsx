@@ -8,29 +8,29 @@ import { FiStar, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 const testimonials = [
     {
         name: "Yuki Tanaka",
-        role: "Coffee Enthusiast",
-        text: "The V60 here redefined what I thought pour-over could be. Each cup is a masterclass in extraction.",
+        role: "Amateur de Café",
+        text: "Le V60 ici a redéfini ce que je pensais du pour-over. Chaque tasse est un cours magistral d'extraction.",
         rating: 5,
         image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop"
     },
     {
         name: "Marcus Chen",
-        role: "Local Architect",
-        text: "KŌHĪ is my second office. The atmosphere is meditative, the coffee is transcendent.",
+        role: "Architecte Local",
+        text: "KŌHĪ est mon deuxième bureau. L'atmosphère est méditative, le café est transcendant.",
         rating: 5,
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"
     },
     {
         name: "Elena Vasquez",
-        role: "Food Critic",
-        text: "In a city saturated with specialty coffee, KŌHĪ stands apart. This is coffee as an art form.",
+        role: "Critique Gastronomique",
+        text: "Dans une ville saturée de cafés de spécialité, KŌHĪ se distingue. C'est le café comme forme d'art.",
         rating: 5,
         image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop"
     },
     {
         name: "James Wright",
-        role: "Writer",
-        text: "The single origin series is extraordinary. You can taste the terroir in every sip.",
+        role: "Écrivain",
+        text: "La série origine unique est extraordinaire. On peut goûter le terroir à chaque gorgée.",
         rating: 5,
         image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop"
     }
@@ -58,9 +58,9 @@ export function CafeTestimonials() {
                         viewport={{ once: true }}
                     >
                         <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-4">
-                            Voices
+                            Voix
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-serif">Guest Reflections</h2>
+                        <h2 className="text-4xl md:text-5xl font-serif">Réflexions des Invités</h2>
                     </motion.div>
                 </div>
 
@@ -124,8 +124,8 @@ export function CafeTestimonials() {
                                         key={index}
                                         onClick={() => setCurrentIndex(index)}
                                         className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentIndex
-                                                ? 'bg-[#C8AA6E] w-8'
-                                                : 'bg-white/20 hover:bg-white/40'
+                                            ? 'bg-[#C8AA6E] w-8'
+                                            : 'bg-white/20 hover:bg-white/40'
                                             }`}
                                     />
                                 ))}

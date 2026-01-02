@@ -63,31 +63,31 @@ export function EcommerceLookbook() {
                         className="lg:pl-12"
                     >
                         <span className="text-[#D4A574] text-xs uppercase tracking-[0.3em] block mb-6">
-                            Winter 2024
+                            Hiver 2024
                         </span>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-8 leading-[1.1]">
-                            The Art of<br />
-                            <span className="font-serif italic">Layering</span>
+                            L'Art de la<br />
+                            <span className="font-serif italic">Superposition</span>
                         </h2>
                         <p className="text-lg text-[#666] font-light leading-relaxed mb-8 max-w-md">
-                            Discover our winter lookbook featuring versatile pieces designed to elevate your cold-weather wardrobe. Luxurious fabrics, timeless silhouettes.
+                            Découvrez notre lookbook d'hiver mettant en vedette des pièces polyvalentes conçues pour sublimer votre garde-robe par temps froid. Tissus luxueux, silhouettes intemporelles.
                         </p>
                         <div className="space-y-4 mb-12">
                             <div className="flex items-center gap-4">
                                 <span className="w-8 h-[1px] bg-[#D4A574]" />
-                                <span className="text-sm text-[#666]">Sustainable Materials</span>
+                                <span className="text-sm text-[#666]">Matériaux Durables</span>
                             </div>
                             <div className="flex items-center gap-4">
                                 <span className="w-8 h-[1px] bg-[#D4A574]" />
-                                <span className="text-sm text-[#666]">Ethically Crafted</span>
+                                <span className="text-sm text-[#666]">Fabrication Éthique</span>
                             </div>
                             <div className="flex items-center gap-4">
                                 <span className="w-8 h-[1px] bg-[#D4A574]" />
-                                <span className="text-sm text-[#666]">Timeless Design</span>
+                                <span className="text-sm text-[#666]">Design Intemporel</span>
                             </div>
                         </div>
                         <button className="group flex items-center gap-4 text-sm uppercase tracking-wider font-medium">
-                            View Lookbook
+                            Voir le Lookbook
                             <span className="w-12 h-12 bg-[#1A1A1A] text-white flex items-center justify-center group-hover:bg-[#D4A574] transition-colors">
                                 <FiArrowRight />
                             </span>

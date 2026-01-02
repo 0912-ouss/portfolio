@@ -28,22 +28,22 @@ import {
 
 // Products data
 const products = [
-    { id: 1, name: "Trendy Brown Coat", price: 75, oldPrice: 150, rating: 4.8, image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=600&auto=format&fit=crop", discount: 50, category: "Women" },
-    { id: 2, name: "Classy Light Coat", price: 165, oldPrice: 220, rating: 4.9, image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600&auto=format&fit=crop", discount: 25, category: "Women" },
-    { id: 3, name: "Modern Brown Dress", price: 90, oldPrice: 100, rating: 4.8, image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600&auto=format&fit=crop", discount: 10, category: "Women" },
-    { id: 4, name: "Elegant Blazer", price: 120, oldPrice: 180, rating: 4.7, image: "https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=600&auto=format&fit=crop", discount: 33, category: "Men" },
-    { id: 5, name: "Stylish Summer Dress", price: 75, oldPrice: 150, rating: 4.8, image: "https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?q=80&w=600&auto=format&fit=crop", discount: 50, category: "Women" },
-    { id: 6, name: "Modern Party Dress", price: 80, oldPrice: 100, rating: 4.9, image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=600&auto=format&fit=crop", discount: 20, category: "Women" },
+    { id: 1, name: "Manteau Marron Tendance", price: 75, oldPrice: 150, rating: 4.8, image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=600&auto=format&fit=crop", discount: 50, category: "Femme" },
+    { id: 2, name: "Manteau Léger Élégant", price: 165, oldPrice: 220, rating: 4.9, image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600&auto=format&fit=crop", discount: 25, category: "Femme" },
+    { id: 3, name: "Robe Marron Moderne", price: 90, oldPrice: 100, rating: 4.8, image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600&auto=format&fit=crop", discount: 10, category: "Femme" },
+    { id: 4, name: "Blazer Élégant", price: 120, oldPrice: 180, rating: 4.7, image: "https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=600&auto=format&fit=crop", discount: 33, category: "Homme" },
+    { id: 5, name: "Robe d'Été Stylée", price: 75, oldPrice: 150, rating: 4.8, image: "https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?q=80&w=600&auto=format&fit=crop", discount: 50, category: "Femme" },
+    { id: 6, name: "Robe de Soirée Moderne", price: 80, oldPrice: 100, rating: 4.9, image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=600&auto=format&fit=crop", discount: 20, category: "Femme" },
 ];
 
 // Categories data
 const categories = [
-    { name: "For Women's", items: ["Blouse", "Dress", "Jackets & Coats", "Shirt"], count: "2300+ items", image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=400" },
-    { name: "For Men's", items: ["T-shirts and Shirts", "Pants", "Jackets & Coats", "Suit"], count: "1500+ items", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400" },
+    { name: "Pour Femme", items: ["Blouse", "Robe", "Vestes & Manteaux", "Chemise"], count: "2300+ articles", image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=400" },
+    { name: "Pour Homme", items: ["T-shirts & Chemises", "Pantalons", "Vestes & Manteaux", "Costume"], count: "1500+ articles", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400" },
 ];
 
 // Accessories
-const accessories = ["Sunglasses", "Handbags", "Jewelry", "Watches"];
+const accessories = ["Lunettes de Soleil", "Sacs à Main", "Bijoux", "Montres"];
 
 // Instagram images
 const instagramImages = [
@@ -57,24 +57,24 @@ const instagramImages = [
 
 // Testimonials
 const testimonials = [
-    { id: 1, name: "Leslie Alexander", role: "Fashion Enthusiast", rating: 5, review: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100" },
-    { id: 2, name: "Sarah Johnson", role: "Style Blogger", rating: 5, review: "Amazing quality and fast shipping. The clothes fit perfectly and the customer service is outstanding!", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100" },
+    { id: 1, name: "Leslie Alexander", role: "Passionnée de Mode", rating: 5, review: "J'adore absolument la qualité et le style. Ce sont mes vêtements préférés pour toutes les occasions.", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100" },
+    { id: 2, name: "Sarah Johnson", role: "Blogueuse Mode", rating: 5, review: "Qualité incroyable et livraison rapide. Les vêtements tombent parfaitement et le service client est exceptionnel !", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100" },
 ];
 
 // Blog posts
 const blogPosts = [
-    { id: 1, title: "10 Fashion Trends for the Modern Woman", date: "March 2024", image: "https://images.unsplash.com/photo-1558171813-4c088753af8f?q=80&w=400" },
-    { id: 2, title: "Fashion Forward: Tips, Trends, and Inspiration", date: "March 2024", image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=400" },
-    { id: 3, title: "Fall Fashion Frenzy: The Ultimate Style Guide", date: "March 2024", image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=400" },
+    { id: 1, title: "10 Tendances Mode pour la Femme Moderne", date: "Mars 2024", image: "https://images.unsplash.com/photo-1558171813-4c088753af8f?q=80&w=400" },
+    { id: 2, title: "Mode Avant-Garde : Astuces, Tendances et Inspiration", date: "Mars 2024", image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=400" },
+    { id: 3, title: "Folie de la Mode Automne : Le Guide de Style Ultime", date: "Mars 2024", image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=400" },
 ];
 
 // FAQs
 const faqs = [
-    { id: 1, q: "How can I place an order?", a: "Simply browse our collection, add items to your cart, and proceed to checkout. We accept all major payment methods." },
-    { id: 2, q: "What payment methods do you accept?", a: "We accept credit/debit cards, PayPal, and bank transfers. All transactions are secure and encrypted." },
-    { id: 3, q: "Can I track my order after it's been placed?", a: "Yes! Once your order ships, you'll receive a tracking number via email to monitor your delivery." },
-    { id: 4, q: "Do you offer customer support?", a: "Yes, our customer support team is available 24/7 via chat, email, or phone." },
-    { id: 5, q: "What is your return policy?", a: "We offer a 30-day return policy on all items in original condition with tags attached." },
+    { id: 1, q: "Comment passer une commande ?", a: "Parcourez simplement notre collection, ajoutez des articles à votre panier et passez à la caisse. Nous acceptons tous les principaux moyens de paiement." },
+    { id: 2, q: "Quels moyens de paiement acceptez-vous ?", a: "Nous acceptons les cartes de crédit/débit, PayPal et les virements bancaires. Toutes les transactions sont sécurisées et cryptées." },
+    { id: 3, q: "Puis-je suivre ma commande une fois passée ?", a: "Oui ! Une fois votre commande expédiée, vous recevrez un numéro de suivi par e-mail pour surveiller votre livraison." },
+    { id: 4, q: "Proposez-vous un service client ?", a: "Oui, notre équipe de support client est disponible 24/7 par chat, e-mail ou téléphone." },
+    { id: 5, q: "Quelle est votre politique de retour ?", a: "Nous offrons une politique de retour de 30 jours sur tous les articles dans leur état d'origine avec les étiquettes attachées." },
 ];
 
 // Countdown component
@@ -93,7 +93,7 @@ function Countdown() {
     }, []);
     return (
         <div className="flex gap-2">
-            {[{ v: time.days, l: "Days" }, { v: time.hours, l: "Hours" }, { v: time.mins, l: "Mins" }, { v: time.secs, l: "Secs" }].map(t => (
+            {[{ v: time.days, l: "Jours" }, { v: time.hours, l: "Heures" }, { v: time.mins, l: "Min" }, { v: time.secs, l: "Sec" }].map(t => (
                 <div key={t.l} className="bg-[#3D2314] text-white px-3 py-2 rounded-lg text-center min-w-[50px]">
                     <div className="text-lg font-bold">{String(t.v).padStart(2, "0")}</div>
                     <div className="text-[10px] text-white/70">{t.l}</div>
@@ -105,7 +105,7 @@ function Countdown() {
 
 export default function FashionDemo() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [productFilter, setProductFilter] = useState("All");
+    const [productFilter, setProductFilter] = useState("Tout");
     const [openFaq, setOpenFaq] = useState<number | null>(1);
     const [testimonialIndex, setTestimonialIndex] = useState(0);
     const [cartOpen, setCartOpen] = useState(false);
@@ -117,7 +117,7 @@ export default function FashionDemo() {
     const { scrollYProgress } = useScroll();
 
     useEffect(() => {
-        document.title = "Clothing - Your Ultimate Fashion Destination";
+        document.title = "Clothing - Votre Destination Mode Ultime";
         const handleScroll = () => setShowBackToTop(window.scrollY > 500);
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
@@ -130,7 +130,7 @@ export default function FashionDemo() {
 
     const staggerContainer = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.1 } } };
     const staggerItem = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } };
-    const filteredProducts = productFilter === "All" ? products : products.filter(p => p.category === productFilter);
+    const filteredProducts = productFilter === "Tout" ? products : products.filter(p => p.category === productFilter);
 
 
     return (
@@ -141,8 +141,8 @@ export default function FashionDemo() {
             {/* Top Bar */}
             <div className="bg-[#3D2314] text-white text-sm py-2">
                 <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                    <span>Support: 1 800 555 0100</span>
-                    <span>🎉 GET 20% Off for New User: <span className="font-bold underline cursor-pointer">Sign up now</span></span>
+                    <span>Support : 1 800 555 0100</span>
+                    <span>🎉 OBTENEZ -20% pour les Nouveaux : <span className="font-bold underline cursor-pointer">Inscrivez-vous</span></span>
                     <div className="hidden md:flex gap-4">
                         <span>FAQ</span>
                         <span>Contact</span>
@@ -161,7 +161,7 @@ export default function FashionDemo() {
                     </motion.div>
 
                     <div className="hidden lg:flex items-center gap-8">
-                        {["Home", "Shop", "Men", "Women", "Kids", "Accessories", "About", "Contact"].map(link => (
+                        {["Accueil", "Boutique", "Homme", "Femme", "Enfant", "Accessoires", "À Propos", "Contact"].map(link => (
                             <motion.a key={link} href="#" whileHover={{ y: -2 }} className="text-sm font-medium text-[#3D2314]/70 hover:text-[#D4A574] transition-colors">
                                 {link}
                             </motion.a>
@@ -192,7 +192,7 @@ export default function FashionDemo() {
                     {mobileMenuOpen && (
                         <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} className="lg:hidden bg-white border-t">
                             <div className="px-6 py-4 space-y-3">
-                                {["Home", "Shop", "Men", "Women", "Kids", "Accessories"].map(link => (
+                                {["Accueil", "Boutique", "Homme", "Femme", "Enfant", "Accessoires"].map(link => (
                                     <a key={link} href="#" className="block py-2 text-[#3D2314] font-medium">{link}</a>
                                 ))}
                             </div>
@@ -207,16 +207,16 @@ export default function FashionDemo() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
                             <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#D4A574]/20 text-[#3D2314] rounded-full text-sm font-medium mb-6">
-                                <span className="text-xl">👗</span> 50% OFF Summer Super Sale
+                                <span className="text-xl">👗</span> 50% DE RÉDUCTION - Super Vente d'Été
                             </span>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3D2314] leading-tight mb-6">
-                                Step into Style: Your Ultimate Fashion Destination
+                                Entrez dans le Style : Votre Destination Mode Ultime
                             </h1>
                             <p className="text-[#3D2314]/60 mb-8 max-w-md">
-                                Discover the latest trends and timeless classics that define your unique style.
+                                Découvrez les dernières tendances et les classiques intemporels qui définissent votre style unique.
                             </p>
                             <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="px-8 py-4 bg-[#D4A574] text-white rounded-lg font-semibold flex items-center gap-2 hover:bg-[#C49566] transition-colors">
-                                Shop Now <FiArrowRight />
+                                Acheter Maintenant <FiArrowRight />
                             </motion.button>
                         </motion.div>
                         <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="relative hidden lg:block">
@@ -236,9 +236,9 @@ export default function FashionDemo() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {[
-                            { icon: FiTruck, title: "Free Shipping", desc: "Free shipping for orders above £80" },
-                            { icon: FiCreditCard, title: "Flexible Payment", desc: "Pay with multiple credit cards" },
-                            { icon: FiHeadphones, title: "24/7 Support", desc: "We support you round the clock" },
+                            { icon: FiTruck, title: "Livraison Gratuite", desc: "Livraison gratuite > 80€" },
+                            { icon: FiCreditCard, title: "Paiement Flexible", desc: "Payez avec plusieurs cartes" },
+                            { icon: FiHeadphones, title: "Support 24/7", desc: "Nous vous assistons 24h/24" },
                         ].map((f, i) => (
                             <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="flex items-center gap-4 p-4 bg-[#F5EBE0] rounded-xl">
                                 <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
@@ -272,8 +272,8 @@ export default function FashionDemo() {
                         ))}
                         {/* Accessories */}
                         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="bg-white rounded-2xl p-6 shadow-sm">
-                            <span className="text-sm text-[#D4A574] font-medium">800+ items</span>
-                            <h3 className="text-2xl font-bold text-[#3D2314] mt-2 mb-4">Accessories</h3>
+                            <span className="text-sm text-[#D4A574] font-medium">800+ Articles</span>
+                            <h3 className="text-2xl font-bold text-[#3D2314] mt-2 mb-4">Accessoires</h3>
                             <ul className="space-y-2">
                                 {accessories.map(item => (
                                     <li key={item} className="text-[#3D2314]/60 hover:text-[#D4A574] cursor-pointer transition-colors">{item}</li>
@@ -289,11 +289,11 @@ export default function FashionDemo() {
                 <div className="max-w-7xl mx-auto px-6">
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
                         <div>
-                            <span className="text-sm text-[#D4A574] font-medium">Our Products</span>
-                            <h2 className="text-3xl font-bold text-[#3D2314]">Our Top Seller Products</h2>
+                            <span className="text-sm text-[#D4A574] font-medium">Nos Produits</span>
+                            <h2 className="text-3xl font-bold text-[#3D2314]">Nos Meilleurs Vendeurs</h2>
                         </div>
                         <div className="flex gap-2">
-                            {["All", "Women", "Men", "Accessories"].map(f => (
+                            {["Tout", "Femme", "Homme", "Accessoires"].map(f => (
                                 <button key={f} onClick={() => setProductFilter(f)} className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${productFilter === f ? "bg-[#D4A574] text-white" : "bg-gray-100 text-[#3D2314] hover:bg-gray-200"}`}>
                                     {f}
                                 </button>
@@ -309,13 +309,13 @@ export default function FashionDemo() {
                                         <Image src={product.image} alt={product.name} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
                                         {product.discount > 0 && (
                                             <div className="absolute top-3 left-3 px-3 py-1 bg-[#D4A574] text-white rounded-full text-sm font-semibold">
-                                                {product.discount}% off
+                                                -{product.discount}%
                                             </div>
                                         )}
                                         <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={(e) => { e.stopPropagation(); toggleWishlist(product.id); }} className={`absolute top-3 right-3 w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all ${wishlist.includes(product.id) ? "bg-red-500 text-white" : "bg-white text-[#3D2314] opacity-0 group-hover:opacity-100"}`}>
                                             <FiHeart fill={wishlist.includes(product.id) ? "currentColor" : "none"} />
                                         </motion.button>
-                                        <motion.button initial={{ opacity: 0, y: 10 }} whileHover={{ scale: 1.05 }} className="absolute bottom-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium text-[#3D2314] opacity-0 group-hover:opacity-100 transition-all" onClick={(e) => { e.stopPropagation(); setQuickViewProduct(product); }}>Quick View</motion.button>
+                                        <motion.button initial={{ opacity: 0, y: 10 }} whileHover={{ scale: 1.05 }} className="absolute bottom-3 left-1/2 -translate-x-1/2 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-sm font-medium text-[#3D2314] opacity-0 group-hover:opacity-100 transition-all" onClick={(e) => { e.stopPropagation(); setQuickViewProduct(product); }}>Aperçu Rapide</motion.button>
                                     </div>
                                     <div className="p-4">
                                         <span className="text-xs text-[#D4A574]">{product.category}</span>
@@ -347,12 +347,12 @@ export default function FashionDemo() {
                             <Image src="https://images.unsplash.com/photo-1558171813-4c088753af8f?q=80&w=800" alt="Limited Offer" fill className="object-cover" />
                         </motion.div>
                         <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                            <span className="text-sm text-[#D4A574] font-medium">Limited Time Offers</span>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#3D2314] mt-2 mb-4">25% Off All Fashion Favorites - Limited Time!</h2>
-                            <p className="text-[#3D2314]/60 mb-6">Don't miss out on our exclusive collection at unbeatable prices.</p>
+                            <span className="text-sm text-[#D4A574] font-medium">Offres à Durée Limitée</span>
+                            <h2 className="text-3xl md:text-4xl font-bold text-[#3D2314] mt-2 mb-4">-25% sur Tous les Favoris - Temps Limité !</h2>
+                            <p className="text-[#3D2314]/60 mb-6">Ne manquez pas notre collection exclusive à des prix imbattables.</p>
                             <Countdown />
                             <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="mt-8 px-8 py-4 bg-[#3D2314] text-white rounded-lg font-semibold flex items-center gap-2">
-                                Shop Now <FiArrowRight />
+                                Profiter de l'Offre <FiArrowRight />
                             </motion.button>
                         </motion.div>
                     </div>
@@ -364,8 +364,8 @@ export default function FashionDemo() {
                 <div className="max-w-7xl mx-auto px-6">
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex items-center justify-between mb-10">
                         <div>
-                            <span className="text-sm text-[#D4A574] font-medium">Today Deals</span>
-                            <h2 className="text-3xl font-bold text-[#3D2314]">Deals of the Day</h2>
+                            <span className="text-sm text-[#D4A574] font-medium">Offres du Jour</span>
+                            <h2 className="text-3xl font-bold text-[#3D2314]">Les Affaires du Jour</h2>
                         </div>
                     </motion.div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -373,7 +373,7 @@ export default function FashionDemo() {
                             <motion.div key={product.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} whileHover={{ y: -5 }} className="flex bg-white rounded-2xl overflow-hidden shadow-lg">
                                 <div className="relative w-1/2 min-h-[250px]">
                                     <Image src={product.image} alt={product.name} fill className="object-cover" />
-                                    <div className="absolute top-3 left-3 px-3 py-1 bg-[#D4A574] text-white rounded-full text-sm font-semibold">{product.discount}% off</div>
+                                    <div className="absolute top-3 left-3 px-3 py-1 bg-[#D4A574] text-white rounded-full text-sm font-semibold">-{product.discount}%</div>
                                 </div>
                                 <div className="p-6 flex-1 flex flex-col justify-center">
                                     <span className="text-xs text-[#D4A574]">{product.category}</span>
@@ -386,9 +386,9 @@ export default function FashionDemo() {
                                         <FiStar className="text-yellow-500" fill="currentColor" />
                                         <span className="font-medium">{product.rating}</span>
                                     </div>
-                                    <p className="text-sm text-[#3D2314]/60 mt-3">Limited stock available. Grab yours now!</p>
+                                    <p className="text-sm text-[#3D2314]/60 mt-3">Stock limité disponible. Saisissez le vôtre maintenant !</p>
                                     <button className="mt-4 text-[#D4A574] font-semibold flex items-center gap-1 hover:gap-2 transition-all">
-                                        Shop Now <FiArrowRight />
+                                        Acheter <FiArrowRight />
                                     </button>
                                 </div>
                             </motion.div>
@@ -402,15 +402,15 @@ export default function FashionDemo() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
-                            { title: "Men's Latest Collection", discount: "Flat 20% Discount", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600", dark: true },
-                            { title: "Women's Latest Fashion", discount: "Flat 25% Discount", image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600", dark: false },
+                            { title: "Dernière Collection Homme", discount: "20% de Réduction Directe", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600", dark: true },
+                            { title: "Dernière Mode Femme", discount: "25% de Réduction Directe", image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600", dark: false },
                         ].map((banner, i) => (
                             <motion.div key={banner.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} whileHover={{ scale: 1.02 }} className={`relative h-[300px] rounded-2xl overflow-hidden cursor-pointer ${banner.dark ? "bg-[#3D2314]" : "bg-[#D4A574]"}`}>
                                 <div className="absolute inset-0 p-8 flex flex-col justify-center z-10">
                                     <span className="text-sm text-white/80">{banner.discount}</span>
                                     <h3 className="text-2xl md:text-3xl font-bold text-white mt-2 mb-4">{banner.title}</h3>
                                     <button className="w-fit px-6 py-3 bg-white text-[#3D2314] rounded-lg font-semibold flex items-center gap-2">
-                                        Shop Now <FiArrowRight />
+                                        Voir la Collection <FiArrowRight />
                                     </button>
                                 </div>
                                 <div className="absolute right-0 bottom-0 w-1/2 h-full">
@@ -426,8 +426,8 @@ export default function FashionDemo() {
             <section className="py-16">
                 <div className="max-w-7xl mx-auto px-6">
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
-                        <span className="text-sm text-[#D4A574] font-medium">Follow Us</span>
-                        <h2 className="text-3xl font-bold text-[#3D2314]">Follow Us On Instagram</h2>
+                        <span className="text-sm text-[#D4A574] font-medium">Suivez-Nous</span>
+                        <h2 className="text-3xl font-bold text-[#3D2314]">Suivez-Nous sur Instagram</h2>
                     </motion.div>
                     <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
                         {instagramImages.map((img, i) => (
@@ -447,8 +447,8 @@ export default function FashionDemo() {
                 <div className="max-w-4xl mx-auto px-6">
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex items-center justify-between mb-10">
                         <div>
-                            <span className="text-sm text-[#D4A574] font-medium">Testimonial</span>
-                            <h2 className="text-3xl font-bold text-[#3D2314]">What Our Clients Say</h2>
+                            <span className="text-sm text-[#D4A574] font-medium">Témoignages</span>
+                            <h2 className="text-3xl font-bold text-[#3D2314]">Ce Que Disent Nos Clients</h2>
                         </div>
                         <div className="flex gap-2">
                             <button onClick={() => setTestimonialIndex(i => Math.max(0, i - 1))} className="w-10 h-10 rounded-full border border-[#D4A574] flex items-center justify-center text-[#D4A574] hover:bg-[#D4A574] hover:text-white transition-colors">
@@ -483,8 +483,8 @@ export default function FashionDemo() {
             <section className="py-16">
                 <div className="max-w-7xl mx-auto px-6">
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
-                        <span className="text-sm text-[#D4A574] font-medium">News & Blog</span>
-                        <h2 className="text-3xl font-bold text-[#3D2314]">Our Latest News & Blogs</h2>
+                        <span className="text-sm text-[#D4A574] font-medium">Actualités & Blog</span>
+                        <h2 className="text-3xl font-bold text-[#3D2314]">Nos Dernières Actualités</h2>
                     </motion.div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {blogPosts.map((post, i) => (
@@ -495,7 +495,7 @@ export default function FashionDemo() {
                                 <span className="text-sm text-[#D4A574]">{post.date}</span>
                                 <h3 className="font-bold text-[#3D2314] mt-1 group-hover:text-[#D4A574] transition-colors">{post.title}</h3>
                                 <a href="#" className="text-[#D4A574] text-sm font-medium mt-2 inline-flex items-center gap-1 hover:gap-2 transition-all">
-                                    Read More <FiArrowRight />
+                                    Lire Plus <FiArrowRight />
                                 </a>
                             </motion.div>
                         ))}
@@ -508,7 +508,7 @@ export default function FashionDemo() {
                 <div className="max-w-3xl mx-auto px-6">
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
                         <span className="text-sm text-[#D4A574] font-medium">FAQ</span>
-                        <h2 className="text-3xl font-bold text-[#3D2314]">Questions? Look here.</h2>
+                        <h2 className="text-3xl font-bold text-[#3D2314]">Des Questions ? Regardez ici.</h2>
                     </motion.div>
                     <div className="space-y-4">
                         {faqs.map((faq) => (
@@ -536,16 +536,16 @@ export default function FashionDemo() {
             <section className="py-16">
                 <div className="max-w-3xl mx-auto px-6 text-center">
                     <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                        <span className="text-sm text-[#D4A574] font-medium">Our Newsletter</span>
-                        <h2 className="text-3xl font-bold text-[#3D2314] mt-2 mb-4">Subscribe to Our Newsletter to Get Updates to Our Latest Collection</h2>
-                        <p className="text-[#3D2314]/60 mb-8">Get 20% off on your first order just by subscribing to our newsletter</p>
+                        <span className="text-sm text-[#D4A574] font-medium">Notre Newsletter</span>
+                        <h2 className="text-3xl font-bold text-[#3D2314] mt-2 mb-4">Abonnez-vous à Notre Newsletter pour les Dernières Mises à Jour</h2>
+                        <p className="text-[#3D2314]/60 mb-8">Obtenez -20% sur votre première commande juste en vous abonnant</p>
                         <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                             <div className="flex-1 flex items-center gap-2 px-4 py-3 bg-gray-100 rounded-lg">
                                 <FiMail className="text-[#D4A574]" />
-                                <input type="email" placeholder="Enter your email" className="flex-1 bg-transparent outline-none text-[#3D2314]" />
+                                <input type="email" placeholder="Entrez votre e-mail" className="flex-1 bg-transparent outline-none text-[#3D2314]" />
                             </div>
                             <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="px-8 py-3 bg-[#3D2314] text-white rounded-lg font-semibold">
-                                Subscribe
+                                S'abonner
                             </motion.button>
                         </div>
                     </motion.div>
@@ -563,7 +563,7 @@ export default function FashionDemo() {
                                 </div>
                                 <span className="font-bold text-xl">Clothing.</span>
                             </div>
-                            <p className="text-white/60 text-sm mb-4">Your ultimate fashion destination for trendy and timeless clothing.</p>
+                            <p className="text-white/60 text-sm mb-4">Votre destination mode ultime pour des vêtements tendances et intemporels.</p>
                             <div className="flex gap-3">
                                 {[FiFacebook, FiTwitter, FiInstagram].map((Icon, i) => (
                                     <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4A574] transition-colors">
@@ -573,9 +573,9 @@ export default function FashionDemo() {
                             </div>
                         </div>
                         {[
-                            { title: "Company", links: ["About Us", "Blog", "Contact Us", "Career"] },
-                            { title: "Customer Service", links: ["My Account", "Track My Order", "Return", "Help"] },
-                            { title: "Our Information", links: ["Start Return & Exchange", "Privacy Policy", "Terms & Conditions", "FAQ"] },
+                            { title: "Entreprise", links: ["À Propos", "Blog", "Contactez-Nous", "Carrières"] },
+                            { title: "Service Client", links: ["Mon Compte", "Suivre Ma Commande", "Retours", "Aide"] },
+                            { title: "Nos Informations", links: ["Commencer Retour & Échange", "Politique de Confidentialité", "Conditions Générales", "FAQ"] },
                         ].map((section) => (
                             <div key={section.title}>
                                 <h4 className="font-semibold mb-4">{section.title}</h4>
@@ -587,7 +587,7 @@ export default function FashionDemo() {
                             </div>
                         ))}
                         <div>
-                            <h4 className="font-semibold mb-4">Contact Us</h4>
+                            <h4 className="font-semibold mb-4">Contactez-Nous</h4>
                             <ul className="space-y-3 text-sm text-white/60">
                                 <li className="flex items-center gap-2"><FiPhone className="text-[#D4A574]" /> +1 800 555 0100</li>
                                 <li className="flex items-center gap-2"><FiMail className="text-[#D4A574]" /> info@clothing.com</li>
@@ -596,7 +596,7 @@ export default function FashionDemo() {
                         </div>
                     </div>
                     <div className="pt-8 border-t border-white/10 text-center text-sm text-white/40">
-                        Copyright © 2024 Clothing Fashion Design. All Rights Reserved.
+                        Copyright © 2024 Clothing Fashion Design. Tous Droits Réservés.
                     </div>
                 </div>
             </footer>
@@ -608,12 +608,12 @@ export default function FashionDemo() {
                         <motion.div initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -50, opacity: 0 }} onClick={e => e.stopPropagation()} className="bg-white rounded-2xl p-6 w-full max-w-xl mx-4 shadow-2xl">
                             <div className="flex items-center gap-3 border-b border-gray-100 pb-4 mb-4">
                                 <FiSearch className="text-xl text-[#D4A574]" />
-                                <input type="text" placeholder="Search for products..." className="flex-1 text-lg outline-none text-[#3D2314]" autoFocus />
+                                <input type="text" placeholder="Rechercher des produits..." className="flex-1 text-lg outline-none text-[#3D2314]" autoFocus />
                                 <button onClick={() => setSearchOpen(false)} className="p-2 hover:bg-gray-100 rounded-full"><FiX /></button>
                             </div>
-                            <p className="text-sm text-gray-400 mb-3">Popular searches:</p>
+                            <p className="text-sm text-gray-400 mb-3">Recherches populaires :</p>
                             <div className="flex flex-wrap gap-2">
-                                {["Dresses", "Blazers", "Summer", "Coats"].map(t => <span key={t} className="px-4 py-2 bg-gray-100 rounded-full text-sm text-[#3D2314] cursor-pointer hover:bg-[#D4A574] hover:text-white transition-colors">{t}</span>)}
+                                {["Robes", "Blazers", "Été", "Manteaux"].map(t => <span key={t} className="px-4 py-2 bg-gray-100 rounded-full text-sm text-[#3D2314] cursor-pointer hover:bg-[#D4A574] hover:text-white transition-colors">{t}</span>)}
                             </div>
                         </motion.div>
                     </motion.div>
@@ -627,11 +627,11 @@ export default function FashionDemo() {
                         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[100] bg-black/50" onClick={() => setCartOpen(false)} />
                         <motion.div initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }} transition={{ type: "tween" }} className="fixed right-0 top-0 h-full w-full max-w-md bg-white z-[101] shadow-2xl">
                             <div className="flex items-center justify-between p-6 border-b">
-                                <h3 className="text-xl font-bold text-[#3D2314]">Shopping Cart ({cart.length})</h3>
+                                <h3 className="text-xl font-bold text-[#3D2314]">Panier ({cart.length})</h3>
                                 <button onClick={() => setCartOpen(false)} className="p-2 hover:bg-gray-100 rounded-full"><FiX className="text-xl" /></button>
                             </div>
                             <div className="p-6 flex-1 overflow-auto max-h-[60vh]">
-                                {cart.length === 0 ? <p className="text-gray-400 text-center py-8">Your cart is empty</p> : cart.map(item => {
+                                {cart.length === 0 ? <p className="text-gray-400 text-center py-8">Votre panier est vide</p> : cart.map(item => {
                                     const p = products.find(x => x.id === item.id);
                                     if (!p) return null;
                                     return (
@@ -642,7 +642,7 @@ export default function FashionDemo() {
                                             <div className="flex-1">
                                                 <h4 className="font-semibold text-[#3D2314]">{p.name}</h4>
                                                 <p className="text-[#D4A574] font-bold">${p.price}.00</p>
-                                                <p className="text-sm text-gray-400">Qty: {item.qty}</p>
+                                                <p className="text-sm text-gray-400">Qté : {item.qty}</p>
                                             </div>
                                             <button onClick={() => removeFromCart(item.id)} className="text-gray-400 hover:text-red-500"><FiX /></button>
                                         </div>
@@ -650,8 +650,8 @@ export default function FashionDemo() {
                                 })}
                             </div>
                             <div className="absolute bottom-0 left-0 right-0 p-6 border-t bg-white">
-                                <div className="flex justify-between mb-4"><span className="text-gray-500">Subtotal</span><span className="font-bold text-[#3D2314]">${cartTotal}.00</span></div>
-                                <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full py-4 bg-[#D4A574] text-white rounded-xl font-semibold">Checkout</motion.button>
+                                <div className="flex justify-between mb-4"><span className="text-gray-500">Sous-total</span><span className="font-bold text-[#3D2314]">${cartTotal}.00</span></div>
+                                <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full py-4 bg-[#D4A574] text-white rounded-xl font-semibold">Paiement</motion.button>
                             </div>
                         </motion.div>
                     </>
@@ -665,7 +665,7 @@ export default function FashionDemo() {
                         <motion.div initial={{ scale: 0.9, y: 50 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.9, y: 50 }} onClick={e => e.stopPropagation()} className="bg-white rounded-3xl max-w-3xl w-full overflow-hidden flex flex-col md:flex-row">
                             <div className="relative h-64 md:h-auto md:w-1/2">
                                 <Image src={quickViewProduct.image} alt={quickViewProduct.name} fill className="object-cover" />
-                                {quickViewProduct.discount > 0 && <div className="absolute top-4 left-4 px-3 py-1 bg-[#D4A574] text-white rounded-full text-sm font-bold">{quickViewProduct.discount}% OFF</div>}
+                                {quickViewProduct.discount > 0 && <div className="absolute top-4 left-4 px-3 py-1 bg-[#D4A574] text-white rounded-full text-sm font-bold">-{quickViewProduct.discount}%</div>}
                             </div>
                             <div className="p-8 flex-1">
                                 <button onClick={() => setQuickViewProduct(null)} className="absolute top-4 right-4 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center"><FiX /></button>
@@ -676,9 +676,9 @@ export default function FashionDemo() {
                                     <span className="text-3xl font-bold text-[#D4A574]">${quickViewProduct.price}.00</span>
                                     {quickViewProduct.oldPrice && <span className="text-xl text-gray-400 line-through">${quickViewProduct.oldPrice}.00</span>}
                                 </div>
-                                <p className="text-gray-500 mt-4">Premium quality clothing with exceptional comfort and style. Perfect for any occasion.</p>
+                                <p className="text-gray-500 mt-4">Vêtements de qualité premium avec un confort et un style exceptionnels. Parfait pour toute occasion.</p>
                                 <div className="flex gap-3 mt-6">
-                                    <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => { addToCart(quickViewProduct.id); setQuickViewProduct(null); setCartOpen(true); }} className="flex-1 py-3 bg-[#D4A574] text-white rounded-xl font-semibold">Add to Cart</motion.button>
+                                    <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => { addToCart(quickViewProduct.id); setQuickViewProduct(null); setCartOpen(true); }} className="flex-1 py-3 bg-[#D4A574] text-white rounded-xl font-semibold">Ajouter au Panier</motion.button>
                                     <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => toggleWishlist(quickViewProduct.id)} className={`w-12 h-12 rounded-xl flex items-center justify-center border-2 ${wishlist.includes(quickViewProduct.id) ? "bg-red-500 border-red-500 text-white" : "border-gray-200 text-gray-400"}`}>
                                         <FiHeart fill={wishlist.includes(quickViewProduct.id) ? "currentColor" : "none"} />
                                     </motion.button>

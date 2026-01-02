@@ -61,14 +61,14 @@ export function CarRentalLocations() {
                         whileInView={{ opacity: 1 }}
                         className="text-[#FF6B35] text-xs uppercase tracking-[0.3em] block mb-4"
                     >
-                        Pick-up Locations
+                        Lieux de Prise en Charge
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-black tracking-tight"
                     >
-                        Find Us <span className="text-white/20">Anywhere</span>
+                        Trouvez-nous <span className="text-white/20">Partout</span>
                     </motion.h2>
                 </div>
 
@@ -140,7 +140,7 @@ export function CarRentalLocations() {
 
                         {/* Map Label */}
                         <div className="absolute bottom-4 left-4 text-[10px] uppercase tracking-widest text-white/30">
-                            Los Angeles Metro Area
+                            Zone Métropolitaine de Los Angeles
                         </div>
                     </motion.div>
 
@@ -156,8 +156,8 @@ export function CarRentalLocations() {
                                     key={location.id}
                                     onClick={() => setActiveLocation(location)}
                                     className={`px-4 py-2 text-xs uppercase tracking-wider font-bold transition-all ${activeLocation.id === location.id
-                                            ? 'bg-[#FF6B35] text-white'
-                                            : 'bg-white/5 text-white/60 hover:text-white'
+                                        ? 'bg-[#FF6B35] text-white'
+                                        : 'bg-white/5 text-white/60 hover:text-white'
                                         }`}
                                 >
                                     {location.name}
@@ -193,7 +193,7 @@ export function CarRentalLocations() {
 
                             <button className="flex items-center gap-3 px-6 py-3 bg-[#FF6B35] text-white font-bold uppercase tracking-wider text-sm hover:bg-[#FF8C42] transition-colors">
                                 <FiNavigation className="w-4 h-4" />
-                                Get Directions
+                                Itinéraire
                             </button>
                         </motion.div>
                     </motion.div>

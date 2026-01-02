@@ -58,13 +58,13 @@ export function PropertyDetailModal({
                                 onClick={() => setActiveTab('overview')}
                                 className={`px-5 py-2.5 text-[9px] uppercase tracking-widest font-bold rounded-full transition-all backdrop-blur-md border ${activeTab === 'overview' ? 'bg-[#C19A6B] text-white border-transparent' : 'bg-black/20 text-white border-white/10 hover:bg-black/40'}`}
                             >
-                                Overview
+                                Aperçu
                             </button>
                             <button
                                 onClick={() => setActiveTab('floorplan')}
                                 className={`px-5 py-2.5 text-[9px] uppercase tracking-widest font-bold rounded-full transition-all backdrop-blur-md border ${activeTab === 'floorplan' ? 'bg-[#C19A6B] text-white border-transparent' : 'bg-black/20 text-white border-white/10 hover:bg-black/40'}`}
                             >
-                                Floor Plan
+                                Plan
                             </button>
                         </div>
                         <div className="flex gap-4 pointer-events-auto">
@@ -117,7 +117,7 @@ export function PropertyDetailModal({
                                     >
                                         <div className={`w-2 h-2 rounded-full ${isCinematic ? 'bg-white' : 'bg-[#C19A6B]'} animate-pulse`} />
                                         <span className="text-[10px] uppercase tracking-[0.2em] font-bold">
-                                            {isCinematic ? "Exit Walkthrough" : "Cinematic Walkthrough"}
+                                            {isCinematic ? "Quitter la Visite" : "Visite Cinématographique"}
                                         </span>
                                     </button>
                                 </motion.div>
@@ -138,22 +138,22 @@ export function PropertyDetailModal({
                                             className="fill-white/5 hover:fill-[#C19A6B]/20 transition-colors cursor-help"
                                             whileHover={{ scale: 1.02 }}
                                         />
-                                        <text x="70" y="80" className="fill-white/40 text-[8px] font-bold uppercase tracking-widest">Master Suite</text>
+                                        <text x="70" y="80" className="fill-white/40 text-[8px] font-bold uppercase tracking-widest">Suite Principale</text>
 
                                         <motion.rect
                                             x="210" y="60" width="130" height="180"
                                             className="fill-white/5 hover:fill-[#C19A6B]/20 transition-colors cursor-help"
                                         />
-                                        <text x="220" y="80" className="fill-white/40 text-[8px] font-bold uppercase tracking-widest">Grande Salon</text>
+                                        <text x="220" y="80" className="fill-white/40 text-[8px] font-bold uppercase tracking-widest">Grand Salon</text>
 
                                         <motion.rect
                                             x="60" y="160" width="130" height="80"
                                             className="fill-white/5 hover:fill-[#C19A6B]/20 transition-colors cursor-help"
                                         />
-                                        <text x="70" y="180" className="fill-white/40 text-[8px] font-bold uppercase tracking-widest">Traditional Spa</text>
+                                        <text x="70" y="180" className="fill-white/40 text-[8px] font-bold uppercase tracking-widest">Spa Traditionnel</text>
                                     </svg>
                                     <div className="absolute bottom-10 left-10 text-white/30 text-[9px] uppercase tracking-widest font-light">
-                                        Architectural Layout / V.1.0
+                                        Disposition Architecturale / V.1.0
                                     </div>
                                 </motion.div>
                             )}
@@ -164,7 +164,7 @@ export function PropertyDetailModal({
                     <div className="w-full md:w-2/5 p-10 md:p-14 overflow-y-auto bg-[#FDFBF7]">
                         <div className="mb-12">
                             <span className="text-[#C19A6B] text-[10px] uppercase tracking-[0.5em] font-bold mb-4 block">
-                                Heritage Portfolio
+                                Portefeuille Héritage
                             </span>
                             <h2 className="text-4xl lg:text-5xl font-serif text-[#2C2C2C] mb-6 leading-tight">
                                 {property.title}
@@ -182,31 +182,31 @@ export function PropertyDetailModal({
                             <div className="text-center group">
                                 <BedDouble size={24} className="mx-auto text-gray-300 mb-3 group-hover:text-[#C19A6B] transition-colors" />
                                 <span className="text-[12px] font-bold text-[#2C2C2C] block mb-1">{property.specs.beds}</span>
-                                <span className="text-[8px] uppercase tracking-widest text-gray-400">Beds</span>
+                                <span className="text-[8px] uppercase tracking-widest text-gray-400">Lits</span>
                             </div>
                             <div className="text-center group border-x border-gray-100">
                                 <Bath size={24} className="mx-auto text-gray-300 mb-3 group-hover:text-[#C19A6B] transition-colors" />
                                 <span className="text-[12px] font-bold text-[#2C2C2C] block mb-1">{property.specs.baths}</span>
-                                <span className="text-[8px] uppercase tracking-widest text-gray-400">Baths</span>
+                                <span className="text-[8px] uppercase tracking-widest text-gray-400">SDB</span>
                             </div>
                             <div className="text-center group">
                                 <Square size={24} className="mx-auto text-gray-300 mb-3 group-hover:text-[#C19A6B] transition-colors" />
                                 <span className="text-[12px] font-bold text-[#2C2C2C] block mb-1">{property.specs.size}</span>
-                                <span className="text-[8px] uppercase tracking-widest text-gray-400">Area</span>
+                                <span className="text-[8px] uppercase tracking-widest text-gray-400">Surface</span>
                             </div>
                         </div>
 
                         <div className="mb-12">
-                            <h4 className="text-[10px] uppercase tracking-widest font-bold text-[#2C2C2C] mb-6 border-b border-gray-100 pb-2">Narrative</h4>
+                            <h4 className="text-[10px] uppercase tracking-widest font-bold text-[#2C2C2C] mb-6 border-b border-gray-100 pb-2">Récit</h4>
                             <p className="text-gray-500 font-light text-sm leading-relaxed italic">
                                 "{property.description}"
                             </p>
                         </div>
 
                         <div className="mb-14">
-                            <h4 className="text-[10px] uppercase tracking-widest font-bold text-[#2C2C2C] mb-6 border-b border-gray-100 pb-2">Amenities</h4>
+                            <h4 className="text-[10px] uppercase tracking-widest font-bold text-[#2C2C2C] mb-6 border-b border-gray-100 pb-2">Équipements</h4>
                             <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                                {["Private Terrace", "Historic Zellige", "Cedar Hand-carved Doors", "Smart Climate", "Private Concierge", "Atlas View"].map(item => (
+                                {["Terrasse Privée", "Zellige Historique", "Portes en Cèdre Sculpté", "Climatisation Intelligente", "Concierge Privé", "Vue sur l'Atlas"].map(item => (
                                     <div key={item} className="flex items-center gap-3 text-[9px] uppercase tracking-widest text-gray-400 font-bold">
                                         <div className="w-1 h-1 rounded-full bg-[#C19A6B]" />
                                         <span>{item}</span>
@@ -219,7 +219,7 @@ export function PropertyDetailModal({
                             onClick={() => setShowInquiry(true)}
                             className="w-full py-6 bg-[#2C2C2C] text-white text-[10px] uppercase tracking-[0.4em] font-bold hover:bg-[#C19A6B] transition-all duration-700 rounded-sm shadow-2xl shadow-black/10 flex items-center justify-center gap-4 group"
                         >
-                            Request Bespoke Invitation
+                            Demander une Invitation Sur Mesure
                             <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                         </button>
                     </div>

@@ -15,7 +15,7 @@ export function RealEstateMap({
 
     // Simplified coordinates for Morocco locations on a 500x600 viewBox
     const points = [
-        { id: "tangier", x: 400, y: 50, name: "Tangier" },
+        { id: "tangier", x: 400, y: 50, name: "Tanger" },
         { id: "casablanca", x: 300, y: 180, name: "Casablanca" },
         { id: "marrakech", x: 260, y: 280, name: "Marrakech" },
         { id: "taghazout", x: 180, y: 380, name: "Taghazout" }
@@ -27,13 +27,13 @@ export function RealEstateMap({
 
                 {/* Left: Content */}
                 <div>
-                    <span className="text-[#C19A6B] text-xs uppercase tracking-[0.6em] font-bold mb-6 block">Geographic Reach</span>
+                    <span className="text-[#C19A6B] text-xs uppercase tracking-[0.6em] font-bold mb-6 block">Portée Géographique</span>
                     <h2 className="text-5xl md:text-7xl font-serif text-[#2C2C2C] mb-10 leading-tight">
-                        The Heritage <br />
-                        <span className="italic">Cartography</span>
+                        La Cartographie <br />
+                        <span className="italic">Héritage</span>
                     </h2>
                     <p className="text-gray-500 font-light leading-relaxed mb-12 max-w-md">
-                        Explore our exclusive portfolio across the most prestigious regions of the Kingdom. Each pin represents a cluster of architectural masterpieces.
+                        Explorez notre portefeuille exclusif à travers les régions les plus prestigieuses du Royaume. Chaque épingle représente un groupe de chefs-d'œuvre architecturaux.
                     </p>
 
                     <div className="space-y-4">
@@ -126,7 +126,7 @@ export function RealEstateMap({
 
                     {/* Decorative Overlay */}
                     <div className="absolute bottom-8 right-8 text-right">
-                        <span className="text-[10px] uppercase tracking-[0.5em] text-gray-300 font-bold block mb-1">Scale / Scale</span>
+                        <span className="text-[10px] uppercase tracking-[0.5em] text-gray-300 font-bold block mb-1">Échelle / Scale</span>
                         <div className="w-32 h-[1px] bg-gray-100 relative">
                             <div className="absolute inset-y-0 left-0 w-8 bg-[#C19A6B]" />
                         </div>

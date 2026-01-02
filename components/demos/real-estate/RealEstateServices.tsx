@@ -6,23 +6,23 @@ import { Key, Shield, PenTool, Globe } from 'lucide-react';
 
 const services = [
     {
-        title: "Heritage Restoration",
-        description: "Specialized consultancy for restoring historic Riads while integrating modern luxury amenities.",
+        title: "Restauration du Patrimoine",
+        description: "Conseil spécialisé pour la restauration de Riads historiques tout en intégrant des équipements de luxe modernes.",
         icon: <PenTool className="w-8 h-8" />
     },
     {
-        title: "Luxury Property Management",
-        description: "Full-service management for high-end villas, ensuring your investment is maintained to the highest standards.",
+        title: "Gestion Immobilière de Luxe",
+        description: "Gestion complète pour villas haut de gamme, assurant le maintien de votre investissement aux normes les plus élevées.",
         icon: <Shield className="w-8 h-8" />
     },
     {
-        title: "Global Investment Advisory",
-        description: "Expert guidance for international investors navigating the Moroccan real estate market landscape.",
+        title: "Conseil en Investissement Global",
+        description: "Conseils d'experts pour les investisseurs internationaux naviguant dans le paysage immobilier marocain.",
         icon: <Globe className="w-8 h-8" />
     },
     {
-        title: "Private Concierge",
-        description: "Exclusive access to off-market properties and personalized viewings across the kingdom.",
+        title: "Conciergerie Privée",
+        description: "Accès exclusif aux propriétés hors marché et visites personnalisées à travers le royaume.",
         icon: <Key className="w-8 h-8" />
     }
 ];

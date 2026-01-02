@@ -7,14 +7,14 @@ import { FiUsers, FiSettings, FiZap, FiDroplet } from 'react-icons/fi';
 
 import { carRentalFleet } from '@/data/car-rental/fleet';
 
-const categories = ['All', 'Sports', 'SUV', 'Sedan', 'Electric', 'Luxury'];
+const categories = ['Tous', 'Sport', 'SUV', 'Berline', 'Électrique', 'Luxe'];
 
 export function CarRentalFleet() {
     const cars = carRentalFleet;
-    const [activeCategory, setActiveCategory] = useState('All');
+    const [activeCategory, setActiveCategory] = useState('Tous');
     const [hoveredCar, setHoveredCar] = useState<number | null>(null);
 
-    const filteredCars = activeCategory === 'All'
+    const filteredCars = activeCategory === 'Tous'
         ? cars
         : cars.filter(car => car.category === activeCategory);
 
@@ -37,15 +37,15 @@ export function CarRentalFleet() {
                             whileInView={{ opacity: 1 }}
                             className="text-[#FF6B35] text-xs uppercase tracking-[0.3em] block mb-4"
                         >
-                            Our Fleet
+                            Notre Flotte
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             className="text-4xl md:text-6xl font-black tracking-tight"
                         >
-                            Premium<br />
-                            <span className="text-white/20">Vehicles</span>
+                            Véhicules<br />
+                            <span className="text-white/20">Premium</span>
                         </motion.h2>
                     </div>
 
@@ -127,10 +127,10 @@ export function CarRentalFleet() {
                                     <div className="flex items-center justify-between pt-4 border-t border-white/10">
                                         <div>
                                             <span className="text-2xl font-black text-[#FF6B35]">${car.price}</span>
-                                            <span className="text-white/40 text-sm">/day</span>
+                                            <span className="text-white/40 text-sm">/jour</span>
                                         </div>
                                         <button className="px-6 py-3 bg-white/10 hover:bg-[#FF6B35] text-white text-xs uppercase tracking-wider font-bold transition-colors">
-                                            Book
+                                            Réserver
                                         </button>
                                     </div>
                                 </div>

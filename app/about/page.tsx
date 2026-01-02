@@ -18,23 +18,23 @@ export default function AboutPage() {
                     className="max-w-4xl"
                 >
                     <span className="block text-sm font-bold uppercase tracking-widest text-muted-foreground mb-8">
-                        About Me
+                        À propos
                     </span>
                     <h1 className="text-5xl font-bold leading-tight tracking-tight text-foreground md:text-7xl lg:text-8xl mb-12">
-                        I create meaningful <br />
-                        digital experiences.
+                        Je crée des expériences <br />
+                        digitales significatives.
                     </h1>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-lg text-muted-foreground leading-relaxed">
                         <p>
-                            My name is Bazil Hamard, a freelance art director and digital designer based in Paris.
-                            With over 10 years of experience, I help brands and agencies tell their stories through
-                            design, motion, and code.
+                            Je m'appelle Bazil Hamard, directeur artistique et designer digital freelance basé à Paris.
+                            Avec plus de 10 ans d'expérience, j'aide les marques et agences à raconter leur histoire à travers
+                            le design, le motion et le code.
                         </p>
                         <p>
-                            I believe in simplicity and emotion. My work is driven by a passion for typography,
-                            minimalist aesthetics, and smooth interactions. I strive to create websites that are
-                            not only beautiful but also intuitive and performant.
+                            Je crois en la simplicité et l'émotion. Mon travail est guidé par une passion pour la typographie,
+                            l'esthétique minimaliste et les interactions fluides. Je m'efforce de créer des sites web qui sont
+                            non seulement beaux mais aussi intuitifs et performants.
                         </p>
                     </div>
 
@@ -42,10 +42,10 @@ export default function AboutPage() {
                         <div>
                             <h3 className="text-lg font-bold text-foreground mb-4">Services</h3>
                             <ul className="space-y-2 text-muted-foreground">
-                                <li>Art Direction</li>
-                                <li>Web Design</li>
-                                <li>Development</li>
-                                <li>Brand Identity</li>
+                                <li>Direction artistique</li>
+                                <li>Design Web</li>
+                                <li>Développement</li>
+                                <li>Identité de marque</li>
                             </ul>
                         </div>
                         <div>

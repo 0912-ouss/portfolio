@@ -16,7 +16,7 @@ export function EcommerceBanner() {
                 className="absolute inset-0 flex items-center whitespace-nowrap pointer-events-none"
             >
                 <span className="text-[200px] font-black text-white/[0.02] uppercase tracking-tighter">
-                    WINTER SALE • UP TO 50% OFF • WINTER SALE • UP TO 50% OFF •
+                    SOLDES D'HIVER • JUSQU'À -50% • SOLDES D'HIVER • JUSQU'À -50% •
                 </span>
             </motion.div>
 
@@ -34,14 +34,14 @@ export function EcommerceBanner() {
                             transition={{ repeat: Infinity, duration: 2 }}
                             className="inline-block px-4 py-2 bg-[#D4A574] text-white text-xs uppercase tracking-wider font-bold mb-6"
                         >
-                            Limited Time
+                            Temps Limité
                         </motion.span>
                         <h2 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight mb-6">
-                            Winter<br />
-                            <span className="font-serif italic">Sale</span>
+                            Soldes<br />
+                            <span className="font-serif italic">d'Hiver</span>
                         </h2>
                         <p className="text-white/60 mb-8 max-w-md font-light">
-                            Up to 50% off on selected items. Elevate your winter wardrobe with our curated collection of luxury pieces.
+                            Jusqu'à -50% sur une sélection d'articles. Sublimez votre garde-robe d'hiver avec notre collection de pièces de luxe.
                         </p>
                     </motion.div>
 
@@ -55,9 +55,9 @@ export function EcommerceBanner() {
                         {/* Countdown-like display */}
                         <div className="flex gap-4">
                             {[
-                                { value: "02", label: "Days" },
-                                { value: "18", label: "Hours" },
-                                { value: "45", label: "Mins" }
+                                { value: "02", label: "Jours" },
+                                { value: "18", label: "Heures" },
+                                { value: "45", label: "Min" }
                             ].map((item, i) => (
                                 <div key={i} className="text-center">
                                     <div className="w-16 h-16 bg-white/10 flex items-center justify-center text-2xl font-bold">
@@ -71,7 +71,7 @@ export function EcommerceBanner() {
                         </div>
 
                         <button className="group flex items-center gap-4 px-8 py-4 bg-white text-[#1A1A1A] font-medium uppercase tracking-wider text-sm hover:bg-[#D4A574] hover:text-white transition-colors">
-                            Shop Sale
+                            Voir les Soldes
                             <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
                         </button>
                     </motion.div>

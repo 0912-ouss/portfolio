@@ -34,7 +34,7 @@ export default function RealEstateDemo() {
     const [showInquiry, setShowInquiry] = useState(false);
 
     useEffect(() => {
-        document.title = "Atlas Estates | Luxury Real Estate Morocco";
+        document.title = "Atlas Estates | Immobilier de Luxe Maroc";
     }, []);
 
     const toggleFavorite = (id: number) => {
@@ -108,7 +108,7 @@ export default function RealEstateDemo() {
                             className="fixed bottom-12 right-12 z-[100] bg-[#2C2C2C] text-white px-8 py-4 rounded-full flex items-center gap-4 hover:bg-[#C19A6B] transition-all duration-500 shadow-2xl"
                         >
                             <ArrowRightLeft size={18} />
-                            <span className="text-[10px] uppercase tracking-widest font-bold">Compare Collection ({favorites.length})</span>
+                            <span className="text-[10px] uppercase tracking-widest font-bold">Comparer la Collection ({favorites.length})</span>
                         </motion.button>
                     )}
                 </AnimatePresence>

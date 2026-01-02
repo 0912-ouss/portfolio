@@ -30,10 +30,10 @@ function Counter({ value, suffix = "" }: { value: number, suffix?: string }) {
 }
 
 const stats = [
-    { label: "Years of Heritage", value: 15, suffix: "+" },
-    { label: "Exclusive Properties", value: 42, suffix: "" },
-    { label: "Successful Sales", value: 120, suffix: "+" },
-    { label: "Awards Won", value: 8, suffix: "" }
+    { label: "Années d'Héritage", value: 15, suffix: "+" },
+    { label: "Propriétés Exclusives", value: 42, suffix: "" },
+    { label: "Ventes Réussies", value: 120, suffix: "+" },
+    { label: "Prix Remportés", value: 8, suffix: "" }
 ];
 
 export function RealEstateStats() {
