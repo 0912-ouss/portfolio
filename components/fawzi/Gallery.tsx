@@ -1,9 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { galleryItems } from "@/lib/data";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
+import { FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 interface FawziGalleryProps {
     limit?: number;
@@ -12,7 +13,17 @@ interface FawziGalleryProps {
 
 export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps) {
     const containerRef = useRef(null);
+    const [selectedImage, setSelectedImage] = useState<number | null>(null);
     const displayItems = limit ? galleryItems.slice(0, limit) : galleryItems;
+
+    const navigate = (direction: "next" | "prev") => {
+        if (selectedImage === null) return;
+        if (direction === "next") {
+            setSelectedImage((selectedImage + 1) % galleryItems.length);
+        } else {
+            setSelectedImage((selectedImage - 1 + galleryItems.length) % galleryItems.length);
+        }
+    };
 
     return (
         <section id="gallery" className="py-32 px-4 md:px-20 bg-white dark:bg-[#1E1E1E]">
@@ -61,7 +72,8 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                                 ease: [0.16, 1, 0.3, 1]
                             }}
                             whileHover={{ y: -10 }}
-                            className="relative group overflow-hidden rounded-[2rem] break-inside-avoid shadow-sm hover:shadow-2xl transition-all duration-700 cursor-none"
+                            onClick={() => setSelectedImage(idx)}
+                            className="relative group overflow-hidden rounded-[2rem] break-inside-avoid shadow-sm hover:shadow-2xl transition-all duration-700 cursor-pointer"
                         >
                             <img
                                 src={item.image}
@@ -70,7 +82,7 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                             />
 
                             {/* Interactive Overlay */}
-                            <div className="absolute inset-0 bg-orange-500/90 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10 transform translate-y-full group-hover:translate-y-0">
+                            <div className="absolute inset-0 bg-orange-600/80 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10 transform translate-y-full group-hover:translate-y-0">
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -78,14 +90,7 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                                 >
                                     <p className="text-white/70 text-[10px] font-black uppercase tracking-[0.2em]">{item.category}</p>
                                     <h4 className="text-white font-black text-3xl tracking-tighter">{item.title}</h4>
-
-                                    <div className="pt-4 overflow-hidden">
-                                        <motion.div
-                                            initial={{ x: -100 }}
-                                            whileHover={{ x: 0 }}
-                                            className="h-1 w-20 bg-white"
-                                        />
-                                    </div>
+                                    <p className="text-white/60 text-xs font-semibold">Click to expand</p>
                                 </motion.div>
                             </div>
 
@@ -114,6 +119,77 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                     </motion.div>
                 )}
             </div>
+
+            {/* Lightbox Modal */}
+            <AnimatePresence>
+                {selectedImage !== null && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[1000] bg-black/95 flex items-center justify-center p-4 md:p-20"
+                    >
+                        {/* Close Button */}
+                        <button
+                            onClick={() => setSelectedImage(null)}
+                            className="absolute top-8 right-8 text-white text-4xl hover:text-orange-500 transition-colors z-50 focus:outline-none"
+                            aria-label="Close lightbox"
+                        >
+                            <FaTimes />
+                        </button>
+
+                        {/* Navigation Buttons */}
+                        <button
+                            onClick={() => navigate("prev")}
+                            className="absolute left-8 text-white/50 hover:text-white text-4xl transition-all hidden md:block focus:outline-none"
+                        >
+                            <FaChevronLeft />
+                        </button>
+                        <button
+                            onClick={() => navigate("next")}
+                            className="absolute right-8 text-white/50 hover:text-white text-4xl transition-all hidden md:block focus:outline-none"
+                        >
+                            <FaChevronRight />
+                        </button>
+
+                        {/* Image Container */}
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            transition={{ type: "spring", damping: 25 }}
+                            className="relative max-w-6xl w-full max-h-full flex flex-col items-center"
+                        >
+                            <img
+                                src={galleryItems[selectedImage].image}
+                                alt={galleryItems[selectedImage].title}
+                                className="max-w-full max-h-[70vh] md:max-h-[80vh] object-contain rounded-xl shadow-2xl"
+                            />
+
+                            <div className="mt-8 text-center space-y-2">
+                                <p className="text-orange-500 font-black uppercase tracking-[0.3em] text-xs">
+                                    {galleryItems[selectedImage].category}
+                                </p>
+                                <h3 className="text-white text-3xl md:text-5xl font-black tracking-tighter">
+                                    {galleryItems[selectedImage].title}
+                                </h3>
+                                <p className="text-gray-400 max-w-lg mx-auto text-sm md:text-base">
+                                    Part of my design artifacts collection showcased at OU BERHAYLA.
+                                </p>
+                            </div>
+
+                            {/* Mobile Swipe Simulation Info */}
+                            <div className="md:hidden mt-4 text-gray-500 text-xs">
+                                Tap sides to navigate
+                            </div>
+                        </motion.div>
+
+                        {/* Invisible tap areas for mobile navigation */}
+                        <div className="absolute inset-y-0 left-0 w-1/4 md:hidden" onClick={() => navigate("prev")} />
+                        <div className="absolute inset-y-0 right-0 w-1/4 md:hidden" onClick={() => navigate("next")} />
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 }

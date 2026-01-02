@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description: "Modern & Premium UI/UX design portfolio for high-end digital experiences.",
 };
 
+import { BackgroundEffects } from "@/components/ui/BackgroundEffects";
+import { PageTransition } from "@/components/ui/PageTransition";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,7 +23,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} ${playfair.variable}`}>
         <ThemeProvider>
-          {children}
+          <BackgroundEffects />
+          <PageTransition>
+            {children}
+          </PageTransition>
         </ThemeProvider>
       </body>
     </html>
