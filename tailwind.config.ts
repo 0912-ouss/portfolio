@@ -33,6 +33,10 @@ const config: Config = {
           DEFAULT: "rgb(var(--muted) / <alpha-value>)",
           foreground: "rgb(var(--muted-foreground) / <alpha-value>)",
         },
+        orange: {
+          500: "#FD6F00",
+          600: "#E66400",
+        },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

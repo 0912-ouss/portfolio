@@ -1,21 +1,24 @@
 "use client";
 
-import { HeroFull } from "@/components/sections/HeroFull";
-import { ProjectScroll } from "@/components/sections/ProjectScroll";
+import { FawziNavbar, FawziFooter } from "@/components/fawzi/Layout";
+import { FawziProjectsHero } from "@/components/fawzi/ProjectsHero";
+import { FawziProjects } from "@/components/fawzi/Projects";
 import { CustomCursor } from "@/components/ui/CustomCursor";
-import { Navbar } from "@/components/layout/Navbar";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { LoadingScreen } from "@/components/ui/LoadingScreen";
 
 export default function ProjectsPage() {
     return (
-        <main className="h-screen overflow-hidden">
+        <main className="min-h-screen bg-white dark:bg-[#1E1E1E] text-black dark:text-white overflow-x-hidden">
+            <LoadingScreen />
+            <ScrollProgress />
             <CustomCursor />
-            <Navbar />
-            <div className="h-screen w-full snap-y snap-mandatory overflow-y-scroll scroll-smooth theme-transition">
-                <div className="snap-start">
-                    <HeroFull />
-                </div>
-                <ProjectScroll />
-            </div>
+            <FawziNavbar />
+
+            <FawziProjectsHero />
+            <FawziProjects showFullButton={false} />
+
+            <FawziFooter />
         </main>
     );
 }

@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "700", "900"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  title: "Production Boutique - Creative Events & Design",
-  description: "Creative production boutique specializing in event organization, interior design, photography, and creative services",
+  title: "OU BERHAYLA | Creative UI & UX Designer Portfolio",
+  description: "Modern & Premium UI/UX design portfolio for high-end digital experiences.",
 };
 
 export default function RootLayout({

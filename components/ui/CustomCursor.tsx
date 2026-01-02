@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useSpring, AnimatePresence } from "framer-motion";
 
 export function CustomCursor() {
     const [isHovering, setIsHovering] = useState(false);
@@ -55,10 +55,22 @@ export function CustomCursor() {
     }
 
     return (
-        <>
-            {/* Main cursor */}
+        <>{/* Main Dot */}
             <motion.div
-                className="fixed top-0 left-0 w-4 h-4 pointer-events-none z-[9999] mix-blend-difference hidden md:block"
+                className="fixed top-0 left-0 w-2 h-2 pointer-events-none z-[10001] hidden md:block"
+                style={{
+                    x: cursorXSpring,
+                    y: cursorYSpring,
+                    translateX: "-50%",
+                    translateY: "-50%",
+                }}
+            >
+                <div className="w-full h-full rounded-full bg-orange-500 shadow-lg shadow-orange-500/50" />
+            </motion.div>
+
+            {/* Outer Ring */}
+            <motion.div
+                className="fixed top-0 left-0 w-12 h-12 pointer-events-none z-[10000] hidden md:block"
                 style={{
                     x: cursorXSpring,
                     y: cursorYSpring,
@@ -67,53 +79,36 @@ export function CustomCursor() {
                 }}
             >
                 <motion.div
-                    className="w-full h-full rounded-full bg-white"
+                    className="w-full h-full rounded-full border border-orange-500/30 bg-orange-500/5"
                     animate={{
-                        scale: isClicking ? 0.5 : isHovering ? 0.5 : 1,
+                        scale: isClicking ? 0.8 : isHovering ? 1.8 : 1,
+                        rotate: isHovering ? 90 : 0
                     }}
-                    transition={{ duration: 0.15 }}
+                    transition={{ type: "spring", damping: 20 }}
                 />
             </motion.div>
 
-            {/* Outer ring */}
-            <motion.div
-                className="fixed top-0 left-0 w-10 h-10 pointer-events-none z-[9998] hidden md:block"
-                style={{
-                    x: cursorXSpring,
-                    y: cursorYSpring,
-                    translateX: "-50%",
-                    translateY: "-50%",
-                }}
-            >
-                <motion.div
-                    className="w-full h-full rounded-full border-2 border-primary/50"
-                    animate={{
-                        scale: isClicking ? 0.8 : isHovering ? 1.5 : 1,
-                        borderColor: isHovering ? "rgb(168, 85, 247)" : "rgba(168, 85, 247, 0.5)",
-                    }}
-                    transition={{ duration: 0.2 }}
-                />
-            </motion.div>
-
-            {/* Hover text indicator */}
-            {isHovering && (
-                <motion.div
-                    className="fixed top-0 left-0 pointer-events-none z-[9997] hidden md:block"
-                    style={{
-                        x: cursorXSpring,
-                        y: cursorYSpring,
-                        translateX: "10px",
-                        translateY: "10px",
-                    }}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                >
-                    <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
-                        Click
-                    </span>
-                </motion.div>
-            )}
+            {/* Hover Indicator */}
+            <AnimatePresence>
+                {isHovering && (
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0 }}
+                        className="fixed top-0 left-0 pointer-events-none z-[10002] hidden md:block"
+                        style={{
+                            x: cursorXSpring,
+                            y: cursorYSpring,
+                            translateX: "24px",
+                            translateY: "-24px",
+                        }}
+                    >
+                        <div className="bg-black dark:bg-white text-white dark:text-black px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl">
+                            Explore
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Global style to hide default cursor */}
             <style jsx global>{`

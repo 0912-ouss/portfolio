@@ -29,6 +29,7 @@ export interface Testimonial {
 export interface GalleryItem {
   id: string;
   title: string;
+  description?: string;
   image: string;
   category: string;
 }
@@ -218,52 +219,26 @@ export const testimonials: Testimonial[] = [
 
 // Portfolio Gallery
 export const galleryItems: GalleryItem[] = [
-  {
-    id: "1",
-    title: "Site Médical",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
-    category: "Sites Web",
-  },
-  {
-    id: "2",
-    title: "Design Restaurant",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
-    category: "Sites Web",
-  },
-  {
-    id: "3",
-    title: "Logo Tech",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-    category: "Logos",
-  },
-  {
-    id: "4",
-    title: "Plateforme E-commerce",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
-    category: "Sites Web",
-  },
-  {
-    id: "5",
-    title: "Infographie Business",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    category: "Infographies",
-  },
-  {
-    id: "6",
-    title: "UI App Mobile",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
-    category: "Designs UI",
-  },
-  {
-    id: "7",
-    title: "Site Salon",
-    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=400&fit=crop",
-    category: "Sites Web",
-  },
-  {
-    id: "8",
-    title: "Identité de Marque",
-    image: "https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=600&h=400&fit=crop",
-    category: "Logos",
-  },
+  { id: "DG1", title: "Social Media Campaign", image: "/images/design/ad-campaign.jpg", category: "Advertising" },
+  { id: "DG2", title: "Beverage Branding", image: "/images/design/beverage-can.jpg", category: "Product" },
+  { id: "DG3", title: "Bleu de Chanel", image: "/images/design/bleu-de-chanel.jpg", category: "Luxury" },
+  { id: "DG4", title: "Burger Colosseum", image: "/images/design/burger-colosseum.jpg", category: "Creative" },
+  { id: "DG5", title: "Dental Braces Ad", image: "/images/design/dental-braces.jpg", category: "Healthcare" },
+  { id: "DG6", title: "Dental Character", image: "/images/design/dental-character.jpg", category: "Illustration" },
+  { id: "DG7", title: "Dental Helicopter", image: "/images/design/dental-helicopter.jpg", category: "Creative" },
+  { id: "DG8", title: "Dental Surf", image: "/images/design/dental-surf.jpg", category: "Creative" },
+  { id: "DG9", title: "Earbuds Ad", image: "/images/design/earbuds-ad.jpg", category: "Tech" },
+  { id: "DG10", title: "Internet Service Ad", image: "/images/design/internet-ad.jpg", category: "Advertising" },
+  { id: "DG11", title: "Air Jordan Retro", image: "/images/design/jordan-shoes.jpg", category: "Fashion" },
+  { id: "DG12", title: "Kebab Menu Design", image: "/images/design/kebab-menu.jpg", category: "Food" },
+  { id: "DG13", title: "Lux Body Wash", image: "/images/design/lux-body-wash.jpg", category: "Beauty" },
+  { id: "DG14", title: "Gourmet Menu", image: "/images/design/menu-design-1.jpg", category: "Hospitality" },
+  { id: "DG15", title: "Milka Poster", image: "/images/design/milka-poster.jpg", category: "Marketing" },
+  { id: "DG16", title: "Milka Product", image: "/images/design/milka-product.jpg", category: "Product" },
+  { id: "DG17", title: "Mint Cookie Drink", image: "/images/design/mint-cookie-drink.jpg", category: "Beverage" },
+  { id: "DG18", title: "Restaurant Menu", image: "/images/design/restaurant-menu.jpg", category: "Graphic Design" },
+  { id: "DG19", title: "Rolex Watch", image: "/images/design/rolex-watch.jpg", category: "Luxury" },
+  { id: "DG20", title: "Sandwich Menu", image: "/images/design/sandwich-menu.jpg", category: "Food" },
+  { id: "DG21", title: "Travis Scott Jordan", image: "/images/design/travis-scott-jordan.jpg", category: "Fashion" },
+  { id: "DG22", title: "Marketing Campaign", image: "/images/design/yebehiir-marketing.jpg", category: "Advertising" },
 ];
