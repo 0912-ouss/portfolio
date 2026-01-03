@@ -214,41 +214,41 @@ export function CafeReservation() {
                                     value={formData.experience}
                                     onChange={handleChange}
                                     className="w-full bg-transparent text-lg font-light text-white focus:outline-none appearance-none cursor-pointer"
-                                .>
-                                <option value="tasting" className="bg-[#1A1714]">Dégustation Origine — 45$/personne</option>
-                                <option value="brewing" className="bg-[#1A1714]">Masterclass Infusion — 75$/personne</option>
-                                <option value="private" className="bg-[#1A1714]">Dégustation Privée — 120$/groupe</option>
-                            </select>
-                        </div>
+                                >
+                                    <option value="tasting" className="bg-[#1A1714]">Dégustation Origine — 45$/personne</option>
+                                    <option value="brewing" className="bg-[#1A1714]">Masterclass Infusion — 75$/personne</option>
+                                    <option value="private" className="bg-[#1A1714]">Dégustation Privée — 120$/groupe</option>
+                                </select>
+                            </div>
 
-                        {/* Notes */}
-                        <div className="border-b border-white/10 pb-4">
-                            <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4">Demandes Spéciales</label>
-                            <textarea
-                                name="notes"
-                                value={formData.notes}
-                                onChange={handleChange}
-                                rows={3}
-                                placeholder="Toute préférence ou exigence alimentaire..."
-                                className="w-full bg-transparent text-lg font-light text-white placeholder-white/20 focus:outline-none resize-none"
-                            />
-                        </div>
+                            {/* Notes */}
+                            <div className="border-b border-white/10 pb-4">
+                                <label className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4">Demandes Spéciales</label>
+                                <textarea
+                                    name="notes"
+                                    value={formData.notes}
+                                    onChange={handleChange}
+                                    rows={3}
+                                    placeholder="Toute préférence ou exigence alimentaire..."
+                                    className="w-full bg-transparent text-lg font-light text-white placeholder-white/20 focus:outline-none resize-none"
+                                />
+                            </div>
 
-                        {/* Submit Button */}
-                        <button
-                            type="submit"
-                            disabled={submitted}
-                            className={`w-full py-6 text-xs uppercase font-bold tracking-[0.3em] transition-all duration-500 ${submitted
-                                ? 'bg-[#C8AA6E] text-black'
-                                : 'border border-[#C8AA6E] text-[#C8AA6E] hover:bg-[#C8AA6E] hover:text-black'
-                                }`}
-                        >
-                            {submitted ? '✓ Réservation Demandée' : 'Demander une Réservation'}
-                        </button>
-                    </form>
-                </motion.div>
+                            {/* Submit Button */}
+                            <button
+                                type="submit"
+                                disabled={submitted}
+                                className={`w-full py-6 text-xs uppercase font-bold tracking-[0.3em] transition-all duration-500 ${submitted
+                                    ? 'bg-[#C8AA6E] text-black'
+                                    : 'border border-[#C8AA6E] text-[#C8AA6E] hover:bg-[#C8AA6E] hover:text-black'
+                                    }`}
+                            >
+                                {submitted ? '✓ Réservation Demandée' : 'Demander une Réservation'}
+                            </button>
+                        </form>
+                    </motion.div>
+                </div>
             </div>
-        </div>
-        </section >
+        </section>
     );
 }

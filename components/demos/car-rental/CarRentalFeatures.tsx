@@ -7,8 +7,6 @@ import { FiShield, FiClock, FiMapPin, FiHeadphones, FiDollarSign, FiTruck } from
 const features = [
     {
         icon: FiShield,
-    {
-        icon: FiShield,
         title: "Assurance Complète",
         description: "Couverture complète incluse avec chaque location. Conduisez en toute tranquillité."
     },
