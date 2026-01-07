@@ -8,18 +8,11 @@ import { FawziGallery } from "@/components/fawzi/Gallery";
 import { FawziTestimonials, FawziContact } from "@/components/fawzi/Testimonials";
 import { FawziNavbar, FawziFooter } from "@/components/fawzi/Layout";
 import { CustomCursor } from "@/components/ui/CustomCursor";
-import { LoadingScreen } from "@/components/ui/LoadingScreen";
-import { ScrollProgress } from "@/components/ui/ScrollProgress";
+
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white dark:bg-[#1E1E1E] text-black dark:text-white transition-colors duration-300 overflow-x-hidden">
-      <ScrollProgress />
-      <LoadingScreen />
-      <CustomCursor />
-
-      <FawziNavbar />
-
+    <main className="min-h-screen bg-white dark:bg-[#1E1E1E] text-black dark:text-white transition-colors duration-300 overflow-x-hidden pt-20">
       <div id="home">
         <FawziHero />
       </div>

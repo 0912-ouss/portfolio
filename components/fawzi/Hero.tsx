@@ -52,16 +52,19 @@ export function FawziHero() {
                     >
                         Muhammad Umair
                     </motion.h2>
-                    <motion.h1
-                        style={{ x: textX, y: textY }}
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-5xl md:text-8xl font-extrabold leading-tight text-black dark:text-white select-none"
                     >
-                        UI & UX <br />
-                        <span className="md:ml-[0.5em]">Designer</span>
-                    </motion.h1>
+                        <motion.h1
+                            style={{ x: textX, y: textY }}
+                            className="text-5xl md:text-8xl font-extrabold leading-tight text-black dark:text-white select-none"
+                        >
+                            UI & UX <br />
+                            <span className="md:ml-[0.5em]">Designer</span>
+                        </motion.h1>
+                    </motion.div>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

@@ -4,9 +4,14 @@ import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring, AnimatePresence } from "framer-motion";
 
 export function CustomCursor() {
+    const [isMounted, setIsMounted] = useState(false);
     const [isHovering, setIsHovering] = useState(false);
     const [isClicking, setIsClicking] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
     const cursorX = useMotionValue(-100);
     const cursorY = useMotionValue(-100);
@@ -48,6 +53,8 @@ export function CustomCursor() {
             document.removeEventListener("mouseout", handleMouseLeave);
         };
     }, [cursorX, cursorY]);
+
+    if (!isMounted) return null;
 
     // Hide on mobile/touch devices
     if (typeof window !== "undefined" && window.matchMedia("(hover: none)").matches) {

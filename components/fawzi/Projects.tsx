@@ -6,7 +6,7 @@ import Link from "next/link";
 import { projects } from "@/lib/data";
 import { FaTimes, FaExternalLinkAlt } from "react-icons/fa";
 
-const categories = ["All", "Web Design", "Healthcare", "Beauty", "Restaurant", "Real Estate", "Ecommerce"];
+const categories = ["All", "Web Design", "Healthcare", "Beauty", "Restaurant", "Real Estate", "Ecommerce", "Fitness"];
 
 interface FawziProjectsProps {
     showFullButton?: boolean;
@@ -19,8 +19,10 @@ export function FawziProjects({ showFullButton = true, limit }: FawziProjectsPro
 
     const filteredProjects = projects.filter(project => {
         if (activeCategory === "All") return true;
-        if (activeCategory === "Web Design") return true;
-        return project.category.toLowerCase() === activeCategory.toLowerCase();
+
+        // Handle "Web Design" as a special case if needed, or slugify the active category
+        const categorySlug = activeCategory.toLowerCase().replace(" ", "-");
+        return project.category.toLowerCase() === categorySlug;
     });
 
     const displayProjects = limit ? filteredProjects.slice(0, limit) : filteredProjects;

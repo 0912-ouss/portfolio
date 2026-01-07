@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   description: "Modern & Premium UI/UX design portfolio for high-end digital experiences.",
 };
 
-import { BackgroundEffects } from "@/components/ui/BackgroundEffects";
+import { ClientProviders } from "@/components/providers/ClientProviders";
+import { PortfolioUI } from "@/components/layout/PortfolioUI";
 import { PageTransition } from "@/components/ui/PageTransition";
 
 export default function RootLayout({
@@ -22,12 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} ${playfair.variable}`}>
-        <ThemeProvider>
-          <BackgroundEffects />
-          <PageTransition>
-            {children}
-          </PageTransition>
-        </ThemeProvider>
+        <ClientProviders>
+          <PortfolioUI>
+            <PageTransition>
+              {children}
+            </PageTransition>
+          </PortfolioUI>
+        </ClientProviders>
       </body>
     </html>
   );

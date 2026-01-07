@@ -147,6 +147,18 @@ export const projects: Project[] = [
     client: "Atlas Luxury Living",
     year: "2024",
   },
+  // Fitness & Wellness
+  {
+    id: "11",
+    title: "Elysium Athletics",
+    description: "Ultra-luxury fitness sanctuary featuring biometric tracking, elite coaching, and architectural excellence",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&h=600&fit=crop",
+    tags: ["Next.js", "GSAP", "Dark Aesthetic", "Luxury"],
+    link: "/demos/fitness",
+    category: "fitness",
+    client: "Elysium Group",
+    year: "2024",
+  },
 ];
 
 // Developer/Designer Services

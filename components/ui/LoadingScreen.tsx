@@ -1,11 +1,23 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { motion } from "framer-motion";
 
 export function LoadingScreen() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
+  return <LoadingScreenContent />;
+}
+
+function LoadingScreenContent() {
   const containerRef = useRef<HTMLDivElement>(null);
   const counterRef = useRef<HTMLHeadingElement>(null);
   const [isComplete, setIsComplete] = useState(false);
@@ -56,6 +68,15 @@ export function LoadingScreen() {
       }, "-=0.2");
 
   }, { scope: containerRef });
+
+  // Failsafe timeout in case animations hang
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsComplete(true);
+    }, 4500); // Slightly longer than total animation time
+
+    return () => clearTimeout(timer);
+  }, []);
 
   if (isComplete) return null;
 
