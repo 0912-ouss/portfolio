@@ -142,7 +142,7 @@ export function FawziContact() {
                                             className="p-6 rounded-2xl border-2 border-transparent bg-white dark:bg-white/10 hover:border-orange-500 hover:text-orange-500 text-black dark:text-white font-bold transition-all text-left flex justify-between items-center group shadow-sm hover:shadow-xl"
                                         >
                                             {option}
-                                            <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                                            <span aria-hidden="true" className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                                         </button>
                                     ))}
                                 </div>

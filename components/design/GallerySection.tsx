@@ -183,7 +183,7 @@ export const GallerySection = () => {
                                     fill
                                     className="object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16, 1, 0.3, 1)] group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                                <div aria-hidden="true" className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
                                     <span className="text-[10px] text-white/60 uppercase tracking-widest mb-2">{item.category}</span>
                                     <h3 className="text-3xl font-black text-white uppercase tracking-tighter leading-none">{item.title}</h3>
                                 </div>

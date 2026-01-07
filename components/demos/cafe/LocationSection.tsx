@@ -88,7 +88,7 @@ export default function LocationSection() {
                                 </div>
                             </div>
                             {/* Decorative grid pattern */}
-                            <div
+                            <div aria-hidden="true"
                                 className="absolute inset-0 opacity-10"
                                 style={{
                                     backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,

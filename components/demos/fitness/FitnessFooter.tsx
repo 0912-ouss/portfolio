@@ -44,10 +44,10 @@ export function FitnessFooter() {
                         ))}
                     </div>
 
-                    <div className="flex flex-col md:flex-row gap-8 md:gap-24 mt-16 text-[8px] uppercase font-black tracking-[0.5em] text-white/20">
+                    <div aria-hidden="true" className="flex flex-col md:flex-row gap-8 md:gap-24 mt-16 text-[8px] uppercase font-black tracking-[0.5em] text-white/20">
                         <span>Kyoto • Paris • Los Angeles</span>
                         <span>© 2024 Elysium Athletics.</span>
-                        <a href="#" className="hover:text-white transition-colors">Politique de Confidentialité</a>
+                        <a href="javascript:void(0)" className="hover:text-white transition-colors">Politique de Confidentialité</a>
                     </div>
                 </div>
             </div>

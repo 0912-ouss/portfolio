@@ -53,7 +53,7 @@ export function TestimonialsSection() {
                             className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 relative"
                         >
                             {/* Quote Icon Background */}
-                            <div className="absolute top-4 right-8 text-9xl font-serif text-gray-200 opacity-20 pointer-events-none">"</div>
+                            <div aria-hidden="true" className="absolute top-4 right-8 text-9xl font-serif text-gray-200 opacity-20 pointer-events-none">"</div>
 
                             <div className="flex items-center gap-4 mb-6">
                                 <div className="w-16 h-16 rounded-full overflow-hidden relative border-2 border-orange-200">

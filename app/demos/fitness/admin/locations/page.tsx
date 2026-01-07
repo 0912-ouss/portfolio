@@ -161,7 +161,7 @@ export default function LocationsPage() {
                                         className="object-cover"
                                     />
                                     <div className={`absolute inset-0 bg-gradient-to-t ${theme === 'dark' ? 'from-[#0A0A0A]' : 'from-white'} to-transparent`} />
-                                    <div className="absolute top-4 right-4 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div aria-hidden="true" className="absolute top-4 right-4 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                                         <button
                                             onClick={() => openEditModal(location)}
                                             className="w-8 h-8 rounded-lg bg-black/50 backdrop-blur flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"

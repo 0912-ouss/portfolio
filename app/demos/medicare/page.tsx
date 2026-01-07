@@ -687,7 +687,7 @@ export default function MediCareDemo() {
                                 <div className="flex items-baseline gap-2 mb-16">
                                     <span className="text-4xl font-serif italic text-emerald-400">dès</span>
                                     <span className="text-6xl font-black tracking-tighter">${tier.price}</span>
-                                    <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/20">/ an</span>
+                                    <span aria-hidden="true" className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/20">/ an</span>
                                 </div>
                                 <ul className="space-y-6 mb-16">
                                     {tier.protocols.map((protocol, pi) => (
@@ -738,7 +738,7 @@ export default function MediCareDemo() {
                                         alt={service.title}
                                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[1500ms] group-hover:scale-110 brightness-95"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent opacity-100 group-hover:opacity-0 transition-opacity duration-700" />
+                                    <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent opacity-100 group-hover:opacity-0 transition-opacity duration-700" />
 
                                     <div className="absolute bottom-10 left-10 p-2">
                                         <div className="w-12 h-12 rounded-2xl bg-white/90 backdrop-blur-xl flex items-center justify-center text-[#1A1A1A] shadow-xl border border-white mb-6">
@@ -790,7 +790,7 @@ export default function MediCareDemo() {
 
             {/* How It Works Section */}
             <section id="process" className="py-40 bg-[#1A1A1A] text-white relative overflow-hidden">
-                <div className="absolute inset-0 grain-overlay opacity-10" />
+                <div aria-hidden="true" className="absolute inset-0 grain-overlay opacity-10" />
                 <div className="container mx-auto px-6 lg:px-12 relative z-10">
                     <div className="text-center mb-32">
                         <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-400 block mb-8">Le Voyage</span>
@@ -922,7 +922,7 @@ export default function MediCareDemo() {
                                         alt={doctor.name}
                                         className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000 group-hover:scale-110"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-12">
+                                    <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-12">
                                         <div className="text-white">
                                             <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-emerald-400 mb-2">Prêt pour Consultation Privée</p>
                                             <div className="h-[1px] w-12 bg-white/20" />
@@ -989,7 +989,7 @@ export default function MediCareDemo() {
                             <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter text-[#1A1A1A]">LE JOURNAL</h2>
                         </div>
                         <motion.a
-                            href="#"
+                            href="javascript:void(0)"
                             whileHover={{ x: 10 }}
                             className="flex items-center gap-6 group"
                         >
@@ -1203,7 +1203,7 @@ export default function MediCareDemo() {
                             </p>
                             <div className="flex gap-8">
                                 {[FiInstagram, FiTwitter, FiLinkedin].map((Icon, i) => (
-                                    <a key={i} href="#" className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center hover:bg-white hover:text-[#1A1A1A] transition-all">
+                                    <a key={i} href="javascript:void(0)" className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center hover:bg-white hover:text-[#1A1A1A] transition-all">
                                         <Icon className="w-4 h-4" />
                                     </a>
                                 ))}
@@ -1221,7 +1221,7 @@ export default function MediCareDemo() {
                                     <ul className="space-y-4">
                                         {group.links.map((link, j) => (
                                             <li key={j}>
-                                                <a href="#" className="text-[10px] uppercase font-bold tracking-[0.2em] hover:text-emerald-400 transition-colors">{link}</a>
+                                                <a href="javascript:void(0)" className="text-[10px] uppercase font-bold tracking-[0.2em] hover:text-emerald-400 transition-colors">{link}</a>
                                             </li>
                                         ))}
                                     </ul>

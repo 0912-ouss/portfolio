@@ -149,8 +149,8 @@ export function Footer() {
               &copy; {currentYear} <span className="font-semibold text-foreground">Production Boutique</span>. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm text-foreground/60">
-              <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+              <a href="javascript:void(0)" className="hover:text-primary transition-colors">Privacy Policy</a>
+              <a href="javascript:void(0)" className="hover:text-primary transition-colors">Terms of Service</a>
             </div>
           </div>
         </motion.div>

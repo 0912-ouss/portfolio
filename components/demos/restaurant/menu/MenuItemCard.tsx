@@ -34,7 +34,7 @@ export function MenuItemCard({ item, onAddToCart, onOpenModal }: MenuItemCardPro
                 </motion.div>
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 {/* Badges */}
                 <div className="absolute top-3 left-3 flex flex-wrap gap-2">
@@ -51,7 +51,7 @@ export function MenuItemCard({ item, onAddToCart, onOpenModal }: MenuItemCardPro
                 </div>
 
                 {/* Quick View Button */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <div aria-hidden="true" className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <span className="bg-white/90 backdrop-blur text-gray-800 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full">
                         Quick View
                     </span>

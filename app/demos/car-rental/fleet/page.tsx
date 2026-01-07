@@ -46,7 +46,7 @@ export default function FleetPage() {
                         Our Fleet
                     </span>
                     <h1 className="text-6xl md:text-7xl font-black tracking-tight mb-8">
-                        The <span className="text-white/20">Collection</span>
+                        The <span aria-hidden="true" className="text-white/20">Collection</span>
                     </h1>
                     <p className="text-white/50 text-xl font-light leading-relaxed">
                         From track-focused supercars to handcrafted luxury SUVs. Explore our meticulously maintained selection.
@@ -78,7 +78,7 @@ export default function FleetPage() {
                             <button className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-white">
                                 {activeSort} <FiChevronDown />
                             </button>
-                            <div className="absolute right-0 top-full mt-2 w-56 bg-[#0F0F0F] border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-2 shadow-2xl">
+                            <div aria-hidden="true" className="absolute right-0 top-full mt-2 w-56 bg-[#0F0F0F] border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-2 shadow-2xl">
                                 {sorts.map(s => (
                                     <button
                                         key={s}

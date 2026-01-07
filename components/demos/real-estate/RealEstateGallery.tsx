@@ -69,7 +69,7 @@ export function RealEstateGallery() {
                                     height={1000}
                                     className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105"
                                 />
-                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                                <div aria-hidden="true" className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                                     <span className="text-[#C19A6B] text-[10px] uppercase tracking-widest font-bold mb-2">{item.category}</span>
                                     <h3 className="text-white text-2xl font-serif">{item.title}</h3>
                                 </div>

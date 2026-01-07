@@ -44,7 +44,7 @@ export default function EventsSection() {
     return (
         <section id="events" className="py-24 bg-gradient-to-b from-[#1A120B] to-[#3C2A21] relative overflow-hidden">
             {/* Decorative Elements */}
-            <div className="absolute inset-0 opacity-10">
+            <div aria-hidden="true" className="absolute inset-0 opacity-10">
                 <div
                     className="absolute inset-0"
                     style={{

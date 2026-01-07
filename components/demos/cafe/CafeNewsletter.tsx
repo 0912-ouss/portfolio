@@ -99,7 +99,7 @@ export function CafeNewsletter() {
                         </form>
 
                         {/* Social Proof */}
-                        <p className="text-[10px] uppercase tracking-[0.2em] text-white/20 mt-8">
+                        <p aria-hidden="true" className="text-[10px] uppercase tracking-[0.2em] text-white/20 mt-8">
                             Rejoignez plus de 2 400 amateurs de café
                         </p>
                     </motion.div>

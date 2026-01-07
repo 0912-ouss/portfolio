@@ -110,7 +110,7 @@ export function FitnessLogin() {
                                     Mot de passe
                                 </label>
                                 <a
-                                    href="#"
+                                    href="javascript:void(0)"
                                     className="text-[10px] uppercase tracking-widest text-[#D4AF37] hover:text-white transition-colors font-bold"
                                 >
                                     Oublié ?

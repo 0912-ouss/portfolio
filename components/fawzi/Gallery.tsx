@@ -78,7 +78,7 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                             />
 
                             {/* Interactive Overlay */}
-                            <div className="absolute inset-0 bg-orange-600/80 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10 transform translate-y-full group-hover:translate-y-0">
+                            <div aria-hidden="true" className="absolute inset-0 bg-orange-600/80 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10 transform translate-y-full group-hover:translate-y-0">
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}

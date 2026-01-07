@@ -19,7 +19,7 @@ export function EcommerceFooter() {
                         </p>
                         <div className="flex gap-4">
                             {[FiInstagram, FiTwitter, FiFacebook, FiYoutube].map((Icon, i) => (
-                                <a key={i} href="#" className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-[#D4A574] hover:border-[#D4A574] transition-colors">
+                                <a key={i} href="javascript:void(0)" className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-[#D4A574] hover:border-[#D4A574] transition-colors">
                                     <Icon className="w-4 h-4" />
                                 </a>
                             ))}
@@ -32,7 +32,7 @@ export function EcommerceFooter() {
                         <ul className="space-y-3">
                             {['Nouveautés', 'Meilleures Ventes', 'Robes', 'Manteaux', 'Accessoires', 'Soldes'].map(link => (
                                 <li key={link}>
-                                    <a href="#" className="text-white/50 hover:text-[#D4A574] transition-colors text-sm">
+                                    <a href="javascript:void(0)" className="text-white/50 hover:text-[#D4A574] transition-colors text-sm">
                                         {link}
                                     </a>
                                 </li>
@@ -46,7 +46,7 @@ export function EcommerceFooter() {
                         <ul className="space-y-3">
                             {['Contactez-nous', 'FAQ', 'Livraison', 'Retours', 'Guide des Tailles', 'Suivi de Commande'].map(link => (
                                 <li key={link}>
-                                    <a href="#" className="text-white/50 hover:text-[#D4A574] transition-colors text-sm">
+                                    <a href="javascript:void(0)" className="text-white/50 hover:text-[#D4A574] transition-colors text-sm">
                                         {link}
                                     </a>
                                 </li>
@@ -60,7 +60,7 @@ export function EcommerceFooter() {
                         <ul className="space-y-3">
                             {['Notre Histoire', 'Durabilité', 'Carrières', 'Presse', 'Affiliés'].map(link => (
                                 <li key={link}>
-                                    <a href="#" className="text-white/50 hover:text-[#D4A574] transition-colors text-sm">
+                                    <a href="javascript:void(0)" className="text-white/50 hover:text-[#D4A574] transition-colors text-sm">
                                         {link}
                                     </a>
                                 </li>
@@ -77,9 +77,9 @@ export function EcommerceFooter() {
                         © 2024 FASHION Boutique. Tous droits réservés.
                     </p>
                     <div className="flex gap-6 text-xs text-white/30">
-                        <a href="#" className="hover:text-white transition-colors">Confidentialité</a>
-                        <a href="#" className="hover:text-white transition-colors">Conditions</a>
-                        <a href="#" className="hover:text-white transition-colors">Cookies</a>
+                        <a href="javascript:void(0)" className="hover:text-white transition-colors">Confidentialité</a>
+                        <a href="javascript:void(0)" className="hover:text-white transition-colors">Conditions</a>
+                        <a href="javascript:void(0)" className="hover:text-white transition-colors">Cookies</a>
                     </div>
                 </div>
             </div>

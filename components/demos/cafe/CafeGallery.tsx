@@ -92,7 +92,7 @@ export function CafeGallery() {
                                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500" />
 
                                 {/* Overlay Content */}
-                                <div className="absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <div aria-hidden="true" className="absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     <span className="text-[10px] uppercase tracking-[0.3em] text-[#C8AA6E] mb-2">
                                         {image.category}
                                     </span>
@@ -102,7 +102,7 @@ export function CafeGallery() {
                                 </div>
 
                                 {/* Corner Accent */}
-                                <div className="absolute top-4 right-4 w-8 h-8 border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div aria-hidden="true" className="absolute top-4 right-4 w-8 h-8 border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             </div>
                         </motion.div>
                     ))}

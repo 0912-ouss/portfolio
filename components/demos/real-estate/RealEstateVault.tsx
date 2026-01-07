@@ -22,7 +22,7 @@ export function RealEstateVault() {
     return (
         <section className="py-40 bg-black overflow-hidden relative">
             {/* Background Texture/Pattern */}
-            <div className="absolute inset-0 opacity-10 pointer-events-none">
+            <div aria-hidden="true" className="absolute inset-0 opacity-10 pointer-events-none">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#C19A6B_1px,_transparent_1px)] bg-[size:40px_40px]" />
             </div>
 
@@ -111,7 +111,7 @@ export function RealEstateVault() {
 
                         {/* Decorative side text */}
                         <div className="absolute top-1/2 -left-20 -translate-y-1/2 rotate-90 hidden lg:block">
-                            <span className="text-[10px] uppercase tracking-[1em] text-white/10 font-bold whitespace-nowrap">SECTION RESTREINTE 09-AF</span>
+                            <span aria-hidden="true" className="text-[10px] uppercase tracking-[1em] text-white/10 font-bold whitespace-nowrap">SECTION RESTREINTE 09-AF</span>
                         </div>
                     </div>
 

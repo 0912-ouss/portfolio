@@ -82,7 +82,7 @@ export function Gallery({ items }: GalleryProps) {
             </div>
 
             {/* Expand icon */}
-            <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div aria-hidden="true" className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="p-2 glass rounded-lg backdrop-blur-md border border-white/20">
                 <FiMaximize2 className="w-4 h-4 text-white" />
               </div>

@@ -179,7 +179,7 @@ export default function SessionsPage() {
                                         </span>
                                         <h3 className={`${colors.text} font-bold text-lg mt-1`}>{session.name}</h3>
                                     </div>
-                                    <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div aria-hidden="true" className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                                         <button
                                             onClick={() => openEditModal(session)}
                                             className={`w-8 h-8 rounded-lg ${theme === 'dark' ? 'bg-white/5 hover:bg-white/10' : 'bg-gray-100 hover:bg-gray-200'} flex items-center justify-center ${colors.textMuted} hover:${colors.text} transition-all`}

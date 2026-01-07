@@ -50,7 +50,7 @@ export function EcommerceCategories() {
                     {categories.map((category, index) => (
                         <motion.a
                             key={category.name}
-                            href="#"
+                            href="javascript:void(0)"
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.15 }}

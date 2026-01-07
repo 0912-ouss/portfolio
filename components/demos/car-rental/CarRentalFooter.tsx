@@ -18,13 +18,13 @@ export function CarRentalFooter() {
                             Service de location de voitures premium avec une flotte de véhicules de luxe. Vivez la conduite de vos rêves.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 bg-white/5 flex items-center justify-center hover:bg-[#FF6B35] transition-colors">
+                            <a href="javascript:void(0)" className="w-10 h-10 bg-white/5 flex items-center justify-center hover:bg-[#FF6B35] transition-colors">
                                 <FiInstagram className="w-4 h-4" />
                             </a>
-                            <a href="#" className="w-10 h-10 bg-white/5 flex items-center justify-center hover:bg-[#FF6B35] transition-colors">
+                            <a href="javascript:void(0)" className="w-10 h-10 bg-white/5 flex items-center justify-center hover:bg-[#FF6B35] transition-colors">
                                 <FiTwitter className="w-4 h-4" />
                             </a>
-                            <a href="#" className="w-10 h-10 bg-white/5 flex items-center justify-center hover:bg-[#FF6B35] transition-colors">
+                            <a href="javascript:void(0)" className="w-10 h-10 bg-white/5 flex items-center justify-center hover:bg-[#FF6B35] transition-colors">
                                 <FiFacebook className="w-4 h-4" />
                             </a>
                         </div>
@@ -36,7 +36,7 @@ export function CarRentalFooter() {
                         <ul className="space-y-3">
                             {['Notre Flotte', 'Agences', 'Tarifs', 'Assurance', 'Entreprise'].map(link => (
                                 <li key={link}>
-                                    <a href="#" className="text-white/50 hover:text-[#FF6B35] transition-colors text-sm">
+                                    <a href="javascript:void(0)" className="text-white/50 hover:text-[#FF6B35] transition-colors text-sm">
                                         {link}
                                     </a>
                                 </li>
@@ -50,7 +50,7 @@ export function CarRentalFooter() {
                         <ul className="space-y-3">
                             {['Centre d\'Aide', 'Guide de Réservation', 'Conditions Générales', 'Politique de Confidentialité', 'Contactez-nous'].map(link => (
                                 <li key={link}>
-                                    <a href="#" className="text-white/50 hover:text-[#FF6B35] transition-colors text-sm">
+                                    <a href="javascript:void(0)" className="text-white/50 hover:text-[#FF6B35] transition-colors text-sm">
                                         {link}
                                     </a>
                                 </li>
@@ -89,9 +89,9 @@ export function CarRentalFooter() {
                         © 2024 AutoRent. Tous droits réservés.
                     </p>
                     <div className="flex gap-6 text-xs text-white/30">
-                        <a href="#" className="hover:text-white transition-colors">Confidentialité</a>
-                        <a href="#" className="hover:text-white transition-colors">Conditions</a>
-                        <a href="#" className="hover:text-white transition-colors">Cookies</a>
+                        <a href="javascript:void(0)" className="hover:text-white transition-colors">Confidentialité</a>
+                        <a href="javascript:void(0)" className="hover:text-white transition-colors">Conditions</a>
+                        <a href="javascript:void(0)" className="hover:text-white transition-colors">Cookies</a>
                     </div>
                 </div>
             </div>

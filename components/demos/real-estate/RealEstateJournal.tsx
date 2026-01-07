@@ -64,7 +64,7 @@ export function RealEstateJournal() {
                                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors" />
-                                <div className="absolute top-8 right-8 w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 -rotate-45 group-hover:rotate-0">
+                                <div aria-hidden="true" className="absolute top-8 right-8 w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 -rotate-45 group-hover:rotate-0">
                                     <ArrowUpRight size={20} className="text-[#2C2C2C]" />
                                 </div>
                             </div>

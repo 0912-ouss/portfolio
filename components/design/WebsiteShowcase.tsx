@@ -37,7 +37,7 @@ export function WebsiteShowcase() {
                             <img src={src} alt={`Website ${index}`} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
 
                             {/* Overlay Content */}
-                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                            <div aria-hidden="true" className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                                 <span className="bg-white text-black px-6 py-3 font-bold uppercase tracking-widest text-xs rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Voir le projet</span>
                             </div>
                         </div>

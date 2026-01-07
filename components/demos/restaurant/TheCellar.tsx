@@ -39,7 +39,7 @@ export function TheCellar() {
                             <span className="text-[10px] uppercase font-bold tracking-widest text-[#D4AF37] mb-2">{wine.region}</span>
                             <h3 className="text-2xl font-serif mb-4">{wine.name}</h3>
                             <p className="text-sm font-light text-white/60 leading-relaxed max-w-xs">{wine.notes}</p>
-                            <span className="absolute top-8 right-8 text-4xl font-serif text-white/10 group-hover:text-[#D4AF37]/20 transition-colors">{wine.year}</span>
+                            <span aria-hidden="true" className="absolute top-8 right-8 text-4xl font-serif text-white/10 group-hover:text-[#D4AF37]/20 transition-colors">{wine.year}</span>
                         </div>
                         <Image
                             src={wine.image}

@@ -20,13 +20,13 @@ export function RealEstateFooter() {
                             Redéfinir l'expérience immobilière marocaine par une qualité sans compromis et la préservation historique.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#C19A6B] hover:text-[#C19A6B] transition-colors">
+                            <a href="javascript:void(0)" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#C19A6B] hover:text-[#C19A6B] transition-colors">
                                 <Instagram size={18} />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#C19A6B] hover:text-[#C19A6B] transition-colors">
+                            <a href="javascript:void(0)" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#C19A6B] hover:text-[#C19A6B] transition-colors">
                                 <Facebook size={18} />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#C19A6B] hover:text-[#C19A6B] transition-colors">
+                            <a href="javascript:void(0)" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#C19A6B] hover:text-[#C19A6B] transition-colors">
                                 <Linkedin size={18} />
                             </a>
                         </div>
@@ -37,7 +37,7 @@ export function RealEstateFooter() {
                         <ul className="space-y-4">
                             {['Collection Héritage', 'Villas Côtières', 'Vie Moderne', 'Guide d\'Investissement'].map((item) => (
                                 <li key={item}>
-                                    <Link href="#" className="text-gray-400 text-sm hover:text-[#C19A6B] transition-colors">{item}</Link>
+                                    <Link href="javascript:void(0)" className="text-gray-400 text-sm hover:text-[#C19A6B] transition-colors">{item}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -83,8 +83,8 @@ export function RealEstateFooter() {
                 <div className="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8 text-[11px] text-gray-400 uppercase tracking-widest font-medium">
                     <p>© 2024 Atlas Estates Maroc. Tous droits réservés.</p>
                     <div className="flex gap-12">
-                        <Link href="#" className="hover:text-[#2C2C2C] transition-colors">Politique de Confidentialité</Link>
-                        <Link href="#" className="hover:text-[#2C2C2C] transition-colors">Conditions d'Utilisation</Link>
+                        <Link href="javascript:void(0)" className="hover:text-[#2C2C2C] transition-colors">Politique de Confidentialité</Link>
+                        <Link href="javascript:void(0)" className="hover:text-[#2C2C2C] transition-colors">Conditions d'Utilisation</Link>
                     </div>
                     <Link href="/" className="hover:text-[#2C2C2C] transition-colors">Retour au Portefeuille</Link>
                 </div>

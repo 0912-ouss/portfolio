@@ -79,7 +79,7 @@ function EquipmentCard({ item, index }: { item: any; index: number }) {
                 <h3 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tighter mb-2 md:mb-4">
                     {item.name}
                 </h3>
-                <p className="text-white/40 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                <p aria-hidden="true" className="text-white/40 text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                     {item.desc}
                 </p>
             </div>

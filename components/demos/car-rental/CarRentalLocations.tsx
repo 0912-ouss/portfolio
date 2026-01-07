@@ -68,7 +68,7 @@ export function CarRentalLocations() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-black tracking-tight"
                     >
-                        Trouvez-nous <span className="text-white/20">Partout</span>
+                        Trouvez-nous <span aria-hidden="true" className="text-white/20">Partout</span>
                     </motion.h2>
                 </div>
 
@@ -80,7 +80,7 @@ export function CarRentalLocations() {
                         className="relative aspect-square bg-[#0F0F0F] border border-white/10 overflow-hidden"
                     >
                         {/* Map Background Grid */}
-                        <div className="absolute inset-0 opacity-20">
+                        <div aria-hidden="true" className="absolute inset-0 opacity-20">
                             <div className="absolute inset-0" style={{
                                 backgroundImage: `linear-gradient(#FF6B35 1px, transparent 1px), linear-gradient(90deg, #FF6B35 1px, transparent 1px)`,
                                 backgroundSize: '40px 40px'

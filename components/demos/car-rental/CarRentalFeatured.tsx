@@ -46,7 +46,7 @@ export function CarRentalFeatured() {
     return (
         <section className="py-32 bg-[#0F0F0F] text-white relative overflow-hidden">
             {/* Background Accent */}
-            <div
+            <div aria-hidden="true"
                 className="absolute inset-0 opacity-10 transition-colors duration-700"
                 style={{
                     background: `radial-gradient(circle at 70% 50%, ${currentCar.color}40, transparent 60%)`

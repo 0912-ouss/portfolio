@@ -162,11 +162,11 @@ export default function TrainersPage() {
                                             className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                                         />
                                     ) : (
-                                        <div className="w-full h-full flex items-center justify-center text-white/20 text-6xl font-black">
+                                        <div aria-hidden="true" className="w-full h-full flex items-center justify-center text-white/20 text-6xl font-black">
                                             {trainer.name.charAt(0)}
                                         </div>
                                     )}
-                                    <div className="absolute top-4 right-4 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div aria-hidden="true" className="absolute top-4 right-4 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                                         <button
                                             onClick={() => openEditModal(trainer)}
                                             className="w-8 h-8 rounded-lg bg-black/50 backdrop-blur flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"

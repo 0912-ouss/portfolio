@@ -53,7 +53,7 @@ export function CarRentalFAQ() {
                             className="text-4xl md:text-5xl font-black tracking-tight mb-8"
                         >
                             Questions<br />
-                            <span className="text-white/20">Fréquentes</span>
+                            <span aria-hidden="true" className="text-white/20">Fréquentes</span>
                         </motion.h2>
                         <p className="text-white/50 mb-8 max-w-sm">
                             Tout ce que vous devez savoir sur la location avec AutoRent. Vous ne trouvez pas votre réponse ? Contactez notre équipe support.

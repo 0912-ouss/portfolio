@@ -350,7 +350,7 @@ export default function SpaDemo() {
                                     className="text-[10px] uppercase font-bold tracking-[0.3em] text-[#2A2A2A]/40 hover:text-[#9C8461] transition-all relative group"
                                 >
                                     {item.label}
-                                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#9C8461] rounded-full opacity-0 group-hover:opacity-100 transition-all"></span>
+                                    <span aria-hidden="true" className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#9C8461] rounded-full opacity-0 group-hover:opacity-100 transition-all"></span>
                                 </motion.a>
                             ))}
                         </div>
@@ -389,7 +389,7 @@ export default function SpaDemo() {
                         {isAudioPlaying ? <FiVolumeX className="w-4 h-4 z-10" /> : <FiVolume1 className="w-4 h-4 z-10" />}
                         {isAudioPlaying && (
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#9C8461] opacity-20"></span>
+                                <span aria-hidden="true" className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#9C8461] opacity-20"></span>
                             </div>
                         )}
                     </button>
@@ -707,7 +707,7 @@ export default function SpaDemo() {
                     </div>
 
                     <div className="mt-32 p-16 bg-[#2A2A2A] rounded-[4rem] text-white overflow-hidden relative">
-                        <div className="absolute top-0 right-0 w-1/2 h-full opacity-20">
+                        <div aria-hidden="true" className="absolute top-0 right-0 w-1/2 h-full opacity-20">
                             <Image
                                 src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2070&auto=format&fit=crop"
                                 alt="Laboratory"
@@ -815,7 +815,7 @@ export default function SpaDemo() {
                                         fill
                                         className="object-cover grayscale hover:grayscale-0 transition-all duration-[1.5s] scale-105 group-hover:scale-100"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </div>
                                 <h3 className="text-2xl font-black uppercase tracking-tight text-[#2A2A2A] mb-2">{curator.name}</h3>
                                 <p className="text-[10px] uppercase tracking-[0.4em] font-black text-[#9C8461] mb-4">{curator.role}</p>
@@ -912,7 +912,7 @@ export default function SpaDemo() {
                                 <h3 className="text-2xl font-serif text-[#2A2A2A] mb-4 group-hover:italic transition-all">{entry.title}</h3>
                                 <p className="text-sm text-black/40 font-light leading-relaxed mb-8">{entry.excerpt}</p>
                                 <Magnetic>
-                                    <span className="text-[10px] uppercase font-black tracking-widest text-[#9C8461] opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 inline-block duration-500">Lire l'Article</span>
+                                    <span aria-hidden="true" className="text-[10px] uppercase font-black tracking-widest text-[#9C8461] opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 inline-block duration-500">Lire l'Article</span>
                                 </Magnetic>
                             </motion.div>
                         ))}
@@ -1017,7 +1017,7 @@ export default function SpaDemo() {
                             <div className="flex gap-6">
                                 {[FiInstagram, FiTwitter, FiFacebook].map((Icon, i) => (
                                     <Magnetic key={i}>
-                                        <a href="#" className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-[#2A2A2A] border border-black/5 hover:bg-[#9C8461] hover:text-white transition-all shadow-sm">
+                                        <a href="javascript:void(0)" className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-[#2A2A2A] border border-black/5 hover:bg-[#9C8461] hover:text-white transition-all shadow-sm">
                                             <Icon className="w-5 h-5" />
                                         </a>
                                     </Magnetic>
@@ -1048,8 +1048,8 @@ export default function SpaDemo() {
                     <div className="pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-8">
                         <span className="text-[8px] uppercase font-black tracking-widest text-black/20">© 2025 Systèmes Spa Zenith. Tous droits réservés.</span>
                         <div className="flex gap-12 text-[8px] uppercase font-black tracking-widest text-black/20">
-                            <a href="#" className="hover:text-[#9C8461]">Protocole de Confidentialité</a>
-                            <a href="#" className="hover:text-[#9C8461]">Conditions d'Accès</a>
+                            <a href="javascript:void(0)" className="hover:text-[#9C8461]">Protocole de Confidentialité</a>
+                            <a href="javascript:void(0)" className="hover:text-[#9C8461]">Conditions d'Accès</a>
                         </div>
                     </div>
                 </div>

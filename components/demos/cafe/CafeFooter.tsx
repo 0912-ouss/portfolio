@@ -30,7 +30,7 @@ export function CafeFooter() {
                     <FiMapPin className="w-5 h-5 hover:text-white transition-colors cursor-pointer" />
                 </div>
 
-                <div className="mt-16 text-[10px] uppercase tracking-widest text-white/20">
+                <div aria-hidden="true" className="mt-16 text-[10px] uppercase tracking-widest text-white/20">
                     © 2024 KŌHĪ Atelier. Tous Droits Réservés.
                 </div>
             </div>

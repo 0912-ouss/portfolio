@@ -57,7 +57,7 @@ export function CarRentalTestimonials() {
                             className="text-4xl md:text-5xl font-black tracking-tight mb-12"
                         >
                             Ce Que Disent<br />
-                            <span className="text-white/20">Nos Clients</span>
+                            <span aria-hidden="true" className="text-white/20">Nos Clients</span>
                         </motion.h2>
 
                         {/* Testimonial */}

@@ -15,7 +15,7 @@ export function FitnessPartners() {
     return (
         <section className="py-20 bg-[#050505] border-t border-b border-white/5 overflow-hidden">
             <div className="container mx-auto px-6 mb-12">
-                <p className="text-white/20 text-[10px] uppercase tracking-[0.5em] font-bold text-center">
+                <p aria-hidden="true" className="text-white/20 text-[10px] uppercase tracking-[0.5em] font-bold text-center">
                     Trusted By Elite Partners
                 </p>
             </div>
@@ -37,7 +37,7 @@ export function FitnessPartners() {
                 >
                     {/* Duplicate for seamless loop */}
                     {[...partners, ...partners].map((partner, i) => (
-                        <div
+                        <div aria-hidden="true"
                             key={i}
                             className="text-3xl md:text-4xl font-black uppercase tracking-[0.3em] text-white/10 hover:text-[#D4AF37]/50 transition-colors duration-500 cursor-default select-none"
                         >

@@ -60,7 +60,7 @@ export function CarRentalFeatures() {
                         className="text-4xl md:text-5xl font-black tracking-tight mb-6"
                     >
                         L'Avantage<br />
-                        <span className="text-white/20">AutoRent</span>
+                        <span aria-hidden="true" className="text-white/20">AutoRent</span>
                     </motion.h2>
                     <p className="max-w-lg mx-auto text-white/50 font-light">
                         Profitez d'un service premium à chaque location. Nous allons au-delà de la simple fourniture de voitures.

@@ -136,7 +136,7 @@ export default function AdminOverview() {
                                         <FiArrowUpRight className="text-white/20 group-hover:text-white transition-colors" />
                                     </div>
                                 )) : (
-                                    <p className="text-white/20 text-[10px] uppercase tracking-widest py-10 text-center">Aucune activité récente</p>
+                                    <p aria-hidden="true" className="text-white/20 text-[10px] uppercase tracking-widest py-10 text-center">Aucune activité récente</p>
                                 )}
                             </div>
                         </div>

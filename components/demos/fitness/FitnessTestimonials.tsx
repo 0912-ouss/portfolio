@@ -73,7 +73,7 @@ export function FitnessTestimonials() {
                                         className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
                                     />
                                 </div>
-                                <div className="absolute -bottom-2 -right-2 text-[#D4AF37] text-4xl font-serif opacity-20 group-hover:opacity-100 transition-opacity">"</div>
+                                <div aria-hidden="true" className="absolute -bottom-2 -right-2 text-[#D4AF37] text-4xl font-serif opacity-20 group-hover:opacity-100 transition-opacity">"</div>
                             </div>
 
                             <p className="text-white/70 font-sans leading-relaxed mb-8 group-hover:text-white transition-colors duration-300">

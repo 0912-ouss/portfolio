@@ -59,7 +59,7 @@ export function Testimonials() {
                     >
                       <div className="relative card p-8 md:p-12 lg:p-16 h-full flex flex-col justify-center overflow-hidden">
                         {/* Gradient overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 hover:opacity-100 transition-opacity duration-500" />
+                        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 hover:opacity-100 transition-opacity duration-500" />
                         
                         {/* Quote Icon */}
                         <motion.div

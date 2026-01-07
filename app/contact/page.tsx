@@ -35,7 +35,7 @@ export default function ContactPage() {
                     <div className="mt-24 flex gap-8">
                         {/* Socials placeholder */}
                         {['Instagram', 'Twitter', 'LinkedIn'].map((social) => (
-                            <a key={social} href="#" className="uppercase tracking-widest text-sm font-bold hover:text-primary transition-colors">
+                            <a key={social} href="javascript:void(0)" className="uppercase tracking-widest text-sm font-bold hover:text-primary transition-colors">
                                 {social}
                             </a>
                         ))}

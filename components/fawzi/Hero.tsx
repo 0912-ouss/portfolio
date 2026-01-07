@@ -99,7 +99,7 @@ export function FawziHero() {
                         className="relative w-72 h-72 md:w-[450px] md:h-[450px]"
                     >
                         {/* Background shape/orange circle if needed */}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-orange-500 rounded-full opacity-10 animate-pulse"></div>
+                        <div aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-orange-500 rounded-full opacity-10 animate-pulse"></div>
 
                         <div className="relative z-10 w-full h-full rounded-full overflow-hidden border-8 border-white/50 dark:border-white/10 shadow-2xl">
                             <img

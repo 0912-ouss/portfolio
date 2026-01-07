@@ -82,7 +82,7 @@ export function FitnessLocations() {
                             <h3 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-700">
                                 {loc.name}
                             </h3>
-                            <p className="text-white/40 text-[10px] uppercase tracking-[0.3em] font-bold mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                            <p aria-hidden="true" className="text-white/40 text-[10px] uppercase tracking-[0.3em] font-bold mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
                                 {loc.address}
                             </p>
                             <button className="px-12 py-5 bg-white text-black text-[10px] uppercase font-black tracking-[0.3em] opacity-0 group-hover:opacity-100 transition-all duration-700 delay-200 hover:bg-[#D4AF37]">

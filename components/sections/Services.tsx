@@ -37,14 +37,14 @@ export function Services() {
               className="group relative card overflow-hidden p-8 lg:p-10 cursor-pointer"
             >
               {/* Gradient Background on Hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               {/* Icon Container */}
               <div className="relative mb-6">
                 <div className="text-6xl transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                   {service.icon}
                 </div>
-                <div className="absolute -top-2 -right-2 w-16 h-16 bg-primary/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div aria-hidden="true" className="absolute -top-2 -right-2 w-16 h-16 bg-primary/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
               
               <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
@@ -66,7 +66,7 @@ export function Services() {
               </motion.div>
 
               {/* Shine Effect */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+              <div aria-hidden="true" className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
               </div>
             </motion.div>

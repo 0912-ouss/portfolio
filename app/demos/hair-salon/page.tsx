@@ -451,7 +451,7 @@ export default function HairSalonDemo() {
                                     className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/40 hover:text-[#C5A059] transition-all relative group"
                                 >
                                     {item.label}
-                                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#C5A059] rounded-full opacity-0 group-hover:opacity-100 transition-all"></span>
+                                    <span aria-hidden="true" className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#C5A059] rounded-full opacity-0 group-hover:opacity-100 transition-all"></span>
                                 </motion.a>
                             ))}
                         </div>
@@ -545,7 +545,7 @@ export default function HairSalonDemo() {
 
                                     <div className="flex flex-col gap-2">
                                         <span className="text-4xl font-black tracking-tighter text-white">15+</span>
-                                        <span className="text-[8px] uppercase font-bold tracking-[0.3em] text-white/20">Années de Maîtrise</span>
+                                        <span aria-hidden="true" className="text-[8px] uppercase font-bold tracking-[0.3em] text-white/20">Années de Maîtrise</span>
                                     </div>
                                 </div>
                             </div>
@@ -586,7 +586,7 @@ export default function HairSalonDemo() {
                                         fill
                                         className="object-cover grayscale group-hover:grayscale-0 transition-all duration-[1500ms] group-hover:scale-110 brightness-90 shadow-2xl"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0B] via-transparent to-transparent opacity-100 group-hover:opacity-0 transition-opacity duration-700" />
+                                    <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#0A0A0B] via-transparent to-transparent opacity-100 group-hover:opacity-0 transition-opacity duration-700" />
 
                                     <div className="absolute bottom-10 left-10 p-2">
                                         <div className="w-12 h-12 rounded-2xl bg-[#C5A059] flex items-center justify-center text-[#0A0A0B] shadow-2xl border border-white/10 mb-6">
@@ -825,7 +825,7 @@ export default function HairSalonDemo() {
                                         </div>
 
                                         {/* Instructional Hint (shows on hover) */}
-                                        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-[#0A0A0B]/80 backdrop-blur-md text-[#C5A059] px-6 py-3 rounded-full text-[8px] font-black uppercase tracking-[0.3em] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-[#C5A059]/20">
+                                        <div aria-hidden="true" className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-[#0A0A0B]/80 backdrop-blur-md text-[#C5A059] px-6 py-3 rounded-full text-[8px] font-black uppercase tracking-[0.3em] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-[#C5A059]/20">
                                             Glisser pour Contraster
                                         </div>
                                     </div>
@@ -875,18 +875,18 @@ export default function HairSalonDemo() {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0B] via-transparent to-transparent opacity-60" />
 
-                                    <div className="absolute bottom-8 left-8 right-8 flex justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                                        <motion.a href="#" whileHover={{ scale: 1.1 }} className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-[#C5A059] hover:text-[#0A0A0B] transition-all">
+                                    <div aria-hidden="true" className="absolute bottom-8 left-8 right-8 flex justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                        <motion.a href="javascript:void(0)" whileHover={{ scale: 1.1 }} className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-[#C5A059] hover:text-[#0A0A0B] transition-all">
                                             <FiInstagram className="w-4 h-4" />
                                         </motion.a>
-                                        <motion.a href="#" whileHover={{ scale: 1.1 }} className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-[#C5A059] hover:text-[#0A0A0B] transition-all">
+                                        <motion.a href="javascript:void(0)" whileHover={{ scale: 1.1 }} className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-[#C5A059] hover:text-[#0A0A0B] transition-all">
                                             <FiFacebook className="w-4 h-4" />
                                         </motion.a>
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-black uppercase tracking-tighter text-white mb-1">{member.name}</h3>
                                 <p className="text-[10px] text-[#C5A059] uppercase font-black tracking-widest mb-4">{member.role}</p>
-                                <div className="flex items-center gap-2 text-[10px] text-white/20 uppercase font-bold tracking-widest">
+                                <div aria-hidden="true" className="flex items-center gap-2 text-[10px] text-white/20 uppercase font-bold tracking-widest">
                                     <FiAward className="w-3 h-3" />
                                     <span>{member.experience} Discipline</span>
                                 </div>
@@ -911,7 +911,7 @@ export default function HairSalonDemo() {
                             </p>
                             <div className="flex flex-col gap-4">
                                 <span className="text-4xl font-serif italic font-extralight text-[#C5A059]">98%</span>
-                                <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/20">Métrique de Rétention</span>
+                                <span aria-hidden="true" className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/20">Métrique de Rétention</span>
                             </div>
                         </div>
 
@@ -1047,13 +1047,13 @@ export default function HairSalonDemo() {
                                 </div>
                                 <h3 className="text-2xl font-black uppercase tracking-tighter text-white">MILL BERRY</h3>
                             </div>
-                            <p className="text-white/20 text-sm font-light leading-relaxed max-w-sm mb-12">
+                            <p aria-hidden="true" className="text-white/20 text-sm font-light leading-relaxed max-w-sm mb-12">
                                 Une faculté souterraine dédiée à l'architecture avancée du cheveu. Redéfinition des silhouettes par la précision moléculaire.
                             </p>
                             <div className="flex gap-8">
-                                <motion.a href="#" whileHover={{ y: -5 }} className="text-white/20 hover:text-[#C5A059] transition-colors"><FiInstagram className="w-6 h-6" /></motion.a>
-                                <motion.a href="#" whileHover={{ y: -5 }} className="text-white/20 hover:text-[#C5A059] transition-colors"><FiFacebook className="w-6 h-6" /></motion.a>
-                                <motion.a href="#" whileHover={{ y: -5 }} className="text-white/20 hover:text-[#C5A059] transition-colors"><FiTwitter className="w-6 h-6" /></motion.a>
+                                <motion.a href="javascript:void(0)" whileHover={{ y: -5 }} className="text-white/20 hover:text-[#C5A059] transition-colors"><FiInstagram className="w-6 h-6" /></motion.a>
+                                <motion.a href="javascript:void(0)" whileHover={{ y: -5 }} className="text-white/20 hover:text-[#C5A059] transition-colors"><FiFacebook className="w-6 h-6" /></motion.a>
+                                <motion.a href="javascript:void(0)" whileHover={{ y: -5 }} className="text-white/20 hover:text-[#C5A059] transition-colors"><FiTwitter className="w-6 h-6" /></motion.a>
                             </div>
                         </div>
                         <div>
@@ -1075,8 +1075,8 @@ export default function HairSalonDemo() {
                         </div>
                     </div>
                     <div className="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-12 gap-8">
-                        <p className="text-[8px] uppercase font-black tracking-[0.5em] text-white/10 italic">© 2024 MILL BERRY FACULTÉ. TOUS DROITS RÉSERVÉS.</p>
-                        <div className="flex gap-12 text-[8px] uppercase font-black tracking-[0.3em] text-white/10">
+                        <p aria-hidden="true" className="text-[8px] uppercase font-black tracking-[0.5em] text-white/10 italic">© 2024 MILL BERRY FACULTÉ. TOUS DROITS RÉSERVÉS.</p>
+                        <div aria-hidden="true" className="flex gap-12 text-[8px] uppercase font-black tracking-[0.3em] text-white/10">
                             <span className="hover:text-[#C5A059] transition-colors cursor-pointer">Protocole Confidentialité</span>
                             <span className="hover:text-[#C5A059] transition-colors cursor-pointer">Conditions Service</span>
                         </div>

@@ -63,7 +63,7 @@ export function CafeBackToTop() {
                     </div>
 
                     {/* Tooltip */}
-                    <span className="absolute right-full mr-4 top-1/2 -translate-y-1/2 text-[10px] uppercase tracking-widest text-[#C8AA6E] opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    <span aria-hidden="true" className="absolute right-full mr-4 top-1/2 -translate-y-1/2 text-[10px] uppercase tracking-widest text-[#C8AA6E] opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         Back to Top
                     </span>
                 </motion.button>

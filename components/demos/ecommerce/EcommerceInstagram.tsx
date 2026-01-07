@@ -25,7 +25,7 @@ export function EcommerceInstagram() {
                     className="text-center mb-12"
                 >
                     <a
-                        href="#"
+                        href="javascript:void(0)"
                         className="inline-flex items-center gap-3 text-[#1A1A1A] hover:text-[#D4A574] transition-colors group"
                     >
                         <FiInstagram className="w-6 h-6" />
@@ -39,7 +39,7 @@ export function EcommerceInstagram() {
                     {instagramPosts.map((post, index) => (
                         <motion.a
                             key={index}
-                            href="#"
+                            href="javascript:void(0)"
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: index * 0.05 }}
@@ -51,7 +51,7 @@ export function EcommerceInstagram() {
                                 fill
                                 className="object-cover group-hover:scale-110 transition-transform duration-500"
                             />
-                            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div aria-hidden="true" className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                 <span className="text-white text-sm font-medium">♥ {post.likes}</span>
                             </div>
                         </motion.a>

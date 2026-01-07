@@ -45,7 +45,7 @@ export function CarRentalFleet() {
                             className="text-4xl md:text-6xl font-black tracking-tight"
                         >
                             Véhicules<br />
-                            <span className="text-white/20">Premium</span>
+                            <span aria-hidden="true" className="text-white/20">Premium</span>
                         </motion.h2>
                     </div>
 

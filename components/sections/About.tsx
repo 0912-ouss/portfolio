@@ -159,7 +159,7 @@ export function About() {
             <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
           </motion.a>
           <motion.a
-            href="#"
+            href="javascript:void(0)"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
             className="flex items-center gap-2 px-8 py-4 bg-card/80 backdrop-blur-sm text-foreground rounded-2xl font-semibold border border-border/50 hover:border-primary/50 hover:bg-card transition-all"

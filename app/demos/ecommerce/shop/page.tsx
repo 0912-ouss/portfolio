@@ -116,7 +116,7 @@ export default function ShopPage() {
                             <button className="flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] font-bold text-[#1A1A1A]">
                                 <span className="text-[#999] font-normal">Sort:</span> {activeSort} <FiChevronDown className="w-4 h-4" />
                             </button>
-                            <div className="absolute right-0 top-full mt-2 w-56 bg-white border border-[#E5E5E5] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-2 shadow-2xl z-50">
+                            <div aria-hidden="true" className="absolute right-0 top-full mt-2 w-56 bg-white border border-[#E5E5E5] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all p-2 shadow-2xl z-50">
                                 {sorts.map(s => (
                                     <button
                                         key={s}
@@ -172,9 +172,9 @@ export default function ShopPage() {
                                         </div>
 
                                         {/* Luxury Hover Overlay */}
-                                        <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                        <div aria-hidden="true" className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                                        <div className="absolute inset-x-0 bottom-0 p-6 flex flex-col gap-3 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                                        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 p-6 flex flex-col gap-3 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
                                             <button className="w-full bg-[#1A1A1A] text-white py-4 flex items-center justify-center gap-3 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-[#333] transition-colors">
                                                 <FiShoppingBag className="w-4 h-4" /> Quick Add
                                             </button>

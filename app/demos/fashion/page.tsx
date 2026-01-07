@@ -162,7 +162,7 @@ export default function FashionDemo() {
 
                     <div className="hidden lg:flex items-center gap-8">
                         {["Accueil", "Boutique", "Homme", "Femme", "Enfant", "Accessoires", "À Propos", "Contact"].map(link => (
-                            <motion.a key={link} href="#" whileHover={{ y: -2 }} className="text-sm font-medium text-[#3D2314]/70 hover:text-[#D4A574] transition-colors">
+                            <motion.a key={link} href="javascript:void(0)" whileHover={{ y: -2 }} className="text-sm font-medium text-[#3D2314]/70 hover:text-[#D4A574] transition-colors">
                                 {link}
                             </motion.a>
                         ))}
@@ -193,7 +193,7 @@ export default function FashionDemo() {
                         <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} className="lg:hidden bg-white border-t">
                             <div className="px-6 py-4 space-y-3">
                                 {["Accueil", "Boutique", "Homme", "Femme", "Enfant", "Accessoires"].map(link => (
-                                    <a key={link} href="#" className="block py-2 text-[#3D2314] font-medium">{link}</a>
+                                    <a key={link} href="javascript:void(0)" className="block py-2 text-[#3D2314] font-medium">{link}</a>
                                 ))}
                             </div>
                         </motion.div>
@@ -433,7 +433,7 @@ export default function FashionDemo() {
                         {instagramImages.map((img, i) => (
                             <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.05 }} whileHover={{ scale: 1.05 }} className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group">
                                 <Image src={img} alt="Instagram" fill className="object-cover" />
-                                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <div aria-hidden="true" className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                     <FiInstagram className="text-white text-3xl" />
                                 </div>
                             </motion.div>
@@ -494,7 +494,7 @@ export default function FashionDemo() {
                                 </div>
                                 <span className="text-sm text-[#D4A574]">{post.date}</span>
                                 <h3 className="font-bold text-[#3D2314] mt-1 group-hover:text-[#D4A574] transition-colors">{post.title}</h3>
-                                <a href="#" className="text-[#D4A574] text-sm font-medium mt-2 inline-flex items-center gap-1 hover:gap-2 transition-all">
+                                <a href="javascript:void(0)" className="text-[#D4A574] text-sm font-medium mt-2 inline-flex items-center gap-1 hover:gap-2 transition-all">
                                     Lire Plus <FiArrowRight />
                                 </a>
                             </motion.div>
@@ -566,7 +566,7 @@ export default function FashionDemo() {
                             <p className="text-white/60 text-sm mb-4">Votre destination mode ultime pour des vêtements tendances et intemporels.</p>
                             <div className="flex gap-3">
                                 {[FiFacebook, FiTwitter, FiInstagram].map((Icon, i) => (
-                                    <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4A574] transition-colors">
+                                    <a key={i} href="javascript:void(0)" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4A574] transition-colors">
                                         <Icon />
                                     </a>
                                 ))}
@@ -581,7 +581,7 @@ export default function FashionDemo() {
                                 <h4 className="font-semibold mb-4">{section.title}</h4>
                                 <ul className="space-y-3">
                                     {section.links.map((link) => (
-                                        <li key={link}><a href="#" className="text-sm text-white/60 hover:text-[#D4A574] transition-colors">{link}</a></li>
+                                        <li key={link}><a href="javascript:void(0)" className="text-sm text-white/60 hover:text-[#D4A574] transition-colors">{link}</a></li>
                                     ))}
                                 </ul>
                             </div>

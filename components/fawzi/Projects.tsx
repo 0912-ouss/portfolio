@@ -97,9 +97,9 @@ export function FawziProjects({ showFullButton = true, limit }: FawziProjectsPro
                                     />
 
                                     {/* Hover Overlay Reveal */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-orange-600/90 via-orange-600/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-between p-8">
+                                    <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-orange-600/90 via-orange-600/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-between p-8">
                                         <div className="flex justify-end">
-                                            <div className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-white text-[10px] font-black uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-all delay-100">
+                                            <div aria-hidden="true" className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-white text-[10px] font-black uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-all delay-100">
                                                 Voir l'Étude
                                             </div>
                                         </div>

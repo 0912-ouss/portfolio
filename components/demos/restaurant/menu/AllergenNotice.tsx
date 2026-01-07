@@ -41,7 +41,7 @@ export function AllergenNotice() {
                 {/* Additional Info */}
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm">
                     <a
-                        href="#"
+                        href="javascript:void(0)"
                         className="text-orange-600 hover:text-orange-700 font-medium flex items-center gap-2 transition-colors"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

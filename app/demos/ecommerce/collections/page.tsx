@@ -103,7 +103,7 @@ export default function CollectionsPage() {
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-[2s] ease-out"
                                 />
-                                <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <div aria-hidden="true" className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 <div className="absolute top-8 left-8">
                                     <span className="px-6 py-2 bg-white/90 backdrop-blur-sm text-[10px] uppercase tracking-[0.3em] font-bold">
                                         Vol. {index + 1}

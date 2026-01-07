@@ -325,7 +325,7 @@ export default function DentistDemo() {
                                         <p className="text-xs text-[#1F2933]/50 font-light leading-relaxed max-w-[200px]">{service.description}</p>
                                     </div>
 
-                                    <div className="absolute top-12 right-12 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                                    <div aria-hidden="true" className="absolute top-12 right-12 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                                         <div className="w-16 h-16 rounded-full border border-[#1F2933]/10 flex items-center justify-center backdrop-blur-xl bg-white/40">
                                             <FiArrowRight className="w-6 h-6 text-[#1F2933]" />
                                         </div>
@@ -463,7 +463,7 @@ export default function DentistDemo() {
                                     />
                                     <div className="absolute inset-0 bg-[#2F80ED]/0 group-hover:bg-[#2F80ED]/10 transition-colors duration-500" />
 
-                                    <div className="absolute bottom-8 left-8 right-8 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                                    <div aria-hidden="true" className="absolute bottom-8 left-8 right-8 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                                         <span className="text-[8px] uppercase tracking-[0.3em] font-black text-white/60 mb-2 block">{item.category}</span>
                                         <h4 className="text-lg font-black uppercase tracking-tight text-white">{item.title}</h4>
                                     </div>
@@ -608,7 +608,7 @@ export default function DentistDemo() {
                             <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#2F80ED] block mb-6">Le Journal</span>
                             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-[#1F2933]">ART DE VIVRE & Science</h2>
                         </div>
-                        <a href="#" className="hidden md:flex items-center gap-4 text-[10px] uppercase font-bold tracking-widest border-b border-[#1F2933]/10 pb-2 hover:border-[#2F80ED] transition-colors">
+                        <a href="javascript:void(0)" className="hidden md:flex items-center gap-4 text-[10px] uppercase font-bold tracking-widest border-b border-[#1F2933]/10 pb-2 hover:border-[#2F80ED] transition-colors">
                             Voir tous les articles <FiArrowUpRight />
                         </a>
                     </div>
@@ -794,32 +794,32 @@ export default function DentistDemo() {
                             </p>
                             <div className="flex gap-6">
                                 {['IG', 'TW', 'LI', 'FB'].map((social) => (
-                                    <a key={social} href="#" className="text-[10px] font-bold text-white/30 hover:text-[#2F80ED] transition-colors">{social}</a>
+                                    <a key={social} href="javascript:void(0)" className="text-[10px] font-bold text-white/30 hover:text-[#2F80ED] transition-colors">{social}</a>
                                 ))}
                             </div>
                         </div>
 
                         <div className="grid grid-cols-2 gap-24">
                             <div className="space-y-6">
-                                <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/20 mb-10">Studio</h4>
-                                <a href="#" className="block text-[10px] uppercase font-bold tracking-[0.2em] hover:text-[#2F80ED]">La Galerie</a>
-                                <a href="#" className="block text-[10px] uppercase font-bold tracking-[0.2em] hover:text-[#2F80ED]">Héritage</a>
-                                <a href="#" className="block text-[10px] uppercase font-bold tracking-[0.2em] hover:text-[#2F80ED]">Conciergerie</a>
+                                <h4 aria-hidden="true" className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/20 mb-10">Studio</h4>
+                                <a href="javascript:void(0)" className="block text-[10px] uppercase font-bold tracking-[0.2em] hover:text-[#2F80ED]">La Galerie</a>
+                                <a href="javascript:void(0)" className="block text-[10px] uppercase font-bold tracking-[0.2em] hover:text-[#2F80ED]">Héritage</a>
+                                <a href="javascript:void(0)" className="block text-[10px] uppercase font-bold tracking-[0.2em] hover:text-[#2F80ED]">Conciergerie</a>
                             </div>
                             <div className="space-y-6">
-                                <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/20 mb-10">Journaux</h4>
-                                <a href="#" className="block text-[10px] uppercase font-bold tracking-[0.2em] hover:text-[#2F80ED]">Esthétique</a>
-                                <a href="#" className="block text-[10px] uppercase font-bold tracking-[0.2em] hover:text-[#2F80ED]">Clinique</a>
-                                <a href="#" className="block text-[10px] uppercase font-bold tracking-[0.2em] hover:text-[#2F80ED]">Science</a>
+                                <h4 aria-hidden="true" className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/20 mb-10">Journaux</h4>
+                                <a href="javascript:void(0)" className="block text-[10px] uppercase font-bold tracking-[0.2em] hover:text-[#2F80ED]">Esthétique</a>
+                                <a href="javascript:void(0)" className="block text-[10px] uppercase font-bold tracking-[0.2em] hover:text-[#2F80ED]">Clinique</a>
+                                <a href="javascript:void(0)" className="block text-[10px] uppercase font-bold tracking-[0.2em] hover:text-[#2F80ED]">Science</a>
                             </div>
                         </div>
                     </div>
 
                     <div className="flex flex-col md:flex-row justify-between items-center pt-20 border-t border-white/5 gap-12">
-                        <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/20">© 2025 Studio Privé Berhayla.</span>
-                        <div className="flex gap-12 text-[10px] uppercase font-bold tracking-[0.2em] text-white/20">
-                            <a href="#" className="hover:text-white">Conditions</a>
-                            <a href="#" className="hover:text-white">Politique</a>
+                        <span aria-hidden="true" className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/20">© 2025 Studio Privé Berhayla.</span>
+                        <div aria-hidden="true" className="flex gap-12 text-[10px] uppercase font-bold tracking-[0.2em] text-white/20">
+                            <a href="javascript:void(0)" className="hover:text-white">Conditions</a>
+                            <a href="javascript:void(0)" className="hover:text-white">Politique</a>
                         </div>
                     </div>
                 </div>
