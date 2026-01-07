@@ -8,7 +8,30 @@ const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "700", "
 
 export const metadata: Metadata = {
   title: "OU BERHAYLA | Creative UI & UX Designer Portfolio",
-  description: "Modern & Premium UI/UX design portfolio for high-end digital experiences.",
+  description: "Modern & Premium UI/UX design portfolio showcasing high-end digital experiences, web design, and creative solutions for luxury brands.",
+  keywords: ["UI Designer", "UX Designer", "Portfolio", "Web Design", "Creative", "Luxury Design"],
+  authors: [{ name: "OU BERHAYLA" }],
+  creator: "OU BERHAYLA",
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://ouberhayla.com',
+    title: "OU BERHAYLA | Creative UI & UX Designer",
+    description: "Modern & Premium UI/UX design portfolio",
+    siteName: "OU BERHAYLA Portfolio",
+    images: [{
+      url: '/og-image.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'OU BERHAYLA Portfolio',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "OU BERHAYLA | UI & UX Designer",
+    description: "Modern & Premium UI/UX design portfolio",
+    images: ['/twitter-image.jpg'],
+  },
 };
 
 import { ClientProviders } from "@/components/providers/ClientProviders";
@@ -26,7 +49,9 @@ export default function RootLayout({
         <ClientProviders>
           <PortfolioUI>
             <PageTransition>
-              {children}
+              <main>
+                {children}
+              </main>
             </PageTransition>
           </PortfolioUI>
         </ClientProviders>

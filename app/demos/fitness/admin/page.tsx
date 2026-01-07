@@ -1,12 +1,23 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { AdminHeader } from "@/components/demos/fitness/admin/AdminHeader";
 import { StatsCard } from "@/components/demos/fitness/admin/StatsCard";
-import { MembershipGrowthChart, MembershipDistributionChart } from "@/components/demos/fitness/admin/AdminCharts";
 import { FiUsers, FiActivity, FiArrowUpRight, FiCalendar, FiDollarSign, FiLoader, FiUser } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { Member } from "@/types/fitness";
+
+// Lazy load charts for better performance
+const MembershipGrowthChart = dynamic(
+    () => import("@/components/demos/fitness/admin/AdminCharts").then(mod => ({ default: mod.MembershipGrowthChart })),
+    { loading: () => <div className="h-64 flex items-center justify-center"><FiLoader className="animate-spin" /></div> }
+);
+
+const MembershipDistributionChart = dynamic(
+    () => import("@/components/demos/fitness/admin/AdminCharts").then(mod => ({ default: mod.MembershipDistributionChart })),
+    { loading: () => <div className="h-64 flex items-center justify-center"><FiLoader className="animate-spin" /></div> }
+);
 
 export default function AdminOverview() {
     const [loading, setLoading] = useState(true);

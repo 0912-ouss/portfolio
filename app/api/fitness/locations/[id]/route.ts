@@ -3,11 +3,11 @@ import { prisma } from "@/lib/prisma"
 
 export async function DELETE(
     request: Request,
-    { params }: { params: { id: string } }
+    context: { params: Promise<{ id: string }> }
 ) {
     try {
         await prisma.location.delete({
-            where: { id: params.id }
+            where: { id: (await context.params).id }
         })
         return NextResponse.json({ success: true })
     } catch (error) {
@@ -17,12 +17,12 @@ export async function DELETE(
 
 export async function PUT(
     request: Request,
-    { params }: { params: { id: string } }
+    context: { params: Promise<{ id: string }> }
 ) {
     try {
         const body = await request.json()
         const updatedLocation = await prisma.location.update({
-            where: { id: params.id },
+            where: { id: (await context.params).id },
             data: body
         })
         return NextResponse.json({ success: true, data: updatedLocation })
