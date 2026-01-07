@@ -45,9 +45,8 @@ export function FawziAbout() {
                         <div className="relative group">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                                viewport={{ once: true }}
                                 className="relative rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl border-4 border-white dark:border-gray-800"
                             >
                                 <img
@@ -74,14 +73,14 @@ export function FawziAbout() {
                         <div className="space-y-6">
                             <motion.span
                                 initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                animate={{ opacity: 1, x: 0 }}
                                 className="text-orange-500 font-black uppercase tracking-[0.4em] text-sm"
                             >
                                 L'Architecte
                             </motion.span>
                             <motion.h2
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.4 }}
                                 className="text-5xl md:text-7xl font-black text-black dark:text-white tracking-tighter"
                             >
@@ -89,7 +88,7 @@ export function FawziAbout() {
                             </motion.h2>
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1 }}
                                 className="text-gray-500 dark:text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl"
                             >
@@ -103,9 +102,8 @@ export function FawziAbout() {
                                 <motion.div
                                     key={skill.name}
                                     initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.2 + idx * 0.1 }}
-                                    viewport={{ once: true }}
                                     className="p-8 rounded-[2rem] bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-orange-500/30 transition-all group"
                                 >
                                     <div className={`w-14 h-14 ${skill.color} text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-xl group-hover:scale-110 transition-transform`}>

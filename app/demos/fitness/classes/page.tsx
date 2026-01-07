@@ -50,9 +50,8 @@ export default function ClassesPage() {
                             <motion.div
                                 key={cls.id}
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
-                                viewport={{ once: true }}
                                 className="group"
                             >
                                 <Link href={`/demos/fitness/classes/${cls.slug}`}>

@@ -39,14 +39,14 @@ export function FitnessTestimonials() {
                 <div className="text-center mb-24 space-y-4">
                     <motion.span
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="text-[#D4AF37] text-[10px] uppercase tracking-[0.5em] font-black"
                     >
                         Témoignages
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter"
                     >
@@ -59,9 +59,8 @@ export function FitnessTestimonials() {
                         <motion.div
                             key={item.id}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.2 }}
-                            viewport={{ once: true }}
                             className="bg-[#050505] p-12 border border-white/5 group hover:border-[#D4AF37]/30 transition-all duration-500 rounded-none relative"
                         >
                             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />

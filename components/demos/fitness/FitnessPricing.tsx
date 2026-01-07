@@ -57,9 +57,8 @@ export function FitnessPricing() {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: index * 0.2 }}
-                            viewport={{ once: true }}
                             className={`relative p-12 rounded-[2rem] border transition-all duration-500 group ${tier.highlight ? 'bg-white/5 border-[#D4AF37] shadow-[0_0_50px_rgba(212,175,55,0.1)]' : 'bg-[#0A0A0A] border-white/5 hover:border-white/10'}`}
                         >
                             {tier.highlight && (

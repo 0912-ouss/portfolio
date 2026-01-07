@@ -41,9 +41,8 @@ export function FitnessRecovery() {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: index * 0.2 }}
-                            viewport={{ once: true }}
                             className="bg-white/[0.01] border border-white/5 p-12 rounded-[2.5rem] hover:bg-white/[0.03] transition-all group"
                         >
                             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl mb-12">

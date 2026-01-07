@@ -46,14 +46,14 @@ export function CarRentalTestimonials() {
                     <div>
                         <motion.span
                             initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
                             className="text-[#FF6B35] text-xs uppercase tracking-[0.3em] block mb-4"
                         >
                             Clients Satisfaits
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             className="text-4xl md:text-5xl font-black tracking-tight mb-12"
                         >
                             Ce Que Disent<br />
@@ -127,7 +127,7 @@ export function CarRentalTestimonials() {
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1 }}
                                 className="p-8 bg-white/5 border border-white/10 text-center"
                             >

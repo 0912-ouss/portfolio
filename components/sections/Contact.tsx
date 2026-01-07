@@ -59,8 +59,7 @@ export function Contact() {
                 key={info.label}
                 href={info.link}
                 initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.08, type: "spring" }}
                 whileHover={{ scale: 1.02, x: 10 }}
                 className="group relative block p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 overflow-hidden"

@@ -45,8 +45,7 @@ export function CafeFAQ() {
                     {/* Left - Header */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         className="lg:sticky lg:top-32 lg:self-start"
                     >
                         <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-8">
@@ -74,8 +73,7 @@ export function CafeFAQ() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 className="border-b border-white/5"
                             >

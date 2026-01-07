@@ -12,8 +12,7 @@ export function FooterInfo() {
                 {/* Item 1 */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
                     className="flex items-start gap-4 group cursor-pointer"
                 >
@@ -36,8 +35,7 @@ export function FooterInfo() {
                 {/* Item 2 */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                     className="flex items-start gap-4 group cursor-pointer"
                 >
@@ -60,8 +58,7 @@ export function FooterInfo() {
                 {/* Item 3 */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                     className="flex items-start gap-4 group cursor-pointer"
                 >

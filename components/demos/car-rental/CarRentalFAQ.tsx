@@ -42,14 +42,14 @@ export function CarRentalFAQ() {
                     <div className="lg:sticky lg:top-32 lg:self-start">
                         <motion.span
                             initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
                             className="text-[#FF6B35] text-xs uppercase tracking-[0.3em] block mb-4"
                         >
                             FAQ
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             className="text-4xl md:text-5xl font-black tracking-tight mb-8"
                         >
                             Questions<br />
@@ -69,8 +69,7 @@ export function CarRentalFAQ() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.05 }}
                                 className="border border-white/10"
                             >

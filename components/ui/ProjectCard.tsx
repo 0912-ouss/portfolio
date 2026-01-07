@@ -24,8 +24,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: index * 0.1, type: "spring" }}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -47,7 +46,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           {/* Category Badge */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 + 0.2 }}
             className="absolute top-4 right-4 px-4 py-2 bg-background/90 dark:bg-background/80 backdrop-blur-sm rounded-full text-xs font-semibold text-foreground/80 border border-border/50 shadow-lg"
           >
@@ -57,7 +56,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           {/* External Link Icon */}
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1 + 0.3 }}
             className="absolute top-4 left-4 w-10 h-10 bg-primary/10 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
           >
@@ -70,7 +69,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           {/* Title */}
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 + 0.3 }}
             className="text-2xl font-bold group-hover:text-primary transition-colors"
           >
@@ -80,7 +79,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 + 0.4 }}
             className="text-sm text-foreground/70 line-clamp-2"
           >
@@ -93,7 +92,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               <motion.span
                 key={tag}
                 initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 + tagIndex * 0.05 }}
                 className="px-3 py-1.5 bg-background/80 dark:bg-background/50 rounded-lg text-xs font-medium text-foreground/80 border border-border/50"
               >

@@ -6,6 +6,7 @@ import { StatsCard } from "@/components/demos/fitness/admin/StatsCard";
 import { MembershipGrowthChart, MembershipDistributionChart } from "@/components/demos/fitness/admin/AdminCharts";
 import { FiUsers, FiActivity, FiArrowUpRight, FiCalendar, FiDollarSign, FiLoader, FiUser } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { Member } from "@/types/fitness";
 
 export default function AdminOverview() {
     const [loading, setLoading] = useState(true);
@@ -42,7 +43,7 @@ export default function AdminOverview() {
         }
     };
 
-    const [recentActivity, setRecentActivity] = useState<any[]>([]);
+    const [recentActivity, setRecentActivity] = useState<Member[]>([]);
 
     return (
         <div className="space-y-8">
@@ -57,6 +58,7 @@ export default function AdminOverview() {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
                     className="p-8 space-y-8"
                 >
                     {/* Stats Grid */}
@@ -117,7 +119,7 @@ export default function AdminOverview() {
                                             </div>
                                             <div>
                                                 <p className="text-white text-xs font-bold">Nouveau Membre: {activity.firstName}</p>
-                                                <p className="text-white/40 text-[10px] uppercase tracking-widest">{new Date(activity.createdAt).toLocaleDateString()}</p>
+                                                <p className="text-white/40 text-[10px] uppercase tracking-widest">{activity.createdAt ? new Date(activity.createdAt).toLocaleDateString() : 'N/A'}</p>
                                             </div>
                                         </div>
                                         <FiArrowUpRight className="text-white/20 group-hover:text-white transition-colors" />

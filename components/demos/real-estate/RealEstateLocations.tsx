@@ -18,14 +18,14 @@ export function RealEstateLocations({
                 <div className="text-center mb-24">
                     <motion.span
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        animate={{ opacity: 1 }}
                         className="text-[#C19A6B] text-xs uppercase tracking-[0.6em] font-bold mb-4 block"
                     >
                         Explorer les Paysages
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-8xl font-serif mb-8"
                     >
                         Vivre le <span className="italic">Maroc</span>
@@ -42,8 +42,7 @@ export function RealEstateLocations({
                             <motion.div
                                 key={loc.id}
                                 initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: index * 0.1 }}
                                 onClick={() => onSelectLocation(isSelected ? "" : loc.id)}
                                 className={`relative group h-[500px] overflow-hidden cursor-pointer transition-all duration-700 ${isSelected ? 'ring-2 ring-[#C19A6B] ring-offset-4 ring-offset-[#1A1A1A] scale-[1.02]' : 'hover:scale-[1.02]'}`}

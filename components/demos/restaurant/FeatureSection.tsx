@@ -14,8 +14,7 @@ export function FeatureSection() {
                     {/* Top Image */}
                     <motion.div
                         initial={{ x: -100, rotate: -20, opacity: 0 }}
-                        whileInView={{ x: 0, rotate: -6, opacity: 1 }}
-                        viewport={{ once: true }}
+                        animate={{ x: 0, rotate: -6, opacity: 1 }}
                         transition={{ duration: 0.8 }}
                         className="absolute top-0 left-0 w-3/5 h-[300px] z-10 transform -rotate-6 shadow-2xl border-4 border-white/10 overflow-hidden rounded-lg"
                     >
@@ -32,8 +31,7 @@ export function FeatureSection() {
                     {/* Bottom Image */}
                     <motion.div
                         initial={{ x: 100, rotate: 20, opacity: 0 }}
-                        whileInView={{ x: 0, rotate: 3, opacity: 1 }}
-                        viewport={{ once: true }}
+                        animate={{ x: 0, rotate: 3, opacity: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="absolute bottom-10 right-0 w-3/5 h-[300px] z-20 transform rotate-3 shadow-2xl border-4 border-white/10 overflow-hidden rounded-lg"
                     >
@@ -50,8 +48,7 @@ export function FeatureSection() {
                     {/* Text Badge */}
                     <motion.div
                         initial={{ scale: 0, opacity: 0 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
-                        viewport={{ once: true }}
+                        animate={{ scale: 1, opacity: 1 }}
                         transition={{ delay: 0.6, type: "spring" }}
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         className="absolute bottom-40 left-20 bg-black p-8 z-30 text-center border border-white/20 shadow-xl backdrop-blur-md bg-black/80 cursor-default"
@@ -65,8 +62,7 @@ export function FeatureSection() {
                 <div className="space-y-8 relative z-40">
                     <motion.h2
                         initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                         className="text-4xl lg:text-5xl font-serif font-bold leading-tight"
                     >
@@ -74,8 +70,7 @@ export function FeatureSection() {
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-gray-400 leading-relaxed text-sm max-w-md"
                     >
@@ -83,8 +78,7 @@ export function FeatureSection() {
                     </motion.p>
                     <motion.button
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                         whileHover={{ x: 10 }}
                         className="text-orange-500 text-xs font-bold uppercase tracking-widest border-b-2 border-orange-500 pb-1 hover:text-white hover:border-white transition-colors"

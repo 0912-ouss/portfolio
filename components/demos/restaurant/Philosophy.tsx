@@ -40,8 +40,7 @@ export function Philosophy() {
                     {/* Text Content */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1, ease: 'easeOut' }}
                     >
                         <span className="text-xs font-sans uppercase tracking-[0.3em] text-[#D4AF37] block mb-8">

@@ -5,13 +5,14 @@ import { AdminHeader } from "@/components/demos/fitness/admin/AdminHeader";
 import { FiPlus, FiEdit2, FiTrash2, FiUsers, FiLoader, FiX, FiCheck } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme, themeColors } from "@/components/demos/fitness/admin/ThemeContext";
+import { Session, Trainer } from "@/types/fitness";
 
 export default function SessionsPage() {
     const { theme } = useTheme();
     const colors = themeColors[theme];
 
-    const [sessions, setSessions] = useState<any[]>([]);
-    const [trainers, setTrainers] = useState<any[]>([]);
+    const [sessions, setSessions] = useState<Session[]>([]);
+    const [trainers, setTrainers] = useState<Trainer[]>([]);
     const [loading, setLoading] = useState(true);
 
     // Modal States
@@ -116,7 +117,7 @@ export default function SessionsPage() {
         setEditingId(null);
     };
 
-    const openEditModal = (session: any) => {
+    const openEditModal = (session: Session) => {
         setSessionData({
             name: session.name,
             activity: session.activity,
@@ -168,7 +169,7 @@ export default function SessionsPage() {
                                 key={session.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.1 }}
+                                transition={{ delay: index * 0.05, duration: 0.3 }}
                                 className={`${colors.card} border ${colors.border} rounded-2xl p-6 hover:border-[#D4AF37]/20 transition-colors group shadow-sm`}
                             >
                                 <div className="flex items-start justify-between mb-4">

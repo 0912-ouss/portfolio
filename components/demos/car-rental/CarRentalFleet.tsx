@@ -34,14 +34,14 @@ export function CarRentalFleet() {
                     <div>
                         <motion.span
                             initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
                             className="text-[#FF6B35] text-xs uppercase tracking-[0.3em] block mb-4"
                         >
                             Notre Flotte
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             className="text-4xl md:text-6xl font-black tracking-tight"
                         >
                             Véhicules<br />

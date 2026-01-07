@@ -59,7 +59,7 @@ export function CarRentalFeatured() {
                     <div>
                         <motion.span
                             initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
                             className="text-[#FF6B35] text-xs uppercase tracking-[0.3em] block mb-4"
                         >
                             Véhicule en Vedette

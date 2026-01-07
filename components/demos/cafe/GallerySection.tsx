@@ -83,8 +83,7 @@ export default function GallerySection() {
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-12"
                 >
                     <span className="inline-block px-4 py-2 bg-[#3C2A21]/10 rounded-full text-[#3C2A21] font-semibold text-sm tracking-wider mb-4">
@@ -101,8 +100,7 @@ export default function GallerySection() {
                 {/* Filter Buttons */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="flex flex-wrap justify-center gap-4 mb-12"
                 >
                     {categories.map((category) => (

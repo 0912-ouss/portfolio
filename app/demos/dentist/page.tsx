@@ -285,8 +285,7 @@ export default function DentistDemo() {
                         <div className="lg:col-span-8">
                             <motion.div
                                 initial={{ opacity: 0, x: -30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, x: 0 }}
                             >
                                 <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-[#2F80ED] block mb-8">La Collection</span>
                                 <h2 className="text-[8vw] sm:text-[7vw] md:text-[6vw] font-black uppercase tracking-tighter leading-[0.8] text-[#1F2933]">
@@ -307,8 +306,7 @@ export default function DentistDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 100 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.2 }}
                                 className="group relative"
                             >
@@ -347,8 +345,7 @@ export default function DentistDemo() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1.5 }}
                             className="relative"
                         >
@@ -371,8 +368,7 @@ export default function DentistDemo() {
 
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                         >
                             <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#2F80ED] block mb-10">L'Héritage</span>
                             <h2 className="text-[8vw] md:text-[6vw] font-black uppercase tracking-tighter leading-[0.7] text-[#1F2933] transition-all mb-16">
@@ -418,8 +414,7 @@ export default function DentistDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className="p-12 border border-white/5 bg-white/[0.02] rounded-[3rem] hover:bg-white/[0.05] transition-all duration-700 group ring-1 ring-white/0 hover:ring-[#2F80ED]/30"
                             >
@@ -455,8 +450,7 @@ export default function DentistDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 className={`relative overflow-hidden group ${index % 2 === 1 ? 'md:mt-24' : ''}`}
                             >
@@ -509,8 +503,7 @@ export default function DentistDemo() {
                         </div>
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, scale: 1 }}
                             className="order-1 lg:order-2 relative aspect-square"
                         >
                             <Image
@@ -544,8 +537,7 @@ export default function DentistDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className={`relative p-12 rounded-[4rem] border ${index === 2 ? 'border-[#2F80ED]/30 bg-[#2F80ED]/[0.02]' : 'border-black/5 bg-slate-50/50'} hover:bg-white hover:shadow-2xl hover:shadow-[#2F80ED]/5 transition-all duration-700 overflow-hidden group`}
                             >
@@ -626,8 +618,7 @@ export default function DentistDemo() {
                             <motion.article
                                 key={i}
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ ...luxuryEaseTransition, delay: i * 0.1 }}
                                 className="group cursor-pointer"
                             >
@@ -663,8 +654,7 @@ export default function DentistDemo() {
 
                             <motion.div
                                 initial={{ opacity: 0, x: -30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, x: 0 }}
                                 transition={luxuryEaseTransition}
                                 className="relative"
                             >
@@ -707,7 +697,7 @@ export default function DentistDemo() {
                             {/* Vault Metric Float */}
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-3xl border border-white p-12 shadow-2xl rounded-[3rem] z-20"
                             >
                                 <div className="text-center">
@@ -729,8 +719,7 @@ export default function DentistDemo() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
                             <motion.div
                                 initial={{ opacity: 0, x: -30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, x: 0 }}
                             >
                                 <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-[#2F80ED] block mb-10">Entrée Privée</span>
                                 <h2 className="text-7xl font-black uppercase tracking-tighter leading-none mb-12 text-[#1F2933]">
@@ -758,8 +747,7 @@ export default function DentistDemo() {
 
                             <motion.div
                                 initial={{ opacity: 0, x: 30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.3 }}
                                 className="space-y-12"
                             >

@@ -16,8 +16,7 @@ export function SpecialsBanner({ onAddToCart }: SpecialsBannerProps) {
         <section className="py-16 px-4">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 className="max-w-6xl mx-auto bg-gradient-to-r from-orange-600 to-red-600 rounded-3xl overflow-hidden shadow-2xl"
             >
                 <div className="flex flex-col lg:flex-row items-center">
@@ -39,8 +38,7 @@ export function SpecialsBanner({ onAddToCart }: SpecialsBannerProps) {
                     <div className="p-8 lg:p-12 text-white flex-grow">
                         <motion.div
                             initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1 }}
                             transition={{ delay: 0.2 }}
                         >
                             <p className="text-orange-200 text-sm font-bold uppercase tracking-widest mb-2">

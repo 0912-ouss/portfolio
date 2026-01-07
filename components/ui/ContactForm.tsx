@@ -42,8 +42,7 @@ export function ContactForm() {
   return (
     <motion.form
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       onSubmit={handleSubmit(onSubmit)}
       className="relative card p-8 lg:p-10 space-y-6"

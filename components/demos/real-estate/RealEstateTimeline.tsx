@@ -114,8 +114,7 @@ function TimelineItem({ item, index }: { item: any; index: number }) {
             <div className="w-full lg:w-1/2 px-4 lg:px-20 text-center lg:text-left">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className={item.side === 'right' ? 'lg:text-right' : 'lg:text-left'}
                 >
                     <span className="text-6xl md:text-8xl font-serif text-[#C19A6B]/10 block mb-4 lg:-mb-8 lg:-ml-4 font-black">

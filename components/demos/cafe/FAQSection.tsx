@@ -50,8 +50,7 @@ export default function FAQSection() {
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-16"
                 >
                     <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#3C2A21]/10 rounded-full text-[#3C2A21] font-semibold text-sm tracking-wider mb-4">
@@ -72,8 +71,7 @@ export default function FAQSection() {
                         <motion.div
                             key={faq.id}
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.05 }}
                             className="border border-[#3C2A21]/10 rounded-2xl overflow-hidden"
                         >
@@ -126,8 +124,7 @@ export default function FAQSection() {
                 {/* Contact CTA */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="text-center mt-12 p-8 bg-gradient-to-r from-[#EEEBE6] to-[#E5E0D8] rounded-3xl"
                 >
                     <p className="text-[#3C2A21]/70 mb-4">

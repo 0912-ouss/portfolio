@@ -32,16 +32,14 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                     <div className="max-w-2xl space-y-4">
                         <motion.span
                             initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, x: 0 }}
                             className="text-orange-500 font-black uppercase tracking-[0.3em] text-sm"
                         >
                             Vitrine
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4 }}
                             className="text-5xl md:text-7xl font-black text-black dark:text-white tracking-tighter"
                         >
@@ -50,8 +48,7 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                     </div>
                     <motion.p
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1 }}
                         transition={{ delay: 0.3 }}
                         className="max-w-sm text-gray-500 text-sm md:text-base leading-relaxed"
                     >
@@ -64,8 +61,7 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                         <motion.div
                             key={item.id}
                             initial={{ opacity: 0, scale: 0.9, y: 50 }}
-                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
                             transition={{
                                 duration: 0.4,
                                 delay: idx % 3 * 0.05,
@@ -85,7 +81,7 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                             <div className="absolute inset-0 bg-orange-600/80 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10 transform translate-y-full group-hover:translate-y-0">
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    animate={{ opacity: 1, y: 0 }}
                                     className="space-y-2"
                                 >
                                     <p className="text-white/70 text-[10px] font-black uppercase tracking-[0.2em]">{item.category}</p>
@@ -103,8 +99,7 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                 {showFullButton && limit && galleryItems.length > limit && (
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="mt-20 flex justify-center"
                     >
                         <Link

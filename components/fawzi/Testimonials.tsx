@@ -114,7 +114,7 @@ export function FawziContact() {
                     <div className="space-y-4 relative z-10">
                         <motion.span
                             initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
                             className="text-orange-500 font-black uppercase tracking-[0.4em] text-xs"
                         >
                             Contactez-moi

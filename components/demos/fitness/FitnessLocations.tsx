@@ -60,9 +60,8 @@ export function FitnessLocations() {
                     <motion.div
                         key={loc.id}
                         initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: index * 0.2 }}
-                        viewport={{ once: true }}
                         className="min-w-[300px] md:min-w-[600px] group relative h-[700px] overflow-hidden rounded-[3rem]"
                     >
                         <Image

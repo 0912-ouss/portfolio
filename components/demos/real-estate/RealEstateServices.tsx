@@ -36,8 +36,7 @@ export function RealEstateServices() {
                         <motion.div
                             key={service.title}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: index * 0.1 }}
                             className="p-10 bg-[#FDFBF7] border border-gray-100 hover:border-[#C19A6B] transition-colors group"
                         >

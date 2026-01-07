@@ -25,8 +25,7 @@ export function EcommerceBanner() {
                     {/* Left Content */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         className="text-center lg:text-left"
                     >
                         <motion.span
@@ -48,8 +47,7 @@ export function EcommerceBanner() {
                     {/* Right - CTA */}
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         className="flex flex-col items-center lg:items-end gap-6"
                     >
                         {/* Countdown-like display */}

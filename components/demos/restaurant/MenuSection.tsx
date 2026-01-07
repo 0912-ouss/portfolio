@@ -78,8 +78,7 @@ export function MenuSection() {
                                     <motion.div
                                         key={itemIdx}
                                         initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
+                                        animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: itemIdx * 0.1 }}
                                         onMouseEnter={() => setHoveredItem(item)}
                                         onMouseLeave={() => setHoveredItem(null)}

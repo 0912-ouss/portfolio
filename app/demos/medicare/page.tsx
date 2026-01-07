@@ -588,8 +588,7 @@ export default function MediCareDemo() {
                         <div className="lg:col-span-8">
                             <motion.div
                                 initial={{ opacity: 0, x: -30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, x: 0 }}
                             >
                                 <span className="text-[10px] uppercase tracking-[0.6em] font-bold text-emerald-600 block mb-8">L'Avantage Clinique</span>
                                 <h2 className="text-[8vw] sm:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter leading-[0.8] text-[#1A1A1A]">
@@ -610,8 +609,7 @@ export default function MediCareDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 className="group relative"
                             >
@@ -642,8 +640,7 @@ export default function MediCareDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 className="bg-white/40 backdrop-blur-3xl border border-white p-12 rounded-[3.5rem] group hover:bg-white transition-all duration-700 shadow-xl shadow-black/[0.02]"
                             >
@@ -677,8 +674,7 @@ export default function MediCareDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className={`relative p-12 rounded-[4rem] border ${index === 2 ? 'border-emerald-500/30' : 'border-white/5'} bg-white/[0.02] hover:bg-white/[0.05] transition-all duration-700 overflow-hidden group`}
                             >
@@ -732,8 +728,7 @@ export default function MediCareDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className="group cursor-pointer"
                             >
@@ -780,8 +775,7 @@ export default function MediCareDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className="group"
                             >
@@ -808,8 +802,7 @@ export default function MediCareDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className="relative group"
                             >
@@ -835,8 +828,7 @@ export default function MediCareDemo() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={transition}
                             className="space-y-12"
                         >
@@ -859,8 +851,7 @@ export default function MediCareDemo() {
 
                         <motion.div
                             initial={{ opacity: 0, x: 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, x: 0 }}
                         >
                             <span className="text-[10px] uppercase tracking-[0.7em] font-bold text-emerald-600 block mb-8">Infrastructure</span>
                             <h2 className="text-[8vw] sm:text-[6vw] lg:text-[4vw] font-black uppercase tracking-tighter leading-tight text-[#1A1A1A] mb-12">
@@ -921,8 +912,7 @@ export default function MediCareDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.15 }}
                                 className="group"
                             >
@@ -1015,8 +1005,7 @@ export default function MediCareDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className="group cursor-pointer"
                             >
@@ -1063,8 +1052,7 @@ export default function MediCareDemo() {
                                     <motion.div
                                         key={index}
                                         initial={{ opacity: 0, x: -30 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
+                                        animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: index * 0.3 }}
                                         className="relative"
                                     >
@@ -1099,7 +1087,7 @@ export default function MediCareDemo() {
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 className="absolute -bottom-16 -left-16 bg-[#1A1A1A] text-white p-14 rounded-[4rem] shadow-3xl max-w-xs z-20"
                             >
                                 <p className="text-[10px] uppercase tracking-[0.4em] font-bold text-emerald-400 mb-8 underline decoration-emerald-400/20 underline-offset-8">Métrique Coffre</p>

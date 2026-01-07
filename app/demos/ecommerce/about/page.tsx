@@ -70,8 +70,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, scale: 1 }}
                             className="relative aspect-square border border-white/10 p-4"
                         >
                             <Image src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1000" alt="Craftsmanship" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700 p-4" />
@@ -79,8 +78,7 @@ export default function AboutPage() {
 
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, x: 0 }}
                         >
                             <span className="text-[#D4A574] text-xs uppercase tracking-[0.4em] block mb-6">Our Philosophy</span>
                             <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-8 leading-tight">
@@ -128,7 +126,7 @@ export default function AboutPage() {
                 <div className="container mx-auto px-6 lg:px-12 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="max-w-3xl mx-auto"
                     >
                         <span className="text-4xl md:text-6xl font-serif italic text-[#D4A574] block mb-8">"</span>

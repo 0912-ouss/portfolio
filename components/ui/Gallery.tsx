@@ -58,8 +58,7 @@ export function Gallery({ items }: GalleryProps) {
           <motion.div
             key={item.id}
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.04, type: "spring" }}
             whileHover={{ scale: 1.05, y: -8 }}
             onClick={() => openLightbox(index)}

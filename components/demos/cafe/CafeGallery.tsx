@@ -61,8 +61,7 @@ export function CafeGallery() {
                 <div className="text-center mb-20">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, y: 0 }}
                     >
                         <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-4">
                             L'Espace
@@ -77,8 +76,7 @@ export function CafeGallery() {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                             className={`group relative cursor-pointer overflow-hidden ${index === 0 ? 'md:col-span-2 md:row-span-2' : ''
                                 }`}

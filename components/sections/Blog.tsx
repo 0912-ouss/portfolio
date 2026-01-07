@@ -51,8 +51,7 @@ export function Blog() {
                         <motion.article
                             key={post.id}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.1 }}
                             whileHover={{ y: -10 }}
                             className="group cursor-pointer"

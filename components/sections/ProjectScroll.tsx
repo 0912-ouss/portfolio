@@ -53,7 +53,7 @@ function ProjectSection({ project, index }: { project: any; index: number }) {
                 <div className="flex h-1/2 w-full flex-col justify-center px-6 md:h-full md:w-1/2 md:px-16 lg:px-24 bg-white relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                         viewport={{ once: false, amount: 0.3 }}
                         style={{ y: textY }}

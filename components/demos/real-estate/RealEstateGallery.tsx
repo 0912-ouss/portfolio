@@ -57,8 +57,7 @@ export function RealEstateGallery() {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: index * 0.1 }}
                             className="gallery-item relative break-inside-avoid group cursor-none"
                         >

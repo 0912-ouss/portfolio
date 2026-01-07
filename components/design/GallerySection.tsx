@@ -128,16 +128,14 @@ export const GallerySection = () => {
                     <div className="max-w-2xl">
                         <motion.span
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             className="text-[10px] uppercase tracking-[0.4em] font-bold text-gray-400 block mb-6"
                         >
                             Archives Visuelles
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
                             className="text-[8vw] md:text-[5vw] font-black leading-[0.9] tracking-tighter uppercase"
                         >
@@ -150,8 +148,7 @@ export const GallerySection = () => {
                             <motion.button
                                 key={cat}
                                 initial={{ opacity: 0, y: 10 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2 + i * 0.1 }}
                                 onClick={() => setActiveCategory(cat)}
                                 className={`px-6 py-3 rounded-full text-[10px] uppercase font-black tracking-widest transition-all ${activeCategory === cat

@@ -13,14 +13,14 @@ export function FitnessApp() {
                     <div className="flex-1 space-y-8 z-10">
                         <motion.span
                             initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            animate={{ opacity: 1, x: 0 }}
                             className="text-[#D4AF37] text-[10px] uppercase tracking-[0.5em] font-black block"
                         >
                             Digital Ecosystem
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter leading-[0.9]"
                         >
                             L'Expérience <br />
@@ -28,7 +28,7 @@ export function FitnessApp() {
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
                             className="text-white/60 max-w-md text-lg font-sans leading-relaxed"
                         >
@@ -37,7 +37,7 @@ export function FitnessApp() {
 
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
                             className="flex gap-4 pt-4"
                         >
@@ -61,7 +61,7 @@ export function FitnessApp() {
                     {/* Phone Visual Mockup (CSS only construction for speed & style) */}
                     <motion.div
                         initial={{ opacity: 0, x: 50, rotate: 12 }}
-                        whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+                        animate={{ opacity: 1, x: 0, rotate: 0 }}
                         transition={{ duration: 1, ease: "easeOut" }}
                         className="flex-1 relative flex justify-center"
                     >

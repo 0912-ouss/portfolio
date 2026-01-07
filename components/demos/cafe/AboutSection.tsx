@@ -65,8 +65,7 @@ export default function AboutSection() {
                     {/* Image Side */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         className="relative"
                     >
@@ -89,8 +88,7 @@ export default function AboutSection() {
                             {/* Floating Badge */}
                             <motion.div
                                 initial={{ opacity: 0, scale: 0 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: 0.5, type: "spring" }}
                                 className="absolute -bottom-8 -right-8 w-40 h-40 bg-gradient-to-br from-[#D5CEA3] to-[#C4B896] rounded-full flex flex-col items-center justify-center shadow-2xl"
                             >
@@ -102,8 +100,7 @@ export default function AboutSection() {
                             {/* Secondary Image */}
                             <motion.div
                                 initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.3, duration: 0.6 }}
                                 className="absolute -left-8 top-1/2 -translate-y-1/2 w-48 h-64 rounded-2xl overflow-hidden shadow-xl border-4 border-white hidden md:block"
                             >
@@ -120,14 +117,12 @@ export default function AboutSection() {
                     {/* Content Side */}
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
                         <motion.span
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             className="inline-block px-4 py-2 bg-[#3C2A21]/10 rounded-full text-[#3C2A21] font-semibold text-sm tracking-wider mb-6"
                         >
                             OUR STORY
@@ -135,8 +130,7 @@ export default function AboutSection() {
 
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
                             className="text-4xl md:text-5xl font-bold text-[#1A120B] mb-6 leading-tight"
                         >
@@ -146,8 +140,7 @@ export default function AboutSection() {
 
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
                             className="text-lg text-[#3C2A21]/70 mb-6 leading-relaxed"
                         >
@@ -158,8 +151,7 @@ export default function AboutSection() {
 
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3 }}
                             className="text-lg text-[#3C2A21]/70 mb-8 leading-relaxed"
                         >
@@ -171,8 +163,7 @@ export default function AboutSection() {
                         {/* Features */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4 }}
                             className="grid grid-cols-2 gap-4 mb-8"
                         >
@@ -192,8 +183,7 @@ export default function AboutSection() {
                         <motion.a
                             href="#menu"
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 }}
                             whileHover={{ scale: 1.05, y: -3 }}
                             whileTap={{ scale: 0.95 }}
@@ -213,8 +203,7 @@ export default function AboutSection() {
                 {/* Stats Bar */}
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 p-8 bg-gradient-to-r from-[#3C2A21] to-[#1A120B] rounded-3xl shadow-2xl"
                 >
@@ -222,8 +211,7 @@ export default function AboutSection() {
                         <motion.div
                             key={stat.label}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                             className="text-center"
                         >

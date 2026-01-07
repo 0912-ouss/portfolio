@@ -18,8 +18,7 @@ export function Clients() {
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-10"
                 >
                     <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Trusted By</p>
@@ -31,8 +30,7 @@ export function Clients() {
                         <motion.div
                             key={client.name}
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.1 }}
                             whileHover={{ scale: 1.1, y: -5 }}
                             className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-background/50 transition-colors cursor-pointer group"

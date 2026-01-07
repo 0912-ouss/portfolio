@@ -76,14 +76,14 @@ export function EcommerceReviews() {
                     <div>
                         <motion.span
                             initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
                             className="text-[#D4A574] text-xs uppercase tracking-[0.3em] block mb-4"
                         >
                             Avis Clients
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             className="text-4xl md:text-5xl font-light tracking-tight"
                         >
                             Ce Qu'ils <span className="font-serif italic">Disent</span>

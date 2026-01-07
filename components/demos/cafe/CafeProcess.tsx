@@ -46,8 +46,7 @@ export function CafeProcess() {
                 <div className="text-center mb-32">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, y: 0 }}
                     >
                         <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-6">
                             Le Voyage
@@ -65,8 +64,7 @@ export function CafeProcess() {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.15 }}
                             className={`relative flex items-center gap-16 mb-24 last:mb-0 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                                 }`}

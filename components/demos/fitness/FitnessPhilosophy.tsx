@@ -23,7 +23,7 @@ export function FitnessPhilosophy() {
                 <div className="max-w-4xl mx-auto">
                     <motion.span
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                         className="text-[#D4AF37] text-[10px] uppercase tracking-[1em] font-black block mb-12 text-center"
                     >
@@ -35,9 +35,8 @@ export function FitnessPhilosophy() {
                             <motion.span
                                 key={i}
                                 initial={{ opacity: 0, y: 10 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                                viewport={{ once: true }}
                                 className="inline-block mr-3"
                             >
                                 {word}
@@ -47,14 +46,14 @@ export function FitnessPhilosophy() {
 
                     <motion.div
                         initial={{ scaleX: 0 }}
-                        whileInView={{ scaleX: 1 }}
+                        animate={{ scaleX: 1 }}
                         transition={{ duration: 1.5, delay: 0.5, ease: [0.6, 0.05, 0.01, 0.9] }}
                         className="h-px w-40 bg-[#D4AF37] mx-auto mt-20"
                     />
 
                     <motion.p
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        animate={{ opacity: 1 }}
                         transition={{ duration: 1, delay: 1 }}
                         className="text-white/30 text-[10px] uppercase tracking-[0.5em] font-bold text-center mt-12"
                     >

@@ -35,8 +35,7 @@ export function TestimonialsSection() {
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl font-serif font-bold text-gray-800 uppercase tracking-widest mb-4">What Our Customers Say</h2>
@@ -48,8 +47,7 @@ export function TestimonialsSection() {
                         <motion.div
                             key={idx}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: idx * 0.2 }}
                             whileHover={{ y: -10 }}
                             className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 relative"

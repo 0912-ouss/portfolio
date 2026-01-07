@@ -43,13 +43,12 @@ export function FitnessMembership() {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
+                            animate={{ opacity: 1, scale: 1 }}
                             whileHover={{
                                 y: -10,
                                 boxShadow: tier.highlight ? "0 0 50px rgba(212, 175, 55, 0.2)" : "0 0 30px rgba(255, 255, 255, 0.05)"
                             }}
                             transition={{ duration: 0.8, delay: index * 0.1 }}
-                            viewport={{ once: true }}
                             className={`p-16 rounded-[4rem] border relative overflow-hidden group transition-all duration-700 ${tier.highlight ? 'border-[#D4AF37] bg-[#D4AF37]/5' : 'border-white/5 bg-white/[0.02] hover:bg-white/[0.04]'}`}
                         >
                             {tier.highlight && (

@@ -21,8 +21,7 @@ export function EcommerceInstagram() {
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-12"
                 >
                     <a
@@ -42,8 +41,7 @@ export function EcommerceInstagram() {
                             key={index}
                             href="#"
                             initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: index * 0.05 }}
                             className="relative aspect-square overflow-hidden group"
                         >

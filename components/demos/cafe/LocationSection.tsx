@@ -57,8 +57,7 @@ export default function LocationSection() {
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-16"
                 >
                     <span className="inline-block px-4 py-2 bg-[#3C2A21]/10 rounded-full text-[#3C2A21] font-semibold text-sm tracking-wider mb-4">
@@ -76,8 +75,7 @@ export default function LocationSection() {
                     {/* Map & Info */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         className="space-y-8"
                     >
                         {/* Map Placeholder */}
@@ -166,8 +164,7 @@ export default function LocationSection() {
                     {/* Contact Form */}
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         className="bg-white p-8 md:p-12 rounded-3xl shadow-xl"
                     >
                         <h3 className="text-2xl font-bold text-[#1A120B] mb-6">

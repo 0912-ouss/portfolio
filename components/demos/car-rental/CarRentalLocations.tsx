@@ -58,14 +58,14 @@ export function CarRentalLocations() {
                 <div className="text-center mb-16">
                     <motion.span
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        animate={{ opacity: 1 }}
                         className="text-[#FF6B35] text-xs uppercase tracking-[0.3em] block mb-4"
                     >
                         Lieux de Prise en Charge
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-black tracking-tight"
                     >
                         Trouvez-nous <span className="text-white/20">Partout</span>
@@ -76,7 +76,7 @@ export function CarRentalLocations() {
                     {/* Interactive Map */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        animate={{ opacity: 1, x: 0 }}
                         className="relative aspect-square bg-[#0F0F0F] border border-white/10 overflow-hidden"
                     >
                         {/* Map Background Grid */}
@@ -147,7 +147,7 @@ export function CarRentalLocations() {
                     {/* Location Details */}
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        animate={{ opacity: 1, x: 0 }}
                     >
                         {/* Location Tabs */}
                         <div className="flex flex-wrap gap-2 mb-8">

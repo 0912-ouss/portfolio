@@ -34,16 +34,14 @@ export function FawziProjects({ showFullButton = true, limit }: FawziProjectsPro
                     <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             className="text-4xl md:text-7xl font-black text-black dark:text-white tracking-tighter"
                         >
                             Travaux <span className="text-orange-500 italic">Récents</span>
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
                             className="text-gray-500 dark:text-gray-400 text-lg"
                         >
@@ -58,8 +56,7 @@ export function FawziProjects({ showFullButton = true, limit }: FawziProjectsPro
                         <motion.button
                             key={cat}
                             initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: idx * 0.05 }}
                             onClick={() => setActiveCategory(cat)}
                             className={`px-8 py-3 rounded-full border-2 text-[10px] font-black uppercase tracking-[0.2em] transition-all ${activeCategory === cat
@@ -80,8 +77,7 @@ export function FawziProjects({ showFullButton = true, limit }: FawziProjectsPro
                                 key={project.id}
                                 layout
                                 initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{
                                     duration: 0.3,
@@ -150,8 +146,7 @@ export function FawziProjects({ showFullButton = true, limit }: FawziProjectsPro
                 {showFullButton && (
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="mt-24 flex justify-center"
                     >
                         <Link

@@ -88,8 +88,7 @@ export default function ClassDetailPage() {
                             {/* Description */}
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                             >
                                 <h2 className="text-2xl font-black uppercase tracking-tight mb-6">
                                     À Propos
@@ -102,8 +101,7 @@ export default function ClassDetailPage() {
                             {/* Benefits */}
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                             >
                                 <h2 className="text-2xl font-black uppercase tracking-tight mb-6">
                                     Bénéfices
@@ -126,8 +124,7 @@ export default function ClassDetailPage() {
                             {/* Equipment */}
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                             >
                                 <h2 className="text-2xl font-black uppercase tracking-tight mb-6">
                                     Équipement

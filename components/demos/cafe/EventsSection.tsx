@@ -58,8 +58,7 @@ export default function EventsSection() {
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-16"
                 >
                     <span className="inline-block px-4 py-2 bg-[#D5CEA3]/20 rounded-full text-[#D5CEA3] font-semibold text-sm tracking-wider mb-4">
@@ -79,8 +78,7 @@ export default function EventsSection() {
                         <motion.div
                             key={event.id}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ y: -10 }}
                             className="bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 group"
@@ -152,8 +150,7 @@ export default function EventsSection() {
                 {/* View All Button */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="text-center mt-12"
                 >
                     <motion.button

@@ -11,7 +11,7 @@ export function FitnessContact() {
                 {/* Info Side */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                     className="space-y-16"
                 >
@@ -62,7 +62,7 @@ export function FitnessContact() {
                 {/* Form Side */}
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="bg-[#0A0A0A] p-10 md:p-16 rounded-[2rem] border border-white/5 relative overflow-hidden"
                 >

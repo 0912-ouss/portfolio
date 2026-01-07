@@ -59,14 +59,12 @@ export default function SpecialOffersSection() {
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-16"
                 >
                     <motion.div
                         initial={{ scale: 0 }}
-                        whileInView={{ scale: 1 }}
-                        viewport={{ once: true }}
+                        animate={{ scale: 1 }}
                         transition={{ type: "spring", delay: 0.2 }}
                         className="inline-flex items-center gap-2 px-4 py-2 bg-[#3C2A21] rounded-full text-white font-semibold text-sm tracking-wider mb-4"
                     >
@@ -87,8 +85,7 @@ export default function SpecialOffersSection() {
                         <motion.div
                             key={offer.id}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.15 }}
                             whileHover={{ y: -10, scale: 1.02 }}
                             className="bg-white rounded-3xl overflow-hidden shadow-2xl group"
@@ -106,8 +103,7 @@ export default function SpecialOffersSection() {
                                 {/* Badge */}
                                 <motion.div
                                     initial={{ x: -100 }}
-                                    whileInView={{ x: 0 }}
-                                    viewport={{ once: true }}
+                                    animate={{ x: 0 }}
                                     transition={{ type: "spring", delay: index * 0.1 + 0.3 }}
                                     className="absolute top-4 left-4 px-3 py-1 bg-[#E74C3C] text-white text-xs font-bold rounded-full"
                                 >
@@ -118,8 +114,7 @@ export default function SpecialOffersSection() {
                                 <div className="absolute bottom-4 left-4">
                                     <motion.div
                                         initial={{ scale: 0 }}
-                                        whileInView={{ scale: 1 }}
-                                        viewport={{ once: true }}
+                                        animate={{ scale: 1 }}
                                         transition={{ type: "spring", delay: index * 0.1 + 0.4 }}
                                         className="px-4 py-2 bg-[#D5CEA3] text-[#1A120B] font-bold text-xl rounded-xl"
                                     >
@@ -158,8 +153,7 @@ export default function SpecialOffersSection() {
                 {/* Bottom CTA */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="text-center mt-16"
                 >
                     <motion.a

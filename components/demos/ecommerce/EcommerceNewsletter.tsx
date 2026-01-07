@@ -23,8 +23,7 @@ export function EcommerceNewsletter() {
             <div className="container mx-auto px-6 lg:px-12">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="max-w-2xl mx-auto text-center"
                 >
                     <span className="text-[#D4A574] text-xs uppercase tracking-[0.3em] block mb-4">

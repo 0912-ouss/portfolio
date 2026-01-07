@@ -45,8 +45,7 @@ export function Footer() {
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="space-y-4"
           >
@@ -73,8 +72,7 @@ export function Footer() {
           {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-4"
           >
@@ -84,8 +82,7 @@ export function Footer() {
                 <motion.li
                   key={link.name}
                   initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 + index * 0.05 }}
                 >
                   <a
@@ -107,8 +104,7 @@ export function Footer() {
           {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-4"
           >
@@ -121,8 +117,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5 + index * 0.1, type: "spring" }}
                   whileHover={{ scale: 1.15, y: -5, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
@@ -145,8 +140,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           className="border-t border-border/50 pt-8 mt-8"
         >

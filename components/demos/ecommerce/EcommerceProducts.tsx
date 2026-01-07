@@ -19,14 +19,14 @@ export function EcommerceProducts() {
                     <div>
                         <motion.span
                             initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
                             className="text-[#D4A574] text-xs uppercase tracking-[0.3em] block mb-4"
                         >
                             Sélection Exclusive
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             className="text-4xl md:text-5xl font-light tracking-tight"
                         >
                             Nos <span className="font-serif italic">Nouveautés</span>
@@ -43,8 +43,7 @@ export function EcommerceProducts() {
                         <motion.div
                             key={product.id}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                             className="group"
                             onMouseEnter={() => setHoveredProduct(product.id)}

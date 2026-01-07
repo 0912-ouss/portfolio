@@ -49,14 +49,14 @@ export function CarRentalFeatures() {
                 <div className="text-center mb-20">
                     <motion.span
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        animate={{ opacity: 1 }}
                         className="text-[#FF6B35] text-xs uppercase tracking-[0.3em] block mb-4"
                     >
                         Pourquoi Nous Choisir
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-black tracking-tight mb-6"
                     >
                         L'Avantage<br />
@@ -73,8 +73,7 @@ export function CarRentalFeatures() {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                             className="group p-8 bg-white/[0.02] border border-white/5 hover:border-[#FF6B35]/30 transition-all duration-500"
                         >

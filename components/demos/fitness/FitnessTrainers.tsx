@@ -50,9 +50,8 @@ export function FitnessTrainers() {
                         <motion.div
                             key={trainer.id}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: index * 0.2 }}
-                            viewport={{ once: true }}
                             className="group"
                         >
                             <div className="relative aspect-[3/4] overflow-hidden rounded-[3rem] mb-12">

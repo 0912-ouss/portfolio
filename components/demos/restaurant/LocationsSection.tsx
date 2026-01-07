@@ -12,16 +12,14 @@ export function LocationsSection() {
             <div className="text-center mb-16">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="text-2xl md:text-3xl font-serif font-bold text-gray-800 uppercase tracking-wide mb-2"
                 >
                     Visit Any of our Locations
                 </motion.h2>
                 <motion.div
                     initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true }}
+                    animate={{ scaleX: 1 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
                     className="w-24 h-1 bg-orange-500 mx-auto opacity-50"
                 />
@@ -30,8 +28,7 @@ export function LocationsSection() {
             {/* Location Slider (Visual Representation) */}
             <motion.div
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
                 className="flex items-center justify-between border-b border-gray-200 pb-4 mb-12 overflow-x-auto gap-8"
             >
@@ -59,8 +56,7 @@ export function LocationsSection() {
                         {/* Driver Illustration */}
                         <motion.div
                             initial={{ x: -100, opacity: 0 }}
-                            whileInView={{ x: 0, opacity: 1 }}
-                            viewport={{ once: true }}
+                            animate={{ x: 0, opacity: 1 }}
                             transition={{ type: "spring", bounce: 0.4, duration: 1 }}
                             className="w-48 h-48 rounded-full overflow-hidden shadow-xl border-4 border-white flex-shrink-0 relative z-10"
                         >
@@ -75,8 +71,7 @@ export function LocationsSection() {
                         {/* Details */}
                         <motion.div
                             initial={{ opacity: 0, x: 20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.4 }}
                             className="text-center md:text-left space-y-4"
                         >
@@ -102,8 +97,7 @@ export function LocationsSection() {
                 {/* Right: Map with real map image base */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                     className="relative h-[300px] w-full rounded-xl overflow-hidden shadow-inner border border-gray-200"
                 >

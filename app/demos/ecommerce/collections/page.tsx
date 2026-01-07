@@ -91,8 +91,7 @@ export default function CollectionsPage() {
                         <motion.div
                             key={collection.id}
                             initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                             className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 lg:gap-32 items-center`}
                         >
@@ -146,7 +145,7 @@ export default function CollectionsPage() {
                 <div className="container mx-auto px-6 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         className="max-w-2xl mx-auto"
                     >
                         <h2 className="text-4xl md:text-6xl font-light tracking-tight mb-12 capitalize">

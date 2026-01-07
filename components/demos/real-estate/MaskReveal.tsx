@@ -8,8 +8,7 @@ export function MaskReveal({ children, delay = 0 }: { children: React.ReactNode,
         <div className="relative overflow-hidden">
             <motion.div
                 initial={{ y: "100%" }}
-                whileInView={{ y: 0 }}
-                viewport={{ once: true }}
+                animate={{ y: 0 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay }}
             >
                 {children}

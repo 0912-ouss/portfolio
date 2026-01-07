@@ -626,7 +626,7 @@ export default function SpaDemo() {
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, x: 100 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ ...luxuryEaseTransition, delay: i * 0.1 }}
                             className="relative min-w-[80vw] md:min-w-[50vw] aspect-video rounded-[3rem] overflow-hidden group snap-center"
                         >
@@ -687,8 +687,7 @@ export default function SpaDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className="group p-12 bg-white rounded-[3rem] border border-black/5 hover:border-[#9C8461]/30 transition-all duration-700"
                             >
@@ -744,8 +743,7 @@ export default function SpaDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className={`p-16 rounded-[4rem] border relative overflow-hidden group ${index === 1 ? 'border-[#9C8461] bg-[#9C8461]/5' : 'border-white/5 bg-white/[0.02]'}`}
                             >
@@ -806,8 +804,7 @@ export default function SpaDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className="group"
                             >
@@ -853,8 +850,7 @@ export default function SpaDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, x: 0 }}
                                 transition={luxuryEaseTransition}
                                 className="p-16 bg-white rounded-[4rem] border border-black/5 flex flex-col justify-between"
                             >
@@ -898,7 +894,7 @@ export default function SpaDemo() {
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ ...luxuryEaseTransition, delay: i * 0.1 }}
                                 className="group cursor-pointer"
                             >

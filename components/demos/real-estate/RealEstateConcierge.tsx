@@ -16,8 +16,7 @@ export function RealEstateConcierge({ onInquiryClick }: { onInquiryClick: () => 
                     <div className="relative group">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, scale: 1 }}
                             className="relative aspect-[4/5] w-full max-w-lg mx-auto overflow-hidden rounded-sm"
                         >
                             <Image
@@ -49,21 +48,21 @@ export function RealEstateConcierge({ onInquiryClick }: { onInquiryClick: () => 
                     <div>
                         <motion.span
                             initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
+                            animate={{ opacity: 1 }}
                             className="text-[#C19A6B] text-xs uppercase tracking-[0.6em] font-bold mb-6 block"
                         >
                             Service Sur Mesure
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             className="text-5xl md:text-8xl font-serif mb-10 leading-tight"
                         >
                             Votre Concierge <br /><span className="italic">Privé</span>
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
                             className="text-white/40 font-light leading-relaxed mb-12 max-w-lg"
                         >
@@ -80,7 +79,7 @@ export function RealEstateConcierge({ onInquiryClick }: { onInquiryClick: () => 
                                 <motion.div
                                     key={i}
                                     initial={{ opacity: 0, x: 20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
+                                    animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: i * 0.1 }}
                                     className="flex items-start gap-4"
                                 >

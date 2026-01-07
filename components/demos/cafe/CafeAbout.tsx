@@ -86,8 +86,7 @@ export function CafeAbout() {
                         {/* Floating Card */}
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.5, duration: 0.8 }}
                             className="absolute -bottom-8 -right-8 md:right-8 bg-[#1A1714]/90 backdrop-blur-xl border border-white/10 p-8 max-w-[280px]"
                         >
@@ -102,8 +101,7 @@ export function CafeAbout() {
                     <div className="lg:pl-12">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
                             <span className="text-xs font-sans tracking-[0.3em] text-[#C8AA6E] uppercase block mb-8">

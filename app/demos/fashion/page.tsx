@@ -240,7 +240,7 @@ export default function FashionDemo() {
                             { icon: FiCreditCard, title: "Paiement Flexible", desc: "Payez avec plusieurs cartes" },
                             { icon: FiHeadphones, title: "Support 24/7", desc: "Nous vous assistons 24h/24" },
                         ].map((f, i) => (
-                            <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="flex items-center gap-4 p-4 bg-[#F5EBE0] rounded-xl">
+                            <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} className="flex items-center gap-4 p-4 bg-[#F5EBE0] rounded-xl">
                                 <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
                                     <f.icon className="text-[#D4A574] text-xl" />
                                 </div>
@@ -260,7 +260,7 @@ export default function FashionDemo() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* Women & Men */}
                         {categories.map((cat, i) => (
-                            <motion.div key={cat.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="bg-white rounded-2xl p-6 shadow-sm">
+                            <motion.div key={cat.name} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} className="bg-white rounded-2xl p-6 shadow-sm">
                                 <span className="text-sm text-[#D4A574] font-medium">{cat.count}</span>
                                 <h3 className="text-2xl font-bold text-[#3D2314] mt-2 mb-4">{cat.name}</h3>
                                 <ul className="space-y-2 mb-4">
@@ -271,7 +271,7 @@ export default function FashionDemo() {
                             </motion.div>
                         ))}
                         {/* Accessories */}
-                        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="bg-white rounded-2xl p-6 shadow-sm">
+                        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="bg-white rounded-2xl p-6 shadow-sm">
                             <span className="text-sm text-[#D4A574] font-medium">800+ Articles</span>
                             <h3 className="text-2xl font-bold text-[#3D2314] mt-2 mb-4">Accessoires</h3>
                             <ul className="space-y-2">
@@ -287,7 +287,7 @@ export default function FashionDemo() {
             {/* Top Seller Products */}
             <section className="py-16">
                 <div className="max-w-7xl mx-auto px-6">
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
+                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
                         <div>
                             <span className="text-sm text-[#D4A574] font-medium">Nos Produits</span>
                             <h2 className="text-3xl font-bold text-[#3D2314]">Nos Meilleurs Vendeurs</h2>
@@ -343,10 +343,10 @@ export default function FashionDemo() {
             <section className="py-16 bg-[#F5EBE0]">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative h-[400px] rounded-3xl overflow-hidden">
+                        <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} className="relative h-[400px] rounded-3xl overflow-hidden">
                             <Image src="https://images.unsplash.com/photo-1558171813-4c088753af8f?q=80&w=800" alt="Limited Offer" fill className="object-cover" />
                         </motion.div>
-                        <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+                        <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }}>
                             <span className="text-sm text-[#D4A574] font-medium">Offres à Durée Limitée</span>
                             <h2 className="text-3xl md:text-4xl font-bold text-[#3D2314] mt-2 mb-4">-25% sur Tous les Favoris - Temps Limité !</h2>
                             <p className="text-[#3D2314]/60 mb-6">Ne manquez pas notre collection exclusive à des prix imbattables.</p>
@@ -362,7 +362,7 @@ export default function FashionDemo() {
             {/* Deals of the Day */}
             <section className="py-16">
                 <div className="max-w-7xl mx-auto px-6">
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex items-center justify-between mb-10">
+                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex items-center justify-between mb-10">
                         <div>
                             <span className="text-sm text-[#D4A574] font-medium">Offres du Jour</span>
                             <h2 className="text-3xl font-bold text-[#3D2314]">Les Affaires du Jour</h2>
@@ -370,7 +370,7 @@ export default function FashionDemo() {
                     </motion.div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {products.slice(4, 6).map((product, i) => (
-                            <motion.div key={product.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} whileHover={{ y: -5 }} className="flex bg-white rounded-2xl overflow-hidden shadow-lg">
+                            <motion.div key={product.id} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} whileHover={{ y: -5 }} className="flex bg-white rounded-2xl overflow-hidden shadow-lg">
                                 <div className="relative w-1/2 min-h-[250px]">
                                     <Image src={product.image} alt={product.name} fill className="object-cover" />
                                     <div className="absolute top-3 left-3 px-3 py-1 bg-[#D4A574] text-white rounded-full text-sm font-semibold">-{product.discount}%</div>
@@ -405,7 +405,7 @@ export default function FashionDemo() {
                             { title: "Dernière Collection Homme", discount: "20% de Réduction Directe", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600", dark: true },
                             { title: "Dernière Mode Femme", discount: "25% de Réduction Directe", image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600", dark: false },
                         ].map((banner, i) => (
-                            <motion.div key={banner.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} whileHover={{ scale: 1.02 }} className={`relative h-[300px] rounded-2xl overflow-hidden cursor-pointer ${banner.dark ? "bg-[#3D2314]" : "bg-[#D4A574]"}`}>
+                            <motion.div key={banner.title} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} whileHover={{ scale: 1.02 }} className={`relative h-[300px] rounded-2xl overflow-hidden cursor-pointer ${banner.dark ? "bg-[#3D2314]" : "bg-[#D4A574]"}`}>
                                 <div className="absolute inset-0 p-8 flex flex-col justify-center z-10">
                                     <span className="text-sm text-white/80">{banner.discount}</span>
                                     <h3 className="text-2xl md:text-3xl font-bold text-white mt-2 mb-4">{banner.title}</h3>
@@ -425,13 +425,13 @@ export default function FashionDemo() {
             {/* Instagram Feed */}
             <section className="py-16">
                 <div className="max-w-7xl mx-auto px-6">
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
+                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-10">
                         <span className="text-sm text-[#D4A574] font-medium">Suivez-Nous</span>
                         <h2 className="text-3xl font-bold text-[#3D2314]">Suivez-Nous sur Instagram</h2>
                     </motion.div>
                     <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
                         {instagramImages.map((img, i) => (
-                            <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} whileHover={{ scale: 1.05 }} className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group">
+                            <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.05 }} whileHover={{ scale: 1.05 }} className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group">
                                 <Image src={img} alt="Instagram" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                     <FiInstagram className="text-white text-3xl" />
@@ -445,7 +445,7 @@ export default function FashionDemo() {
             {/* Testimonials */}
             <section className="py-16 bg-[#FDF8F3]">
                 <div className="max-w-4xl mx-auto px-6">
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex items-center justify-between mb-10">
+                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex items-center justify-between mb-10">
                         <div>
                             <span className="text-sm text-[#D4A574] font-medium">Témoignages</span>
                             <h2 className="text-3xl font-bold text-[#3D2314]">Ce Que Disent Nos Clients</h2>
@@ -459,7 +459,7 @@ export default function FashionDemo() {
                             </button>
                         </div>
                     </motion.div>
-                    <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-white rounded-2xl p-8 shadow-lg">
+                    <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="bg-white rounded-2xl p-8 shadow-lg">
                         <div className="flex flex-col md:flex-row gap-8 items-center">
                             <div className="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0">
                                 <Image src={testimonials[testimonialIndex].avatar} alt={testimonials[testimonialIndex].name} fill className="object-cover" />
@@ -482,13 +482,13 @@ export default function FashionDemo() {
             {/* Blog Section */}
             <section className="py-16">
                 <div className="max-w-7xl mx-auto px-6">
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
+                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-10">
                         <span className="text-sm text-[#D4A574] font-medium">Actualités & Blog</span>
                         <h2 className="text-3xl font-bold text-[#3D2314]">Nos Dernières Actualités</h2>
                     </motion.div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {blogPosts.map((post, i) => (
-                            <motion.div key={post.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} whileHover={{ y: -10 }} className="group cursor-pointer">
+                            <motion.div key={post.id} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} whileHover={{ y: -10 }} className="group cursor-pointer">
                                 <div className="relative h-52 rounded-2xl overflow-hidden mb-4">
                                     <Image src={post.image} alt={post.title} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
                                 </div>
@@ -506,13 +506,13 @@ export default function FashionDemo() {
             {/* FAQ Section */}
             <section className="py-16 bg-[#FDF8F3]">
                 <div className="max-w-3xl mx-auto px-6">
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
+                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-10">
                         <span className="text-sm text-[#D4A574] font-medium">FAQ</span>
                         <h2 className="text-3xl font-bold text-[#3D2314]">Des Questions ? Regardez ici.</h2>
                     </motion.div>
                     <div className="space-y-4">
                         {faqs.map((faq) => (
-                            <motion.div key={faq.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className={`rounded-xl overflow-hidden border ${openFaq === faq.id ? "bg-[#D4A574] border-[#D4A574]" : "bg-white border-gray-200"}`}>
+                            <motion.div key={faq.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`rounded-xl overflow-hidden border ${openFaq === faq.id ? "bg-[#D4A574] border-[#D4A574]" : "bg-white border-gray-200"}`}>
                                 <button onClick={() => setOpenFaq(openFaq === faq.id ? null : faq.id)} className={`w-full flex items-center justify-between p-5 text-left font-medium ${openFaq === faq.id ? "text-white" : "text-[#3D2314]"}`}>
                                     {faq.q}
                                     <motion.div animate={{ rotate: openFaq === faq.id ? 45 : 0 }}>
@@ -535,7 +535,7 @@ export default function FashionDemo() {
             {/* Newsletter */}
             <section className="py-16">
                 <div className="max-w-3xl mx-auto px-6 text-center">
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
                         <span className="text-sm text-[#D4A574] font-medium">Notre Newsletter</span>
                         <h2 className="text-3xl font-bold text-[#3D2314] mt-2 mb-4">Abonnez-vous à Notre Newsletter pour les Dernières Mises à Jour</h2>
                         <p className="text-[#3D2314]/60 mb-8">Obtenez -20% sur votre première commande juste en vous abonnant</p>

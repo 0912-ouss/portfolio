@@ -11,8 +11,7 @@ export function ChefSection() {
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-12"
                 >
                     <p className="text-orange-400 text-sm font-bold uppercase tracking-widest mb-4">
@@ -27,8 +26,7 @@ export function ChefSection() {
                     {/* Image */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         className="lg:w-1/3"
                     >
                         <div className="relative w-64 h-80 mx-auto">
@@ -50,8 +48,7 @@ export function ChefSection() {
                     {/* Content */}
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         className="lg:w-2/3 text-center lg:text-left"
                     >
                         <h3 className="text-2xl md:text-3xl font-serif font-bold mb-2">

@@ -52,9 +52,8 @@ export function FitnessStats() {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: stat.delay }}
-                            viewport={{ once: true }}
                             className="text-center lg:text-left"
                         >
                             <div className="text-4xl lg:text-5xl font-black text-white mb-4 tracking-tighter">

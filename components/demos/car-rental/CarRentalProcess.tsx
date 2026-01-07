@@ -34,14 +34,14 @@ export function CarRentalProcess() {
                 <div className="text-center mb-20">
                     <motion.span
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        animate={{ opacity: 1 }}
                         className="text-[#FF6B35] text-xs uppercase tracking-[0.3em] block mb-4"
                     >
                         Comment Ça Marche
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-black tracking-tight"
                     >
                         Louez en <span className="text-[#FF6B35]">4</span> Étapes Faciles
@@ -54,8 +54,7 @@ export function CarRentalProcess() {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.15 }}
                             className="relative"
                         >

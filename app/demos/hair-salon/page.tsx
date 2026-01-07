@@ -575,8 +575,7 @@ export default function HairSalonDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.2 }}
                                 className="group cursor-pointer"
                             >
@@ -616,8 +615,7 @@ export default function HairSalonDemo() {
                     <div className="flex flex-col lg:flex-row items-center gap-32">
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={luxuryEaseTransition}
                             className="lg:w-1/2 relative"
                         >
@@ -693,8 +691,7 @@ export default function HairSalonDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className="p-12 border border-white/5 bg-white/[0.02] rounded-[3rem] hover:bg-white/[0.05] transition-all duration-700 group ring-1 ring-white/0 hover:ring-[#C5A059]/30"
                             >
@@ -715,7 +712,7 @@ export default function HairSalonDemo() {
             <section className="py-60 bg-[#0A0A0B] relative overflow-hidden">
                 <motion.div
                     initial={{ scale: 1.2, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 0.15 }}
+                    animate={{ scale: 1, opacity: 0.15 }}
                     transition={{ duration: 2, ease: "easeOut" }}
                     className="absolute inset-0 z-0"
                 >
@@ -767,8 +764,7 @@ export default function HairSalonDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className="group"
                             >
@@ -866,8 +862,7 @@ export default function HairSalonDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, y: 0 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className="group"
                             >
@@ -925,8 +920,7 @@ export default function HairSalonDemo() {
                                 <motion.div
                                     key={index}
                                     initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
+                                    animate={{ opacity: 1, y: 0 }}
                                     transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                     className={`p-16 rounded-[4rem] border border-white/5 bg-white/[0.02] relative ${index === 1 ? 'md:mt-24' : ''}`}
                                 >
@@ -972,8 +966,7 @@ export default function HairSalonDemo() {
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 transition={{ ...luxuryEaseTransition, delay: index * 0.1 }}
                                 className={`relative p-12 rounded-[4rem] border ${index === 2 ? 'border-[#C5A059]/30 bg-[#C5A059]/[0.02]' : 'border-black/5 bg-slate-50/50'} hover:bg-white hover:shadow-2xl hover:shadow-[#C5A059]/5 transition-all duration-700 overflow-hidden group`}
                             >

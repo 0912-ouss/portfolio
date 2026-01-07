@@ -32,7 +32,7 @@ export function TheCellar() {
                         key={i}
                         className="relative min-w-[300px] md:min-w-[400px] aspect-[3/4] group snap-center cursor-pointer"
                         initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: i * 0.1, duration: 0.8 }}
                     >
                         <div className="absolute inset-0 border border-white/10 group-hover:border-[#D4AF37]/50 transition-colors p-8 flex flex-col justify-end z-10 bg-gradient-to-t from-black via-transparent to-transparent">

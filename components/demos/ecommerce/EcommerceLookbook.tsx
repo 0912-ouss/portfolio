@@ -13,8 +13,7 @@ export function EcommerceLookbook() {
                     {/* Left - Image Grid */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         className="grid grid-cols-2 gap-4"
                     >
                         <div className="space-y-4">
@@ -58,8 +57,7 @@ export function EcommerceLookbook() {
                     {/* Right - Content */}
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, x: 0 }}
                         className="lg:pl-12"
                     >
                         <span className="text-[#D4A574] text-xs uppercase tracking-[0.3em] block mb-6">

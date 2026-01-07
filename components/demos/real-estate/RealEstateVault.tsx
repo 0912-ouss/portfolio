@@ -137,9 +137,8 @@ export function RealEstateVault() {
                                 <motion.div
                                     key={i}
                                     initial={{ opacity: 0, x: 20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
+                                    animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.5 + (i * 0.1) }}
-                                    viewport={{ once: true }}
                                     className="flex items-start gap-6 group"
                                 >
                                     <div className="text-[#C19A6B] mt-1 p-3 border border-[#C19A6B]/20 group-hover:border-[#C19A6B] transition-colors">{item.icon}</div>

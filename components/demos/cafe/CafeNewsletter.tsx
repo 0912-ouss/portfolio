@@ -32,8 +32,7 @@ export function CafeNewsletter() {
                 <div className="max-w-3xl mx-auto text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, y: 0 }}
                     >
                         {/* Coffee Bean Icon */}
                         <div className="w-20 h-20 mx-auto mb-8 relative">

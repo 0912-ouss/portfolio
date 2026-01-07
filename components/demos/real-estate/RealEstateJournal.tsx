@@ -52,9 +52,8 @@ export function RealEstateJournal() {
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.1 }}
-                            viewport={{ once: true }}
                             className="group cursor-pointer"
                         >
                             <div className="relative aspect-[16/10] overflow-hidden mb-10 rounded-sm">

@@ -33,16 +33,14 @@ export function FawziServices() {
                 <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-bold text-black dark:text-white"
                     >
                         Services
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
                         className="text-gray-600 dark:text-gray-400 text-sm md:text-base"
                     >
@@ -55,9 +53,8 @@ export function FawziServices() {
                         <motion.div
                             key={service.title}
                             initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            animate={{ opacity: 1, y: 0 }}
                             whileHover={{ y: -10 }}
-                            viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.4 }}
                             className="p-8 bg-gray-50 dark:bg-[#2A2A2A] rounded-2xl space-y-4 hover:shadow-2xl hover:shadow-orange-500/5 transition-all cursor-default group border border-transparent hover:border-orange-500/20"
                         >

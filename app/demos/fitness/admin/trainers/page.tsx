@@ -6,12 +6,13 @@ import { FiPlus, FiEdit2, FiTrash2, FiStar, FiCalendar, FiLoader, FiX } from "re
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useTheme, themeColors } from "@/components/demos/fitness/admin/ThemeContext";
+import { Trainer } from "@/types/fitness";
 
 export default function TrainersPage() {
     const { theme } = useTheme();
     const colors = themeColors[theme];
 
-    const [trainers, setTrainers] = useState<any[]>([]);
+    const [trainers, setTrainers] = useState<Trainer[]>([]);
     const [loading, setLoading] = useState(true);
 
     // Modal States
@@ -148,7 +149,7 @@ export default function TrainersPage() {
                                 key={trainer.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.1 }}
+                                transition={{ delay: index * 0.05, duration: 0.3 }}
                                 className={`${colors.card} border ${colors.border} rounded-2xl overflow-hidden hover:border-[#D4AF37]/20 transition-colors group shadow-sm`}
                             >
                                 {/* Image */}
