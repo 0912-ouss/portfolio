@@ -34,7 +34,7 @@ export function Gallery({ items }: GalleryProps) {
   // Keyboard navigation
   useEffect(() => {
     if (selectedImage === null) return;
-    
+
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") {
         setSelectedImage((prev) => prev !== null ? (prev + 1) % items.length : null);
@@ -60,7 +60,7 @@ export function Gallery({ items }: GalleryProps) {
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: index * 0.08, type: "spring" }}
+            transition={{ duration: 0.3, delay: index * 0.04, type: "spring" }}
             whileHover={{ scale: 1.05, y: -8 }}
             onClick={() => openLightbox(index)}
             className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer card"
@@ -71,24 +71,24 @@ export function Gallery({ items }: GalleryProps) {
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
             />
-            
+
             {/* Gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
-            
+
             {/* Category badge */}
             <div className="absolute top-4 left-4">
               <span className="px-3 py-1.5 glass rounded-full text-xs font-semibold text-white backdrop-blur-md border border-white/20">
                 {item.category}
               </span>
             </div>
-            
+
             {/* Expand icon */}
             <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="p-2 glass rounded-lg backdrop-blur-md border border-white/20">
                 <FiMaximize2 className="w-4 h-4 text-white" />
               </div>
             </div>
-            
+
             {/* Title overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-5 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
               <h4 className="text-white font-bold text-lg mb-1 drop-shadow-lg">{item.title}</h4>
@@ -172,7 +172,7 @@ export function Gallery({ items }: GalleryProps) {
                 height={900}
                 className="object-contain w-full h-full rounded-2xl shadow-2xl"
               />
-              
+
               {/* Image Info */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

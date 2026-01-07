@@ -14,8 +14,8 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{
-                    duration: 0.5,
-                    ease: [0.33, 1, 0.68, 1], // Custom cubic-bezier for premium feel
+                    duration: 0.3,
+                    ease: "easeInOut",
                 }}
             >
                 {children}

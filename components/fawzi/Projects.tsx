@@ -6,7 +6,7 @@ import Link from "next/link";
 import { projects } from "@/lib/data";
 import { FaTimes, FaExternalLinkAlt } from "react-icons/fa";
 
-const categories = ["All", "Web Design", "Healthcare", "Beauty", "Restaurant", "Real Estate", "Ecommerce", "Fitness"];
+const categories = ["Tout", "Web Design", "Santé", "Beauté", "Restaurant", "Immobilier", "Ecommerce", "Fitness"];
 
 interface FawziProjectsProps {
     showFullButton?: boolean;
@@ -14,14 +14,14 @@ interface FawziProjectsProps {
 }
 
 export function FawziProjects({ showFullButton = true, limit }: FawziProjectsProps) {
-    const [activeCategory, setActiveCategory] = useState("All");
+    const [activeCategory, setActiveCategory] = useState("Tout");
     const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
     const filteredProjects = projects.filter(project => {
-        if (activeCategory === "All") return true;
+        if (activeCategory === "Tout") return true;
 
         // Handle "Web Design" as a special case if needed, or slugify the active category
-        const categorySlug = activeCategory.toLowerCase().replace(" ", "-");
+        const categorySlug = activeCategory.toLowerCase().replace(" ", "-").replace("santé", "healthcare").replace("beauté", "beauty").replace("immobilier", "real-estate");
         return project.category.toLowerCase() === categorySlug;
     });
 
@@ -38,7 +38,7 @@ export function FawziProjects({ showFullButton = true, limit }: FawziProjectsPro
                             viewport={{ once: true }}
                             className="text-4xl md:text-7xl font-black text-black dark:text-white tracking-tighter"
                         >
-                            Featured <span className="text-orange-500 italic">Work</span>
+                            Travaux <span className="text-orange-500 italic">Récents</span>
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export function FawziProjects({ showFullButton = true, limit }: FawziProjectsPro
                             transition={{ delay: 0.1 }}
                             className="text-gray-500 dark:text-gray-400 text-lg"
                         >
-                            Crafting high-impact digital solutions across industries.
+                            Création de solutions numériques à fort impact dans tous les secteurs.
                         </motion.p>
                     </div>
                 )}
@@ -84,9 +84,9 @@ export function FawziProjects({ showFullButton = true, limit }: FawziProjectsPro
                                 viewport={{ once: true }}
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{
-                                    duration: 0.6,
+                                    duration: 0.3,
                                     ease: [0.16, 1, 0.3, 1],
-                                    delay: idx * 0.1
+                                    delay: idx * 0.05
                                 }}
                                 onClick={() => setSelectedProject(project)}
                                 className="group cursor-pointer"
@@ -104,7 +104,7 @@ export function FawziProjects({ showFullButton = true, limit }: FawziProjectsPro
                                     <div className="absolute inset-0 bg-gradient-to-t from-orange-600/90 via-orange-600/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-between p-8">
                                         <div className="flex justify-end">
                                             <div className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-white text-[10px] font-black uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-all delay-100">
-                                                View Case Study
+                                                Voir l'Étude
                                             </div>
                                         </div>
 
@@ -158,7 +158,7 @@ export function FawziProjects({ showFullButton = true, limit }: FawziProjectsPro
                             href="/projects"
                             className="group relative px-12 py-5 bg-black dark:bg-white text-white dark:text-black font-black uppercase tracking-[0.2em] text-sm rounded-full overflow-hidden transition-all hover:pr-16 border dark:border-white/10"
                         >
-                            <span className="relative z-10 transition-colors group-hover:text-orange-500">Explore Full Showcase</span>
+                            <span className="relative z-10 transition-colors group-hover:text-orange-500">Voir Tout le Portfolio</span>
                             <div className="absolute right-[-100%] top-0 h-full w-full bg-orange-500 transition-all group-hover:right-[-85%] flex items-center justify-center">
                                 <span className="font-bold text-lg">→</span>
                             </div>
@@ -221,12 +221,12 @@ export function FawziProjects({ showFullButton = true, limit }: FawziProjectsPro
                                     </div>
 
                                     <div className="space-y-4">
-                                        <h4 className="text-sm font-black uppercase tracking-[0.2em] text-gray-400">Project Overview</h4>
+                                        <h4 className="text-sm font-black uppercase tracking-[0.2em] text-gray-400">Aperçu du Projet</h4>
                                         <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
                                             {selectedProject.description}
                                         </p>
                                         <p className="text-gray-500 dark:text-gray-500 text-sm italic">
-                                            This project focused on high-conversion UI patterns and seamless user journeys tailored for the {selectedProject.category} industry.
+                                            Ce projet s'est concentré sur des modèles d'interface utilisateur à forte conversion et des parcours utilisateurs fluides adaptés à l'industrie {selectedProject.category}.
                                         </p>
                                     </div>
 
@@ -235,13 +235,13 @@ export function FawziProjects({ showFullButton = true, limit }: FawziProjectsPro
                                             href={selectedProject.link}
                                             className="flex-1 bg-orange-500 hover:bg-orange-600 text-white py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-center text-sm shadow-xl shadow-orange-500/20 transition-all flex items-center justify-center gap-3"
                                         >
-                                            View Live Demo <FaExternalLinkAlt />
+                                            Voir la Démo <FaExternalLinkAlt />
                                         </Link>
                                         <button
                                             onClick={() => setSelectedProject(null)}
                                             className="px-10 py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-sm border-2 border-gray-100 dark:border-white/5 hover:border-orange-500/50 transition-all"
                                         >
-                                            Next Project →
+                                            Projet Suivant →
                                         </button>
                                     </div>
                                 </div>

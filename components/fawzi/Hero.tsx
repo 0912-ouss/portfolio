@@ -42,7 +42,7 @@ export function FawziHero() {
                         transition={{ duration: 0.5 }}
                         className="text-lg md:text-xl font-medium text-gray-800 dark:text-gray-200"
                     >
-                        Hi I am
+                        Bonjour, je suis
                     </motion.p>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -71,7 +71,7 @@ export function FawziHero() {
                         transition={{ duration: 0.5, delay: 0.3 }}
                         className="max-w-xl text-gray-600 dark:text-gray-400 text-sm md:text-base leading-relaxed"
                     >
-                        Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra
+                        Je conçois des expériences numériques intuitives et engageantes, alliant esthétique et fonctionnalité pour transformer vos idées en réalité.
                     </motion.p>
 
                     <motion.div
@@ -84,7 +84,7 @@ export function FawziHero() {
                             href="/design"
                             className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-3 rounded-md font-semibold transition-all inline-block shadow-lg shadow-orange-500/20 active:scale-95"
                         >
-                            Hire Me
+                            Engagez-moi
                         </Link>
                     </motion.div>
                 </div>

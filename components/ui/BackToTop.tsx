@@ -28,7 +28,7 @@ export function BackToTop() {
                 >
                     <motion.div
                         animate={{ y: [0, -3, 0] }}
-                        transition={{ repeat: Infinity, duration: 1.5 }}
+                        transition={{ repeat: Infinity, duration: 0.6 }}
                     >
                         <FiArrowUp className="text-xl" />
                     </motion.div>

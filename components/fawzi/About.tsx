@@ -5,31 +5,31 @@ import { FaPalette, FaCode, FaMobileAlt, FaBrain } from "react-icons/fa";
 
 const skillEcosystem = [
     {
-        name: "Visual Design",
+        name: "Design Visuel",
         icon: <FaPalette />,
-        desc: "Crafting beautiful, brand-aligned interfaces with precision and emotional resonance.",
-        tags: ["UI Graphics", "Branding", "Motion"],
+        desc: "Création d'interfaces magnifiques et alignées sur la marque avec précision et résonance émotionnelle.",
+        tags: ["Graphismes UI", "Branding", "Motion"],
         color: "bg-orange-500"
     },
     {
-        name: "Interactive Systems",
+        name: "Systèmes Interactifs",
         icon: <FaCode />,
-        desc: "Building scalable design systems and functional prototypes that feel natural.",
+        desc: "Construction de systèmes de design évolutifs et de prototypes fonctionnels qui semblent naturels.",
         tags: ["React/Next.js", "GSAP", "Framer Motion"],
         color: "bg-blue-500"
     },
     {
-        name: "Product Strategy",
+        name: "Stratégie Produit",
         icon: <FaBrain />,
-        desc: "Deciphering user needs to build meaningful journeys and strategic taxonomies.",
-        tags: ["UX Research", "Workshops", "Analytics"],
+        desc: "Déchiffrer les besoins des utilisateurs pour construire des parcours significatifs et des taxonomies stratégiques.",
+        tags: ["Recherche UX", "Ateliers", "Analytique"],
         color: "bg-purple-500"
     },
     {
-        name: "Mobile Experience",
+        name: "Expérience Mobile",
         icon: <FaMobileAlt />,
-        desc: "Optimizing digital touchpoints for the palm of your hand, from iOS to Android.",
-        tags: ["React Native", "Responsive", "Gestures"],
+        desc: "Optimisation de l'expérience numérique pour le mobile, d'iOS à Android.",
+        tags: ["React Native", "Responsive", "Gestes"],
         color: "bg-emerald-500"
     }
 ];
@@ -46,12 +46,12 @@ export function FawziAbout() {
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                                 viewport={{ once: true }}
                                 className="relative rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl border-4 border-white dark:border-gray-800"
                             >
                                 <img
-                                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=1200&q=80"
+                                    src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800&q=80"
                                     alt="OU BERHAYLA - Lead Designer"
                                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
                                 />
@@ -61,10 +61,10 @@ export function FawziAbout() {
                             {/* Floating Accent */}
                             <motion.div
                                 animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
-                                transition={{ duration: 6, repeat: Infinity }}
+                                transition={{ duration: 2.5, repeat: Infinity }}
                                 className="absolute -bottom-10 -right-10 w-40 h-40 bg-orange-500 font-black text-white rounded-full flex items-center justify-center p-8 text-center leading-tight shadow-2xl"
                             >
-                                5+ YEARS EXPERIENCE
+                                5+ ANS D'EXPÉRIENCE
                             </motion.div>
                         </div>
                     </div>
@@ -77,15 +77,15 @@ export function FawziAbout() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 className="text-orange-500 font-black uppercase tracking-[0.4em] text-sm"
                             >
-                                The Architect
+                                L'Architecte
                             </motion.span>
                             <motion.h2
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8 }}
+                                transition={{ duration: 0.4 }}
                                 className="text-5xl md:text-7xl font-black text-black dark:text-white tracking-tighter"
                             >
-                                Balancing <span className="italic text-gray-300 dark:text-gray-700">Art</span> & Logic.
+                                L'Équilibre entre <span className="italic text-gray-300 dark:text-gray-700">Art</span> & Logique.
                             </motion.h2>
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
@@ -93,7 +93,7 @@ export function FawziAbout() {
                                 transition={{ delay: 0.1 }}
                                 className="text-gray-500 dark:text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl"
                             >
-                                I specialize in dissecting complex business challenges and translating them into elegant, user-centric digital ecosystems. My work lives at the intersection of psychology and aesthetics.
+                                Je me spécialise dans la résolution de défis commerciaux complexes et leur traduction en écosystèmes numériques élégants et centrés sur l'utilisateur. Mon travail se situe à l'intersection de la psychologie et de l'esthétique.
                             </motion.p>
                         </div>
 

@@ -13,7 +13,7 @@ export function BackgroundEffects() {
                     scale: [1, 1.2, 1],
                 }}
                 transition={{
-                    duration: 20,
+                    duration: 6,
                     repeat: Infinity,
                     ease: "easeInOut",
                 }}
@@ -28,10 +28,10 @@ export function BackgroundEffects() {
                     scale: [1, 1.1, 1],
                 }}
                 transition={{
-                    duration: 25,
+                    duration: 8,
                     repeat: Infinity,
                     ease: "easeInOut",
-                    delay: 2,
+                    delay: 0.5,
                 }}
                 className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-orange-500/5 rounded-full blur-[150px]"
             />
@@ -43,7 +43,7 @@ export function BackgroundEffects() {
                     opacity: [0.1, 0.2, 0.1],
                 }}
                 transition={{
-                    duration: 15,
+                    duration: 5,
                     repeat: Infinity,
                     ease: "easeInOut",
                 }}

@@ -10,7 +10,7 @@ export function splitText(text: string) {
   }));
 }
 
-export function useCounterInView(targetValue: number, duration: number = 2000) {
+export function useCounterInView(targetValue: number, duration: number = 800) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const [count, setCount] = useState(0);

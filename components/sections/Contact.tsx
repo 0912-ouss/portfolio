@@ -61,7 +61,7 @@ export function Contact() {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.15, type: "spring" }}
+                transition={{ duration: 0.3, delay: index * 0.08, type: "spring" }}
                 whileHover={{ scale: 1.02, x: 10 }}
                 className="group relative block p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 overflow-hidden"
               >
@@ -77,7 +77,7 @@ export function Contact() {
                   {/* 3D Icon Container */}
                   <motion.div
                     whileHover={{ rotateY: 180, scale: 1.1 }}
-                    transition={{ duration: 0.6, type: "spring" }}
+                    transition={{ duration: 0.3, type: "spring" }}
                     className="relative"
                     style={{ perspective: "500px" }}
                   >
@@ -91,7 +91,7 @@ export function Contact() {
                           className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12"
                           initial={{ x: "-100%" }}
                           whileHover={{ x: "200%" }}
-                          transition={{ duration: 0.8 }}
+                          transition={{ duration: 0.4 }}
                         />
                       </div>
 
@@ -99,7 +99,7 @@ export function Contact() {
                       <motion.div
                         className={`absolute -inset-1 rounded-2xl border-2 border-white/20`}
                         animate={{ rotate: 360 }}
-                        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                       />
                     </div>
 

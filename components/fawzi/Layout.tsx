@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaBars, FaTimes } from "react-icons/fa";
 
-const navItems = ["Home", "About Me", "Services", "Projects", "Designs", "Testimonials", "Contact"];
+const navItems = ["Accueil", "À Propos", "Services", "Projets", "Designs", "Témoignages", "Contact"];
 
 export function FawziNavbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -25,10 +25,10 @@ export function FawziNavbar() {
                         <Link
                             key={item}
                             href={
-                                item === "Home" ? "/" :
-                                    item === "Projects" ? "/projects" :
+                                item === "Accueil" ? "/" :
+                                    item === "Projets" ? "/projects" :
                                         item === "Designs" ? "/design" :
-                                            `/#${item.toLowerCase().replace(" ", "-")}`
+                                            `/#${item.toLowerCase().replace(" ", "-").replace("à", "a").replace("é", "e")}`
                             }
                             className="text-black dark:text-white font-medium hover:text-orange-500 transition-colors relative group"
                         >
@@ -68,10 +68,10 @@ export function FawziNavbar() {
                                 <Link
                                     key={item}
                                     href={
-                                        item === "Home" ? "/" :
-                                            item === "Projects" ? "/projects" :
+                                        item === "Accueil" ? "/" :
+                                            item === "Projets" ? "/projects" :
                                                 item === "Designs" ? "/design" :
-                                                    `/#${item.toLowerCase().replace(" ", "-")}`
+                                                    `/#${item.toLowerCase().replace(" ", "-").replace("à", "a").replace("é", "e")}`
                                     }
                                     onClick={() => setIsOpen(false)}
                                     className="text-lg font-medium dark:text-white hover:text-orange-500"
@@ -109,10 +109,10 @@ export function FawziFooter() {
                             <Link
                                 key={item}
                                 href={
-                                    item === "Home" ? "/" :
-                                        item === "Projects" ? "/projects" :
+                                    item === "Accueil" ? "/" :
+                                        item === "Projets" ? "/projects" :
                                             item === "Designs" ? "/design" :
-                                                `/#${item.toLowerCase().replace(" ", "-")}`
+                                                `/#${item.toLowerCase().replace(" ", "-").replace("à", "a").replace("é", "e")}`
                                 }
                                 className="text-black dark:text-white font-bold hover:text-orange-500 transition-colors"
                             >
@@ -130,7 +130,7 @@ export function FawziFooter() {
                 </div>
 
                 <div className="pt-8 border-t dark:border-gray-800 text-gray-500 text-sm">
-                    <p>© 2024 <span className="text-orange-500 font-bold">OU BERHAYLA</span> All Rights Reserved.</p>
+                    <p>© 2024 <span className="text-orange-500 font-bold">OU BERHAYLA</span> Tous droits réservés.</p>
                 </div>
             </div>
         </footer>

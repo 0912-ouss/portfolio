@@ -36,16 +36,16 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                             viewport={{ once: true }}
                             className="text-orange-500 font-black uppercase tracking-[0.3em] text-sm"
                         >
-                            Showcase
+                            Vitrine
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
+                            transition={{ duration: 0.4 }}
                             className="text-5xl md:text-7xl font-black text-black dark:text-white tracking-tighter"
                         >
-                            Visual <span className="text-gray-300 dark:text-gray-700">Artifacts</span>
+                            Artefacts <span className="text-gray-300 dark:text-gray-700">Visuels</span>
                         </motion.h2>
                     </div>
                     <motion.p
@@ -55,7 +55,7 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                         transition={{ delay: 0.3 }}
                         className="max-w-sm text-gray-500 text-sm md:text-base leading-relaxed"
                     >
-                        A curated selection of graphics, branding components, and UI experiments from my design lab.
+                        Une sélection curatée de graphismes, composants de marque et expériences UI de mon laboratoire de design.
                     </motion.p>
                 </div>
 
@@ -67,8 +67,8 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{
-                                duration: 0.8,
-                                delay: idx % 3 * 0.1,
+                                duration: 0.4,
+                                delay: idx % 3 * 0.05,
                                 ease: [0.16, 1, 0.3, 1]
                             }}
                             whileHover={{ y: -10 }}
@@ -90,7 +90,7 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                                 >
                                     <p className="text-white/70 text-[10px] font-black uppercase tracking-[0.2em]">{item.category}</p>
                                     <h4 className="text-white font-black text-3xl tracking-tighter">{item.title}</h4>
-                                    <p className="text-white/60 text-xs font-semibold">Click to expand</p>
+                                    <p className="text-white/60 text-xs font-semibold">Cliquer pour agrandir</p>
                                 </motion.div>
                             </div>
 
@@ -111,7 +111,7 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                             href="/design"
                             className="group relative px-12 py-5 bg-black dark:bg-white text-white dark:text-black font-black uppercase tracking-[0.2em] text-sm rounded-full overflow-hidden transition-all hover:pr-16"
                         >
-                            <span className="relative z-10 transition-colors group-hover:text-orange-500">View Full Gallery</span>
+                            <span className="relative z-10 transition-colors group-hover:text-orange-500">Voir toute la Galerie</span>
                             <div className="absolute right-[-100%] top-0 h-full w-full bg-orange-500 transition-all group-hover:right-[-85%] flex items-center justify-center">
                                 <span className="font-bold text-lg">→</span>
                             </div>
@@ -174,13 +174,13 @@ export function FawziGallery({ limit, showFullButton = true }: FawziGalleryProps
                                     {galleryItems[selectedImage].title}
                                 </h3>
                                 <p className="text-gray-400 max-w-lg mx-auto text-sm md:text-base">
-                                    Part of my design artifacts collection showcased at OU BERHAYLA.
+                                    Fait partie de ma collection d'artefacts de design présentée chez OU BERHAYLA.
                                 </p>
                             </div>
 
                             {/* Mobile Swipe Simulation Info */}
                             <div className="md:hidden mt-4 text-gray-500 text-xs">
-                                Tap sides to navigate
+                                Appuyez sur les côtés pour naviguer
                             </div>
                         </motion.div>
 

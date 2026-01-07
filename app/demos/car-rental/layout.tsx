@@ -14,15 +14,13 @@ export default function CarRentalLayout({
     children: React.ReactNode
 }) {
     return (
-        <ReactLenis root>
-            <div className="min-h-screen bg-[#0A0A0A] font-sans text-white overflow-x-hidden">
-                <CarRentalLoading />
-                <CarRentalCursor />
-                <CarRentalScrollProgress />
-                <CarRentalHeader />
-                <main>{children}</main>
-                <CarRentalFooter />
-            </div>
-        </ReactLenis>
+        <div className="min-h-screen bg-[#0A0A0A] font-sans text-white overflow-x-hidden">
+            <CarRentalLoading />
+            <CarRentalCursor />
+            <CarRentalScrollProgress />
+            <CarRentalHeader />
+            <main>{children}</main>
+            <CarRentalFooter />
+        </div>
     );
 }

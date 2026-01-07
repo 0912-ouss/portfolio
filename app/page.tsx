@@ -6,7 +6,7 @@ import { FawziServices } from "@/components/fawzi/Services";
 import { FawziProjects } from "@/components/fawzi/Projects";
 import { FawziGallery } from "@/components/fawzi/Gallery";
 import { FawziTestimonials, FawziContact } from "@/components/fawzi/Testimonials";
-import { FawziNavbar, FawziFooter } from "@/components/fawzi/Layout";
+
 import { CustomCursor } from "@/components/ui/CustomCursor";
 
 
@@ -41,7 +41,7 @@ export default function Home() {
         <FawziContact />
       </div>
 
-      <FawziFooter />
+
     </main>
   );
 }

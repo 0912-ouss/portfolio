@@ -9,7 +9,7 @@ export const fadeInUp: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.35,
       ease: "easeOut",
     },
   },
@@ -22,7 +22,7 @@ export const fadeIn: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.25,
     },
   },
 };
@@ -34,7 +34,7 @@ export const staggerContainer: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.05,
     },
   },
 };
@@ -48,7 +48,7 @@ export const scaleIn: Variants = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.25,
     },
   },
 };
@@ -62,7 +62,7 @@ export const slideInLeft: Variants = {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.35,
       ease: "easeOut",
     },
   },
@@ -77,7 +77,7 @@ export const slideInRight: Variants = {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.35,
       ease: "easeOut",
     },
   },

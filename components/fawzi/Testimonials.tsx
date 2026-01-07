@@ -6,14 +6,14 @@ import { useState } from "react";
 const testimonials = [
     {
         id: 1,
-        text: "The designs provided by OU BERHAYLA were world-class and really helped our brand stand out. Highly recommended!",
+        text: "Les designs fournis par OU BERHAYLA étaient de classe mondiale et ont vraiment aidé notre marque à se démarquer. Hautement recommandé !",
         name: "Sarah Johnson",
         role: "CEO at TechFlow",
         image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
     },
     {
         id: 2,
-        text: "Incredible attention to detail and a very smooth workflow. One of the best UI designers I have worked with.",
+        text: "Une attention incroyable aux détails et un flux de travail très fluide. L'un des meilleurs designers UI avec qui j'ai travaillé.",
         name: "David Chen",
         role: "Founder of Apex Studio",
         image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
@@ -27,9 +27,9 @@ export function FawziTestimonials() {
         <section className="py-24 px-4 md:px-20 bg-white dark:bg-[#1E1E1E]">
             <div className="container mx-auto">
                 <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-                    <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white tracking-tighter">Testimonials</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white tracking-tighter">Témoignages</h2>
                     <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
-                        Hear from the amazing clients I've had the pleasure of working with on various design projects.
+                        Découvrez ce que disent les clients incroyables avec qui j'ai eu le plaisir de travailler sur divers projets de design.
                     </p>
                 </div>
 
@@ -117,10 +117,10 @@ export function FawziContact() {
                             whileInView={{ opacity: 1 }}
                             className="text-orange-500 font-black uppercase tracking-[0.4em] text-xs"
                         >
-                            Get in Touch
+                            Contactez-moi
                         </motion.span>
                         <h2 className="text-4xl md:text-7xl font-black text-black dark:text-white tracking-tighter leading-none">
-                            Let's <span className="text-orange-500 uppercase">Sync.</span>
+                            Discutons.
                         </h2>
                     </div>
 
@@ -133,9 +133,9 @@ export function FawziContact() {
                                 exit={{ opacity: 0, scale: 1.05 }}
                                 className="space-y-10 relative z-10"
                             >
-                                <p className="text-gray-500 dark:text-gray-400 text-lg">What project can I help you architect?</p>
+                                <p className="text-gray-500 dark:text-gray-400 text-lg">Quel projet puis-je vous aider à architecturer ?</p>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    {["Premium Web Design", "Brand Identity", "Design Systems", "Consulting"].map((option) => (
+                                    {["Design Web Premium", "Identité de Marque", "Systèmes de Design", "Consulting"].map((option) => (
                                         <button
                                             key={option}
                                             onClick={() => handleInterestSelection(option)}
@@ -156,19 +156,19 @@ export function FawziContact() {
                                 className="space-y-8 relative z-10"
                             >
                                 <div className="flex flex-col items-center">
-                                    <p className="text-gray-500 dark:text-gray-400">Architeching your <span className="text-orange-500 font-bold">{interest}</span> solution.</p>
+                                    <p className="text-gray-500 dark:text-gray-400">Architecture de votre solution <span className="text-orange-500 font-bold">{interest}</span>.</p>
                                     <button
                                         onClick={() => setStep(1)}
                                         className="text-xs text-orange-500 mt-2 hover:underline font-bold uppercase tracking-widest"
                                     >
-                                        Change project type
+                                        Changer de type de projet
                                     </button>
                                 </div>
                                 <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto w-full">
                                     <input
                                         type="email"
                                         required
-                                        placeholder="Your business email"
+                                        placeholder="Votre email professionnel"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                         disabled={status === "loading" || status === "success"}
@@ -179,9 +179,9 @@ export function FawziContact() {
                                         disabled={status === "loading" || status === "success"}
                                         className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-sm transition-all shadow-xl hover:shadow-orange-500/40 active:scale-95 disabled:bg-gray-400 min-w-[200px]"
                                     >
-                                        {status === "idle" && "Let's Talk"}
-                                        {status === "loading" && "Processing..."}
-                                        {status === "success" && "Sent!"}
+                                        {status === "idle" && "Parlons-en"}
+                                        {status === "loading" && "Traitement..."}
+                                        {status === "success" && "Envoyé !"}
                                     </button>
                                 </form>
                                 {status === "success" && (
@@ -190,7 +190,7 @@ export function FawziContact() {
                                         animate={{ opacity: 1, y: 0 }}
                                         className="text-green-500 font-bold"
                                     >
-                                        Inquiry received. Checking my calendar...
+                                        Demande reçue. Je vérifie mon agenda...
                                     </motion.p>
                                 )}
                             </motion.div>

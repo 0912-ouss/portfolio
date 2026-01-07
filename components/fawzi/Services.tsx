@@ -6,22 +6,22 @@ import { FaMobileAlt, FaLayerGroup, FaDesktop, FaPaintBrush } from "react-icons/
 const services = [
     {
         title: "UI/UX",
-        description: "Crafting intuitive user interfaces and delightful user experiences that drive engagement.",
+        description: "Conception d'interfaces utilisateur intuitives et d'expériences agréables qui stimulent l'engagement.",
         icon: <FaLayerGroup className="text-5xl text-orange-500 group-hover:scale-110 transition-transform" />,
     },
     {
-        title: "Web Design",
-        description: "Designing modern, responsive websites that look great on any device or screen size.",
+        title: "Design Web",
+        description: "Création de sites web modernes et réactifs, parfaits sur tous les appareils et tailles d'écran.",
         icon: <FaDesktop className="text-5xl text-orange-500 group-hover:scale-110 transition-transform" />,
     },
     {
-        title: "App Design",
-        description: "Building functional and beautiful mobile application designs for iOS and Android.",
+        title: "Design d'App",
+        description: "Création de designs d'applications mobiles fonctionnels et esthétiques pour iOS et Android.",
         icon: <FaMobileAlt className="text-5xl text-orange-500 group-hover:scale-110 transition-transform" />,
     },
     {
-        title: "Graphic Design",
-        description: "Creating visual content to communicate messages, including logos and branding materials.",
+        title: "Design Graphique",
+        description: "Création de contenu visuel pour communiquer des messages, incluant logos et identité de marque.",
         icon: <FaPaintBrush className="text-5xl text-orange-500 group-hover:scale-110 transition-transform" />,
     },
 ];
@@ -46,7 +46,7 @@ export function FawziServices() {
                         transition={{ delay: 0.1 }}
                         className="text-gray-600 dark:text-gray-400 text-sm md:text-base"
                     >
-                        I offer a wide range of design services to help businesses and individuals achieve their goals through visual storytelling.
+                        J'offre une large gamme de services de design pour aider les entreprises et les particuliers à atteindre leurs objectifs grâce à la narration visuelle.
                     </motion.p>
                 </div>
 

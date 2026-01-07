@@ -26,7 +26,7 @@ export function Hero() {
 
   useEffect(() => {
     if (isMobile) return; // Disable mouse parallax on mobile
-    
+
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({
         x: (e.clientX / window.innerWidth - 0.5) * 30,
@@ -52,7 +52,7 @@ export function Hero() {
     >
       {/* Animated Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/20" />
-      
+
       {/* Mesh gradient overlay - Hidden on mobile for performance */}
       <div className="hidden md:block absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(168,85,247,0.15),transparent_50%)]" />
       <div className="hidden md:block absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(236,72,153,0.15),transparent_50%)]" />
@@ -66,7 +66,7 @@ export function Hero() {
               y: mousePosition.y,
               scale: [1, 1.2, 1],
             }}
-            transition={{ type: "spring", stiffness: 50, duration: 6 }}
+            transition={{ type: "spring", stiffness: 100, duration: 2 }}
             className="absolute top-1/4 left-1/4 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-gradient-to-r from-primary/30 to-accent/30 rounded-full blur-[80px] md:blur-[120px] opacity-40 md:opacity-60"
           />
           <motion.div
@@ -75,7 +75,7 @@ export function Hero() {
               y: -mousePosition.y,
               scale: [1, 1.1, 1],
             }}
-            transition={{ type: "spring", stiffness: 50, duration: 8 }}
+            transition={{ type: "spring", stiffness: 100, duration: 3 }}
             className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] md:w-[600px] md:h-[600px] bg-gradient-to-r from-accent/30 to-primary/30 rounded-full blur-[100px] md:blur-[140px] opacity-40 md:opacity-60"
           />
         </>
@@ -94,7 +94,7 @@ export function Hero() {
             rotate: [0, 360],
           }}
           transition={{
-            duration: isMobile ? 5 : 6,
+            duration: isMobile ? 2.5 : 3,
             repeat: Infinity,
             delay: item.delay,
             ease: "easeInOut",
@@ -121,7 +121,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
             className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 mb-4 md:mb-6 glass rounded-full text-xs md:text-sm font-medium"
           >
             <FiStar className="w-3 h-3 md:w-4 md:h-4 text-primary" />
@@ -132,7 +132,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.3, delay: 0.05 }}
             className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 mb-4 md:mb-6 font-medium tracking-wide uppercase"
           >
             Welcome to
@@ -142,7 +142,7 @@ export function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, type: "spring" }}
+            transition={{ duration: 0.4, delay: 0.1, type: "spring" }}
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 md:mb-8 leading-[1.1] px-2"
           >
             <span className="block mb-1 md:mb-2">
@@ -157,12 +157,12 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-foreground/70 max-w-4xl mx-auto mb-8 md:mb-12 leading-relaxed font-light px-4"
           >
             We create <span className="font-semibold text-foreground">extraordinary experiences</span> through
             <br className="hidden sm:block" />
-            <span className="text-primary">event organization</span>, <span className="text-accent">interior design</span>, 
+            <span className="text-primary">event organization</span>, <span className="text-accent">interior design</span>,
             <span className="text-primary"> photography</span>, and <span className="text-accent">creative production</span>.
           </motion.p>
 
@@ -170,7 +170,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.3, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center px-4"
           >
             <motion.a
@@ -219,7 +219,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
             className="mt-12 md:mt-16 grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto pt-8 md:pt-12 border-t border-border/50 dark:border-border/30 px-4"
           >
             {[
@@ -239,21 +239,21 @@ export function Hero() {
         <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          transition={{ duration: 0.3, delay: 0.5 }}
           onClick={scrollToNext}
           className="absolute bottom-6 md:bottom-12 left-1/2 transform -translate-x-1/2 group hidden sm:flex flex-col items-center"
           aria-label="Scroll down"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
             className="flex flex-col items-center gap-2"
           >
             <div className="text-foreground/40 text-xs md:text-sm mb-2 font-medium tracking-wider hidden md:block">Scroll</div>
             <div className="w-5 h-8 md:w-6 md:h-10 rounded-full border-2 border-foreground/30 flex items-start justify-center p-1.5 md:p-2 group-hover:border-primary/50 transition-colors">
               <motion.div
                 animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 0.6, repeat: Infinity, ease: "easeInOut" }}
                 className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-primary"
               />
             </div>

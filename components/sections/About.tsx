@@ -25,7 +25,7 @@ function Counter({ end, isInView }: { end: number; isInView: boolean }) {
   useEffect(() => {
     if (!isInView) return;
     let start = 0;
-    const duration = 2000;
+    const duration = 800;
     const step = () => {
       start += end / (duration / 16);
       if (start >= end) { setCount(end); return; }
@@ -47,12 +47,12 @@ export function About() {
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-background to-background" />
       <motion.div
         animate={{ rotate: 360 }}
-        transition={{ duration: 100, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
         className="absolute top-1/4 -left-32 w-64 h-64 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl"
       />
       <motion.div
         animate={{ rotate: -360 }}
-        transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         className="absolute bottom-1/4 -right-32 w-96 h-96 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-3xl"
       />
 
@@ -103,7 +103,7 @@ export function About() {
                 {/* Animated ring */}
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                   className={`absolute -top-8 -right-8 w-24 h-24 rounded-full border-2 border-dashed ${stat.gradient.includes("violet") ? "border-violet-500/30" : stat.gradient.includes("pink") ? "border-pink-500/30" : stat.gradient.includes("orange") ? "border-orange-500/30" : "border-cyan-500/30"}`}
                 />
 

@@ -44,7 +44,7 @@ function LoadingScreenContent() {
     // Counter Animation
     tl.to(counter, {
       value: 100,
-      duration: 1.2, // Faster count
+      duration: 0.6, // Ultra fast count
       ease: "power2.inOut",
       onUpdate: () => {
         if (counterRef.current) {
@@ -63,9 +63,9 @@ function LoadingScreenContent() {
     })
       .to(containerRef.current, {
         yPercent: -100,
-        duration: 0.8, // Snappy lift
+        duration: 0.4, // Ultra snappy lift
         ease: "power4.inOut",
-      }, "-=0.2");
+      }, "-=0.1");
 
   }, { scope: containerRef });
 
@@ -73,7 +73,7 @@ function LoadingScreenContent() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsComplete(true);
-    }, 4500); // Slightly longer than total animation time
+    }, 2500); // Reduced failsafe for fast charging
 
     return () => clearTimeout(timer);
   }, []);
@@ -86,7 +86,7 @@ function LoadingScreenContent() {
       {/* Background Pulse */}
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
         className="absolute w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-[100px]"
       />
 
