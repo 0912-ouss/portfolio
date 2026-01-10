@@ -10,7 +10,8 @@ export function PortfolioUI({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
 
     // Pages that should NOT have the main portfolio navbar/footer
-    const isDemoOrAdmin = pathname.startsWith("/demos") || pathname.startsWith("/admin");
+    // Use optional chaining to handle undefined pathname during SSR
+    const isDemoOrAdmin = pathname?.startsWith("/demos") || pathname?.startsWith("/admin") || false;
 
     if (isDemoOrAdmin) {
         return <>{children}</>;

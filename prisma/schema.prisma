@@ -9,17 +9,21 @@ datasource db {
 }
 
 model User {
-  id           String    @id @default(cuid())
-  email        String    @unique
-  password     String
-  firstName    String
-  lastName     String
-  phone        String?
-  role         String    @default("MEMBER")
-  membershipId String?
-  createdAt    DateTime  @default(now())
-  updatedAt    DateTime  @updatedAt
-  bookings     Booking[]
+  id            String                  @id @default(cuid())
+  email         String                  @unique
+  password      String
+  firstName     String
+  lastName      String
+  phone         String?
+  role          String                  @default("MEMBER")
+  status        String                  @default("Active")
+  membershipId  String?
+  createdAt     DateTime                @default(now())
+  updatedAt     DateTime                @updatedAt
+  bookings      Booking[]
+  activityLogs  ActivityLog[]
+  notifications NotificationRecipient[]
+  waitlists     Waitlist[]
 }
 
 model Trainer {
@@ -34,29 +38,32 @@ model Trainer {
 }
 
 model Session {
-  id         String    @id @default(cuid())
-  name       String
-  activity   String
-  gender     String    @default("Mixte")
-  day        String
-  time       String
-  capacity   Int
-  trainerId  String?
-  locationId String?
-  createdAt  DateTime  @default(now())
-  bookings   Booking[]
-  location   Location? @relation(fields: [locationId], references: [id])
-  trainer    Trainer?  @relation(fields: [trainerId], references: [id])
+  id             String     @id @default(cuid())
+  name           String
+  activity       String
+  gender         String     @default("Mixte")
+  day            String
+  time           String
+  capacity       Int
+  bookingEnabled Boolean    @default(true)
+  trainerId      String?
+  locationId     String?
+  createdAt      DateTime   @default(now())
+  bookings       Booking[]
+  waitlists      Waitlist[]
+  location       Location?  @relation(fields: [locationId], references: [id])
+  trainer        Trainer?   @relation(fields: [trainerId], references: [id])
 }
 
 model Booking {
-  id        String   @id @default(cuid())
-  userId    String
-  sessionId String
-  status    String   @default("CONFIRMED")
-  createdAt DateTime @default(now())
-  session   Session  @relation(fields: [sessionId], references: [id])
-  user      User     @relation(fields: [userId], references: [id])
+  id         String      @id @default(cuid())
+  userId     String
+  sessionId  String
+  status     String      @default("CONFIRMED")
+  createdAt  DateTime    @default(now())
+  session    Session     @relation(fields: [sessionId], references: [id])
+  user       User        @relation(fields: [userId], references: [id])
+  attendance Attendance?
 }
 
 model Location {
@@ -78,4 +85,74 @@ model Inquiry {
   message   String
   status    String   @default("PENDING")
   createdAt DateTime @default(now())
+}
+
+model ActivityLog {
+  id        String   @id @default(cuid())
+  userId    String
+  action    String // CREATE, UPDATE, DELETE, LOGIN, etc.
+  entity    String // User, Session, Booking, etc.
+  entityId  String?
+  details   String? // JSON string with details
+  ipAddress String?
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model Notification {
+  id          String                  @id @default(cuid())
+  title       String
+  message     String
+  type        String                  @default("INFO") // INFO, WARNING, SUCCESS, ERROR
+  targetType  String                  @default("ALL") // ALL, MEMBER, CLIENT, ROLE, SPECIFIC
+  targetValue String? // Role or specific user IDs
+  sent        Boolean                 @default(false)
+  sentAt      DateTime?
+  createdAt   DateTime                @default(now())
+  recipients  NotificationRecipient[]
+}
+
+model NotificationRecipient {
+  id             String       @id @default(cuid())
+  notificationId String
+  userId         String
+  read           Boolean      @default(false)
+  readAt         DateTime?
+  createdAt      DateTime     @default(now())
+  notification   Notification @relation(fields: [notificationId], references: [id])
+  user           User         @relation(fields: [userId], references: [id])
+}
+
+model Attendance {
+  id          String    @id @default(cuid())
+  bookingId   String    @unique
+  attended    Boolean   @default(false)
+  notes       String?
+  checkedInAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  booking     Booking   @relation(fields: [bookingId], references: [id])
+}
+
+model Waitlist {
+  id        String   @id @default(cuid())
+  userId    String
+  sessionId String
+  priority  Int      @default(0)
+  notified  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  session   Session  @relation(fields: [sessionId], references: [id])
+}
+
+model EmailTemplate {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  subject   String
+  body      String
+  category  String   @default("GENERAL") // GENERAL, WELCOME, REMINDER, etc.
+  variables String? // JSON array of available variables
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

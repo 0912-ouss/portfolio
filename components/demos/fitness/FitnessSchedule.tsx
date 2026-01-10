@@ -18,12 +18,18 @@ interface Session {
     activity: string;
     gender: 'Hommes' | 'Femmes' | 'Mixte';
     trainerId: string;
+    bookingEnabled?: boolean;
+    capacity?: number;
+    _count?: {
+        bookings: number;
+    };
 }
 
 export function FitnessSchedule() {
     const { data: session } = useSession();
     const router = useRouter();
     const [sessions, setSessions] = useState<Session[]>([]);
+    const [userBookings, setUserBookings] = useState<string[]>([]); // Array of booked session IDs
     const [loading, setLoading] = useState(true);
 
     const [selectedGender, setSelectedGender] = useState("Tous");
@@ -42,7 +48,9 @@ export function FitnessSchedule() {
                     setSessions(data.data);
                 }
             } catch (error) {
-                console.error('Failed to fetch sessions:', error);
+                if (process.env.NODE_ENV !== 'production') {
+                    console.error('Failed to fetch sessions:', error);
+                }
             } finally {
                 setLoading(false);
             }
@@ -50,6 +58,34 @@ export function FitnessSchedule() {
 
         fetchSessions();
     }, []);
+
+    // Fetch user's bookings if logged in
+    useEffect(() => {
+        const fetchUserBookings = async () => {
+            if (!session?.user?.id) {
+                setUserBookings([]);
+                return;
+            }
+
+            try {
+                const res = await fetch('/api/fitness/bookings');
+                const data = await res.json();
+                if (data.success) {
+                    // Extract confirmed booking session IDs
+                    const bookedSessionIds = data.data
+                        .filter((booking: any) => booking.status === 'CONFIRMED')
+                        .map((booking: any) => booking.sessionId);
+                    setUserBookings(bookedSessionIds);
+                }
+            } catch (error) {
+                if (process.env.NODE_ENV !== 'production') {
+                    console.error('Failed to fetch user bookings:', error);
+                }
+            }
+        };
+
+        fetchUserBookings();
+    }, [session]);
 
     const filteredSessions = sessions.filter(session => {
         const genderMatch = selectedGender === "Tous" || session.gender === selectedGender;
@@ -64,6 +100,14 @@ export function FitnessSchedule() {
             return;
         }
 
+        // Check if already booked
+        if (userBookings.includes(sessionId)) {
+            setBookingStatus('error');
+            setBookingMessage('Vous avez déjà réservé cette session');
+            setTimeout(() => setBookingStatus('idle'), 3000);
+            return;
+        }
+
         setBookingStatus('loading');
         try {
             const res = await fetch('/api/fitness/bookings', {
@@ -74,9 +118,17 @@ export function FitnessSchedule() {
 
             const data = await res.json();
 
-            if (res.ok) {
+            if (res.ok && data.success) {
                 setBookingStatus('success');
                 setBookingMessage('Session réservée avec succès !');
+                // Add to user bookings
+                setUserBookings([...userBookings, sessionId]);
+                // Refresh sessions to update booking counts
+                const sessionsRes = await fetch('/api/fitness/sessions');
+                const sessionsData = await sessionsRes.json();
+                if (sessionsData.success) {
+                    setSessions(sessionsData.data);
+                }
                 setTimeout(() => setBookingStatus('idle'), 3000);
             } else {
                 setBookingStatus('error');
@@ -209,18 +261,61 @@ export function FitnessSchedule() {
                                                 {session.name}
                                             </h3>
 
-                                            <div className="flex items-center gap-3 mb-10">
+                                            <div className="flex items-center gap-3 mb-6">
                                                 <div className="w-8 h-[1px] bg-white/10 group-hover:bg-[#D4AF37]/50 transition-colors"></div>
                                                 <p className="text-white/50 text-[11px] uppercase tracking-[0.2em] font-medium font-sans">
                                                     {session.time}
                                                 </p>
                                             </div>
 
+                                            {/* Capacity & Booking Status */}
+                                            <div className="mb-6 space-y-2">
+                                                <div className="flex items-center justify-between text-[10px]">
+                                                    <span className="text-white/40 uppercase tracking-wider">Capacité</span>
+                                                    <span className={`font-bold ${(session._count?.bookings || 0) >= session.capacity ? 'text-red-400' : 'text-white/60'}`}>
+                                                        {session._count?.bookings || 0}/{session.capacity}
+                                                    </span>
+                                                </div>
+                                                {userBookings.includes(session.id) && (
+                                                    <div className="px-3 py-1.5 bg-[#D4AF37]/20 border border-[#D4AF37]/30 rounded-lg">
+                                                        <p className="text-[#D4AF37] text-[9px] uppercase tracking-wider font-black text-center">
+                                                            ✓ Déjà réservé
+                                                        </p>
+                                                    </div>
+                                                )}
+                                                {(session._count?.bookings || 0) >= session.capacity && !userBookings.includes(session.id) && (
+                                                    <div className="px-3 py-1.5 bg-red-500/20 border border-red-500/30 rounded-lg">
+                                                        <p className="text-red-400 text-[9px] uppercase tracking-wider font-black text-center">
+                                                            Complet
+                                                        </p>
+                                                    </div>
+                                                )}
+                                            </div>
+
                                             <button
                                                 onClick={() => handleBooking(session.id)}
-                                                className="w-full py-4 border border-white/10 bg-white/5 text-[10px] uppercase font-black tracking-[0.3em] text-white rounded-xl hover:bg-[#D4AF37] hover:text-black hover:border-transparent transition-all duration-300 translate-y-0 group-hover:-translate-y-1 shadow-lg shadow-black/50"
+                                                disabled={
+                                                    userBookings.includes(session.id) || 
+                                                    (session._count?.bookings || 0) >= (session.capacity || 0) ||
+                                                    session.bookingEnabled === false
+                                                }
+                                                className={`w-full py-4 border text-[10px] uppercase font-black tracking-[0.3em] rounded-xl transition-all duration-300 translate-y-0 group-hover:-translate-y-1 shadow-lg shadow-black/50 ${
+                                                    session.bookingEnabled === false
+                                                        ? 'border-gray-500/30 bg-gray-500/10 text-gray-400 cursor-not-allowed opacity-60'
+                                                        : userBookings.includes(session.id)
+                                                        ? 'border-[#D4AF37]/30 bg-[#D4AF37]/10 text-[#D4AF37] cursor-not-allowed opacity-60'
+                                                        : (session._count?.bookings || 0) >= (session.capacity || 0)
+                                                        ? 'border-red-500/30 bg-red-500/10 text-red-400 cursor-not-allowed opacity-60'
+                                                        : 'border-white/10 bg-white/5 text-white hover:bg-[#D4AF37] hover:text-black hover:border-transparent'
+                                                }`}
                                             >
-                                                Réserver
+                                                {session.bookingEnabled === false
+                                                    ? 'Réservations désactivées'
+                                                    : userBookings.includes(session.id) 
+                                                    ? 'Déjà réservé' 
+                                                    : (session._count?.bookings || 0) >= (session.capacity || 0) 
+                                                    ? 'Complet' 
+                                                    : 'Réserver'}
                                             </button>
                                         </div>
                                     </motion.div>

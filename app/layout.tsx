@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   keywords: ["UI Designer", "UX Designer", "Portfolio", "Web Design", "Creative", "Luxury Design"],
   authors: [{ name: "OU BERHAYLA" }],
   creator: "OU BERHAYLA",
+  alternates: {
+    canonical: 'https://ouberhayla.com',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -36,7 +39,8 @@ export const metadata: Metadata = {
 
 import { ClientProviders } from "@/components/providers/ClientProviders";
 import { PortfolioUI } from "@/components/layout/PortfolioUI";
-import { PageTransition } from "@/components/ui/PageTransition";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { StructuredData } from "@/components/StructuredData";
 
 export default function RootLayout({
   children,
@@ -46,15 +50,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} ${playfair.variable}`}>
-        <ClientProviders>
-          <PortfolioUI>
-            <PageTransition>
-              <main>
-                {children}
-              </main>
-            </PageTransition>
-          </PortfolioUI>
-        </ClientProviders>
+        <StructuredData />
+        <ErrorBoundary>
+          <ClientProviders>
+            <PortfolioUI>
+              {children}
+            </PortfolioUI>
+          </ClientProviders>
+        </ErrorBoundary>
       </body>
     </html>
   );

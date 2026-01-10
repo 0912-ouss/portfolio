@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma"
+import { requireAdmin } from "@/lib/api-auth"
 
-// GET all locations
+// GET all locations (Public - used by frontend)
 export async function GET() {
     try {
         const locations = await prisma.location.findMany({
@@ -13,8 +14,10 @@ export async function GET() {
     }
 }
 
-// POST create location
+// POST create location (Admin only)
 export async function POST(request: Request) {
+    const authError = await requireAdmin();
+    if (authError) return authError;
     try {
         const body = await request.json()
         const location = await prisma.location.create({ data: body })

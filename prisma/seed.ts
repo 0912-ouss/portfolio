@@ -27,7 +27,7 @@ async function main() {
         })
         console.log('✅ Created admin user:', admin.email)
 
-        // Create trainers
+        // Create trainers with real person photos
         const trainers = await Promise.all([
             prisma.trainer.upsert({
                 where: { id: '1' },
@@ -37,7 +37,7 @@ async function main() {
                     name: 'Marcus Steiner',
                     specialty: 'Force & Conditionnement',
                     bio: 'Champion national de powerlifting',
-                    image: '/images/fitness/trainer1.jpg',
+                    image: 'https://randomuser.me/api/portraits/men/32.jpg',
                 },
             }),
             prisma.trainer.upsert({
@@ -48,7 +48,7 @@ async function main() {
                     name: 'Elise Fontaine',
                     specialty: 'Yoga & Méditation',
                     bio: 'Maître yogi certifiée',
-                    image: '/images/fitness/trainer2.jpg',
+                    image: 'https://randomuser.me/api/portraits/women/44.jpg',
                 },
             }),
             prisma.trainer.upsert({
@@ -59,7 +59,7 @@ async function main() {
                     name: 'Kenji Yamamoto',
                     specialty: 'Arts Martiaux & Mobilité',
                     bio: 'Ceinture noire 5ème dan',
-                    image: '/images/fitness/trainer3.jpg',
+                    image: 'https://randomuser.me/api/portraits/men/22.jpg',
                 },
             }),
         ])

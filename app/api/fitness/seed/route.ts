@@ -4,7 +4,9 @@ import bcrypt from "bcryptjs"
 
 export async function GET() {
     try {
-        console.log("🌱 API Seeding started...")
+        if (process.env.NODE_ENV !== 'production') {
+            console.log("🌱 API Seeding started...")
+        }
 
         // 1. Members
         const memberPassword = await bcrypt.hash("member123", 10)
@@ -25,7 +27,7 @@ export async function GET() {
             return NextResponse.json({ success: false, error: "Step 1 (Members) failed", details: e.message, stack: e.stack }, { status: 500 })
         }
 
-        // 2. Trainers
+        // 2. Trainers with real person photos
         try {
             await prisma.trainer.upsert({
                 where: { id: "1" },
@@ -35,7 +37,29 @@ export async function GET() {
                     name: "Marcus Steiner",
                     specialty: "Force & Conditionnement",
                     bio: "Champion national de powerlifting",
-                    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200",
+                    image: "https://randomuser.me/api/portraits/men/32.jpg",
+                },
+            })
+            await prisma.trainer.upsert({
+                where: { id: "2" },
+                update: {},
+                create: {
+                    id: "2",
+                    name: "Elise Fontaine",
+                    specialty: "Yoga & Méditation",
+                    bio: "Maître yogi certifiée",
+                    image: "https://randomuser.me/api/portraits/women/44.jpg",
+                },
+            })
+            await prisma.trainer.upsert({
+                where: { id: "3" },
+                update: {},
+                create: {
+                    id: "3",
+                    name: "Kenji Yamamoto",
+                    specialty: "Arts Martiaux & Mobilité",
+                    bio: "Ceinture noire 5ème dan",
+                    image: "https://randomuser.me/api/portraits/men/22.jpg",
                 },
             })
         } catch (e: any) {
@@ -72,6 +96,7 @@ export async function GET() {
                     firstName: "Admin",
                     lastName: "Elysium",
                     role: "ADMIN",
+                    status: "Active",
                 },
             })
         } catch (e: any) {
@@ -80,7 +105,9 @@ export async function GET() {
 
         return NextResponse.json({ success: true, message: "Database seeded successfully" })
     } catch (error: any) {
-        console.error("❌ Fatal Seed Error:", error)
+        if (process.env.NODE_ENV !== 'production') {
+            console.error("❌ Fatal Seed Error:", error)
+        }
         return NextResponse.json({ success: false, error: "Fatal error", details: error.message }, { status: 500 })
     }
 }

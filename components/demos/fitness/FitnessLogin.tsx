@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { signIn } from "next-auth/react";
+import { signIn, getSession } from "next-auth/react";
 import { FiArrowRight, FiLoader } from "react-icons/fi";
 
 export function FitnessLogin() {
@@ -27,13 +27,32 @@ export function FitnessLogin() {
             });
 
             if (result?.error) {
-                setError("Identifiants incorrects. Veuillez réessayer.");
-            } else {
-                router.push("/demos/fitness/admin");
+                // Show specific error message for inactive accounts
+                if (result.error.includes("inactive") || result.error.includes("Inactive")) {
+                    setError("Compte désactivé. Veuillez contacter le support.");
+                } else {
+                    setError("Identifiants incorrects. Veuillez réessayer.");
+                }
+                setLoading(false);
+            } else if (result?.ok) {
+                // Wait a moment for session to update, then get session to check user role
+                setTimeout(async () => {
+                    const session = await getSession();
+                    
+                // Redirect based on user role
+                if (session?.user?.role === "ADMIN") {
+                    router.push("/demos/fitness/admin");
+                } else if (session?.user?.role === "CLIENT" || session?.user?.role === "MEMBER") {
+                    // Clients and members go to fitness demo home page
+                    router.push("/demos/fitness");
+                } else {
+                    // Default fallback
+                    router.push("/demos/fitness");
+                }
+                }, 100);
             }
         } catch (err) {
             setError("Une erreur est survenue. Veuillez réessayer.");
-        } finally {
             setLoading(false);
         }
     };

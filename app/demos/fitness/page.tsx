@@ -11,6 +11,7 @@ import { FitnessLocations } from '@/components/demos/fitness/FitnessLocations';
 import { FitnessRecovery } from '@/components/demos/fitness/FitnessRecovery';
 import { FitnessMembership } from '@/components/demos/fitness/FitnessMembership';
 import { FitnessFooter } from '@/components/demos/fitness/FitnessFooter';
+import { MyBookings } from '@/components/demos/fitness/MyBookings';
 
 import { FitnessTestimonials } from '@/components/demos/fitness/FitnessTestimonials';
 import { FitnessFAQ } from '@/components/demos/fitness/FitnessFAQ';
@@ -45,6 +46,7 @@ export default function FitnessDemo() {
                 <FitnessStats />
                 <FitnessPhilosophy />
                 <FitnessSchedule />
+                <MyBookings />
                 <FitnessTestimonials />
                 <FitnessEquipment />
                 <FitnessTrainers />

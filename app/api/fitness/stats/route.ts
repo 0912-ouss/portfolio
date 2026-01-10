@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma"
+import { requireAdmin } from "@/lib/api-auth"
 
 export async function GET() {
+    const authError = await requireAdmin();
+    if (authError) return authError;
     try {
         const [totalMembers, activeSessions, newInquiries] = await Promise.all([
             prisma.user.count({ where: { role: "MEMBER" } }),

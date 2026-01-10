@@ -24,6 +24,11 @@ export const authOptions: NextAuthOptions = {
                     throw new Error("Invalid credentials")
                 }
 
+                // Check if user is active
+                if (user.status !== "Active") {
+                    throw new Error("Account is inactive. Please contact support.")
+                }
+
                 const isPasswordValid = await bcrypt.compare(
                     credentials.password,
                     user.password
@@ -64,5 +69,20 @@ export const authOptions: NextAuthOptions = {
     session: {
         strategy: "jwt",
     },
-    secret: process.env.NEXTAUTH_SECRET || "elysium-fitness-secret-key-2024",
+    secret: (() => {
+        const secret = process.env.NEXTAUTH_SECRET;
+        
+        // In production, require the secret
+        if (process.env.NODE_ENV === 'production' && !secret) {
+            throw new Error("NEXTAUTH_SECRET environment variable is required in production");
+        }
+        
+        // In development, use fallback but warn
+        if (!secret) {
+            console.warn("⚠️  WARNING: NEXTAUTH_SECRET not set. Using development fallback. Set NEXTAUTH_SECRET in production!");
+            return "development-secret-key-change-in-production";
+        }
+        
+        return secret;
+    })(),
 }

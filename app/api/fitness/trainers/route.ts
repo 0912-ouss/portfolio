@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma"
+import { requireAdmin } from "@/lib/api-auth"
 
-// GET all trainers
+// GET all trainers (Public - used by frontend)
 export async function GET() {
     try {
         const trainers = await prisma.trainer.findMany({
@@ -13,8 +14,10 @@ export async function GET() {
     }
 }
 
-// POST create trainer
+// POST create trainer (Admin only)
 export async function POST(request: Request) {
+    const authError = await requireAdmin();
+    if (authError) return authError;
     try {
         const body = await request.json()
         const trainer = await prisma.trainer.create({ data: body })

@@ -28,7 +28,9 @@ export function FitnessLocations() {
                     setLocations(data.data);
                 }
             } catch (error) {
-                console.error('Failed to fetch locations:', error);
+                if (process.env.NODE_ENV !== 'production') {
+                    console.error('Failed to fetch locations:', error);
+                }
             } finally {
                 setLoading(false);
             }

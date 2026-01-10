@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { AdminHeader } from "@/components/demos/fitness/admin/AdminHeader";
+import { AdminAuthGuard } from "@/components/demos/fitness/admin/AdminAuthGuard";
 import { FiSave, FiUpload, FiCheck, FiX } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -33,7 +34,9 @@ export default function SettingsPage() {
             try {
                 setSettings(JSON.parse(saved));
             } catch {
-                console.error('Failed to parse saved settings');
+                if (process.env.NODE_ENV !== 'production') {
+                    console.error('Failed to parse saved settings');
+                }
             }
         }
     }, []);
@@ -59,8 +62,9 @@ export default function SettingsPage() {
     };
 
     return (
-        <div>
-            <AdminHeader title="Settings" />
+        <AdminAuthGuard>
+            <div>
+                <AdminHeader title="Settings" />
 
             {/* Toast Notification */}
             <AnimatePresence>
@@ -207,7 +211,8 @@ export default function SettingsPage() {
                     )}
                 </motion.button>
             </div>
-        </div>
+            </div>
+        </AdminAuthGuard>
     );
 }
 

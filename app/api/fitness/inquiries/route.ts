@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma"
+import { requireAdmin } from "@/lib/api-auth"
 
-// GET all inquiries
+// GET all inquiries (Admin only)
 export async function GET() {
+    const authError = await requireAdmin();
+    if (authError) return authError;
     try {
         const inquiries = await prisma.inquiry.findMany({
             orderBy: { createdAt: "desc" },

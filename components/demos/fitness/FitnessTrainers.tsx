@@ -3,13 +3,14 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { getTrainerImageUrl } from '@/lib/avatar-utils';
 
 interface Trainer {
     id: string;
     name: string;
     specialty: string;
     bio: string;
-    image: string;
+    image?: string | null;
     status: string;
 }
 
@@ -26,7 +27,9 @@ export function FitnessTrainers() {
                     setTrainers(data.data.filter((t: Trainer) => t.status === 'Active'));
                 }
             } catch (error) {
-                console.error('Failed to fetch trainers:', error);
+                if (process.env.NODE_ENV !== 'production') {
+                    console.error('Failed to fetch trainers:', error);
+                }
             } finally {
                 setLoading(false);
             }
@@ -56,10 +59,22 @@ export function FitnessTrainers() {
                         >
                             <div className="relative aspect-[3/4] overflow-hidden rounded-[3rem] mb-12">
                                 <Image
-                                    src={trainer.image || "/images/fitness/trainer1.png"}
+                                    src={getTrainerImageUrl(trainer)}
                                     alt={trainer.name}
                                     fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                                    unoptimized
+                                    onError={(e) => {
+                                        // Fallback to Unsplash fitness trainer photo if image fails
+                                        const target = e.target as HTMLImageElement;
+                                        const seed = trainer.name.split('').reduce((acc, char) => char.charCodeAt(0) + ((acc << 5) - acc), 0);
+                                        const isMale = Math.abs(seed) % 2 === 0;
+                                        const keywords = isMale 
+                                            ? 'fitness-trainer,personal-trainer,gym-instructor,man,gym'
+                                            : 'fitness-trainer,personal-trainer,gym-instructor,woman,gym';
+                                        target.src = `https://source.unsplash.com/800x1200/?${keywords}&sig=${Math.abs(seed)}`;
+                                    }}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60" />
 

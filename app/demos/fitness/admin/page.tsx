@@ -1,12 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { AdminHeader } from "@/components/demos/fitness/admin/AdminHeader";
+import { AdminAuthGuard } from "@/components/demos/fitness/admin/AdminAuthGuard";
 import { StatsCard } from "@/components/demos/fitness/admin/StatsCard";
 import { FiUsers, FiActivity, FiArrowUpRight, FiCalendar, FiDollarSign, FiLoader, FiUser } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { Member } from "@/types/fitness";
+import { useTheme, themeColors } from "@/components/demos/fitness/admin/ThemeContext";
 
 // Lazy load charts for better performance
 const MembershipGrowthChart = dynamic(
@@ -20,7 +24,12 @@ const MembershipDistributionChart = dynamic(
 );
 
 export default function AdminOverview() {
+    const { data: session, status } = useSession();
+    const router = useRouter();
+    const { theme } = useTheme();
+    const colors = themeColors[theme];
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
     const [stats, setStats] = useState({
         totalMembers: 0,
         activeSessions: 0,
@@ -28,27 +37,51 @@ export default function AdminOverview() {
         revenue: 0
     });
 
+    // Authentication guard
     useEffect(() => {
-        fetchOverviewData();
-    }, []);
+        if (status === "loading") return;
+        
+        if (status === "unauthenticated") {
+            router.push("/demos/fitness/login");
+            return;
+        }
+        
+        if (session?.user?.role !== "ADMIN") {
+            router.push("/demos/fitness");
+            return;
+        }
+    }, [session, status, router]);
+
+    useEffect(() => {
+        if (session?.user?.role === "ADMIN") {
+            fetchOverviewData();
+        }
+    }, [session]);
 
     const fetchOverviewData = async () => {
         try {
+            setError(null);
             setLoading(true);
             const res = await fetch("/api/fitness/stats");
             const data = await res.json();
 
-            if (data.success) {
-                setStats({
-                    totalMembers: data.data.totalMembers,
-                    activeSessions: data.data.activeSessions,
-                    newInquiries: data.data.newInquiries,
-                    revenue: data.data.revenue
-                });
-                setRecentActivity(data.data.recentActivity);
+            if (!res.ok || !data.success) {
+                throw new Error(data.error || "Failed to fetch overview data");
             }
+
+            setStats({
+                totalMembers: data.data.totalMembers,
+                activeSessions: data.data.activeSessions,
+                newInquiries: data.data.newInquiries,
+                revenue: data.data.revenue
+            });
+            setRecentActivity(data.data.recentActivity);
         } catch (err) {
-            console.error("Failed to fetch overview data:", err);
+            const errorMessage = err instanceof Error ? err.message : "Une erreur est survenue";
+            setError(errorMessage);
+            if (process.env.NODE_ENV !== 'production') {
+                console.error("Failed to fetch overview data:", err);
+            }
         } finally {
             setLoading(false);
         }
@@ -56,14 +89,33 @@ export default function AdminOverview() {
 
     const [recentActivity, setRecentActivity] = useState<Member[]>([]);
 
+    // Show loading while checking auth
+    if (status === "loading" || !session || session.user?.role !== "ADMIN") {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-[#050505]">
+                <div className="text-center">
+                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#D4AF37] mx-auto mb-4"></div>
+                    <p className="text-white/40 text-sm">Vérification de l'autorisation...</p>
+                </div>
+            </div>
+        );
+    }
+
     return (
-        <div className="space-y-8">
-            <AdminHeader title="Vue d'ensemble" />
+        <AdminAuthGuard>
+            <div className="space-y-8">
+                <AdminHeader title="Vue d'ensemble" />
+
+                {error && (
+                    <div className="mx-8 p-4 bg-red-500/10 border border-red-500/20 text-red-500 rounded-lg">
+                        {error}
+                    </div>
+                )}
 
             {loading ? (
                 <div className="h-[60vh] flex flex-col items-center justify-center gap-4">
                     <FiLoader className="w-10 h-10 text-[#D4AF37] animate-spin" />
-                    <p className="text-white/40 text-[10px] uppercase tracking-[0.3em] font-bold">Initialisation du Dashboard...</p>
+                    <p className="text-white/40 dark:text-white/40 text-gray-500 text-[10px] uppercase tracking-[0.3em] font-bold">Initialisation du Dashboard...</p>
                 </div>
             ) : (
                 <motion.div
@@ -106,56 +158,107 @@ export default function AdminOverview() {
 
                     {/* Charts Section */}
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                        <div className="lg:col-span-2">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                            className="lg:col-span-2"
+                        >
                             <MembershipGrowthChart />
-                        </div>
-                        <div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 }}
+                        >
                             <MembershipDistributionChart />
-                        </div>
+                        </motion.div>
                     </div>
 
-                    {/* Recent Activity / Quick Tasks */}
+                    {/* Recent Activity / Concierge Tasks */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <div className="bg-[#0A0A0A] border border-white/5 rounded-2xl p-6">
-                            <h3 className="text-white font-bold uppercase tracking-widest text-xs mb-6 flex items-center gap-2">
-                                <span className="w-2 h-2 bg-[#D4AF37] rounded-full"></span>
+                        {/* Activité Récente */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4 }}
+                            className={`${colors.card} border ${colors.border} rounded-2xl p-6`}
+                        >
+                            <h3 className={`${colors.text} font-bold uppercase tracking-widest text-xs mb-6 flex items-center gap-2`}>
+                                <span className={`w-2 h-2 ${colors.accentBg} rounded-full`}></span>
                                 Activité Récente
                             </h3>
-                            <div className="space-y-4">
+                            <div className="space-y-0">
                                 {recentActivity.length > 0 ? recentActivity.map((activity, i) => (
-                                    <div key={activity.id} className="flex items-center justify-between py-3 border-b border-white/5 last:border-0 group cursor-default">
+                                    <motion.div
+                                        key={activity.id}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: 0.5 + i * 0.1 }}
+                                        className="flex items-center justify-between py-4 border-b last:border-0 group cursor-pointer"
+                                        style={{ borderColor: theme === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)' }}
+                                    >
                                         <div className="flex items-center gap-4">
-                                            <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/40 group-hover:bg-[#D4AF37]/10 group-hover:text-[#D4AF37] transition-all">
-                                                <FiUser />
+                                            <div className={`w-10 h-10 rounded-full ${colors.input} flex items-center justify-center ${colors.textMuted} group-hover:${colors.accentBg} group-hover:${colors.accent} transition-all`}>
+                                                <FiUser className="w-5 h-5" />
                                             </div>
                                             <div>
-                                                <p className="text-white text-xs font-bold">Nouveau Membre: {activity.firstName}</p>
-                                                <p className="text-white/40 text-[10px] uppercase tracking-widest">{activity.createdAt ? new Date(activity.createdAt).toLocaleDateString() : 'N/A'}</p>
+                                                <p className={`${colors.text} text-xs font-bold`}>
+                                                    Nouveau Membre: {activity.firstName} {activity.lastName}
+                                                </p>
+                                                <p className={`${colors.textMuted} text-[10px] uppercase tracking-widest`}>
+                                                    {activity.createdAt ? new Date(activity.createdAt).toLocaleDateString('fr-FR') : 'N/A'}
+                                                </p>
                                             </div>
                                         </div>
-                                        <FiArrowUpRight className="text-white/20 group-hover:text-white transition-colors" />
-                                    </div>
+                                        <FiArrowUpRight className={`${colors.textMuted} group-hover:${colors.accent} transition-colors`} />
+                                    </motion.div>
                                 )) : (
-                                    <p aria-hidden="true" className="text-white/20 text-[10px] uppercase tracking-widest py-10 text-center">Aucune activité récente</p>
+                                    <p className={`${colors.textMuted} text-[10px] uppercase tracking-widest py-10 text-center`}>
+                                        Aucune activité récente
+                                    </p>
                                 )}
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="bg-[#050505] border border-[#D4AF37]/10 rounded-2xl p-6 relative overflow-hidden group">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/5 blur-3xl rounded-full" />
-                            <h3 className="text-[#D4AF37] font-bold uppercase tracking-widest text-xs mb-6">Concierge Tasks</h3>
-                            <div className="space-y-4">
-                                {[1, 2, 3].map((i) => (
-                                    <div key={i} className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-[#D4AF37]/30 transition-all cursor-pointer">
-                                        <div className="w-2 h-2 rounded-full bg-[#D4AF37] shadow-[0_0_10px_#D4AF37/50]" />
-                                        <p className="text-white/80 text-xs font-sans">Révision de la maintenance salle {i}</p>
-                                    </div>
+                        {/* Concierge Tasks */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5 }}
+                            className={`${colors.card} border ${colors.accentBorder} rounded-2xl p-6 relative overflow-hidden`}
+                        >
+                            <div className={`absolute top-0 right-0 w-32 h-32 ${colors.accentBg} blur-3xl rounded-full opacity-50`} />
+                            <h3 className={`${colors.accent} font-bold uppercase tracking-widest text-xs mb-6 relative z-10`}>
+                                Concierge Tasks
+                            </h3>
+                            <div className="space-y-3 relative z-10">
+                                {[
+                                    "Révision de la maintenance salle 1",
+                                    "Révision de la maintenance salle 2",
+                                    "Révision de la maintenance salle 3"
+                                ].map((task, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: 0.6 + i * 0.1 }}
+                                        className={`flex items-center gap-4 ${colors.input} p-4 rounded-xl border ${colors.border} ${colors.hover} transition-all cursor-pointer group`}
+                                    >
+                                        <div className={`w-2 h-2 rounded-full ${colors.accentBg} flex-shrink-0`}>
+                                            <div className={`w-2 h-2 rounded-full bg-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.5)]`}></div>
+                                        </div>
+                                        <p className={`${colors.textSecondary} text-xs font-medium group-hover:${colors.text} transition-colors`}>
+                                            {task}
+                                        </p>
+                                    </motion.div>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </motion.div>
             )}
-        </div>
+            </div>
+        </AdminAuthGuard>
     );
 }
