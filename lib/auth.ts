@@ -72,13 +72,24 @@ export const authOptions: NextAuthOptions = {
     secret: (() => {
         const secret = process.env.NEXTAUTH_SECRET;
         
-        // In production, require the secret
-        if (process.env.NODE_ENV === 'production' && !secret) {
-            throw new Error("NEXTAUTH_SECRET environment variable is required in production");
-        }
+        // Check if we're in a build phase (not runtime)
+        const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || 
+                            process.env.NEXT_PHASE === 'phase-development-build';
         
-        // In development, use fallback but warn
+        // If no secret is set
         if (!secret) {
+            // During build phase, use fallback (don't throw)
+            if (isBuildPhase) {
+                console.warn("⚠️  WARNING: NEXTAUTH_SECRET not set during build. Using fallback. Set NEXTAUTH_SECRET in .env.local!");
+                return "development-secret-key-change-in-production";
+            }
+            
+            // In production runtime, require the secret
+            if (process.env.NODE_ENV === 'production') {
+                throw new Error("NEXTAUTH_SECRET environment variable is required in production");
+            }
+            
+            // In development runtime, use fallback but warn
             console.warn("⚠️  WARNING: NEXTAUTH_SECRET not set. Using development fallback. Set NEXTAUTH_SECRET in production!");
             return "development-secret-key-change-in-production";
         }
