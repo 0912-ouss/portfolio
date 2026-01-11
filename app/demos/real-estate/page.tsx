@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { ReactLenis } from "@studio-freight/react-lenis";
+import { ReactLenis } from "lenis/react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRightLeft } from 'lucide-react';
 

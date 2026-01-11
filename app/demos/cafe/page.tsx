@@ -26,7 +26,7 @@ import { CafeFAQ } from "@/components/demos/cafe/CafeFAQ";
 // Effects
 import { CafeGrain } from "@/components/demos/cafe/CafeGrain";
 
-import { ReactLenis } from "@studio-freight/react-lenis";
+import { ReactLenis } from "lenis/react";
 
 export default function CafeDemo() {
     useEffect(() => {

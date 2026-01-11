@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { ReactLenis } from "@studio-freight/react-lenis";
+import { ReactLenis } from "lenis/react";
 import { CarRentalLoading } from "@/components/demos/car-rental/CarRentalLoading";
 import { CarRentalCursor } from "@/components/demos/car-rental/CarRentalCursor";
 import { CarRentalScrollProgress } from "@/components/demos/car-rental/CarRentalScrollProgress";

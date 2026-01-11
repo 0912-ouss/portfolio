@@ -13,10 +13,10 @@ async function createAdminUser() {
         console.log('🔐 Creating admin user...');
 
         // Admin credentials
-        const email = 'admin@elysium.com';
-        const password = 'admin123';
+        const email = 'admin';
+        const password = 'admin';
         const firstName = 'Admin';
-        const lastName = 'Elysium';
+        const lastName = 'User';
 
         // Hash password
         const hashedPassword = await bcrypt.hash(password, 10);

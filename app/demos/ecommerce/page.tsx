@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from 'react';
-import { ReactLenis } from "@studio-freight/react-lenis";
+import { ReactLenis } from "lenis/react";
 
 // E-commerce Components
 import { EcommerceLoading } from "@/components/demos/ecommerce/EcommerceLoading";
