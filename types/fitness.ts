@@ -38,6 +38,7 @@ export interface Session {
     trainer?: Trainer;
     capacity: number;
     booked?: number;
+    bookingEnabled?: boolean;
     _count?: {
         bookings: number;
     };

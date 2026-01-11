@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { FiLoader, FiX, FiCalendar, FiClock, FiMapPin, FiUser, FiCheck } from 'react-icons/fi';
+import { FiLoader, FiX, FiCalendar, FiClock, FiMapPin, FiUser, FiCheck, FiTrash2 } from 'react-icons/fi';
 
 interface Booking {
     id: string;
@@ -39,6 +39,22 @@ export function MyBookings() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [cancellingId, setCancellingId] = useState<string | null>(null);
+    
+    // Toast Notification
+    const [toast, setToast] = useState<{ 
+        type: 'success' | 'error' | 'info'; 
+        message: string; 
+    } | null>(null);
+
+    // Confirmation Modal
+    const [confirmModal, setConfirmModal] = useState<{
+        isOpen: boolean;
+        title: string;
+        message: string;
+        onConfirm: () => void;
+        confirmText?: string;
+        cancelText?: string;
+    } | null>(null);
 
     useEffect(() => {
         if (session?.user?.id) {
@@ -73,35 +89,50 @@ export function MyBookings() {
         }
     };
 
-    const handleCancelBooking = async (bookingId: string) => {
-        if (!confirm('Êtes-vous sûr de vouloir annuler cette réservation ?')) {
-            return;
-        }
+    const showToast = (type: 'success' | 'error' | 'info', message: string) => {
+        setToast({ type, message });
+        setTimeout(() => setToast(null), 4000);
+    };
 
-        setCancellingId(bookingId);
-        try {
-            const res = await fetch(`/api/fitness/bookings/${bookingId}`, {
-                method: 'DELETE',
-            });
-            const data = await res.json();
+    const handleCancelBooking = (bookingId: string) => {
+        const booking = bookings.find(b => b.id === bookingId);
+        const sessionName = booking?.session?.name || 'cette session';
+        
+        setConfirmModal({
+            isOpen: true,
+            title: "Annuler la réservation",
+            message: `Êtes-vous sûr de vouloir annuler votre réservation pour "${sessionName}" ? Cette action est irréversible.`,
+            onConfirm: async () => {
+                setConfirmModal(null);
+                setCancellingId(bookingId);
+                try {
+                    const res = await fetch(`/api/fitness/bookings/${bookingId}`, {
+                        method: 'DELETE',
+                    });
+                    const data = await res.json();
 
-            if (data.success) {
-                // Remove from list
-                setBookings(bookings.filter(b => b.id !== bookingId));
-                // Refresh bookings to get updated list
-                fetchBookings();
-            } else {
-                throw new Error(data.error || 'Failed to cancel booking');
-            }
-        } catch (err) {
-            const errorMessage = err instanceof Error ? err.message : 'Erreur lors de l\'annulation';
-            alert(errorMessage);
-            if (process.env.NODE_ENV !== 'production') {
-                console.error('Failed to cancel booking:', err);
-            }
-        } finally {
-            setCancellingId(null);
-        }
+                    if (data.success) {
+                        // Remove from list
+                        setBookings(bookings.filter(b => b.id !== bookingId));
+                        // Refresh bookings to get updated list
+                        fetchBookings();
+                        showToast('success', 'Réservation annulée avec succès');
+                    } else {
+                        throw new Error(data.error || 'Failed to cancel booking');
+                    }
+                } catch (err) {
+                    const errorMessage = err instanceof Error ? err.message : 'Erreur lors de l\'annulation';
+                    showToast('error', errorMessage);
+                    if (process.env.NODE_ENV !== 'production') {
+                        console.error('Failed to cancel booking:', err);
+                    }
+                } finally {
+                    setCancellingId(null);
+                }
+            },
+            confirmText: "Annuler la réservation",
+            cancelText: "Retour"
+        });
     };
 
     // If not logged in, show login prompt
@@ -249,6 +280,95 @@ export function MyBookings() {
                     </div>
                 )}
             </div>
+
+            {/* Toast Notification */}
+            <AnimatePresence>
+                {toast && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20, x: '-50%' }}
+                        animate={{ opacity: 1, y: 0, x: '-50%' }}
+                        exit={{ opacity: 0, y: -20, x: '-50%' }}
+                        className={`fixed top-6 left-1/2 z-[200] max-w-md w-[90%] ${
+                            toast.type === 'success'
+                                ? 'bg-green-500/95 text-white'
+                                : toast.type === 'error'
+                                ? 'bg-red-500/95 text-white'
+                                : 'bg-blue-500/95 text-white'
+                        } rounded-xl shadow-2xl backdrop-blur-md`}
+                    >
+                        <div className="p-4">
+                            <div className="flex items-start gap-3">
+                                {toast.type === 'success' ? (
+                                    <FiCheck className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                                ) : toast.type === 'error' ? (
+                                    <FiX className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                                ) : (
+                                    <FiCalendar className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                                )}
+                                <div className="flex-1">
+                                    <p className="text-sm font-bold">{toast.message}</p>
+                                </div>
+                                <button
+                                    onClick={() => setToast(null)}
+                                    className="p-1 hover:bg-white/20 rounded transition-colors flex-shrink-0"
+                                >
+                                    <FiX className="w-4 h-4" />
+                                </button>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Confirmation Modal */}
+            <AnimatePresence>
+                {confirmModal?.isOpen && (
+                    <div className="fixed inset-0 z-[300] flex items-center justify-center p-6">
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setConfirmModal(null)}
+                            className="absolute inset-0 bg-black/70 backdrop-blur-md"
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="relative w-full max-w-md bg-[#0A0A0A] border border-white/10 rounded-2xl p-6 shadow-2xl"
+                        >
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center">
+                                    <FiTrash2 className="text-red-400 w-5 h-5" />
+                                </div>
+                                <h3 className="text-white text-lg font-bold">
+                                    {confirmModal.title}
+                                </h3>
+                            </div>
+                            
+                            <p className="text-white/60 text-sm mb-6">
+                                {confirmModal.message}
+                            </p>
+
+                            <div className="flex gap-3">
+                                <button
+                                    onClick={() => setConfirmModal(null)}
+                                    className="flex-1 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-sm font-bold text-white/80 transition-colors"
+                                >
+                                    {confirmModal.cancelText || "Annuler"}
+                                </button>
+                                <button
+                                    onClick={confirmModal.onConfirm}
+                                    className="flex-1 px-4 py-2 bg-red-500/20 text-red-400 hover:bg-red-500/30 border border-red-500/30 rounded-lg text-sm font-bold transition-colors"
+                                >
+                                    {confirmModal.confirmText || "Confirmer"}
+                                </button>
+                            </div>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
         </section>
     );
 }

@@ -272,8 +272,8 @@ export function FitnessSchedule() {
                                             <div className="mb-6 space-y-2">
                                                 <div className="flex items-center justify-between text-[10px]">
                                                     <span className="text-white/40 uppercase tracking-wider">Capacité</span>
-                                                    <span className={`font-bold ${(session._count?.bookings || 0) >= session.capacity ? 'text-red-400' : 'text-white/60'}`}>
-                                                        {session._count?.bookings || 0}/{session.capacity}
+                                                    <span className={`font-bold ${(session._count?.bookings || 0) >= (session.capacity || 0) ? 'text-red-400' : 'text-white/60'}`}>
+                                                        {session._count?.bookings || 0}/{session.capacity || 0}
                                                     </span>
                                                 </div>
                                                 {userBookings.includes(session.id) && (
@@ -283,7 +283,7 @@ export function FitnessSchedule() {
                                                         </p>
                                                     </div>
                                                 )}
-                                                {(session._count?.bookings || 0) >= session.capacity && !userBookings.includes(session.id) && (
+                                                {(session._count?.bookings || 0) >= (session.capacity || 0) && !userBookings.includes(session.id) && (
                                                     <div className="px-3 py-1.5 bg-red-500/20 border border-red-500/30 rounded-lg">
                                                         <p className="text-red-400 text-[9px] uppercase tracking-wider font-black text-center">
                                                             Complet
