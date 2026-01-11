@@ -12,6 +12,19 @@ export const metadata: Metadata = {
   keywords: ["UI Designer", "UX Designer", "Portfolio", "Web Design", "Creative", "Luxury Design"],
   authors: [{ name: "OU BERHAYLA" }],
   creator: "OU BERHAYLA",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#FF6B35' },
+    ],
+  },
+  manifest: '/site.webmanifest',
   alternates: {
     canonical: 'https://ouberhayla.com',
   },

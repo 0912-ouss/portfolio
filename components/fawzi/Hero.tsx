@@ -50,7 +50,7 @@ export function FawziHero() {
                         transition={{ duration: 0.5, delay: 0.1 }}
                         className="text-orange-500 text-2xl md:text-3xl font-bold"
                     >
-                        Muhammad Umair
+                        Berhayla oussama
                     </motion.h2>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ export function FawziHero() {
                         <div className="relative z-10 w-full h-full rounded-full overflow-hidden border-8 border-white/50 dark:border-white/10 shadow-2xl">
                             <img
                                 src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800&q=80"
-                                alt="Muhammad Umair"
+                                alt="Berhayla oussama"
                                 className="w-full h-full object-cover"
                             />
                         </div>
