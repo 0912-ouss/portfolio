@@ -13,7 +13,7 @@ async function createAdminUser() {
         console.log('🔐 Creating admin user...');
 
         // Admin credentials
-        const email = 'admin';
+        const email = 'admin@admin.com';
         const password = 'admin';
         const firstName = 'Admin';
         const lastName = 'User';
